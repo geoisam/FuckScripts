@@ -34,6 +34,10 @@ Config:
         title: 微软必应App（每日签到 + 文章阅读）
         type: checkbox
         default: false
+    promo:
+        title: 每日活动+推广活动
+        type: checkbox
+        default: false
     limit:
         title: 限制搜索（每次运行只搜索 4-8 次）
         type: checkbox
@@ -379,10 +383,12 @@ obj.getRewardsToken = function () {
 obj.taskPromo = async function () {
     if (obj.task.promo.end > 0) {
         return true
-    } else if (obj.data.time.hoursNow < 12) {
-        obj.task.promo.end++
-        return true
-    } else if (obj.task.promo.times > 2) {
+    } 
+    //else if (obj.data.time.hoursNow < 12) {
+        // obj.task.promo.end++
+        // return true
+    // } 
+    else if (obj.task.promo.times > 2) {
         obj.task.promo.end++
         obj.pushMsg("活动推广🔴", "未知原因出错，本次活动推广结束！")
         return true
@@ -739,7 +745,7 @@ return new Promise((resolve, reject) => {
     obj.promoStart = async function () {
         try {
             const result = await obj.taskPromo()
-            result ? obj.taskEnd() : setTimeout(() => { obj.promoStart() }, obj.data.time.task)
+            result ? obj.taskEnd() : setTimeout(() => { obj.promoStart() }, obj.data.time.task)           
         } catch (e) {
             reject(e)
         }
@@ -760,9 +766,13 @@ return new Promise((resolve, reject) => {
             obj.task.sign.end++
             obj.task.read.end++
         }
-        obj.promoStart()
-        obj.signStart()
-        obj.readStart()
-        obj.searchStart()
+        if(GM_getValue("Config.promo", false) == false){
+            obj.task.promo.end++
+        }
+        
+        if (obj.task.sign.end   == 0 || GM_getValue("task_sign", 0)   == obj.data.time.dateNowNum) {obj.signStart()}
+        if (obj.task.read.end   == 0 || GM_getValue("task_read", 0)   == obj.data.time.dateNowNum) {obj.readStart()}
+        if (obj.task.promo.end  == 0 || GM_getValue("task_promo", 0)  == obj.data.time.dateNowNum) {obj.promoStart()}
+        if (obj.task.search.end == 0 || GM_getValue("task_search", 0) == obj.data.time.dateNowNum) {obj.searchStart()}
     }()
 })
