@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Title: ADFUCK
-! Version: 2025091014
+! Version: 2025091421
 ! Expires: 2 days
 ! 👇👇过滤规则推荐👇👇
 ! EasyPrivacy：https://easylist-downloads.adblockplus.org/easyprivacy.txt
@@ -47,13 +47,7 @@ m.mgtv.com##.ReactModalPortal,[class*="OpenApp"],.open-app-popup,.ht.mgui-btn.mg
 123pan.com,123pan.cn,123684.com,123865.com,123912.com,123957.com##.advBanner,[class*="adv-container"],[class*="banner-container"],[class*="banner_guide"],#top_container,#banner_container,.banner_all_wrap,.ant-carousel,.btn_reward,[class*="header-waning-tips"],.loginModal-footer.payment-footer,.activity-box,.bg_svip_block_ads,.uppy-Dashboard-slowSpeed-banner,.ant-modal-content .download-msgInfo-phone,.download-pay-footer
 123pan.com,123pan.cn,123684.com,123865.com,123912.com,123957.com#$#.contentBorder .conter { margin-bottom: 0 !important; }
 123pan.com,123pan.cn,123684.com,123865.com,123912.com,123957.com#$#.appBottomBtn.banner-bottom { bottom: 0 !important; }
-123pan.com,123pan.cn,123684.com,123865.com,123912.com,123957.com#$#.webbody.svip-body,.backgroundImage { background-image: none !important; }
-||statics.123pan.com/share-static/dist/login_img_bg.png$image
-||statics.123pan.cn/share-static/dist/login_img_bg.png$image
-||statics.123684.com/share-static/dist/login_img_bg.png$image
-||statics.123865.com/share-static/dist/login_img_bg.png$image
-||statics.123912.com/share-static/dist/login_img_bg.png$image
-||statics.123957.com/share-static/dist/login_img_bg.png$image
+123pan.com,123pan.cn,123684.com,123865.com,123912.com,123957.com#$#.webbody.svip-body,.backgroundImage,.verifyBox { background-image: none !important; }
 
 ! ---------APKMirror---------
 apkmirror.com##.ezo_ad,.ains-apkm_outbrain_ad,#bottom-slider,[id*="adtester-container"],[id*="appmanager_sppostswidget"],.listWidget:has([data-feed-url]),.appRow:has([id*="adtester-container"])
