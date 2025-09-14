@@ -1,19 +1,19 @@
 [Adblock Plus 2.0]
 ! Title: ADFUCK
-! Version: 2025091421
+! Version: 2025091422
 ! Expires: 2 days
 ! 👇👇过滤规则推荐👇👇
-! EasyPrivacy：https://easylist-downloads.adblockplus.org/easyprivacy.txt
-! Adblock Warning Removal List：https://easylist-downloads.adblockplus.org/antiadblockfilters.txt
-! Fanboy's Annoyance List：https://secure.fanboy.co.nz/fanboy-annoyance_ubo.txt
-! Peter Lowe's BlockList：https://pgl.yoyo.org/adservers/serverlist.php?hostformat=adblockplus&showintro=0&mimetype=plaintext
-! AdGuard 基础过滤器：https://filters.adtidy.org/android/filters/2_optimized.txt
-! AdGuard 中文过滤器：https://filters.adtidy.org/android/filters/224_optimized.txt
-! AdGuard 移动广告过滤器：https://filters.adtidy.org/android/filters/11_optimized.txt
-! AdGuard 移动应用横幅广告过滤器：https://filters.adtidy.org/android/filters/20_optimized.txt
-! AdGuard 其他恼人广告过滤器：https://filters.adtidy.org/android/filters/21_optimized.txt
-! Legitimate URL Shortener：https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt
-! Homepage: https://github.com/geoisam/FuckScripts/issues
+! 基础广告过滤：https://easylist.to/easylist/easylist.txt
+! 隐私保护过滤：https://easylist-downloads.adblockplus.org/easyprivacy.txt
+! 中文广告过滤：https://easylist-downloads.adblockplus.org/easylistchina.txt
+! 反拦截广告拦截：https://easylist-downloads.adblockplus.org/antiadblockfilters.txt
+! Cookie通知过滤：https://secure.fanboy.co.nz/fanboy-cookiemonster.txt
+! 骚扰拦截过滤：https://secure.fanboy.co.nz/fanboy-annoyance_ubo.txt
+! 恶意软件过滤：https://malware-filter.gitlab.io/urlhaus-filter/urlhaus-filter-ag-online.txt
+! 域名黑名单过滤：https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext
+! 👆👆过滤规则推荐👆👆
+! Homepage: https://github.com/geoisam/FuckScripts
+! *** geoisam@qq.com ***
 
 
 ! ---------必应搜索---------
