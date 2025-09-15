@@ -3,7 +3,7 @@
 ! Version: 2025091518
 ! Expires: 2 days
 ! 👇👇过滤规则推荐👇👇
-! 基础广告过滤：https://easylist.to/easylist/easylist.txt
+! 基础广告过滤：https://easylist-downloads.adblockplus.org/easylist.txt
 ! 隐私保护过滤：https://easylist-downloads.adblockplus.org/easyprivacy.txt
 ! 中文广告过滤：https://easylist-downloads.adblockplus.org/easylistchina.txt
 ! 反拦截广告拦截：https://easylist-downloads.adblockplus.org/antiadblockfilters.txt
