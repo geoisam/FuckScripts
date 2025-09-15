@@ -30,6 +30,8 @@ v.qq.com#%#//scriptlet('set-constant', 'CreativePlayerwebPlugin.AD_EVENT.AD_LOAD
 123pan.com,123pan.cn,123684.com,123865.com,123912.com,123957.com#$#.appBottomBtn.banner-bottom { bottom: 0 !important; }
 123pan.com,123pan.cn,123684.com,123865.com,123912.com,123957.com#$#.webbody.svip-body,.backgroundImage,.verifyBox { background-image: none !important; }
 123pan.com,123pan.cn,123684.com,123865.com,123912.com,123957.com#$#.verifyBox .leftCard { width: 100% !important; }
+123pan.com,123pan.cn,123684.com,123865.com,123912.com,123957.com#$#.contentBorder { height: calc(-64px + 100vh) !important;width: 100% !important;max-width: 100% !important;margin: auto !important;}
+123pan.com,123pan.cn,123684.com,123865.com,123912.com,123957.com#$#.contentBorder > div:not(.cleanNet) { width: 75%; }
 
 ! ---------APKMirror---------
 www.apkmirror.com##.ezo_ad,#bottom-slider,[class*="ains-apkm_"]:has(a.advertisement-text),.tab-content .t-height:has(#downloadCountdownBar)
