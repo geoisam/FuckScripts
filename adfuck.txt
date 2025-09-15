@@ -33,5 +33,5 @@ v.qq.com#%#//scriptlet('set-constant', 'CreativePlayerwebPlugin.AD_EVENT.AD_LOAD
 
 ! ---------APKMirror---------
 www.apkmirror.com##.ezo_ad,#bottom-slider,[class*="ains-apkm_"]:has(a.advertisement-text),.tab-content .t-height:has(#downloadCountdownBar)
-www.apkmirror.com#$#.accent_bg { pointer-events: auto !important;background-color: #6dc385 !important; }
-www.apkmirror.com#$#.downloadButton:hover { cursor: pointer !important; }
+www.apkmirror.com#$#a.accent_bg.downloadButton { pointer-events: auto !important;background-color: #6dc385 !important; }
+www.apkmirror.com#$#a.accent_bg.downloadButton:hover { cursor: pointer !important; }
