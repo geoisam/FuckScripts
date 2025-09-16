@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Title: AdsFuck
-! Version: 2025091618
+! Version: 2025091620
 ! Expires: 2 days
 ! 👇👇过滤规则推荐👇👇
 ! 基础广告过滤：https://easylist-downloads.adblockplus.org/easylist.txt
@@ -8,7 +8,7 @@
 ! 中文广告过滤：https://easylist-downloads.adblockplus.org/easylistchina.txt
 ! 反拦截广告拦截：https://easylist-downloads.adblockplus.org/antiadblockfilters.txt
 ! Cookie通知过滤：https://secure.fanboy.co.nz/fanboy-cookiemonster.txt
-! 骚扰拦截过滤：https://secure.fanboy.co.nz/fanboy-annoyance_ubo.txt
+! 骚扰拦截过滤：https://secure.fanboy.co.nz/fanboy-annoyance.txt
 ! 恶意软件过滤：https://malware-filter.gitlab.io/urlhaus-filter/urlhaus-filter-ag-online.txt
 ! 域名黑名单过滤：https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext
 ! 👆👆过滤规则推荐👆👆
@@ -44,7 +44,31 @@ youku.com#%#//scriptlet("adjust-setTimeout", "r--", "", "0.02")
 ||alicdn.com/awsc/et/$script
 
 ! ---------爱奇艺---------
-iqiyi.com##.panel-item:has(a[href*="668wan."]),.panel-item:has(a[href*="game."]),.qy20-h-carousel__ad,.ad-ef,.ad-seed,.ad-screen,.ad-tl,.qy-mod-li:has([class*="vipact"]),.iqp-top-item:has(.tipWrap),.iqp-top-item.iqp-client-launcher,.meta-hot ~ .cont,.side-cont .btn-wrap,.header-sideItem.header-vip,.header-sideItem:has(#nav_game),.qy-plist-ad,#btn_gameBtn
+iqiyi.com##[class$="_ad"],[class^="ad-"],[class$="-ad"]
+iqiyi.com###marketing_bk
+iqiyi.com###bottom_banner_ad_bk
+iqiyi.com###games_bk
+iqiyi.com###meta_info_bk [class*="meta_loginTips"]
+iqiyi.com###video [class*="webHead_playInClient"]
+iqiyi.com##[class*="pages_side"] li:has(i[style*=".png"])
+iqiyi.com##a:has(.ad-item-proxy)
+iqiyi.com###list a[href*="ads.game.iqiyi.com"]
+iqiyi.com###list a[href*="shouyou.xy.com"]
+iqiyi.com###list a[href*="rxcq.4366pk.com"]
+iqiyi.com###list a[href*="wy.668wan.com"]
+iqiyi.com###list a[href*="wy.602.com"]
+iqiyi.com##[class*="flex-resp_cardRespItem"]:has(a[href*="ads.game.iqiyi.com"])
+iqiyi.com##[class*="flex-resp_cardRespItem"]:has(a[href*="shouyou.xy.com"])
+iqiyi.com##[class*="flex-resp_cardRespItem"]:has(a[href*="rxcq.4366pk.com"])
+iqiyi.com##[class*="flex-resp_cardRespItem"]:has(a[href*="wy.668wan.com"])
+iqiyi.com##[class*="flex-resp_cardRespItem"]:has(a[href*="wy.602.com"])
+iqiyi.com##[class*="film-feed_filmFeed"]:has(a[href*="ads.game.iqiyi.com"])
+iqiyi.com##[class*="film-feed_filmFeed"]:has(a[href*="shouyou.xy.com"])
+iqiyi.com##[class*="film-feed_filmFeed"]:has(a[href*="rxcq.4366pk.com"])
+iqiyi.com##[class*="film-feed_filmFeed"]:has(a[href*="wy.668wan.com"])
+iqiyi.com##[class*="film-feed_filmFeed"]:has(a[href*="wy.602.com"])
+iqiyi.com##[class*="flex-resp_cardRespRows"]:has(img[src*="ad.svg"])
+iqiyi.com##[class*="comp-funcs_simpleWrap"] div[id*="game"]
 m.iqiyi.com##.m-iqyGuide-layer,#home_tongyong,.m-box[name="m-recList"],#player_bottom,.m-iqylink-diversion,[class^="ChannelHomeBanner_"]
 iqiyi.com#%#//scriptlet("set-constant", "QiyiPlayerProphetData.a.data.showResponse.slots", "emptyObj")
 iqiyi.com#%#//scriptlet("set-constant", "Object.prototype.blackscreenDuration", "1")
@@ -52,6 +76,8 @@ iqiyi.com#%#//scriptlet("set-constant", "Object.prototype.adPlayerId", "")
 ||cupid.iqiyi.com/mixer?$domain=iqiyi.com
 ||static.iqiyi.com/js/common/mars_v.js^$script
 ||security.iqiyi.com/static/cook/v1/cooksdk.js
+static.g.iqiyi.com
+apisgame.iqiyi.com
 
 ! ---------芒果TV---------
 mgtv.com###sideFloatbtn,.rightnav .openvip,.proright .m-search-source,.vip-button.vip-button-padding,.sidebar-download
