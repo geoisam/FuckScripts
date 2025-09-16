@@ -53,7 +53,7 @@ iqiyi.com###bottom_banner_ad_bk
 iqiyi.com###games_bk
 iqiyi.com###btn_gameBtn
 iqiyi.com###meta_info_bk [class*="meta_loginTips"]
-iqiyi.com###img[src=*"watermark"]
+iqiyi.com##img[src*="watermark"]
 iqiyi.com###video [class*="webHead_playInClient"]
 iqiyi.com##[class*="pages_side"] li:has(i[style*=".png"])
 iqiyi.com##a:has(.ad-item-proxy)
