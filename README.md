@@ -40,7 +40,7 @@
 
 | Name | Expires | Github | Gitee |
 |:---:|:---:|:---:|:---:|
-| ADFUCK | 2 days | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/main/adsfuck.txt) | [下载](https://gitee.com/geoisam/FuckScripts/raw/main/adsfuck.txt) |
+| AdsFuck | 2 days | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/main/adsfuck.txt) | [下载](https://gitee.com/geoisam/FuckScripts/raw/main/adsfuck.txt) |
 
 ---
 
