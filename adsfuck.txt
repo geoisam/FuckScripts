@@ -46,11 +46,9 @@ youku.com#%#//scriptlet("adjust-setTimeout", "r--", "", "0.02")
 ! ---------爱奇艺---------
 iqiyi.com##.panel-item:has(a[href*="668wan."]),.panel-item:has(a[href*="game."]),.qy20-h-carousel__ad,.ad-ef,.ad-seed,.ad-screen,.ad-tl,.qy-mod-li:has([class*="vipact"]),.iqp-top-item:has(.tipWrap),.iqp-top-item.iqp-client-launcher,.meta-hot ~ .cont,.side-cont .btn-wrap,.header-sideItem.header-vip,.header-sideItem:has(#nav_game),.qy-plist-ad,#btn_gameBtn
 m.iqiyi.com##.m-iqyGuide-layer,#home_tongyong,.m-box[name="m-recList"],#player_bottom,.m-iqylink-diversion,[class^="ChannelHomeBanner_"]
-iqiyi.com#%#//scriptlet('set-constant', 'QiyiPlayerProphetData.a.data.showResponse.slots', 'emptyObj')
+iqiyi.com#%#//scriptlet("set-constant", "QiyiPlayerProphetData.a.data.showResponse.slots", "emptyObj")
 iqiyi.com#%#//scriptlet("set-constant", "Object.prototype.blackscreenDuration", "1")
-iqiyi.com##+js(set, Object.prototype.blackscreenDuration, 1)
-iqiyi.com##+js(set, QiyiPlayerProphetData.a.data, {})
-m.iqiyi.com##+js(set, Object.prototype.adPlayerId, "")
+iqiyi.com#%#//scriptlet("set-constant", "Object.prototype.adPlayerId", "")
 ||cupid.iqiyi.com/mixer?$domain=iqiyi.com
 ||static.iqiyi.com/js/common/mars_v.js^$script
 ||security.iqiyi.com/static/cook/v1/cooksdk.js
