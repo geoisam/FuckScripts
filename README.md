@@ -13,7 +13,7 @@
 
 | Name | GitHub | Gitee |
 |:---:|:---:|:---:|
-| ~~**可可影视播放器**~~ | [~~安装~~](https://raw.githubusercontent.com/geoisam/FuckScripts/main/可可影视播放器.user.js) | [~~安装~~](https://gitee.com/geoisam/FuckScripts/raw/main/可可影视播放器.user.js) |
+| ~~**可可影视播放器**~~ (已失效) | [~~安装~~](https://raw.githubusercontent.com/geoisam/FuckScripts/main/可可影视播放器.user.js) | [~~安装~~](https://gitee.com/geoisam/FuckScripts/raw/main/可可影视播放器.user.js) |
 | **微软必应优化助手** | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/微软必应优化助手.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/微软必应优化助手.user.js) |
 | **腾讯视频优化助手** | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/腾讯视频优化助手.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/腾讯视频优化助手.user.js) |
 | **BD网盘视频播放器（改）** | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/BD网盘视频播放器（改）.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/BD网盘视频播放器（改）.user.js) |
@@ -27,10 +27,10 @@
 |:---:|:---:|:---:|:---:|
 | **油猴中文网签到** | **Discuz**(DSU每日签到) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/油猴中文网签到.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/油猴中文网签到.user.js) |
 | **智能电视网签到** | **Discuz**(亮剑打卡签到) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/智能电视网签到.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/智能电视网签到.user.js) |
-| ~~**飘雪动漫社签到**~~ | ~~**Discuz**(西瓜微社区签到)~~ | ~~[安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/飘雪动漫社签到.user.js)~~ | ~~[安装](https://gitee.com/geoisam/FuckScripts/raw/main/飘雪动漫社签到.user.js)~~ |
+| ~~**飘雪动漫社签到**~~ (已失效) | ~~**Discuz**(西瓜微社区签到)~~ | ~~[安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/飘雪动漫社签到.user.js)~~ | ~~[安装](https://gitee.com/geoisam/FuckScripts/raw/main/飘雪动漫社签到.user.js)~~ |
 | **粤知缘动漫社签到** | **Discuz**(DC每日签到) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/粤知缘动漫社签到.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/粤知缘动漫社签到.user.js) |
-| ~~**MIUI历史版本签到**~~ | ~~**WordPress**~~ | ~~[安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/MIUI历史版本签到.user.js)~~ | ~~[安装](https://gitee.com/geoisam/FuckScripts/raw/main/MIUI历史版本签到.user.js)~~ |
-| ~~**微软积分商城签到**~~ | ~~**无**~~ | ~~[安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/微软积分商城签到.user.js)~~ | ~~[安装](https://gitee.com/geoisam/FuckScripts/raw/main/微软积分商城签到.user.js)~~ |
+| ~~**MIUI历史版本签到**~~ (已失效) | ~~**WordPress**~~ | ~~[安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/MIUI历史版本签到.user.js)~~ | ~~[安装](https://gitee.com/geoisam/FuckScripts/raw/main/MIUI历史版本签到.user.js)~~ |
+| ~~**微软积分商城签到**~~ (已失效) | ~~**无**~~ | ~~[安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/微软积分商城签到.user.js)~~ | ~~[安装](https://gitee.com/geoisam/FuckScripts/raw/main/微软积分商城签到.user.js)~~ |
 
 ---
 
