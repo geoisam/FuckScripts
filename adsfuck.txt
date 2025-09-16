@@ -17,10 +17,13 @@
 
 
 ! ---------必应搜索---------
-bing.com##[class$="_ad"],[class^="ad_"],[class^="ads_"],.ad_sc,.adsblock,#ads_banner,#sacs_win,.b_vfly,.b_bza_pole,li.b_algo:has(.b_attribution[data-partnertag]),li.b_algo[style],li:has([class*="_adTA"]),.b_hPanel:has([class*="bingApp_"]),.sidebar:has(.ads_dwn),#bgPro,#b_pole,#id_mobile,#suspenBar,#b_opalpers,#bnp_idh_fly,#bnp_ttc_div,#bnp_rich_div,#b_ims_bza_pole,#ev_talkbox_wrapper,#idCont [id*="id_qrcode"],#b_notificationContainer_bop,.cn_related_search_upsell_container,li.b_ans:has(#opal_serpftrcta),li:has(.b_adSlug),.b_ad
+bing.com##[class$="_ad"],[class^="ad_"],[class^="ads_"]
+bing.com##.adsblock,#ads_banner,#sacs_win,.b_vfly,.b_bza_pole,li.b_algo:has(.b_attribution[data-partnertag]),li.b_algo[style],li:has([class*="_adTA"]),.b_hPanel:has([class*="bingApp_"]),.sidebar:has(.ads_dwn),#bgPro,#b_pole,#id_mobile,#suspenBar,#b_opalpers,#bnp_idh_fly,#bnp_ttc_div,#bnp_rich_div,#b_ims_bza_pole,#ev_talkbox_wrapper,#idCont [id*="id_qrcode"],#b_notificationContainer_bop,.cn_related_search_upsell_container,li.b_ans:has(#opal_serpftrcta),li:has(.b_adSlug),.b_ad
+
 
 ! ---------腾讯视频---------
-v.qq.com,film.qq.com##.link_vip.__open_vip_tv,.playlist-vip-section__vip,[id^="ad_"],[class$="-ad"],[class$="_ad"],[id^="iwan-game"],#iwan-game,#iwan-game-pendant,#iwan-game-recommends,#iwan-gamependant-page,#iwan-gamesearchrank-page,a[href*="qqgame."],a[href*="iwan."],.video-banner:has([data-ckey*="qqgame.qq.com"]),.video-banner:has([data-ckey*="iwan.qq.com"]),.video-card-wrap:has(.ad-flag),.focus-list__item:has(.poster-ad),.focus-title-wrap:has([class*="ad-"]),.video-card-module [dt-params*="ad_"],.video-focus[dt-params=""] .focus-img,.client_download,.tip_download,.fixed_box,.vip_act,#ad_pc-index-vip-tips,#channel-vip-popup,#video-search-ad,#ad_container,#ad_m-site,.game-switch-ad,.banner-ad,.txp_ad,.player-comment-btn,.preview-mini-player,iframe[data-src*="mall."],[class*="txp_full_screen_pause"],[data-role*="creative-player-pause"],.open-app.old-open,.vip-adv-wrapper,.bottom-wrapper,.at-app-banner,.quick_games
+v.qq.com,film.qq.com##[class$="_ad"],[class$="-ad"],[id^="ad_"],[id$="-ad"]
+v.qq.com,film.qq.com##.link_vip.__open_vip_tv,.playlist-vip-section__vip,[id^="iwan-game"],#iwan-game,#iwan-game-pendant,#iwan-game-recommends,#iwan-gamependant-page,#iwan-gamesearchrank-page,a[href*="qqgame."],a[href*="iwan."],.video-banner:has([data-ckey*="qqgame.qq.com"]),.video-banner:has([data-ckey*="iwan.qq.com"]),.video-card-wrap:has(.ad-flag),.focus-list__item:has(.poster-ad),.focus-title-wrap:has([class*="ad-"]),.video-card-module [dt-params*="ad_"],.video-focus[dt-params=""] .focus-img,.client_download,.tip_download,.fixed_box,.vip_act,#channel-vip-popup,.player-comment-btn,.preview-mini-player,iframe[data-src*="mall."],[class*="txp_full_screen_pause"],[data-role*="creative-player-pause"],.open-app.old-open,.vip-adv-wrapper,.bottom-wrapper,.at-app-banner,.quick_games
 v.qq.com#%#//scriptlet("set-constant", "CreativePlayerwebPlugin.AD_EVENT.AD_LOAD_START", "")
 v.qq.com#%#//scriptlet("set-constant", "CreativePlayerwebPlugin.AD_EVENT.AD_DESTROY", "")
 v.qq.com##+js(no-fetch-if, /(beacon|trace)\.qq\.com/)
