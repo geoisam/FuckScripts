@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
-! Title: ADSFUCK
-! Version: 2025091521
+! Title: AdsFuck
+! Version: 2025091618
 ! Expires: 2 days
 ! 👇👇过滤规则推荐👇👇
 ! 基础广告过滤：https://easylist-downloads.adblockplus.org/easylist.txt
@@ -23,26 +23,43 @@ bing.com##[class$="_ad"],[class^="ad_"],[class^="ads_"],.ad_sc,.adsblock,#ads_ba
 v.qq.com,film.qq.com##.link_vip.__open_vip_tv,.playlist-vip-section__vip,[id^="ad_"],[class$="-ad"],[class$="_ad"],[id^="iwan-game"],#iwan-game,#iwan-game-pendant,#iwan-game-recommends,#iwan-gamependant-page,#iwan-gamesearchrank-page,a[href*="qqgame."],a[href*="iwan."],.video-banner:has([data-ckey*="qqgame.qq.com"]),.video-banner:has([data-ckey*="iwan.qq.com"]),.video-card-wrap:has(.ad-flag),.focus-list__item:has(.poster-ad),.focus-title-wrap:has([class*="ad-"]),.video-card-module [dt-params*="ad_"],.video-focus[dt-params=""] .focus-img,.client_download,.tip_download,.fixed_box,.vip_act,#ad_pc-index-vip-tips,#channel-vip-popup,#video-search-ad,#ad_container,#ad_m-site,.game-switch-ad,.banner-ad,.txp_ad,.player-comment-btn,.preview-mini-player,iframe[data-src*="mall."],[class*="txp_full_screen_pause"],[data-role*="creative-player-pause"],.open-app.old-open,.vip-adv-wrapper,.bottom-wrapper,.at-app-banner,.quick_games
 v.qq.com#%#//scriptlet("set-constant", "CreativePlayerwebPlugin.AD_EVENT.AD_LOAD_START", "")
 v.qq.com#%#//scriptlet("set-constant", "CreativePlayerwebPlugin.AD_EVENT.AD_DESTROY", "")
-||pgdt.gtimg.cn^
+v.qq.com##+js(no-fetch-if, /(beacon|trace)\.qq\.com/)
+||pgdt.gtimg.cn^$image
+||beacon.qq.com^$ping
+||trace.qq.com^$image,ping
+||beacon.cdn.qq.com/*/beacon_web.min.js^$script
+||v.qq.com/pwa-sw.js^$script
+||v.qq.com/cache/wuji/object^$script
+||v.qq.com/thumbplayer-offline-log.html^$subdocument
+||mall.video.qq.com/m/activity/h5/$subdocument
+||mark.l.qq.com/fcgi-bin/get_video_mark_all?$script
+||vfiles.gtimg.cn/tvideo/js/new_ping_video.js^$script
 
 ! ---------优酷---------
 youku.com##.vip_vip_wrap,.newswiper_sub_item_box:has(a[href*="tg.602."]),.ad-wrap,.fee-wrap-new.full-mode,.youku-advertise,.youku-advertise-layer,.youku-advertise-tip,.kui-vip-entrance-0,.ad-banner-wrapper,.callEnd_box,.callEnd_fixed_box
 m.youku.com##.clipboard.h5-detail-guide,.clipboard.h5-detail-vip-guide
-youku.com#%#//scriptlet('adjust-setTimeout', 'e-', '', '0.02')
-youku.com#%#//scriptlet('adjust-setTimeout', 'r--', '', '0.02')
-||cibntv.net/youku/*.mp4?$media,redirect=empty,domain=youku.com,important
+youku.com#%#//scriptlet("adjust-setTimeout", "e-", "", "0.02")
+youku.com#%#//scriptlet("adjust-setTimeout", "r--", "", "0.02")
+||alicdn.com/*yksdk/*sdk.js$script,domain=youku.com
+||alicdn.com/awsc/et/$script
 
 ! ---------爱奇艺---------
 iqiyi.com##.panel-item:has(a[href*="668wan."]),.panel-item:has(a[href*="game."]),.qy20-h-carousel__ad,.ad-ef,.ad-seed,.ad-screen,.ad-tl,.qy-mod-li:has([class*="vipact"]),.iqp-top-item:has(.tipWrap),.iqp-top-item.iqp-client-launcher,.meta-hot ~ .cont,.side-cont .btn-wrap,.header-sideItem.header-vip,.header-sideItem:has(#nav_game),.qy-plist-ad,#btn_gameBtn
 m.iqiyi.com##.m-iqyGuide-layer,#home_tongyong,.m-box[name="m-recList"],#player_bottom,.m-iqylink-diversion,[class^="ChannelHomeBanner_"]
 iqiyi.com#%#//scriptlet('set-constant', 'QiyiPlayerProphetData.a.data.showResponse.slots', 'emptyObj')
 iqiyi.com#%#//scriptlet("set-constant", "Object.prototype.blackscreenDuration", "1")
+iqiyi.com##+js(set, Object.prototype.blackscreenDuration, 1)
+iqiyi.com##+js(set, QiyiPlayerProphetData.a.data, {})
+m.iqiyi.com##+js(set, Object.prototype.adPlayerId, "")
 ||cupid.iqiyi.com/mixer?$domain=iqiyi.com
+||static.iqiyi.com/js/common/mars_v.js^$script
+||security.iqiyi.com/static/cook/v1/cooksdk.js
 
 ! ---------芒果TV---------
 mgtv.com###sideFloatbtn,.rightnav .openvip,.proright .m-search-source,.vip-button.vip-button-padding,.sidebar-download
 m.mgtv.com##.ReactModalPortal,[class*="OpenApp"],.open-app-popup,.ht.mgui-btn.mgui-btn-nowelt,.mg-down-btn,.m-vip-list,.m-vip-list + div
-||da.mgtv.com^
+||da.mgtv.com^$image
+||video.da.mgtv.com/$media
 
 ! ---------123云盘---------
 123pan.com,123pan.cn,123684.com,123865.com,123912.com,123957.com##.advBanner,[class*="adv-container"],[class*="banner-container"],[class*="banner_guide"],#top_container,#banner_container,.banner_all_wrap,.ant-carousel,.btn_reward,[class*="header-waning-tips"],.loginModal-footer.payment-footer,.activity-box,.bg_svip_block_ads,.uppy-Dashboard-slowSpeed-banner,.ant-modal-content .download-msgInfo-phone,.download-pay-footer
