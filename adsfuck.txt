@@ -36,12 +36,15 @@ v.qq.com##+js(no-fetch-if, /(beacon|trace)\.qq\.com/)
 ||vfiles.gtimg.cn/tvideo/js/new_ping_video.js^$script
 
 ! ---------优酷---------
-youku.com##.vip_vip_wrap,.newswiper_sub_item_box:has(a[href*="tg.602."]),.ad-wrap,.fee-wrap-new.full-mode,.youku-advertise,.youku-advertise-layer,.youku-advertise-tip,.kui-vip-entrance-0,.ad-banner-wrapper,.callEnd_box,.callEnd_fixed_box
+youku.com##.cardContentVip
+youku.com##.kui-watermark-0
+youku.com###playerMouseWheel
 m.youku.com##.clipboard.h5-detail-guide,.clipboard.h5-detail-vip-guide
 youku.com#%#//scriptlet("adjust-setTimeout", "e-", "", "0.02")
 youku.com#%#//scriptlet("adjust-setTimeout", "r--", "", "0.02")
-||alicdn.com/*yksdk/*sdk.js$script,domain=youku.com
-||alicdn.com/awsc/et/$script
+||acg.youku.com/webfile/$image
+||youku.com/adm-creative-manage/$image
+||ott.cibntv.net/youku/$media
 
 ! ---------爱奇艺---------
 iqiyi.com##[class$="_ad"],[class^="ad-"],[class$="-ad"]
@@ -50,6 +53,7 @@ iqiyi.com###bottom_banner_ad_bk
 iqiyi.com###games_bk
 iqiyi.com###btn_gameBtn
 iqiyi.com###meta_info_bk [class*="meta_loginTips"]
+iqiyi.com###img[src=*"watermark"]
 iqiyi.com###video [class*="webHead_playInClient"]
 iqiyi.com##[class*="pages_side"] li:has(i[style*=".png"])
 iqiyi.com##a:has(.ad-item-proxy)
@@ -74,9 +78,6 @@ m.iqiyi.com##.m-iqyGuide-layer,#home_tongyong,.m-box[name="m-recList"],#player_b
 iqiyi.com#%#//scriptlet("set-constant", "QiyiPlayerProphetData.a.data.showResponse.slots", "emptyObj")
 iqiyi.com#%#//scriptlet("set-constant", "Object.prototype.blackscreenDuration", "1")
 iqiyi.com#%#//scriptlet("set-constant", "Object.prototype.adPlayerId", "")
-||cupid.iqiyi.com/mixer?$domain=iqiyi.com
-||static.iqiyi.com/js/common/mars_v.js^$script
-||security.iqiyi.com/static/cook/v1/cooksdk.js
 static.g.iqiyi.com
 apisgame.iqiyi.com
 
