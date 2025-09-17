@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Title: AdsFuck
-! Version: 2025091716
+! Version: 2025091721
 ! Expires: 2 days
 ! 👇👇过滤规则推荐👇👇
 ! 基础广告过滤: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_2_Base/filter.txt
@@ -78,15 +78,15 @@ m.mgtv.com##.ReactModalPortal,[class*="OpenApp"],.open-app-popup,.ht.mgui-btn.mg
 ||video.da.mgtv.com/$media
 
 ! ---------123云盘---------
-123pan.com,123pan.cn,123684.com,123865.com,123912.com,123957.com##.advBanner,[class*="adv-container"],[class*="banner-container"],[class*="banner_guide"],#top_container,#banner_container,.banner_all_wrap,.ant-carousel,.btn_reward,[class*="header-waning-tips"],.loginModal-footer.payment-footer,.activity-box,.bg_svip_block_ads,.uppy-Dashboard-slowSpeed-banner,.ant-modal-content .download-msgInfo-phone,.download-pay-footer
-123pan.com,123pan.cn,123684.com,123865.com,123912.com,123957.com#$#.contentBorder .conter { margin-bottom: 0 !important; }
-123pan.com,123pan.cn,123684.com,123865.com,123912.com,123957.com#$#.appBottomBtn.banner-bottom { bottom: 0 !important; }
-123pan.com,123pan.cn,123684.com,123865.com,123912.com,123957.com#$#.webbody.svip-body,.backgroundImage,.verifyBox { background-image: none !important; }
-123pan.com,123pan.cn,123684.com,123865.com,123912.com,123957.com#$#.verifyBox .leftCard { width: 100% !important; }
-123pan.com,123pan.cn,123684.com,123865.com,123912.com,123957.com#$#.contentBorder { height: calc(-64px + 100vh) !important;width: 100% !important;max-width: 100% !important;margin: auto !important;}
-123pan.com,123pan.cn,123684.com,123865.com,123912.com,123957.com#$#.contentBorder > div:not(.cleanNet) { width: 75%; }
-123pan.com,123pan.cn,123684.com,123865.com,123912.com,123957.com#$#.web-body .content { width: 100% !important;margin: auto !important;flex-direction: unset !important;justify-content: center; }
-123pan.com,123pan.cn,123684.com,123865.com,123912.com,123957.com#$#.content-layout-page { width: 75%; }
+123pan.com,123pan.cn,123684.com,123865.com,123912.com##.advBanner,[class*="adv-container"],[class*="banner-container"],[class*="banner_guide"],#top_container,#banner_container,.banner_all_wrap,.ant-carousel,.btn_reward,[class*="header-waning-tips"],.loginModal-footer.payment-footer,.activity-box,.bg_svip_block_ads,.uppy-Dashboard-slowSpeed-banner,.ant-modal-content .download-msgInfo-phone
+123pan.com,123pan.cn,123684.com,123865.com,123912.com#$#.contentBorder .conter { margin-bottom: 0 !important; }
+123pan.com,123pan.cn,123684.com,123865.com,123912.com#$#.appBottomBtn.banner-bottom { bottom: 0 !important; }
+123pan.com,123pan.cn,123684.com,123865.com,123912.com#$#.webbody.svip-body,.backgroundImage,.verifyBox { background-image: none !important; }
+123pan.com,123pan.cn,123684.com,123865.com,123912.com#$#.verifyBox .leftCard { width: 100% !important; }
+123pan.com,123pan.cn,123684.com,123865.com,123912.com#$#.contentBorder { height: calc(-64px + 100vh) !important;width: 100% !important;max-width: 100% !important;margin: auto !important;}
+123pan.com,123pan.cn,123684.com,123865.com,123912.com#$#.contentBorder > div:not(.cleanNet) { width: 75%; }
+123pan.com,123pan.cn,123684.com,123865.com,123912.com#$#.web-body .content { width: 100% !important;margin: auto !important;flex-direction: unset !important;justify-content: center; }
+123pan.com,123pan.cn,123684.com,123865.com,123912.com#$#.content-layout-page { width: 75%; }
 
 ! ---------APKMirror---------
 apkmirror.com##.ezo_ad,#bottom-slider,[class*="ains-apkm_"]:has(a.advertisement-text),.tab-content .t-height:has(#downloadCountdownBar)
