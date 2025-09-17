@@ -48,8 +48,8 @@ youku.com##.cardContentVip
 youku.com##.kui-watermark-0
 youku.com###playerMouseWheel
 m.youku.com##.clipboard.h5-detail-guide,.clipboard.h5-detail-vip-guide,.callEnd_box
-youku.com#%#//scriptlet("adjust-setTimeout", "e-", "", "0.02")
-youku.com#%#//scriptlet("adjust-setTimeout", "r--", "", "0.02")
+youku.com##+js(scriptlet, adjust-setTimeout, e-, 0.02)
+youku.com##+js(scriptlet, adjust-setTimeout, r--, 0.02)
 ||acg.youku.com/webfile/$image
 ||youku.com/adm-creative-manage/$image
 ||ott.cibntv.net/youku/$media
@@ -64,15 +64,15 @@ iqiyi.com##[class*="film-feed_filmFeed"]:has(a[href*="ads.game.iqiyi.com"]),[cla
 iqiyi.com##[class*="flex-resp_cardRespRows"]:has(img[src*="ad.svg"])
 iqiyi.com##[class*="comp-funcs_simpleWrap"] div[id*="game"]
 m.iqiyi.com##.m-iqyGuide-layer,#home_tongyong,.m-box[name="m-recList"],#player_bottom,.m-iqylink-diversion,[class^="ChannelHomeBanner_"],.m-iqiyi-common-banner
-iqiyi.com#%#//scriptlet("set-constant", "QiyiPlayerProphetData.a.data.showResponse.slots", "emptyObj")
-iqiyi.com#%#//scriptlet("set-constant", "Object.prototype.blackscreenDuration", "1")
-iqiyi.com#%#//scriptlet("set-constant", "Object.prototype.adPlayerId", "")
+iqiyi.com##+js(set-constant, "QiyiPlayerProphetData.a.data.showResponse.slots", "emptyObj")
+iqiyi.com##+js(set-constant, "Object.prototype.blackscreenDuration", "1")
+m.iqiyi.com##+js(set-constant, "Object.prototype.adPlayerId", "")
 static.g.iqiyi.com
 apisgame.iqiyi.com
 
 ! ---------芒果TV---------
 mgtv.com###sideFloatbtn,.rightnav .openvip,.proright .m-search-source,.vip-button.vip-button-padding,.sidebar-download
-m.mgtv.com##.ReactModalPortal,[class*="OpenApp"],.open-app-popup,.ht.mgui-btn.mgui-btn-nowelt,.mg-down-btn,.m-vip-list,.m-vip-list + div
+m.mgtv.com##.ReactModalPortal,[class*="OpenApp"],.open-app-popup,.ht.mgui-btn.mgui-btn-nowelt,.mg-down-btn,.m-vip-list,.m-vip-list + div,.vip-popover
 ||da.mgtv.com^$image
 ||video.da.mgtv.com/$media
 
