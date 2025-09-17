@@ -67,7 +67,6 @@ iqiyi.com##[class*="comp-funcs_simpleWrap"] div[id*="game"]
 m.iqiyi.com##.m-iqyGuide-layer,#home_tongyong,.m-box[name="m-recList"],#player_bottom,.m-iqylink-diversion,[class^="ChannelHomeBanner_"],.m-iqiyi-common-banner
 iqiyi.com##+js(set-constant, "QiyiPlayerProphetData.a.data.showResponse.slots", "emptyObj")
 iqiyi.com##+js(set-constant, "Object.prototype.blackscreenDuration", "1")
-m.iqiyi.com##+js(set-constant, "Object.prototype.adPlayerId", "")
 static.g.iqiyi.com
 apisgame.iqiyi.com
 
