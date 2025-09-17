@@ -50,7 +50,8 @@ youku.com###playerMouseWheel
 m.youku.com##.clipboard.h5-detail-guide,.clipboard.h5-detail-vip-guide,.callEnd_box
 youku.com#%#//scriptlet("adjust-setTimeout", "e-", "", "0.02")
 youku.com#%#//scriptlet('adjust-setTimeout', 'r--', '', '0.02')
-@@||m.youku.com^$script,domain=youku.com
+||ad.youku.com/vp?
+||alicdn.com^*yksdk/*sdk.js$script,domain=youku.com
 ||acg.youku.com/webfile/$image
 ||youku.com/adm-creative-manage/$image
 ||ott.cibntv.net/youku/$media
