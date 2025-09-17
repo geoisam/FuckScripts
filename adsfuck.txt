@@ -1,16 +1,16 @@
 [Adblock Plus 2.0]
 ! Title: AdsFuck
-! Version: 2025091715
+! Version: 2025091716
 ! Expires: 2 days
 ! 👇👇过滤规则推荐👇👇
-! 基础广告过滤：https://easylist-downloads.adblockplus.org/easylist.txt
-! 隐私保护过滤：https://easylist-downloads.adblockplus.org/easyprivacy.txt
-! 中文广告过滤：https://easylist-downloads.adblockplus.org/easylistchina.txt
-! 反拦截广告拦截：https://easylist-downloads.adblockplus.org/antiadblockfilters.txt
-! Cookie通知过滤：https://secure.fanboy.co.nz/fanboy-cookiemonster.txt
-! 骚扰拦截过滤：https://secure.fanboy.co.nz/fanboy-annoyance.txt
-! 恶意软件过滤：https://malware-filter.gitlab.io/urlhaus-filter/urlhaus-filter-ag-online.txt
-! 域名黑名单过滤：https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext
+! 基础广告过滤: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_2_Base/filter.txt
+! 隐私保护过滤: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_3_Spyware/filter.txt
+! 中文广告过滤: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_224_Chinese/filter.txt
+! 移动设备广告过滤: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_11_Mobile/filter.txt
+! 其他骚扰拦截过滤: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_21_Annoyances_Other/filter.txt
+! Cookie通知过滤: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_18_Annoyances_Cookies/filter.txt
+! 移动程序推广过滤: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_20_Annoyances_MobileApp/filter.txt
+! 反拦截广告拦截: https://easylist-downloads.adblockplus.org/antiadblockfilters.txt
 ! 👆👆过滤规则推荐👆👆
 ! Homepage: https://github.com/geoisam/FuckScripts
 ! *** geoisam@qq.com ***
@@ -31,6 +31,7 @@ v.qq.com,film.qq.com##iframe[data-src*="mall."],[class*="txp_full_screen_pause"]
 v.qq.com,film.qq.com##.open-app.old-open,.vip-adv-wrapper,.bottom-wrapper,.at-app-banner
 v.qq.com#%#//scriptlet("set-constant", "CreativePlayerwebPlugin.AD_EVENT.AD_LOAD_START", "")
 v.qq.com#%#//scriptlet("set-constant", "CreativePlayerwebPlugin.AD_EVENT.AD_DESTROY", "")
+qq.com#%#//scriptlet('json-prune', 'ads')
 v.qq.com##+js(no-fetch-if, /(beacon|trace)\.qq\.com/)
 ||pgdt.gtimg.cn^$image
 ||beacon.qq.com^$ping
@@ -46,9 +47,9 @@ v.qq.com##+js(no-fetch-if, /(beacon|trace)\.qq\.com/)
 ! ---------优酷---------
 youku.com##.cardContentVip,#playerMouseWheel,.kui-watermark-0,.kui-vipentrance-member-control-container
 m.youku.com##.clipboard.h5-detail-guide,.clipboard.h5-detail-vip-guide,.callEnd_box
-youku.com#%#//scriptlet("adjust-setTimeout", "e-", "", "0.02")
-youku.com#%#//scriptlet('adjust-setTimeout', 'r--', '', '0.02')
-||ad.youku.com/vp?
+youku.com#%#//scriptlet("set-constant", "Object.prototype._adData", "emptyObj")
+youku.com#%#//scriptlet("set-constant", "Object.prototype.adData", "emptyObj")
+youku.com#%#//scriptlet("adjust-setTimeout", "", "", "0.02")
 ||acg.youku.com/webfile/$image
 ||youku.com/adm-creative-manage/$image
 ||ott.cibntv.net/youku/$media
@@ -65,6 +66,7 @@ iqiyi.com##[class*="comp-funcs_simpleWrap"] div[id*="game"]
 m.iqiyi.com##.m-iqyGuide-layer,#home_tongyong,.m-box[name="m-recList"],#player_bottom,.m-iqylink-diversion,[class^="ChannelHomeBanner_"],.m-iqiyi-common-banner
 iqiyi.com#%#//scriptlet('set-constant', 'QiyiPlayerProphetData.a.data.showResponse.slots', 'emptyObj')
 iqiyi.com#%#//scriptlet("set-constant", "Object.prototype.blackscreenDuration", "1")
+iqiyi.com#%#//scriptlet('adjust-setInterval', 'adUI', '1000', '0.02')
 static.g.iqiyi.com
 apisgame.iqiyi.com
 
