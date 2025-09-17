@@ -35,7 +35,7 @@
 
 ---
 
-### \#\# 广告过滤（AdGuard）
+### \#\# 广告过滤（uBlock Origin / AdGuard / AdBlock Plus）
 
 > **🔥🔥网页广告过滤规则🔥🔥**
 
