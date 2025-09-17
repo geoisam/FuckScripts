@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Title: AdsFuck
-! Version: 2025091621
+! Version: 2025091714
 ! Expires: 2 days
 ! 👇👇过滤规则推荐👇👇
 ! 基础广告过滤：https://easylist-downloads.adblockplus.org/easylist.txt
@@ -47,7 +47,7 @@ v.qq.com##+js(no-fetch-if, /(beacon|trace)\.qq\.com/)
 youku.com##.cardContentVip
 youku.com##.kui-watermark-0
 youku.com###playerMouseWheel
-m.youku.com##.clipboard.h5-detail-guide,.clipboard.h5-detail-vip-guide
+m.youku.com##.clipboard.h5-detail-guide,.clipboard.h5-detail-vip-guide,.callEnd_box
 youku.com#%#//scriptlet("adjust-setTimeout", "e-", "", "0.02")
 youku.com#%#//scriptlet("adjust-setTimeout", "r--", "", "0.02")
 ||acg.youku.com/webfile/$image
@@ -63,7 +63,7 @@ iqiyi.com##[class*="flex-resp_cardRespItem"]:has(a[href*="ads.game.iqiyi.com"]),
 iqiyi.com##[class*="film-feed_filmFeed"]:has(a[href*="ads.game.iqiyi.com"]),[class*="film-feed_filmFeed"]:has(a[href*="shouyou.xy.com"]),[class*="film-feed_filmFeed"]:has(a[href*="rxcq.4366pk.com"]),[class*="film-feed_filmFeed"]:has(a[href*="wy.668wan.com"]),[class*="film-feed_filmFeed"]:has(a[href*="wy.602.com"])
 iqiyi.com##[class*="flex-resp_cardRespRows"]:has(img[src*="ad.svg"])
 iqiyi.com##[class*="comp-funcs_simpleWrap"] div[id*="game"]
-m.iqiyi.com##.m-iqyGuide-layer,#home_tongyong,.m-box[name="m-recList"],#player_bottom,.m-iqylink-diversion,[class^="ChannelHomeBanner_"]
+m.iqiyi.com##.m-iqyGuide-layer,#home_tongyong,.m-box[name="m-recList"],#player_bottom,.m-iqylink-diversion,[class^="ChannelHomeBanner_"],.m-iqiyi-common-banner
 iqiyi.com#%#//scriptlet("set-constant", "QiyiPlayerProphetData.a.data.showResponse.slots", "emptyObj")
 iqiyi.com#%#//scriptlet("set-constant", "Object.prototype.blackscreenDuration", "1")
 iqiyi.com#%#//scriptlet("set-constant", "Object.prototype.adPlayerId", "")
@@ -84,6 +84,8 @@ m.mgtv.com##.ReactModalPortal,[class*="OpenApp"],.open-app-popup,.ht.mgui-btn.mg
 123pan.com,123pan.cn,123684.com,123865.com,123912.com,123957.com#$#.verifyBox .leftCard { width: 100% !important; }
 123pan.com,123pan.cn,123684.com,123865.com,123912.com,123957.com#$#.contentBorder { height: calc(-64px + 100vh) !important;width: 100% !important;max-width: 100% !important;margin: auto !important;}
 123pan.com,123pan.cn,123684.com,123865.com,123912.com,123957.com#$#.contentBorder > div:not(.cleanNet) { width: 75%; }
+123pan.com,123pan.cn,123684.com,123865.com,123912.com,123957.com#$#.web-body .content { width: 100% !important;margin: auto !important;flex-direction: unset !important;justify-content: center; }
+123pan.com,123pan.cn,123684.com,123865.com,123912.com,123957.com#$#.content-layout-page { width: 75%; }
 
 ! ---------APKMirror---------
 apkmirror.com##.ezo_ad,#bottom-slider,[class*="ains-apkm_"]:has(a.advertisement-text),.tab-content .t-height:has(#downloadCountdownBar)
