@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Title: AdsFuck
-! Version: 2025091714
+! Version: 2025091715
 ! Expires: 2 days
 ! 👇👇过滤规则推荐👇👇
 ! 基础广告过滤：https://easylist-downloads.adblockplus.org/easylist.txt
@@ -29,8 +29,8 @@ v.qq.com,film.qq.com##.video-card-wrap:has(.ad-flag),.focus-list__item:has(.post
 v.qq.com,film.qq.com##.client_download,.tip_download,.fixed_box,.vip_act,#channel-vip-popup,.player-comment-btn,.preview-mini-player
 v.qq.com,film.qq.com##iframe[data-src*="mall."],[class*="txp_full_screen_pause"],[data-role*="creative-player-pause"]
 v.qq.com,film.qq.com##.open-app.old-open,.vip-adv-wrapper,.bottom-wrapper,.at-app-banner
-v.qq.com#%#//scriptlet("set-constant", "CreativePlayerwebPlugin.AD_EVENT.AD_LOAD_START", "")
-v.qq.com#%#//scriptlet("set-constant", "CreativePlayerwebPlugin.AD_EVENT.AD_DESTROY", "")
+v.qq.com##+js(set-constant, "CreativePlayerwebPlugin.AD_EVENT.AD_LOAD_START", "")
+v.qq.com##+js(set-constant, "CreativePlayerwebPlugin.AD_EVENT.AD_DESTROY", "")
 v.qq.com##+js(no-fetch-if, /(beacon|trace)\.qq\.com/)
 ||pgdt.gtimg.cn^$image
 ||beacon.qq.com^$ping
@@ -50,6 +50,7 @@ youku.com###playerMouseWheel
 m.youku.com##.clipboard.h5-detail-guide,.clipboard.h5-detail-vip-guide,.callEnd_box
 youku.com##+js(scriptlet, adjust-setTimeout, e-, 0.02)
 youku.com##+js(scriptlet, adjust-setTimeout, r--, 0.02)
+@@||m.youku.com^$script,domain=youku.com
 ||acg.youku.com/webfile/$image
 ||youku.com/adm-creative-manage/$image
 ||ott.cibntv.net/youku/$media
