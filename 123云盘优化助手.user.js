@@ -177,50 +177,69 @@
                     }
                     return arrX[Math.floor(Math.random() * arrX.length)]
                 }
-                try {
-                    const appVersion = getRandomItem(appVersionX, "empty appVersionX")
-                    const brand = getRandomItem(Object.keys(deviceBrands), "empty deviceBrands")
-                    const { os, versions: systemVersions } = deviceBrands[brand]
-                    const osVersion = getRandomItem(systemVersions, "empty systemVersions")
-                    return {
-                        ua: `123pan/v${appVersion.ver} (${os}_${osVersion};${brand})`,
-                        version: Number(appVersion.num),
-                        versionX: appVersion.ver,
-                        os
-                    }
-                } catch (e) {
-                    console.error("UserAgent Generation Error:", e)
-                    return {
-                        "ua": "123pan/v2.4.5 (iOS_16.0;Google)",
-                        "version": 67,
-                        "versionX": "2.4.5",
-                        "os": "Android"
-                    }
+                const appVersion = getRandomItem(appVersionX, "empty appVersionX")
+                const brand = getRandomItem(Object.keys(deviceBrands), "empty deviceBrands")
+                const { os, versions: systemVersions } = deviceBrands[brand]
+                const osVersion = getRandomItem(systemVersions, "empty systemVersions")
+                return {
+                    ua: `123pan/v${appVersion.ver} (${os}_${osVersion};${brand})`,
+                    version: Number(appVersion.num),
+                    versionX: appVersion.ver,
+                    os
                 }
             }
 
-            function modifyDownloadInfo(res, url) {
+            function modifyUserInfo(res) {
                 if (!res.data) return
-                let downloadUrl = res.data.DownloadUrl || res.data.DownloadURL
-                if (!downloadUrl) return
-                try {
-                    const originURL = new URL(downloadUrl)
-                    if (originURL.origin.includes("web-pro")) {
-                        const directURL = new URL(decodeURIComponent(atob(originURL.searchParams.get("params"))), originURL.origin)
-                        directURL.searchParams.set("auto_redirect", 0)
-                        originURL.searchParams.set("params", btoa(directURL.href))
-                        downloadUrl = originURL.href
+                res.data.IsShowAdvertisement = false
+            }
+
+            function modifyDownloadInfo(res, url) {
+                if (res?.code === 5113 || res?.code === 5114 || res?.message?.includes("下载流量已超出")) {
+                    res.data = null
+                    if (url.includes("batch_download")) {
+                        res.code = 400
+                        res.message = "请勿多选文件下载！已为您拦截付费弹窗"
                     } else {
-                        originURL.searchParams.set("auto_redirect", 0)
-                        const newURL = new URL("https://web-pro2.123952.com/download-v2/", originURL.origin)
-                        newURL.searchParams.set("params", btoa(encodeURI(originURL.href)))
-                        newURL.searchParams.set("is_s3", 0)
-                        downloadUrl = decodeURIComponent(newURL.href)
+                        res.code = 400
+                        res.message = "今日下载流量已超出限制！已为您拦截付费弹窗"
                     }
-                    if (res.data.DownloadUrl) res.data.DownloadUrl = downloadUrl
-                    if (res.data.DownloadURL) res.data.DownloadURL = downloadUrl
-                } catch (e) {
-                    console.error("Download URL Modification Error:", e)
+                    for (const key in res) {
+                        if (key !== "code" && key !== "message" && key !== "data") {
+                            delete res[key]
+                        }
+                    }
+                    return
+                }
+
+                if (res.data && (res.data.DownloadUrl || res.data.DownloadURL)) {
+                    try {
+                        const origKey = res.data.DownloadUrl ? "DownloadUrl" : "DownloadURL"
+                        const origURL = new URL(res.data[origKey])
+                        let finalURL
+                        if (origURL.origin.includes("web-pro")) {
+                            const params = ((url) => {
+                                try {
+                                    return decodeURIComponent(atob(url))
+                                } catch {
+                                    return atob(url)
+                                }
+                            })(origURL.searchParams.get("params"))
+                            const directURL = new URL(params, origURL.origin)
+                            directURL.searchParams.set("auto_redirect", 0)
+                            origURL.searchParams.set("params", btoa(directURL.href))
+                            finalURL = decodeURIComponent(origURL.href)
+                        } else {
+                            origURL.searchParams.set("auto_redirect", 0)
+                            const newURL = new URL("https://web-pro2.123952.com/download-v2/ ", origURL.origin)
+                            newURL.searchParams.set("params", btoa(encodeURI(origURL.href)))
+                            newURL.searchParams.set("is_s3", 0)
+                            finalURL = decodeURIComponent(newURL.href)
+                        }
+                        res.data[origKey] = finalURL
+                    } catch (e) {
+                        console.error("Download URL Modification Error:", e)
+                    }
                 }
             }
 
@@ -232,10 +251,29 @@
                 } catch (e) {
                     return
                 }
-                if (xhr.url.includes("file/download_info") ||
-                    xhr.url.includes("share/download_info") ||
-                    xhr.url.includes("file/batch_download_info")) {
+                if (xhr.url.includes("api/user/info")) {
+                    modifyUserInfo(res)
+                }
+                if (["file/download_info", "share/download/info", "file/batch_download_info", "file/batch_download_share_info"].some(path => xhr.url.includes(path))) {
                     modifyDownloadInfo(res, xhr.url)
+                }
+                if (res) {
+                    if (!xhr._responseModified) {
+                        xhr._responseModified = true
+                        const responseText = JSON.stringify(res)
+                        Object.defineProperties(xhr, {
+                            "response": {
+                                configurable: true,
+                                enumerable: true,
+                                get: () => responseText
+                            },
+                            "responseText": {
+                                configurable: true,
+                                enumerable: true,
+                                get: () => responseText
+                            }
+                        })
+                    }
                 }
             }
 
@@ -259,6 +297,11 @@
 
                 xhr.setRequestHeader = function (header, value) {
                     try {
+                        if (this.url && ["download_info", "batch_download_info", "share/download/info", "file/batch_download_share_info"].some(path => this.url.includes(path))) {
+                            if (header.toLowerCase() === "platform") {
+                                value = "ios"
+                            }
+                        }
                         const info = fakeData()
                         const headers = {
                             "user-agent": info.ua,
@@ -301,7 +344,6 @@
                     try {
                         return originalAtob(decodeURIComponent(str))
                     } catch (e) {
-                        console.error(e)
                         return originalAtob(str)
                     }
                 }
