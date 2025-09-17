@@ -39,6 +39,14 @@
 
 > **🔥🔥网页广告过滤规则🔥🔥**
 
+- ✅ 微软必应
+- ✅ 腾讯视频
+- ✅ 优酷
+- ✅ 爱奇艺
+- ✅ 芒果TV
+- ✅ 123云盘
+- ✅ APKMirror
+
 | Name | Expires | Github | Gitee |
 |:---:|:---:|:---:|:---:|
 | AdsFuck | 2 days | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/main/adsfuck.txt) | [下载](https://gitee.com/geoisam/FuckScripts/raw/main/adsfuck.txt) |
