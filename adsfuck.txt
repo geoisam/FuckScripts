@@ -89,5 +89,5 @@ m.mgtv.com##.ReactModalPortal,[class*="OpenApp"],.open-app-popup,.ht.mgui-btn.mg
 
 ! ---------APKMirror---------
 apkmirror.com##.ezo_ad,#bottom-slider,[class*="ains-apkm_"]:has(a.advertisement-text),.tab-content .t-height:has(#downloadCountdownBar)
-apkmirror.com#$#a.accent_bg.downloadButton { pointer-events: auto !important;background-color: #6dc385 !important; }
+apkmirror.com#$#a.accent_bg.downloadButton { pointer-events: auto !important;background-color: #4ab367 !important; }
 apkmirror.com#$#a.accent_bg.downloadButton:hover { cursor: pointer !important; }
