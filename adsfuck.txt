@@ -1,17 +1,17 @@
 [Adblock Plus 2.0]
 ! Title: AdsFuck
-! Version: 2025091721
+! Version: 2025091722
 ! Expires: 2 days
 ! 👇👇过滤规则推荐👇👇
 ! 基础广告过滤: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_2_Base/filter.txt
-! 隐私保护过滤: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_3_Spyware/filter.txt
+! 隐私保护: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_3_Spyware/filter.txt
 ! 中文广告过滤: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_224_Chinese/filter.txt
 ! 移动设备广告过滤: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_11_Mobile/filter.txt
-! 其他骚扰拦截过滤: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_21_Annoyances_Other/filter.txt
-! Cookie通知过滤: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_18_Annoyances_Cookies/filter.txt
-! 反拦截广告拦截: https://easylist-downloads.adblockplus.org/antiadblockfilters.txt
-! 恶意软件过滤：https://malware-filter.gitlab.io/urlhaus-filter/urlhaus-filter-ag-online.txt
-! 域名黑名单过滤：https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext
+! 骚扰拦截: https://secure.fanboy.co.nz/fanboy-annoyance.txt
+! Cookie通知过滤: https://secure.fanboy.co.nz/fanboy-cookiemonster.txt
+! 反广告拦截警告: https://easylist-downloads.adblockplus.org/antiadblockfilters.txt
+! 恶意软件：https://malware-filter.gitlab.io/urlhaus-filter/urlhaus-filter-ag-online.txt
+! 域名黑名单：https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext
 ! 👆👆过滤规则推荐👆👆
 ! Homepage: https://github.com/geoisam/FuckScripts
 ! *** geoisam@qq.com ***
