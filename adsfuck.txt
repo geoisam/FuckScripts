@@ -11,6 +11,8 @@
 ! Cookie通知过滤: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_18_Annoyances_Cookies/filter.txt
 ! 移动程序推广过滤: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_20_Annoyances_MobileApp/filter.txt
 ! 反拦截广告拦截: https://easylist-downloads.adblockplus.org/antiadblockfilters.txt
+! 恶意软件过滤：https://malware-filter.gitlab.io/urlhaus-filter/urlhaus-filter-ag-online.txt
+! 域名黑名单过滤：https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext
 ! 👆👆过滤规则推荐👆👆
 ! Homepage: https://github.com/geoisam/FuckScripts
 ! *** geoisam@qq.com ***
