@@ -230,7 +230,7 @@
                         runat: "header",
                         match: (url) => ["file/download_info", "file/batch_download_info", "share/download/info", "file/batch_download_share_info"].some(path => url.pathname.includes(path)),
                         action: (res, url) => {
-                            res.platform = "android"
+                            res.platform = Math.random() < 0.5 ? "android" : "ios"
                             return res
                         }
                     },
