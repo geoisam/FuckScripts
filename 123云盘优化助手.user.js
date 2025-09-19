@@ -108,6 +108,7 @@
         },
 
         autoGoGoGo() {
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|Opera Mini|Mobile/i.test(navigator.userAgent)
             const optionNames = pjs.option.map(item => item.name)
             optionNames.forEach(name => {
                 const targetItem = pjs.option.find(item => item.name === name)
