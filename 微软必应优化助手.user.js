@@ -21,6 +21,7 @@
 
 
 (function () {
+    "use strict";
     
     const pjs = {
         option: [{
