@@ -22,228 +22,231 @@
 // ==/UserScript==
 
 
-const pjs = {
-    option: [{
-        name: "only_history_message",
-        value: true
-    }, {
-        name: "display_barrage_none",
-        value: true
-    }, {
-        name: "remove_watermark_logo",
-        value: true
-    }, {
-        name: "filter_grayscale_zero",
-        value: true
-    }],
-    getValue(name, value) {
-        return GM_getValue(name, value)
-    },
-    setValue(name, value) {
-        GM_setValue(name, value)
+(function () {
+    
+    const pjs = {
+        option: [{
+            name: "only_history_message",
+            value: true
+        }, {
+            name: "display_barrage_none",
+            value: true
+        }, {
+            name: "remove_watermark_logo",
+            value: true
+        }, {
+            name: "filter_grayscale_zero",
+            value: true
+        }],
+        getValue(name, value) {
+            return GM_getValue(name, value)
+        },
+        setValue(name, value) {
+            GM_setValue(name, value)
+        }
     }
-}
-
-const main = {
-    initValue() {
-        pjs.option.forEach((v) => {
-            pjs.getValue(v.name) === undefined && pjs.setValue(v.name, v.value)
-        })
-    },
-
-    addPluginStyle() {
-        GM_addStyle(`
-.swal2-title { margin-bottom: 1.25em !important;}
-.pjs-popup { font-size: 14px !important;font-weight: bold !important;}
-.pjs-setting-label { display: flex;align-items: center;justify-content: space-between;padding: 12px 0;}
-.pjs-setting-label input[type="checkbox"] { position: absolute;opacity: 0;width: 0;height: 0;}
-.pjs-setting-checkbox { position: relative;display: inline-block;width: 48px;height: 26px;background-color: #e0e0e0;border-radius: 19px;transition: background-color 0.3s;}
-.pjs-setting-checkbox::before { content: "";position: absolute;left: 2px;top: 2px;width: 22px;height: 22px;background-color: #fff;border-radius: 50%;box-shadow: 0 2px 4px rgba(0,0,0,0.3);transition: transform 0.3s;}
-.pjs-setting-label input:checked + .pjs-setting-checkbox { background-color: #7066e0;}
-.pjs-setting-label input:checked + .pjs-setting-checkbox::before { transform: translateX(22px);}
-`)
-        GM_addStyle(GM_getResourceText("swalStyle"))
-    },
-
-    registerMenuCommand() {
-        GM_registerMenuCommand("⚙️ 设置", () => {
-            let dom = `<div>
-<label class="pjs-setting-label">导航只显示历史和消息<input type="checkbox" id="S-Quick" ${pjs.getValue("only_history_message") ? "checked" : ""} "><span class="pjs-setting-checkbox"></span></label>
-<label class="pjs-setting-label">隐藏视频弹幕相关内容<input type="checkbox" id="S-Danmu" ${pjs.getValue("display_barrage_none") ? "checked" : ""} "><span class="pjs-setting-checkbox"></span></label>
-<label class="pjs-setting-label">移除视频右上角LOGO水印<input type="checkbox" id="S-Logo" ${pjs.getValue("remove_watermark_logo") ? "checked" : ""} "><span class="pjs-setting-checkbox"></span></label>
-<label class="pjs-setting-label">移除哀悼日网站灰度效果<input type="checkbox" id="S-Gray" ${pjs.getValue("filter_grayscale_zero") ? "checked" : ""} "><span class="pjs-setting-checkbox"></span></label>
-</div>`
-
-            Swal.fire({
-                title: "WeTV Config",
-                html: dom,
-                showCloseButton: true,
-                confirmButtonText: "保存",
-                footer: `<div style="text-align: center;font-size: 1em;">✨ 助手免费开源　谨防上当受骗 ✨</div>`,
-                customClass: {
-                    popup: "pjs-popup",
-                },
-            }).then((res) => {
-                if (res.isConfirmed) {
-                    pjs.option.forEach((v) => {
-                        pjs.setValue(v.name, v.value)
-                    })
-                    history.go(0)
-                }
+    
+    const main = {
+        initValue() {
+            pjs.option.forEach((v) => {
+                pjs.getValue(v.name) === undefined && pjs.setValue(v.name, v.value)
             })
-
-            document.querySelector("#S-Quick").addEventListener("change", (e) => {
-                const targetItem = pjs.option.find(item => item.name == "only_history_message")
-                targetItem.value = e.currentTarget.checked
-            })
-            document.querySelector("#S-Danmu").addEventListener("change", (e) => {
-                const targetItem = pjs.option.find(item => item.name == "display_barrage_none")
-                targetItem.value = e.currentTarget.checked
-            })
-            document.querySelector("#S-Logo").addEventListener("change", (e) => {
-                const targetItem = pjs.option.find(item => item.name == "remove_watermark_logo")
-                targetItem.value = e.currentTarget.checked
-            })
-            document.querySelector("#S-Gray").addEventListener("change", (e) => {
-                const targetItem = pjs.option.find(item => item.name == "filter_grayscale_zero")
-                targetItem.value = e.currentTarget.checked
-            })
-        })
-    },
-
-    autoGoGoGo() {
-        const isMobile = /Android|webOS|iPhone|iPad|iPod|Opera Mini|Mobile/i.test(navigator.userAgent)
-        const optionNames = pjs.option.map(item => item.name)
-        optionNames.forEach(name => {
-            const targetItem = pjs.option.find(item => item.name === name)
-            if (targetItem) targetItem.value = pjs.getValue(name)
-        })
-
-        GM_addStyle(`
-.link_vip.__open_vip_tv,
-.playlist-vip-section__vip,
-[id^="ad_"],
-[class$="-ad"],
-[class$="_ad"],
-[id^="iwan-game"],
-#iwan-game,
-#iwan-game-pendant,
-#iwan-game-recommends,
-#iwan-gamependant-page,
-#iwan-gamesearchrank-page,
-a[href*="qqgame."],
-a[href*="iwan."],
-.video-banner:has([data-ckey*="qqgame.qq.com"]),
-.video-banner:has([data-ckey*="iwan.qq.com"]),
-.video-card-wrap:has(.ad-flag),
-.focus-list__item:has(.poster-ad),
-.focus-title-wrap:has([class*="ad-"]),
-.video-card-module [dt-params*="ad_"],
-.video-focus[dt-params=""] .focus-img,
-.client_download,
-.tip_download,
-.fixed_box,
-.vip_act,
-#ad_pc-index-vip-tips,
-#channel-vip-popup,
-#video-search-ad,
-#ad_container,
-#ad_m-site,
-.game-switch-ad,
-.banner-ad,
-.txp_ad,
-.player-comment-btn,
-.preview-mini-player,
-iframe[data-src*="mall."],
-[class*="txp_full_screen_pause"],
-[data-role*="creative-player-pause"],
-.open-app.old-open,
-.vip-adv-wrapper,
-.bottom-wrapper,
-.at-app-banner,
-.quick_games
-{
-    display: none !important;
-}
-`)
-
-        if (pjs.getValue("only_history_message")) {
-            GM_addStyle(`.quick_app,.quick_client,.quick_create,.quick_access,.quick_vip { display: none !important; }`)
-        }
-
-        if (pjs.getValue("display_barrage_none")) {
-            GM_addStyle(`[class*="-barrage"],[class*="barrage-"] { display: none !important; }`)
-            if (!isMobile) {
-                GM_addStyle(`iframe[src*="vfiles.gtimg.cn/tvideo/libcocos-frame"] { display: none !important; }`)
-            }
-        }
-
-        if (pjs.getValue("remove_watermark_logo")) {
-            const t = setInterval(() => {
-                const d = document.querySelector(`.txp-watermark[data-role="txp-ui-watermark-mod"]`)
-                if (d) {
-                    d.remove()
-                }
-            }, 1e3)
-            setTimeout(() => {
-                clearInterval(t)
-            }, 9e3)
-        }
-
-        if (pjs.getValue("filter_grayscale_zero")) {
-            GM_addStyle(`.gray-style-remembrance { -webkit-filter: grayscale(0) !important;filter: grayscale(0) !important; }`)
-        }
-
-        window.addEventListener("DOMContentLoaded", () => {
-            let runme = null
-            clearAd()
-            window.addEventListener("pushState", () => {
-                clearInterval(runme)
-                clearAd()
-            })
-            function clearAd() {
-                runme = setInterval(() => {
-                    let tvads = document.querySelectorAll(".txp_ad video")
-                    tvads.forEach(ad => {
-                        try {
-                            if (ad.duration !== ad.currentTime) {
-                                ad.setAttribute("src", "")
-                                ad.style.display = "none"
-                            }
-                        } catch (e) {
-                            console.log(e)
-                        }
-                    })
-                }, 100)
-                let tcads = document.querySelectorAll(".txp_ad_control")
-                tcads.forEach(item => {
-                    item.style.display = "none"
-                })
-            }
-
-            const player = document.querySelectorAll(".txp_videos_container")
-            if (player.length != 0) {
-                const observerConfig = {
-                    attributes: true,
-                    attributeFilter: ['style'],
-                }, observer = new MutationObserver((mutationsList, observer) => {
-                    for (const mutation of mutationsList) {
-                        mutation.target.removeAttribute("style")
+        },
+    
+        addPluginStyle() {
+            GM_addStyle(`
+    .swal2-title { margin-bottom: 1.25em !important;}
+    .pjs-popup { font-size: 14px !important;font-weight: bold !important;}
+    .pjs-setting-label { display: flex;align-items: center;justify-content: space-between;padding: 12px 0;}
+    .pjs-setting-label input[type="checkbox"] { position: absolute;opacity: 0;width: 0;height: 0;}
+    .pjs-setting-checkbox { position: relative;display: inline-block;width: 48px;height: 26px;background-color: #e0e0e0;border-radius: 19px;transition: background-color 0.3s;}
+    .pjs-setting-checkbox::before { content: "";position: absolute;left: 2px;top: 2px;width: 22px;height: 22px;background-color: #fff;border-radius: 50%;box-shadow: 0 2px 4px rgba(0,0,0,0.3);transition: transform 0.3s;}
+    .pjs-setting-label input:checked + .pjs-setting-checkbox { background-color: #7066e0;}
+    .pjs-setting-label input:checked + .pjs-setting-checkbox::before { transform: translateX(22px);}
+    `)
+            GM_addStyle(GM_getResourceText("swalStyle"))
+        },
+    
+        registerMenuCommand() {
+            GM_registerMenuCommand("⚙️ 设置", () => {
+                let dom = `<div>
+    <label class="pjs-setting-label">导航只显示历史和消息<input type="checkbox" id="S-Quick" ${pjs.getValue("only_history_message") ? "checked" : ""} "><span class="pjs-setting-checkbox"></span></label>
+    <label class="pjs-setting-label">隐藏视频弹幕相关内容<input type="checkbox" id="S-Danmu" ${pjs.getValue("display_barrage_none") ? "checked" : ""} "><span class="pjs-setting-checkbox"></span></label>
+    <label class="pjs-setting-label">移除视频右上角LOGO水印<input type="checkbox" id="S-Logo" ${pjs.getValue("remove_watermark_logo") ? "checked" : ""} "><span class="pjs-setting-checkbox"></span></label>
+    <label class="pjs-setting-label">移除哀悼日网站灰度效果<input type="checkbox" id="S-Gray" ${pjs.getValue("filter_grayscale_zero") ? "checked" : ""} "><span class="pjs-setting-checkbox"></span></label>
+    </div>`
+    
+                Swal.fire({
+                    title: "WeTV Config",
+                    html: dom,
+                    showCloseButton: true,
+                    confirmButtonText: "保存",
+                    footer: `<div style="text-align: center;font-size: 1em;">✨ 助手免费开源　谨防上当受骗 ✨</div>`,
+                    customClass: {
+                        popup: "pjs-popup",
+                    },
+                }).then((res) => {
+                    if (res.isConfirmed) {
+                        pjs.option.forEach((v) => {
+                            pjs.setValue(v.name, v.value)
+                        })
+                        history.go(0)
                     }
                 })
-                player.forEach((e) => {
-                    observer.observe(e, observerConfig)
+    
+                document.querySelector("#S-Quick").addEventListener("change", (e) => {
+                    const targetItem = pjs.option.find(item => item.name == "only_history_message")
+                    targetItem.value = e.currentTarget.checked
                 })
-            }
-        })
-    },
-
-    init() {
-        this.initValue()
-        this.addPluginStyle()
-        this.registerMenuCommand()
-        this.autoGoGoGo()
+                document.querySelector("#S-Danmu").addEventListener("change", (e) => {
+                    const targetItem = pjs.option.find(item => item.name == "display_barrage_none")
+                    targetItem.value = e.currentTarget.checked
+                })
+                document.querySelector("#S-Logo").addEventListener("change", (e) => {
+                    const targetItem = pjs.option.find(item => item.name == "remove_watermark_logo")
+                    targetItem.value = e.currentTarget.checked
+                })
+                document.querySelector("#S-Gray").addEventListener("change", (e) => {
+                    const targetItem = pjs.option.find(item => item.name == "filter_grayscale_zero")
+                    targetItem.value = e.currentTarget.checked
+                })
+            })
+        },
+    
+        autoGoGoGo() {
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|Opera Mini|Mobile/i.test(navigator.userAgent)
+            const optionNames = pjs.option.map(item => item.name)
+            optionNames.forEach(name => {
+                const targetItem = pjs.option.find(item => item.name === name)
+                if (targetItem) targetItem.value = pjs.getValue(name)
+            })
+    
+            GM_addStyle(`
+    .link_vip.__open_vip_tv,
+    .playlist-vip-section__vip,
+    [id^="ad_"],
+    [class$="-ad"],
+    [class$="_ad"],
+    [id^="iwan-game"],
+    #iwan-game,
+    #iwan-game-pendant,
+    #iwan-game-recommends,
+    #iwan-gamependant-page,
+    #iwan-gamesearchrank-page,
+    a[href*="qqgame."],
+    a[href*="iwan."],
+    .video-banner:has([data-ckey*="qqgame.qq.com"]),
+    .video-banner:has([data-ckey*="iwan.qq.com"]),
+    .video-card-wrap:has(.ad-flag),
+    .focus-list__item:has(.poster-ad),
+    .focus-title-wrap:has([class*="ad-"]),
+    .video-card-module [dt-params*="ad_"],
+    .video-focus[dt-params=""] .focus-img,
+    .client_download,
+    .tip_download,
+    .fixed_box,
+    .vip_act,
+    #ad_pc-index-vip-tips,
+    #channel-vip-popup,
+    #video-search-ad,
+    #ad_container,
+    #ad_m-site,
+    .game-switch-ad,
+    .banner-ad,
+    .txp_ad,
+    .player-comment-btn,
+    .preview-mini-player,
+    iframe[data-src*="mall."],
+    [class*="txp_full_screen_pause"],
+    [data-role*="creative-player-pause"],
+    .open-app.old-open,
+    .vip-adv-wrapper,
+    .bottom-wrapper,
+    .at-app-banner,
+    .quick_games
+    {
+        display: none !important;
     }
-}
-
-main.init()
+    `)
+    
+            if (pjs.getValue("only_history_message")) {
+                GM_addStyle(`.quick_app,.quick_client,.quick_create,.quick_access,.quick_vip { display: none !important; }`)
+            }
+    
+            if (pjs.getValue("display_barrage_none")) {
+                GM_addStyle(`[class*="-barrage"],[class*="barrage-"] { display: none !important; }`)
+                if (!isMobile) {
+                    GM_addStyle(`iframe[src*="vfiles.gtimg.cn/tvideo/libcocos-frame"] { display: none !important; }`)
+                }
+            }
+    
+            if (pjs.getValue("remove_watermark_logo")) {
+                const t = setInterval(() => {
+                    const d = document.querySelector(`.txp-watermark[data-role="txp-ui-watermark-mod"]`)
+                    if (d) {
+                        d.remove()
+                    }
+                }, 1e3)
+                setTimeout(() => {
+                    clearInterval(t)
+                }, 9e3)
+            }
+    
+            if (pjs.getValue("filter_grayscale_zero")) {
+                GM_addStyle(`.gray-style-remembrance { -webkit-filter: grayscale(0) !important;filter: grayscale(0) !important; }`)
+            }
+    
+            window.addEventListener("DOMContentLoaded", () => {
+                let runme = null
+                clearAd()
+                window.addEventListener("pushState", () => {
+                    clearInterval(runme)
+                    clearAd()
+                })
+                function clearAd() {
+                    runme = setInterval(() => {
+                        let tvads = document.querySelectorAll(".txp_ad video")
+                        tvads.forEach(ad => {
+                            try {
+                                if (ad.duration !== ad.currentTime) {
+                                    ad.setAttribute("src", "")
+                                    ad.style.display = "none"
+                                }
+                            } catch (e) {
+                                console.log(e)
+                            }
+                        })
+                    }, 100)
+                    let tcads = document.querySelectorAll(".txp_ad_control")
+                    tcads.forEach(item => {
+                        item.style.display = "none"
+                    })
+                }
+    
+                const player = document.querySelectorAll(".txp_videos_container")
+                if (player.length != 0) {
+                    const observerConfig = {
+                        attributes: true,
+                        attributeFilter: ['style'],
+                    }, observer = new MutationObserver((mutationsList, observer) => {
+                        for (const mutation of mutationsList) {
+                            mutation.target.removeAttribute("style")
+                        }
+                    })
+                    player.forEach((e) => {
+                        observer.observe(e, observerConfig)
+                    })
+                }
+            })
+        },
+    
+        init() {
+            this.initValue()
+            this.addPluginStyle()
+            this.registerMenuCommand()
+            this.autoGoGoGo()
+        }
+    }
+    
+    main.init()
+})()
