@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         腾讯视频优化助手
 // @namespace    https://geoisam.github.io
-// @version      2.0.3
+// @version      2.0.4
 // @description  优化腾讯视频（WeTV）浏览与观影体验，支持电脑端和移动端
 // @author       geoisam@qq.com
 // @icon         data:image/x-icon;base64,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Q/8A50P/AOdD/wDnQ/+Pux7//5gA//+YAP//mAD//5gA//+YAP//mAD//5cAgAAAAAAAAAAAAAAAAACI/+4AiP//AIj//wCI//8Aq7j/AOdD/wDnQ/8A50P/v/nQ////////////////////////////7/7z/4Dzof8Q6U7/AOdD/wDnQ/8A50P/AOdD/wDnQ/9vxCb//5gA//+YAP//mAD//5gA//+YAP//mAD//5kAXgAAAAAAAAAAAIj//wCI//8AiP//AIj//wCruP8A50P/AOdD/wDnQ/+/+dD//////////////////////////////////////9/85/8w62b/AOdD/wDnQ/8A50P/AOdD/wDnQ/+gthn//5gA//+YAP//mAD//5gA//+YAP//lwDOAAAAAAAAAAAAiP//AIj//wCI//8AiP//AKu4/wDnQ/8A50P/AOdD/7/50P///////////////////////////////////////////7/50P8A50P/AOdD/wDnQ/8A50P/AOdD/2DJKf//mAD//5gA//+YAP//mAD//5gA//+YAP8AAAAAAAAAAACI//8AiP//AIj//wCI//8Aq7j/AOdD/wDnQ/8A50P/v/nQ//////////////////////////////////////+/+dD/IOpa/wDnQ/8A50P/AOdD/wDnQ/8A50P/v6wQ//+YAP//mAD//5gA//+YAP//mAD//5gAvgAAAAAAAAAAAIj/7gCI//8AiP//AIj//wClxP8A50P/AOdD/wDnQ/+/+dD////////////////////////////f/Of/X/CJ/wDnQ/8A50P/AOdD/wDnQ/8A50P/AOdD/4C/If//mAD//5gA//+YAP//mAD//5gA//+YAP//lwBAAAAAAAAAAAAAiP/eAIj//wCI//8AiP//AJ/Q/wDnQ/8A50P/AOdD/6/3xP/////////////////f/Of/X/CJ/wDnQ/8A50P/AOdD/wDnQ/8A50P/AOdD/yDdO/+gtRn//5gA//+YAP//mAD//5gA//+YAP//mAD//5kAXgAAAAAAAAAAAAAAAACI/74AiP//AIj//wCI//8An9D/AOdD/wDnQ/8A50P/kPSt///////f/Of/X/CJ/wDnQ/8A50P/AOdD/wDnQ/8A50P/AOdD/wDnQ/9gySr/36IJ//+YAP//mAD//5gA//+YAP//mAD//5kA7v+ZAFAAAAAAAAAAAAAAAAAAAAAAAIf/rgCI//8AiP//AIj//wCU5/8A50P/AOdD/wDnQ/8Q6U7/MOtm/wDnQ/8A50P/AOdD/wDnQ/8A50P/AOdD/wDnQ/8g3Tv/oLUZ//+YAP//mAD//5gA//+YAP//mAD//5gA//+YAN7/lwAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAh/+AAIj//wCI//8AiP//AI7z/wDnQ/8A50P/AOdD/wDnQ/8A50P/AOdD/wDnQ/8A50P/AOdD/wDnQ/8Q4j//gL8h/++dBP//mAD//5gA//+YAP//mAD//5gA//+YAP//mACe/5cAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH/0AAiP//AIj//wCI//8AiP//AOFP/wDnQ/8A50P/AOdD/wDnQ/8A50P/AOdD/wDnQ/8A50P/YMkq/9+iCf//mAD//5gA//+YAP//mAD//5gA//+YAP//mQDu/5kAcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACI/94AiP//AIj//wCI//8Az3L/AOdD/wDnQ/8A50P/AOdD/wDnQ/8g3Tv/gL8h/9+iCf//mAD//5gA//+YAP//mAD//5gA//+YAP//mAD//5gArv+XACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIj/fgCI//8AiP//AIj//wC9lf8A50P/AOdD/wDnQ/9Qzi7/oLUZ//+YAP//mAD//5gA//+YAP//mAD//5gA//+YAP//mAD//5gA3v+ZAF4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIr/bgCI/94AiP//EqW43mDJKv+gtRn/750E//+YAP//mAD//5gA//+YAP//mAD//5gA//+YAP//mAD//5kA7v+ZAH7/nwAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/5gA3v+YAP//mAD//5gA//+YAP//mAD//5gA//+YAP//mAD//5gA3v+YAJ7/lwAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/mQB+/5gA//+YAP//mAD//5gA//+YAP//mAD//5gA3v+ZAF7/lwAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/mABu/5kAzv+YAN7/mAC+/5gAkP+aADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////////////////wf///4A///+AD//4AAP/8AAA//AAAH/wAAAf4AAAD+AAAAfgAAAD4AAAAOAAAADgAAAAYAAAAGAAAABgAAAA4AAAAeAAAAPgAAAH4AAAD/AAAD/wAAB/+AAB//wAB///gA///8B////h/////////////8=
@@ -112,21 +112,12 @@ const main = {
     },
 
     autoGoGoGo() {
-        const txpQuick = pjs.getValue("only_history_message")
-            , txpDanmu = pjs.getValue("display_barrage_none")
-            , txpLogo = pjs.getValue("remove_watermark_logo")
-            , txpGray = pjs.getValue("filter_grayscale_zero")
         const isMobile = /Android|webOS|iPhone|iPad|iPod|Opera Mini|Mobile/i.test(navigator.userAgent)
-
-        let targetItem = null
-        targetItem = pjs.option.find(item => item.name == "only_history_message")
-        targetItem.value = txpQuick
-        targetItem = pjs.option.find(item => item.name == "display_barrage_none")
-        targetItem.value = txpDanmu
-        targetItem = pjs.option.find(item => item.name == "remove_watermark_logo")
-        targetItem.value = txpLogo
-        targetItem = pjs.option.find(item => item.name == "filter_grayscale_zero")
-        targetItem.value = txpGray
+        const optionNames = pjs.option.map(item => item.name)
+        optionNames.forEach(name => {
+            const targetItem = pjs.option.find(item => item.name === name)
+            if (targetItem) targetItem.value = pjs.getValue(name)
+        })
 
         GM_addStyle(`
 .link_vip.__open_vip_tv,
@@ -176,18 +167,18 @@ iframe[data-src*="mall."],
 }
 `)
 
-        if (txpQuick) {
+        if (pjs.getValue("only_history_message")) {
             GM_addStyle(`.quick_app,.quick_client,.quick_create,.quick_access,.quick_vip { display: none !important; }`)
         }
 
-        if (txpDanmu) {
+        if (pjs.getValue("display_barrage_none")) {
             GM_addStyle(`[class*="-barrage"],[class*="barrage-"] { display: none !important; }`)
             if (!isMobile) {
                 GM_addStyle(`iframe[src*="vfiles.gtimg.cn/tvideo/libcocos-frame"] { display: none !important; }`)
             }
         }
 
-        if (txpLogo) {
+        if (pjs.getValue("remove_watermark_logo")) {
             const t = setInterval(() => {
                 const d = document.querySelector(`.txp-watermark[data-role="txp-ui-watermark-mod"]`)
                 if (d) {
@@ -199,7 +190,7 @@ iframe[data-src*="mall."],
             }, 9e3)
         }
 
-        if (txpGray) {
+        if (pjs.getValue("filter_grayscale_zero")) {
             GM_addStyle(`.gray-style-remembrance { -webkit-filter: grayscale(0) !important;filter: grayscale(0) !important; }`)
         }
 
