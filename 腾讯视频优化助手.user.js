@@ -224,7 +224,6 @@ iframe[data-src*="mall."],
                         })
                     }
                 }
-
                 const player = document.querySelectorAll(".txp_videos_container")
                 if (player.length != 0) {
                     const observerConfig = {
