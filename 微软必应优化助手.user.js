@@ -22,7 +22,7 @@
 
 (function () {
     "use strict";
-    
+
     const pjs = {
         option: [{
             name: "bing_FAQ",
@@ -56,14 +56,14 @@
             GM_setValue(name, value)
         }
     }
-    
+
     const main = {
         initValue() {
             pjs.option.forEach((v) => {
                 pjs.getValue(v.name) === undefined && pjs.setValue(v.name, v.value)
             })
         },
-    
+
         addPluginStyle() {
             GM_addStyle(`
     .swal2-title { margin-bottom: 1.25em !important;}
@@ -78,7 +78,7 @@
     `)
             GM_addStyle(GM_getResourceText("swalStyle"))
         },
-    
+
         registerMenuCommand() {
             GM_registerMenuCommand("⚙️ 设置", () => {
                 let dom = `<div>
@@ -91,7 +91,7 @@
     <label class="pjs-setting-label">电脑端页面平铺居中<input type="checkbox" id="S-Center" ${pjs.getValue("bing_Center") ? "checked" : ""} "><span class="pjs-setting-checkbox"></span></label>
     <label class="pjs-setting-label">页面平铺最大宽度 (像素)<input type="number" min="1000" id="S-MaxWidth" value="${pjs.getValue("bing_MaxWidth")}" class="pjs-setting-input"></label>
     </div>`
-    
+
                 Swal.fire({
                     title: "Bing Config",
                     html: dom,
@@ -109,7 +109,7 @@
                         history.go(0)
                     }
                 })
-    
+
                 document.querySelector("#S-FAQ").addEventListener("change", (e) => {
                     const targetItem = pjs.option.find(item => item.name == "bing_FAQ")
                     targetItem.value = e.currentTarget.checked
@@ -144,7 +144,7 @@
                 })
             })
         },
-    
+
         autoGoGoGo() {
             const isMobile = /Android|webOS|iPhone|iPad|iPod|Opera Mini|Mobile/i.test(navigator.userAgent)
             const optionNames = pjs.option.map(item => item.name)
@@ -152,69 +152,65 @@
                 const targetItem = pjs.option.find(item => item.name === name)
                 if (targetItem) targetItem.value = pjs.getValue(name)
             })
-    
+
             GM_addStyle(`
-    [class$="_ad"],
-    [class^="ad_"],
-    [class^="ads_"],
-    .ad_sc,
-    .adsblock,
-    #ads_banner,
-    #sacs_win,
-    .b_vfly,
-    .b_bza_pole,
-    li.b_algo:has(.b_attribution[data-partnertag]),
-    li.b_algo[style],
-    li:has([class*="_adTA"]),
-    .b_hPanel:has([class*="bingApp_"]),
-    .sidebar:has(.ads_dwn),
-    #bgPro,
-    #b_pole,
-    #id_mobile,
-    #suspenBar,
-    #b_opalpers,
-    #bnp_idh_fly,
-    #bnp_ttc_div,
-    #bnp_rich_div,
-    #b_ims_bza_pole,
-    #ev_talkbox_wrapper,
-    #idCont [id*="id_qrcode"],
-    #b_notificationContainer_bop,
-    .cn_related_search_upsell_container,
-    li.b_ans:has(#opal_serpftrcta),
-    li:has(.b_adSlug),
-    .b_ad
-    {
-        display: none !important;
-    }
-    `)
-    
+[class$="_ad"],
+[class^="ad_"],
+[class^="ads_"],
+#ads_banner,
+#sacs_win,
+.b_vfly,
+.b_bza_pole,
+li.b_algo:has(.b_attribution[data-partnertag]),
+li.b_algo[style],
+li:has([class*="_adTA"]),
+.b_hPanel:has([class*="bingApp_"]),
+.sidebar:has(.ads_dwn),
+#bgPro,
+#b_pole,
+#id_mobile,
+#suspenBar,
+#b_opalpers,
+#bnp_idh_fly,
+#bnp_ttc_div,
+#bnp_rich_div,
+#b_ims_bza_pole,
+#ev_talkbox_wrapper,
+#idCont [id*="id_qrcode"],
+#b_notificationContainer_bop,
+.cn_related_search_upsell_container,
+li.b_ans:has(#opal_serpftrcta),
+li:has(.b_adSlug),
+.adsblock
+{ display: none !important; }
+`)
+
             if (pjs.getValue("bing_FAQ")) {
                 GM_addStyle(`li.b_ans:has(.b_vPanel) { display: none !important; }`)
             }
-    
+
             if (pjs.getValue("bing_News")) {
                 GM_addStyle(`li.b_ans:has(#ans_nws),li.b_ans:has(.new_see_more) { display: none !important; }`)
             }
-    
+
             if (pjs.getValue("bing_Image")) {
                 GM_addStyle(`li.b_ans:has(.imgPart),li.b_ans:has(.acfImgAns) { display: none !important; }`)
             }
-    
+
             if (pjs.getValue("bing_Video")) {
                 GM_addStyle(`li.b_ans:has(#serpvidans) { display: none !important; }`)
             }
-    
+
             if (pjs.getValue("bing_Search")) {
                 GM_addStyle(`li.b_ans:has(.b_rs),li.b_ans:has(.b_mrs),#b_recSQ,.b_inline_ajax_rs { display: none !important; }`)
             }
-    
+
             if (pjs.getValue("bing_Footer")) {
                 if (isMobile) {
                     GM_addStyle(`#b_footer ul { display: none !important; }`)
                 }
             }
-    
+
             if (pjs.getValue("bing_Center")) {
                 if (!isMobile) {
                     GM_addStyle(`
@@ -242,7 +238,7 @@
                 }
             }
         },
-    
+
         init() {
             this.initValue()
             this.addPluginStyle()
@@ -250,6 +246,6 @@
             this.autoGoGoGo()
         }
     }
-    
+
     main.init()
 })()
