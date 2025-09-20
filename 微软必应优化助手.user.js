@@ -47,7 +47,7 @@
             value: true
         }, {
             name: "bing_MaxWidth",
-            value: 1000
+            value: 1080
         }],
         getValue(name, value) {
             return GM_getValue(name, value)
