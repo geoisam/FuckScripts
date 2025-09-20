@@ -35,7 +35,7 @@
             name: "display_svip_block",
             value: true
         }, {
-            name: "nologin_payment_hidden",
+            name: "popup_payment_hidden",
             value: true
         }],
         getValue(name, value) {
@@ -71,8 +71,8 @@
             GM_registerMenuCommand("⚙️ 设置", () => {
                 let dom = `<div>
 <label class="pjs-setting-label">解除下载限制（需登录）<input type="checkbox" id="S-Download" ${pjs.getValue("download_limit_remove") ? "checked" : ""} "><span class="pjs-setting-checkbox"></span></label>
-<label class="pjs-setting-label">点亮 SVIP 会员（伪装）<input type="checkbox" id="S-SVIP" ${pjs.getValue("display_svip_block") ? "checked" : ""} "><span class="pjs-setting-checkbox"></span></label>
-<label class="pjs-setting-label">隐藏未登录下载付费提示<input type="checkbox" id="S-Payment" ${pjs.getValue("nologin_payment_hidden") ? "checked" : ""} "><span class="pjs-setting-checkbox"></span></label>
+<label class="pjs-setting-label">点亮SVIP会员（伪装）<input type="checkbox" id="S-SVIP" ${pjs.getValue("display_svip_block") ? "checked" : ""} "><span class="pjs-setting-checkbox"></span></label>
+<label class="pjs-setting-label">隐藏下载付费弹窗提示<input type="checkbox" id="S-Payment" ${pjs.getValue("popup_payment_hidden") ? "checked" : ""} "><span class="pjs-setting-checkbox"></span></label>
 </div>`
 
                 Swal.fire({
@@ -102,7 +102,7 @@
                     targetItem.value = e.currentTarget.checked
                 })
                 document.querySelector("#S-Payment").addEventListener("change", (e) => {
-                    const targetItem = pjs.option.find(item => item.name == "nologin_payment_hidden")
+                    const targetItem = pjs.option.find(item => item.name == "popup_payment_hidden")
                     targetItem.value = e.currentTarget.checked
                 })
             })
@@ -147,82 +147,63 @@
 `)
             }
 
-            if (pjs.getValue("download_limit_remove")) {
-                const originalAtob = atob
-                const originalFetch = fetch
-                const originalOpen = XMLHttpRequest.prototype.open
-                const originalSend = XMLHttpRequest.prototype.send
-                const originalSetRequestHeader = XMLHttpRequest.prototype.setRequestHeader
-                const fuckRules = [
-                    {
-                        runat: "end",
-                        match: (url) => url.pathname.includes("api/user/info"),
-                        action: (res, url) => {
-                            if (pjs.getValue("display_svip_block")) {
-                                const timestamp = 253402185600
-                                const standardTime = new Date(timestamp * 1000)
-                                res.data.Vip = true
-                                res.data.GrowSpaceAddCount = 128
-                                res.data.IsShowAdvertisement = false
-                                res.data.VipExpire = standardTime.toLocaleString()
-                                res.data.VipLevel = res.data.UserVipDetail.VipCode = 2
-                                res.data.UserVipDetailInfos = res.data.UserVipDetail.UserVipDetailInfos = [
-                                    {
-                                        VipDesc: "SVIP会员",
-                                        TimeDesc: ` ${standardTime.toLocaleDateString()} 到期`,
-                                        IsUse: standardTime >= new Date(),
-                                        endTime: timestamp,
-                                        EndTime: timestamp,
-                                        StartTime: 1638288000
-                                    }
-                                ]
-                            }
-                            return res
-                        }
-                    },
-                    {
-                        runat: "start",
-                        match: (url) => url.pathname.includes("user/report/info"),
-                        action: (res, url) => {
-                            if (pjs.getValue("display_svip_block")) {
-                                res.data.vipType = 2
-                                res.data.vipSub = 1
-                                res.data.developSub = 1
-                            }
-                            return res
-                        }
-                    },
-                    {
-                        runat: "header",
-                        match: (url) => ["file/download_info", "file/batch_download_info", "share/download/info", "file/batch_download_share_info"].some(path => url.pathname.includes(path)),
-                        action: (res, url) => {
-                            res.platform = Math.random() < 0.5 ? "android" : "ios"
-                            return res
-                        }
-                    },
-                    {
-                        runat: "end",
-                        match: (url) => ["file/download_info", "file/batch_download_info", "share/download/info", "file/batch_download_share_info"].some(path => url.pathname.includes(path)),
-                        action: (res, url) => {
-                            if (res.data && (res.data.DownloadUrl || res.data.DownloadURL)) {
-                                const origKey = res.data.DownloadUrl ? "DownloadUrl" : "DownloadURL"
-                                const origURL = new URL(res.data[origKey])
-                                let finalURL
-                                if (origURL.origin.includes("web-pro")) {
-                                    let params = ((url) => { try { return decodeURIComponent(atob(url)) } catch { return atob(url) } })(origURL.searchParams.get("params"))
-                                    let directURL = new URL(params, origURL.origin)
-                                    directURL.searchParams.set("auto_redirect", 0)
-                                    origURL.searchParams.set("params", btoa(directURL.href))
-                                    finalURL = decodeURIComponent(origURL.href)
-                                } else {
-                                    origURL.searchParams.set("auto_redirect", 0)
-                                    let newURL = new URL("https://web-pro2.123952.com/download-v2/", origURL.origin)
-                                    newURL.searchParams.set("params", btoa(encodeURI(origURL.href)))
-                                    newURL.searchParams.set("is_s3", 0)
-                                    finalURL = decodeURIComponent(newURL.href)
+            const originalAtob = atob
+            const originalFetch = fetch
+            const originalOpen = XMLHttpRequest.prototype.open
+            const originalSend = XMLHttpRequest.prototype.send
+            const originalSetRequestHeader = XMLHttpRequest.prototype.setRequestHeader
+            const fuckRules = [
+                {
+                    runat: "end",
+                    match: (url) => url.pathname.includes("api/user/info"),
+                    action: (res, url) => {
+                        if (pjs.getValue("display_svip_block")) {
+                            const timestamp = 253402185600
+                            const standardTime = new Date(timestamp * 1000)
+                            res.data.Vip = true
+                            res.data.GrowSpaceAddCount = 128
+                            res.data.IsShowAdvertisement = false
+                            res.data.VipExpire = standardTime.toLocaleString()
+                            res.data.VipLevel = res.data.UserVipDetail.VipCode = 2
+                            res.data.UserVipDetailInfos = res.data.UserVipDetail.UserVipDetailInfos = [
+                                {
+                                    VipDesc: "SVIP会员",
+                                    TimeDesc: ` ${standardTime.toLocaleDateString()} 到期`,
+                                    IsUse: standardTime >= new Date(),
+                                    endTime: timestamp,
+                                    EndTime: timestamp,
+                                    StartTime: 1638288000
                                 }
-                                res.data[origKey] = finalURL
-                            }
+                            ]
+                        }
+                        return res
+                    }
+                },
+                {
+                    runat: "start",
+                    match: (url) => url.pathname.includes("user/report/info"),
+                    action: (res, url) => {
+                        if (pjs.getValue("display_svip_block")) {
+                            res.data.vipType = 2
+                        }
+                        return res
+                    }
+                },
+                {
+                    runat: "header",
+                    match: (url) => ["file/download_info", "file/batch_download_info", "share/download/info", "file/batch_download_share_info"].some(path => url.pathname.includes(path)),
+                    action: (res, url) => {
+                        if (pjs.getValue("download_limit_remove")) {
+                            res.platform = Math.random() < 0.5 ? "android" : "ios"
+                        }
+                        return res
+                    }
+                },
+                {
+                    runat: "end",
+                    match: (url) => ["file/download_info", "file/batch_download_info", "share/download/info", "file/batch_download_share_info"].some(path => url.pathname.includes(path)),
+                    action: (res, url) => {
+                        if (pjs.getValue("popup_payment_hidden")) {
                             if (res?.code === 5113 || res?.code === 5114 || res?.message?.includes("下载流量已超出")) {
                                 if (url.pathname.includes("batch_download")) {
                                     res = {
@@ -238,157 +219,176 @@
                                     }
                                 }
                             }
-                            return res
                         }
-                    },
-                    {
-                        runat: "end",
-                        match: (url) => url.pathname.includes("api/video/play/info"),
-                        action: (res, url) => {
-                            if (res.data?.video_play_info) res.data.video_play_info = res.data.video_play_info.filter(item => item.url !== "")
-                            return res
-                        }
-                    },
-                ]
-
-                unsafeWindow.fetch = async function (input, init = {}) {
-                    let url = typeof input === "string" ? input : input?.url || "";
-                    url = new URL(url, location.origin)
-                    if (fuckRules.some(rule => rule.match(url) && rule.runat === "header")) {
-                        if (!init.headers) init.headers = {}
-                        let tempHeaders = {}
-                        if (init.headers instanceof Headers) {
-                            for (let [key, value] of init.headers.entries()) {
-                                tempHeaders[key] = value
+                        if (res.data && pjs.getValue("download_limit_remove") && (res.data.DownloadUrl || res.data.DownloadURL)) {
+                            let origKey = res.data.DownloadUrl ? "DownloadUrl" : "DownloadURL"
+                            let origURL = new URL(res.data[origKey])
+                            let finalURL
+                            if (origURL.origin.includes("web-pro")) {
+                                let params = ((url) => { try { return decodeURIComponent(atob(url)) } catch { return atob(url) } })(origURL.searchParams.get("params"))
+                                let directURL = new URL(params, origURL.origin)
+                                directURL.searchParams.set("auto_redirect", 0)
+                                origURL.searchParams.set("params", btoa(directURL.href))
+                                finalURL = decodeURIComponent(origURL.href)
+                            } else {
+                                origURL.searchParams.set("auto_redirect", 0)
+                                let newURL = new URL("https://web-pro2.123952.com/download-v2/", origURL.origin)
+                                newURL.searchParams.set("params", btoa(encodeURI(origURL.href)))
+                                newURL.searchParams.set("is_s3", 0)
+                                finalURL = decodeURIComponent(newURL.href)
                             }
-                        } else {
-                            tempHeaders = { ...init.headers }
+                            res.data[origKey] = finalURL
                         }
-                        init.headers = new Headers(fuckUniversal("fetch", url, tempHeaders, "header"))
+                        return res
                     }
-                    if (fuckRules.some(rule => rule.match(url) && rule.runat === "end")) {
-                        try {
-                            const response = await originalFetch.apply(this, arguments)
-                            const responseText = await response.text()
-                            const res = fuckUniversal("fetch", url, responseText, "end")
-                            return new Response(res, {
-                                status: response.status,
-                                statusText: response.statusText,
-                                headers: response.headers
-                            })
-                        } catch (e) {
-                            return originalFetch.apply(this, arguments)
-                        }
+                },
+                {
+                    runat: "end",
+                    match: (url) => url.pathname.includes("api/video/play/info"),
+                    action: (res, url) => {
+                        if (res.data?.video_play_info) res.data.video_play_info = res.data.video_play_info.filter(item => item.url !== "")
+                        return res
                     }
-                    if (fuckRules.some(rule => rule.match(url) && rule.runat === "start")) {
-                        try {
-                            const res = fuckUniversal("fetch", url, null, "start")
-                            return new Response(res, {
-                                status: 200,
-                                statusText: "OK",
-                                headers: { "Content-Type": "plain/text" }
-                            })
-                        } catch (e) {
-                            return originalFetch.apply(this, arguments)
-                        }
-                    }
-                    return originalFetch.apply(this, arguments)
-                }
+                },
+            ]
 
-                unsafeWindow.XMLHttpRequest.prototype.open = function (method, input) {
-                    let url = new URL(input, location.origin)
-                    this._currentUrl = url
-                    this.addEventListener("readystatechange", function () {
-                        if (this.readyState === 4) {
-                            if (fuckRules.some(rule => rule.match(url) && rule.runat === "end")) {
-                                let res = fuckUniversal("XHR", url, this.responseText, "end")
-                                Object.defineProperty(this, "responseText", {
-                                    writable: true,
-                                })
-                                Object.defineProperty(this, "response", {
-                                    writable: true,
-                                })
-                                this.response = res
-                                this.responseText = res
-                            }
+            unsafeWindow.fetch = async function (input, init = {}) {
+                let url = typeof input === "string" ? input : input?.url || "";
+                url = new URL(url, location.origin)
+                if (fuckRules.some(rule => rule.match(url) && rule.runat === "header")) {
+                    if (!init.headers) init.headers = {}
+                    let tempHeaders = {}
+                    if (init.headers instanceof Headers) {
+                        for (let [key, value] of init.headers.entries()) {
+                            tempHeaders[key] = value
                         }
-                    })
-                    return originalOpen.apply(this, arguments)
-                }
-
-                unsafeWindow.XMLHttpRequest.prototype.send = function (data) {
-                    const url = this._currentUrl
-                    if (this.headers) {
-                        for (let [name, value] of Object.entries(this.headers)) {
-                            originalSetRequestHeader.call(this, name, value)
-                        }
+                    } else {
+                        tempHeaders = { ...init.headers }
                     }
-                    if (fuckRules.find(rule => rule.match(url) && rule.runat === "start")) {
-                        try {
-                            let res = fuckUniversal("XHR", url, null, "start")
+                    init.headers = new Headers(fuckUniversal("fetch", url, tempHeaders, "header"))
+                }
+                if (fuckRules.some(rule => rule.match(url) && rule.runat === "end")) {
+                    try {
+                        const response = await originalFetch.apply(this, arguments)
+                        const responseText = await response.text()
+                        const res = fuckUniversal("fetch", url, responseText, "end")
+                        return new Response(res, {
+                            status: response.status,
+                            statusText: response.statusText,
+                            headers: response.headers
+                        })
+                    } catch (e) {
+                        return originalFetch.apply(this, arguments)
+                    }
+                }
+                if (fuckRules.some(rule => rule.match(url) && rule.runat === "start")) {
+                    try {
+                        const res = fuckUniversal("fetch", url, null, "start")
+                        return new Response(res, {
+                            status: 200,
+                            statusText: "OK",
+                            headers: { "Content-Type": "plain/text" }
+                        })
+                    } catch (e) {
+                        return originalFetch.apply(this, arguments)
+                    }
+                }
+                return originalFetch.apply(this, arguments)
+            }
+
+            unsafeWindow.XMLHttpRequest.prototype.open = function (method, input) {
+                let url = new URL(input, location.origin)
+                this._currentUrl = url
+                this.addEventListener("readystatechange", function () {
+                    if (this.readyState === 4) {
+                        if (fuckRules.some(rule => rule.match(url) && rule.runat === "end")) {
+                            let res = fuckUniversal("XHR", url, this.responseText, "end")
                             Object.defineProperty(this, "responseText", {
                                 writable: true,
                             })
                             Object.defineProperty(this, "response", {
                                 writable: true,
                             })
-                            this.response = this.responseText = res;
-                            ["readystatechange", "load", "loadend"].forEach(prop => {
-                                this.dispatchEvent(new Event(prop))
-                                if (typeof this[prop] === "function") this[prop]()
-                                if (typeof this[`on${prop}`] === "function") this[`on${prop}`]()
-                            })
-                            return true
-                        } catch (e) {
-                            return originalSend.apply(this, arguments)
+                            this.response = res
+                            this.responseText = res
                         }
                     }
-                    return originalSend.apply(this, arguments)
-                }
-
-                unsafeWindow.XMLHttpRequest.prototype.setRequestHeader = function (name, value) {
-                    const url = this._currentUrl
-                    if (fuckRules.some(rule => rule.match(url) && rule.runat === "header")) {
-                        if (!this.headers) this.headers = {}
-                        this.headers[name] = value
-                        this.headers = fuckUniversal("XHR", url, { ...this.headers }, "header")
-                        return
-                    }
-                    return originalSetRequestHeader.call(this, name, value)
-                }
-
-                unsafeWindow.atob = function (input) {
-                    try { return originalAtob(decodeURIComponent(input)) } catch (e) { return originalAtob(input) }
-                }
-
-                function fuckUniversal(from, url, data, type) {
-                    let res
-                    try {
-                        res = typeof data === "string" ? JSON.parse(data) : data
-                    } catch (e) {
-                        res = data
-                    }
-                    let rule = fuckRules.find(r => r.match(url) && r.runat === type)
-                    if (rule) {
-                        res = rule.action(res, url)
-                        try {
-                            if (res !== null && typeof res === "object" && type === "header") {
-                                let tempHeaders = {}
-                                for (let key in res) {
-                                    tempHeaders[key.toLowerCase().split("-").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join("-")] = res[key]
-                                }
-                                res = tempHeaders
-                            }
-                        } catch (e) { return }
-                        try {
-                            if (res !== null && typeof res === "object" && type !== "header") res = JSON.stringify(res)
-                        } catch (e) { return }
-                    }
-                    return res
-                }
+                })
+                return originalOpen.apply(this, arguments)
             }
 
-            if (pjs.getValue("nologin_payment_hidden")) {
+            unsafeWindow.XMLHttpRequest.prototype.send = function (data) {
+                const url = this._currentUrl
+                if (this.headers) {
+                    for (let [name, value] of Object.entries(this.headers)) {
+                        originalSetRequestHeader.call(this, name, value)
+                    }
+                }
+                if (fuckRules.find(rule => rule.match(url) && rule.runat === "start")) {
+                    try {
+                        let res = fuckUniversal("XHR", url, null, "start")
+                        Object.defineProperty(this, "responseText", {
+                            writable: true,
+                        })
+                        Object.defineProperty(this, "response", {
+                            writable: true,
+                        })
+                        this.response = this.responseText = res;
+                        ["readystatechange", "load", "loadend"].forEach(prop => {
+                            this.dispatchEvent(new Event(prop))
+                            if (typeof this[prop] === "function") this[prop]()
+                            if (typeof this[`on${prop}`] === "function") this[`on${prop}`]()
+                        })
+                        return true
+                    } catch (e) {
+                        return originalSend.apply(this, arguments)
+                    }
+                }
+                return originalSend.apply(this, arguments)
+            }
+
+            unsafeWindow.XMLHttpRequest.prototype.setRequestHeader = function (name, value) {
+                const url = this._currentUrl
+                if (fuckRules.some(rule => rule.match(url) && rule.runat === "header")) {
+                    if (!this.headers) this.headers = {}
+                    this.headers[name] = value
+                    this.headers = fuckUniversal("XHR", url, { ...this.headers }, "header")
+                    return
+                }
+                return originalSetRequestHeader.call(this, name, value)
+            }
+
+            unsafeWindow.atob = function (input) {
+                try { return originalAtob(decodeURIComponent(input)) } catch (e) { return originalAtob(input) }
+            }
+
+            function fuckUniversal(from, url, data, type) {
+                let res
+                try {
+                    res = typeof data === "string" ? JSON.parse(data) : data
+                } catch (e) {
+                    res = data
+                }
+                let rule = fuckRules.find(r => r.match(url) && r.runat === type)
+                if (rule) {
+                    res = rule.action(res, url)
+                    try {
+                        if (res !== null && typeof res === "object" && type === "header") {
+                            let tempHeaders = {}
+                            for (let key in res) {
+                                tempHeaders[key.toLowerCase().split("-").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join("-")] = res[key]
+                            }
+                            res = tempHeaders
+                        }
+                    } catch (e) { return }
+                    try {
+                        if (res !== null && typeof res === "object" && type !== "header") res = JSON.stringify(res)
+                    } catch (e) { return }
+                }
+                return res
+            }
+
+            if (pjs.getValue("popup_payment_hidden")) {
                 GM_addStyle(`.loginModal-footer.payment-footer,.download-pay-footer { display: none !important; }`)
             }
         },
