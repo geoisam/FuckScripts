@@ -46,6 +46,7 @@
 - ✅ [芒果TV](https://mgtv.com)
 - ✅ [123云盘](https://123pan.com)
 - ✅ [APKMirror](https://apkmirror.com)
+- ✅ [蓝奏云](https://pc.woozooo.com)
 
 | Name | Expires | Github | Gitee |
 |:---:|:---:|:---:|:---:|
