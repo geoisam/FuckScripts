@@ -24,7 +24,7 @@
 
 (function () {
     "use strict";
-    
+
     const pjs = {
         option: [{
             name: "only_history_message",
@@ -46,14 +46,14 @@
             GM_setValue(name, value)
         }
     }
-    
+
     const main = {
         initValue() {
             pjs.option.forEach((v) => {
                 pjs.getValue(v.name) === undefined && pjs.setValue(v.name, v.value)
             })
         },
-    
+
         addPluginStyle() {
             GM_addStyle(`
     .swal2-title { margin-bottom: 1.25em !important;}
@@ -67,7 +67,7 @@
     `)
             GM_addStyle(GM_getResourceText("swalStyle"))
         },
-    
+
         registerMenuCommand() {
             GM_registerMenuCommand("⚙️ 设置", () => {
                 let dom = `<div>
@@ -76,7 +76,7 @@
     <label class="pjs-setting-label">移除视频右上角LOGO水印<input type="checkbox" id="S-Logo" ${pjs.getValue("remove_watermark_logo") ? "checked" : ""} "><span class="pjs-setting-checkbox"></span></label>
     <label class="pjs-setting-label">移除哀悼日网站灰度效果<input type="checkbox" id="S-Gray" ${pjs.getValue("filter_grayscale_zero") ? "checked" : ""} "><span class="pjs-setting-checkbox"></span></label>
     </div>`
-    
+
                 Swal.fire({
                     title: "WeTV Config",
                     html: dom,
@@ -94,7 +94,7 @@
                         history.go(0)
                     }
                 })
-    
+
                 document.querySelector("#S-Quick").addEventListener("change", (e) => {
                     const targetItem = pjs.option.find(item => item.name == "only_history_message")
                     targetItem.value = e.currentTarget.checked
@@ -113,7 +113,7 @@
                 })
             })
         },
-    
+
         autoGoGoGo() {
             const isMobile = /Android|webOS|iPhone|iPad|iPod|Opera Mini|Mobile/i.test(navigator.userAgent)
             const optionNames = pjs.option.map(item => item.name)
@@ -121,66 +121,65 @@
                 const targetItem = pjs.option.find(item => item.name === name)
                 if (targetItem) targetItem.value = pjs.getValue(name)
             })
-    
+
             GM_addStyle(`
-    .link_vip.__open_vip_tv,
-    .playlist-vip-section__vip,
-    [id^="ad_"],
-    [class$="-ad"],
-    [class$="_ad"],
-    [id^="iwan-game"],
-    #iwan-game,
-    #iwan-game-pendant,
-    #iwan-game-recommends,
-    #iwan-gamependant-page,
-    #iwan-gamesearchrank-page,
-    a[href*="qqgame."],
-    a[href*="iwan."],
-    .video-banner:has([data-ckey*="qqgame.qq.com"]),
-    .video-banner:has([data-ckey*="iwan.qq.com"]),
-    .video-card-wrap:has(.ad-flag),
-    .focus-list__item:has(.poster-ad),
-    .focus-title-wrap:has([class*="ad-"]),
-    .video-card-module [dt-params*="ad_"],
-    .video-focus[dt-params=""] .focus-img,
-    .client_download,
-    .tip_download,
-    .fixed_box,
-    .vip_act,
-    #ad_pc-index-vip-tips,
-    #channel-vip-popup,
-    #video-search-ad,
-    #ad_container,
-    #ad_m-site,
-    .game-switch-ad,
-    .banner-ad,
-    .txp_ad,
-    .player-comment-btn,
-    .preview-mini-player,
-    iframe[data-src*="mall."],
-    [class*="txp_full_screen_pause"],
-    [data-role*="creative-player-pause"],
-    .open-app.old-open,
-    .vip-adv-wrapper,
-    .bottom-wrapper,
-    .at-app-banner,
-    .quick_games
-    {
-        display: none !important;
-    }
-    `)
-    
+.link_vip.__open_vip_tv,
+.playlist-vip-section__vip,
+[id^="ad_"],
+[class$="-ad"],
+[class$="_ad"],
+[id^="iwan-game"],
+#iwan-game,
+#iwan-game-pendant,
+#iwan-game-recommends,
+#iwan-gamependant-page,
+#iwan-gamesearchrank-page,
+a[href*="qqgame."],
+a[href*="iwan."],
+.video-banner:has([data-ckey*="qqgame.qq.com"]),
+.video-banner:has([data-ckey*="iwan.qq.com"]),
+.video-card-wrap:has(.ad-flag),
+.focus-list__item:has(.poster-ad),
+.focus-title-wrap:has([class*="ad-"]),
+.video-card-module [dt-params*="ad_"],
+.video-focus[dt-params=""] .focus-img,
+.client_download,
+.tip_download,
+.fixed_box,
+.vip_act,
+#ad_pc-index-vip-tips,
+#channel-vip-popup,
+#video-search-ad,
+#ad_container,
+#ad_m-site,
+.game-switch-ad,
+.banner-ad,
+.txp_ad,
+.player-comment-btn,
+.preview-mini-player,
+iframe[data-src*="mall."],
+[class*="txp_full_screen_pause"],
+[data-role*="creative-player-pause"],
+.open-app.old-open,
+.vip-adv-wrapper,
+.bottom-wrapper,
+.at-app-banner,
+.quick_games,
+.quick_app
+{ display: none !important; }
+`)
+
             if (pjs.getValue("only_history_message")) {
-                GM_addStyle(`.quick_app,.quick_client,.quick_create,.quick_access,.quick_vip { display: none !important; }`)
+                GM_addStyle(`.quick_client,.quick_create,.quick_access,.quick_vip { display: none !important; }`)
             }
-    
+
             if (pjs.getValue("display_barrage_none")) {
                 GM_addStyle(`[class*="-barrage"],[class*="barrage-"] { display: none !important; }`)
                 if (!isMobile) {
                     GM_addStyle(`iframe[src*="vfiles.gtimg.cn/tvideo/libcocos-frame"] { display: none !important; }`)
                 }
             }
-    
+
             if (pjs.getValue("remove_watermark_logo")) {
                 const t = setInterval(() => {
                     const d = document.querySelector(`.txp-watermark[data-role="txp-ui-watermark-mod"]`)
@@ -192,38 +191,40 @@
                     clearInterval(t)
                 }, 9e3)
             }
-    
+
             if (pjs.getValue("filter_grayscale_zero")) {
                 GM_addStyle(`.gray-style-remembrance { -webkit-filter: grayscale(0) !important;filter: grayscale(0) !important; }`)
             }
-    
+
             window.addEventListener("DOMContentLoaded", () => {
-                let runme = null
-                clearAd()
-                window.addEventListener("pushState", () => {
-                    clearInterval(runme)
+                if (!isMobile) {
+                    let runme = null
                     clearAd()
-                })
-                function clearAd() {
-                    runme = setInterval(() => {
-                        let tvads = document.querySelectorAll(".txp_ad video")
-                        tvads.forEach(ad => {
-                            try {
-                                if (ad.duration !== ad.currentTime) {
-                                    ad.setAttribute("src", "")
-                                    ad.style.display = "none"
-                                }
-                            } catch (e) {
-                                console.log(e)
-                            }
-                        })
-                    }, 100)
-                    let tcads = document.querySelectorAll(".txp_ad_control")
-                    tcads.forEach(item => {
-                        item.style.display = "none"
+                    window.addEventListener("pushState", () => {
+                        clearInterval(runme)
+                        clearAd()
                     })
+                    function clearAd() {
+                        runme = setInterval(() => {
+                            let tvads = document.querySelectorAll(".txp_ad video")
+                            tvads.forEach(ad => {
+                                try {
+                                    if (ad.duration !== ad.currentTime) {
+                                        ad.setAttribute("src", "")
+                                        ad.style.display = "none"
+                                    }
+                                } catch (e) {
+                                    console.log(e)
+                                }
+                            })
+                        }, 100)
+                        let tcads = document.querySelectorAll(".txp_ad_control")
+                        tcads.forEach(item => {
+                            item.style.display = "none"
+                        })
+                    }
                 }
-    
+
                 const player = document.querySelectorAll(".txp_videos_container")
                 if (player.length != 0) {
                     const observerConfig = {
@@ -240,7 +241,7 @@
                 }
             })
         },
-    
+
         init() {
             this.initValue()
             this.addPluginStyle()
@@ -248,6 +249,6 @@
             this.autoGoGoGo()
         }
     }
-    
+
     main.init()
 })()
