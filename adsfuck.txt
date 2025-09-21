@@ -82,6 +82,7 @@ m.mgtv.com##.ReactModalPortal,[class*="OpenApp"],.open-app-popup,.ht.mgui-btn.mg
 123pan.com,123pan.cn,123684.com,123865.com,123912.com#$#.contentBorder .conter { margin-bottom: 0 !important; }
 123pan.com,123pan.cn,123684.com,123865.com,123912.com#$#.appBottomBtn.banner-bottom { bottom: 0 !important; }
 123pan.com,123pan.cn,123684.com,123865.com,123912.com#$#.webbody.svip-body,.backgroundImage,.verifyBox { background-image: none !important; }
+||arms-retcode.aliyuncs.com/r.png
 
 ! ---------APKMirror---------
 apkmirror.com##.ezo_ad,#bottom-slider,[class*="ains-apkm_"]:has(a.advertisement-text),.tab-content .t-height:has(#downloadCountdownBar)
