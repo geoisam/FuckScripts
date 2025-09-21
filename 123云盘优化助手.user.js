@@ -271,14 +271,6 @@
                         return res
                     }
                 },
-                {
-                    runat: "start",
-                    match: (url) => url.search.includes("token="),
-                    action: (res, url) => {
-                        res[0] = null
-                        return res
-                    }
-                }
             ]
 
             unsafeWindow.fetch = async function (input, init = {}) {
