@@ -1,12 +1,11 @@
 [Adblock Plus 2.0]
 ! Title: AdsFuck
-! Version: 2025092112
+! Version: 2025092122
 ! Expires: 2 days
 ! 👇👇过滤规则推荐👇👇
 ! 基础广告过滤: https://easylist-downloads.adblockplus.org/easylist.txt
 ! 隐私保护: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_3_Spyware/filter.txt
 ! 中文广告过滤: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_224_Chinese/filter.txt
-! 移动设备广告过滤: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_11_Mobile/filter.txt
 ! 骚扰拦截: https://secure.fanboy.co.nz/fanboy-annoyance.txt
 ! Cookie通知过滤: https://secure.fanboy.co.nz/fanboy-cookiemonster.txt
 ! 反广告拦截警告: https://easylist-downloads.adblockplus.org/antiadblockfilters.txt
