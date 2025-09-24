@@ -38,6 +38,9 @@
         }, {
             name: "popup_payment_hidden",
             value: true
+        }, {
+            name: "video_speed_diy",
+            value: [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2, 2.5, 3, 5]
         }],
         getValue(name, value) {
             return GM_getValue(name, value)
@@ -60,6 +63,7 @@
 .pjs-popup { font-size: 14px !important;font-weight: bold !important;}
 .pjs-setting-label { display: flex;align-items: center;justify-content: space-between;padding: 12px 0;}
 .pjs-setting-label input[type="checkbox"] { position: absolute;opacity: 0;width: 0;height: 0;}
+.pjs-setting-label input[type="text"] { flex: 1; padding: 8px 10px; border: 1px solid; border-radius: 5px; font-size: 14px }
 .pjs-setting-checkbox { position: relative;display: inline-block;width: 48px;height: 26px;background-color: #e0e0e0;border-radius: 19px;transition: background-color 0.3s;}
 .pjs-setting-checkbox::before { content: "";position: absolute;left: 2px;top: 2px;width: 22px;height: 22px;background-color: #fff;border-radius: 50%;box-shadow: 0 2px 4px rgba(0,0,0,0.3);transition: transform 0.3s;}
 .pjs-setting-label input:checked + .pjs-setting-checkbox { background-color: #7066e0;}
@@ -71,9 +75,11 @@
         registerMenuCommand() {
             GM_registerMenuCommand("⚙️ 设置", () => {
                 let dom = `<div>
-<label class="pjs-setting-label">解除下载限制（需登录）<input type="checkbox" id="S-Download" ${pjs.getValue("download_limit_remove") ? "checked" : ""} "><span class="pjs-setting-checkbox"></span></label>
-<label class="pjs-setting-label">点亮SVIP会员（伪装）<input type="checkbox" id="S-SVIP" ${pjs.getValue("display_svip_block") ? "checked" : ""} "><span class="pjs-setting-checkbox"></span></label>
-<label class="pjs-setting-label">隐藏下载付费弹窗提示<input type="checkbox" id="S-Payment" ${pjs.getValue("popup_payment_hidden") ? "checked" : ""} "><span class="pjs-setting-checkbox"></span></label>
+<label class="pjs-setting-label">解除下载限制（需登录）<input type="checkbox" id="S-Download" ${pjs.getValue("download_limit_remove") ? "checked" : ""}><span class="pjs-setting-checkbox"></span></label>
+<label class="pjs-setting-label">点亮SVIP身份（伪装）<input type="checkbox" id="S-SVIP" ${pjs.getValue("display_svip_block") ? "checked" : ""}><span class="pjs-setting-checkbox"></span></label>
+<label class="pjs-setting-label">隐藏下载付费弹窗提示<input type="checkbox" id="S-Payment" ${pjs.getValue("popup_payment_hidden") ? "checked" : ""}><span class="pjs-setting-checkbox"></span></label>
+<label class="pjs-setting-label">视频倍速列表：<input type="text" id="S-Speed" value="${pjs.getValue("video_speed_diy")}"></label>
+<div class="swal2-validation-message" id="swal2-validation-message" style="display: none;"></div>
 </div>`
 
                 Swal.fire({
@@ -94,6 +100,30 @@
                     }
                 })
 
+                function isValidFormat(input) {
+                    if (!input) return "视频倍速列表输入内容为空"
+                    if (/(^,+|,+$|,,+)/.test(input)) return "视频倍速列表含有多余逗号"
+                    const inputs = input.split(",")
+                    const numbers = inputs.map(num => num.trim())
+                    for (let num of numbers) {
+                        if (isNaN(num)) return "视频倍速列表含有非法字符"
+                        if (parseFloat(num) < 0.1 || parseFloat(num) > 32) return "视频倍速范围: 0.1 ≤ 倍速 ≤ 32"
+                        if (!(/^(0|[1-9]\d*)(\.\d{1,2})?$/.test(num))) return "视频倍速列表内容格式错误"
+                    }
+                    if (new Set(inputs.map(Number)).size !== numbers.length) return "视频倍速列表含有重复内容"
+                    return true
+                }
+
+                document.querySelector("#S-Speed").addEventListener("input", (e) => {
+                    const isOKtext = isValidFormat(e.currentTarget.value)
+                    const isOKobj = document.querySelector("#swal2-validation-message")
+                    if (isOKtext == true) {
+                        isOKobj.style.display = "none"
+                    } else {
+                        isOKobj.innerHTML = isOKtext
+                        isOKobj.style.display = "flex"
+                    }
+                })
                 document.querySelector("#S-Download").addEventListener("change", (e) => {
                     const targetItem = pjs.option.find(item => item.name == "download_limit_remove")
                     targetItem.value = e.currentTarget.checked
@@ -105,6 +135,11 @@
                 document.querySelector("#S-Payment").addEventListener("change", (e) => {
                     const targetItem = pjs.option.find(item => item.name == "popup_payment_hidden")
                     targetItem.value = e.currentTarget.checked
+                })
+                document.querySelector("#S-Speed").addEventListener("change", (e) => {
+                    const targetItem = pjs.option.find(item => item.name == "video_speed_diy")
+                    const speedArr = e.currentTarget.value
+                    if (isValidFormat(speedArr) == true) targetItem.value = speedArr.split(",").map(Number)
                 })
             })
         },
@@ -129,7 +164,9 @@
 #top_container,
 .banner_all_wrap,
 #banner_container,
+.verifyBox img.default-img-title,
 .uppy-Dashboard-slowSpeed-banner,
+.video-new-user-tips:has(.open-vip),
 .ant-modal-content .download-msgInfo-phone,
 .bg_svip_block_ads
 { display: none !important; }
@@ -177,7 +214,6 @@
                                 }
                             ]
                         }
-                        res["x-traceID"] = null
                         return res
                     }
                 },
@@ -188,7 +224,6 @@
                         if (pjs.getValue("display_svip_block")) {
                             res.data.vipType = 2
                         }
-                        res["x-traceID"] = null
                         return res
                     }
                 },
@@ -257,7 +292,7 @@
                     runat: "end",
                     match: (url) => url.pathname.includes("/api/video/play/conf"),
                     action: (res, url) => {
-                        res.data.speedList = [0.5, 0.75, 1, 1.25, 1.5, 2, 2.5, 3, 5]
+                        res.data.speedList = pjs.getValue("video_speed_diy")
                         res.data.userVideoResolution = "2160p"
                         res.data.vipResolutionList = res.data.timeLimitSpeedList = res.data.vipSpeedList = null
                         return res
@@ -268,6 +303,13 @@
                     match: (url) => ["/web_logs", "/metrics", "/advert/info", "/r.png"].some(path => url.pathname.includes(path)),
                     action: (res, url) => {
                         res = null
+                        return res
+                    }
+                },
+                {
+                    runat: "end",
+                    match: (url) => url.pathname.includes("/api/file/upload_request"),
+                    action: (res, url) => {
                         return res
                     }
                 },
