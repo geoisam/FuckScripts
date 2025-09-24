@@ -13,7 +13,6 @@
 // @match        http*://*.123684.com/*
 // @match        http*://*.123865.com/*
 // @match        http*://*.123912.com/*
-// @connect      web-pro2.123952.com
 // @run-at       document-start
 // @grant        unsafeWindow
 // @grant        GM_addStyle
@@ -182,6 +181,7 @@
 .contentBorder > div:not(.cleanNet) { width: 75%; }
 .web-body .content { width: 100% !important;margin: auto !important;flex-direction: unset !important;justify-content: center; }
 .content-layout-page { width: 75%; }
+.content-layout:has(.single-file-sharing-container) { margin: 64px auto 0; }
 `)
             }
 
@@ -259,18 +259,18 @@
                             }
                         }
                         if (res.data && pjs.getValue("download_limit_remove") && (res.data.DownloadUrl || res.data.DownloadURL)) {
-                            let origKey = res.data.DownloadUrl ? "DownloadUrl" : "DownloadURL"
-                            let origURL = new URL(res.data[origKey])
+                            const origKey = res.data.DownloadUrl ? "DownloadUrl" : "DownloadURL"
+                            const origURL = new URL(res.data[origKey])
                             let finalURL
                             if (origURL.origin.includes("web-pro")) {
-                                let params = ((url) => { try { return decodeURIComponent(atob(url)) } catch { return atob(url) } })(origURL.searchParams.get("params"))
-                                let directURL = new URL(params, origURL.origin)
+                                const params = ((url) => { try { return decodeURIComponent(atob(url)) } catch { return atob(url) } })(origURL.searchParams.get("params"))
+                                const directURL = new URL(params, origURL.origin)
                                 directURL.searchParams.set("auto_redirect", 0)
                                 origURL.searchParams.set("params", btoa(directURL.href))
                                 finalURL = decodeURIComponent(origURL.href)
                             } else {
                                 origURL.searchParams.set("auto_redirect", 0)
-                                let newURL = new URL("https://web-pro2.123952.com/download-v2/", origURL.origin)
+                                const newURL = new URL("https://web-pro2.123952.com/download-v2/", origURL.origin)
                                 newURL.searchParams.set("params", btoa(encodeURI(origURL.href)))
                                 newURL.searchParams.set("is_s3", 0)
                                 finalURL = decodeURIComponent(newURL.href)
@@ -303,13 +303,6 @@
                     match: (url) => ["/web_logs", "/metrics", "/advert", "/r.png"].some(path => url.pathname.includes(path)),
                     action: (res, url) => {
                         res = null
-                        return res
-                    }
-                },
-                {
-                    runat: "end",
-                    match: (url) => url.pathname.includes("/api/file/upload_request"),
-                    action: (res, url) => {
                         return res
                     }
                 },
@@ -365,7 +358,7 @@
                 this.addEventListener("readystatechange", function () {
                     if (this.readyState === 4) {
                         if (fuckRules.some(rule => rule.match(url) && rule.runat === "end")) {
-                            let res = fuckUniversal("XHR", url, this.responseText, "end")
+                            const res = fuckUniversal("XHR", url, this.responseText, "end")
                             Object.defineProperty(this, "responseText", {
                                 writable: true,
                             })
@@ -389,7 +382,7 @@
                 }
                 if (fuckRules.find(rule => rule.match(url) && rule.runat === "start")) {
                     try {
-                        let res = fuckUniversal("XHR", url, null, "start")
+                        const res = fuckUniversal("XHR", url, null, "start")
                         Object.defineProperty(this, "responseText", {
                             writable: true,
                         })
@@ -432,7 +425,7 @@
                 } catch (e) {
                     res = data
                 }
-                let rule = fuckRules.find(r => r.match(url) && r.runat === type)
+                const rule = fuckRules.find(r => r.match(url) && r.runat === type)
                 if (rule) {
                     res = rule.action(res, url)
                     try {
