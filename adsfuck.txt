@@ -1,11 +1,11 @@
 [Adblock Plus 2.0]
 ! Title: AdsFuck
-! Version: 2025092413
+! Version: 2025092414
 ! Expires: 2 days
 ! 👇👇过滤规则推荐👇👇
 ! 基础广告过滤: https://easylist-downloads.adblockplus.org/easylist.txt
-! 隐私保护: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_3_Spyware/filter.txt
-! 中文广告过滤: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_224_Chinese/filter.txt
+! 隐私保护: https://easylist-downloads.adblockplus.org/easyprivacy.txt
+! 中文广告过滤: https://easylist-downloads.adblockplus.org/easylistchina.txt
 ! 骚扰拦截: https://secure.fanboy.co.nz/fanboy-annoyance.txt
 ! Cookie通知过滤: https://secure.fanboy.co.nz/fanboy-cookiemonster.txt
 ! 反广告拦截警告: https://easylist-downloads.adblockplus.org/antiadblockfilters.txt
@@ -77,7 +77,7 @@ m.mgtv.com##.ReactModalPortal,[class*="OpenApp"],.open-app-popup,.ht.mgui-btn.mg
 ||video.da.mgtv.com/$media
 
 ! ---------123云盘---------
-123pan.com,123pan.cn,123684.com,123865.com,123912.com##.advBanner,[class*="banner_guide"],[class*="adv-container"],[class*="banner-container"],[class*="header-waning-tips"],.btn_reward,.ant-carousel,.activity-box,#top_container,.banner_all_wrap,#banner_container,.verifyBox img.default-img-title,.uppy-Dashboard-slowSpeed-banner,.ant-modal-content .download-msgInfo-phone,.bg_svip_block_ads
+123pan.com,123pan.cn,123684.com,123865.com,123912.com##.advBanner,[class*="banner_guide"],[class*="adv-container"],[class*="banner-container"],[class*="header-waning-tips"],.btn_reward,.ant-carousel,.activity-box,#top_container,.banner_all_wrap,#banner_container,.verifyBox img.default-img-title,.uppy-Dashboard-slowSpeed-banner,.video-new-user-tips:has(.open-vip),.ant-modal-content .download-msgInfo-phone,.bg_svip_block_ads
 123pan.com,123pan.cn,123684.com,123865.com,123912.com#$#.contentBorder .conter { margin-bottom: 0 !important; }
 123pan.com,123pan.cn,123684.com,123865.com,123912.com#$#.appBottomBtn.banner-bottom { bottom: 0 !important; }
 123pan.com,123pan.cn,123684.com,123865.com,123912.com#$#.webbody.svip-body,.backgroundImage,.verifyBox { background-image: none !important; }
