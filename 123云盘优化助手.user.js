@@ -300,7 +300,7 @@
                 },
                 {
                     runat: "start",
-                    match: (url) => ["/web_logs", "/metrics", "/advert/info", "/r.png"].some(path => url.pathname.includes(path)),
+                    match: (url) => ["/web_logs", "/metrics", "/advert", "/r.png"].some(path => url.pathname.includes(path)),
                     action: (res, url) => {
                         res = null
                         return res
