@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Title: AdsFuck
-! Version: 2025092414
+! Version: 2025092516
 ! Expires: 2 days
 ! 👇👇过滤规则推荐👇👇
 ! 基础广告过滤: https://easylist-downloads.adblockplus.org/easylist.txt
@@ -35,13 +35,13 @@ v.qq.com##+js(no-fetch-if, /(beacon|trace)\.qq\.com/)
 ||pgdt.gtimg.cn^$image
 ||beacon.qq.com^$ping
 ||trace.qq.com^$image,ping
-||beacon.cdn.qq.com/*/beacon_web.min.js^$script
-||v.qq.com/pwa-sw.js^$script
+||beacon.cdn.qq.com/*/beacon_web.min.js
+||v.qq.com/pwa-sw.js
 ||v.qq.com/cache/wuji/object^$script
-||v.qq.com/thumbplayer-offline-log.html^$subdocument
+||v.qq.com/thumbplayer-offline-log.html
 ||mall.video.qq.com/m/activity/h5/$subdocument
 ||mark.l.qq.com/fcgi-bin/get_video_mark_all?$script
-||vfiles.gtimg.cn/tvideo/js/new_ping_video.js^$script
+||vfiles.gtimg.cn/tvideo/js/new_ping_video.js
 
 ! ---------优酷---------
 youku.com##.cardContentVip,#playerMouseWheel,.kui-watermark-0,.kui-vipentrance-member-control-container
@@ -65,7 +65,6 @@ iqiyi.com##[class*="comp-funcs_simpleWrap"] div[id*="game"]
 m.iqiyi.com##.m-iqyGuide-layer,#home_tongyong,.m-box[name="m-recList"],#player_bottom,.m-iqylink-diversion,[class^="ChannelHomeBanner_"],.m-iqiyi-common-banner
 iqiyi.com#%#//scriptlet('set-constant', 'QiyiPlayerProphetData.a.data.showResponse.slots', 'emptyObj')
 iqiyi.com#%#//scriptlet("set-constant", "Object.prototype.blackscreenDuration", "1")
-iqiyi.com#%#//scriptlet('adjust-setInterval', 'adUI', '1000', '0.02')
 static.g.iqiyi.com
 apisgame.iqiyi.com
 
@@ -90,3 +89,4 @@ apkmirror.com#$#a.accent_bg.downloadButton:hover { cursor: pointer !important; }
 
 ! ---------蓝奏云---------
 lanzn.com,lanpv.com,lanpw.com,lanzov.com,lanzoub.com,lanzouc.com,lanzoue.com,lanzouf.com,lanzoug.com,lanzouh.com,lanzoui.com,lanzouj.com,lanzouk.com,lanzoul.com,lanzoum.com,lanzouo.com,lanzoup.com,lanzouq.com,lanzout.com,lanzouu.com,lanzouv.com,lanzouw.com,lanzoux.com,lanzouy.com##.s_ad,div:not(#ready):has(a > img),.mb div:has(a[href*="ilanzou.com"]),#info #save,#mh_save1,#adpost
+||statics.woozooo.com/assets/img/clipboard.min.js
