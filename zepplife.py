@@ -98,8 +98,8 @@ def get_time():
 
 if __name__ == "__main__":
     for su in dataInfo:
-        user = su["user"]
-        password = su["pwd"]
+        user = su.get("user", "")
+        password = su.get("pwd", "")
         steps = str(randint(minSteps, maxSteps))
         main()
         time.sleep(randint(10, 30))
