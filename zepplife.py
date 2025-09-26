@@ -113,4 +113,4 @@ if __name__ == "__main__":
         password = su.get("pwd", "")
         steps = str(randint(minSteps, maxSteps))
         main()
-        time.sleep(randint(10, 30))
+        time.sleep(randint(10, 20))
