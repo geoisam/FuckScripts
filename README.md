@@ -52,7 +52,7 @@
 
 | Name | Expires | Github | Gitee |
 |:---:|:---:|:---:|:---:|
-| AdsFuck | 2 days | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/main/adsfuck.txt) | [下载](https://gitee.com/geoisam/FuckScripts/raw/main/adsfuck.txt) |
+| AdsFuck | 2 days | [查看](https://raw.githubusercontent.com/geoisam/FuckScripts/main/adsfuck.txt) | [查看](https://gitee.com/geoisam/FuckScripts/raw/main/adsfuck.txt) |
 
 ---
 
