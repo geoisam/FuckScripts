@@ -41,7 +41,7 @@ def login(user, password):
     res1 = requests.post(url1, data=data1, headers=headers)
 
     if res1.status_code == 429:
-        return "------ 请求过于频繁，请变换IP后再试 ------"
+        return "------ 请求过于频繁，请变更IP后再试 ------"
     res1 = res1.json()
     code = res1["access"]
     # print(f"access_token：\ncode")
