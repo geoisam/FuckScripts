@@ -8,6 +8,7 @@
 // @supportURL   https://github.com/geoisam/FuckScripts/issues
 """
 
+
 # -*- coding: UTF-8 -*-
 import requests, json, re, time, datetime
 from random import randint
