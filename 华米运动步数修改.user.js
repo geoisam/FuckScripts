@@ -123,7 +123,7 @@ pjs.getAccessToken = function () {
                         resolve(false)
                     }
                 } else if (xhr.status == 429) {
-                    pjs.pushMsg("Token获取失败🟡", "请求过于频繁，请稍后再试！")
+                    pjs.pushMsg("Token获取失败🟡", "请求过于频繁，请变更IP后再试！")
                     resolve(false)
                 } else {
                     GM_log(`Code：${xhr.status}🔴\n\n${xhr}`)
