@@ -4,7 +4,7 @@
 // @version      1.0.0
 // @description  修改并提交同步 微信运动/支付宝运动 步数，需自行下载 Zepp Life App 注册并登录绑定第三方数据
 // @author       geoisam@qq.com
-// @homepage     https://github.com/geoisam/FuckScripts
+// @homepage     https://github.com/geoisam/FuckScripts/blob/main/zepplife.py
 // @supportURL   https://github.com/geoisam/FuckScripts/issues
 """
 
