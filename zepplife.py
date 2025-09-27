@@ -1,15 +1,16 @@
+# -*- coding: UTF-8 -*-
 """
 // @name         华米运动步数修改
 // @namespace    https://geoisam.github.io
-// @version      1.0.0
+// @version      1.0.1
 // @description  修改并提交同步 微信运动/支付宝运动 步数，需自行下载 Zepp Life App 注册并登录绑定第三方数据
 // @author       geoisam@qq.com
 // @homepage     https://github.com/geoisam/FuckScripts/blob/main/zepplife.py
 // @supportURL   https://github.com/geoisam/FuckScripts/issues
+// @tips         此脚本一直为 开源免费 使用，如果你是从某些地方买的话，你就是被骗了
 """
 
 
-# -*- coding: UTF-8 -*-
 import requests, json, re, time, datetime
 from random import randint
 
@@ -40,29 +41,39 @@ def login(user, password):
     data1 = f"client_id=HuaMi&country_code=CN&json_response=true&name={user}&password={password}&redirect_uri=https://s3-us-west-2.amazonaws.com/hm-registration/successsignin.html&state=REDIRECTION&token=access"
     res1 = requests.post(url1, data=data1, headers=headers)
 
-    if res1.status_code == 429:
-        return "------ 请求过于频繁，请变更IP后再试 ------"
-    res1 = res1.json()
-    code = res1["access"]
-    # print(f"access_token：\ncode")
+    if res1.status_code == 200:
+        res1 = res1.json()
+        code = res1["access"]
+        # print(f"access_token：\ncode")
+    elif res1.status_code == 429:
+        print(f"------ 请求过于频繁，请变更IP或稍后再试 ------")
+        return
+    else:
+        print(f"------ Code：{res1.status_code}，Access Token获取失败 ------")
+        return
 
     url2 = "https://account.zepp.com/v2/client/login"
     data2 = f"app_name=com.xiaomi.hm.health&country_code=CN&code={code}&device_id=fuck1069-2002-7869-0129-757geoi6sam1&device_model=android_phone&app_version=6.12.0&grant_type=access_token&allow_registration=false&dn=account.zepp.com,api-user.zepp.com,api-mifit.zepp.com,api-watch.zepp.com,app-analytics.zepp.com,api-analytics.huami.com,auth.zepp.com&source=com.xiaomi.hm.health&third_name={third_name}"
     res2 = requests.post(url2, data=data2, headers=headers)
 
-    res2 = res2.json()
-    userid = res2["token_info"]["user_id"]
-    # print(f"userid：\nuserid")
-    app_token = res2["token_info"]["app_token"]
-    # print(f"app_token：\napp_token")
-    return app_token, userid
+    if res2.status_code == 200:
+        res2 = res2.json()
+        user_id = res2["token_info"]["user_id"]
+        # print(f"userid：\nuserid")
+        app_token = res2["token_info"]["app_token"]
+        # print(f"app_token：\napp_token")
+        return app_token, user_id
+    else:
+        print(f"------ Code：{res2.status_code}，User ID获取失败 ------")
+        return 0, 0
 
 
 def main():
-    app_token = 0
-    app_token, userid = login(user, password)
-    if app_token == 0:
-        return "------ 华米运动登录失败，请自行检测 ------"
+    apptoken = 0
+    apptoken, userid = login(user, password)
+    if apptoken == 0:
+        print("------ 华米运动登录失败，请自行检测 ------")
+        return
 
     t = get_time()
     today = time.strftime("%F")
@@ -76,7 +87,7 @@ def main():
         "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
         "user-agent": "MiFit/6.12.0 (MCE16; Android 16; Density/1.5)",
         "app_name": "com.xiaomi.hm.health",
-        "apptoken": app_token,
+        "apptoken": apptoken,
     }
     url0 = f"https://api-mifit-cn.zepp.com/v1/data/band_data.json?&t={t}"
     data0 = f"userid={userid}&last_sync_data_time=1755407692&device_type=0&last_deviceid=DA932FFFFE8816E7&data_json={data_json}"
@@ -86,7 +97,7 @@ def main():
     # print(res0)
     result = f"帐号：{user}\n步数：{steps}\n"
     print(result)
-    return result
+    return
 
 
 def get_time():
@@ -109,8 +120,7 @@ def get_time():
 
 if __name__ == "__main__":
     for su in dataInfo:
-        user = su.get("user", "")
-        password = su.get("pwd", "")
+        user, password = su[0], su[1]
         steps = str(randint(minSteps, maxSteps))
         main()
-        time.sleep(randint(10, 20))
+        time.sleep(randint(10, 30))
