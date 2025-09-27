@@ -61,10 +61,10 @@
 <table>
 <tr>
 <td><a>
-<img src="./images/tenpay.png">
+<img src="./images/wechat.jpg">
 </a></td>
 <td><a>
-<img src="./images/alipay.png">
+<img src="./images/alipay.jpg">
 </a></td>
 </tr>
 </table>
