@@ -47,12 +47,8 @@ def login(user, password):
             code = res1["access"]
             # print(f"access_token：\ncode")
         else:
-            if res1["error"] == 401:
-                print(f"------ 用户名或密码错误，请变更后再试 ------")
-                return
-            else:
-                print(f"------ Code：{res1["error"]}，Access Token获取失败 ------")
-                return
+            print(f"------ 用户名或密码错误，请变更后再试 ------")
+            return
     elif res1.status_code == 429:
         print(f"------ 请求过于频繁，请变更IP或稍后再试 ------")
         return
