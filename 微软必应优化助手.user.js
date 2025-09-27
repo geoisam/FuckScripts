@@ -17,6 +17,7 @@
 // @grant        GM_openInTab
 // @grant        GM_getResourceText
 // @grant        GM_registerMenuCommand
+// @tips         此脚本一直为 开源免费 使用，如果你是从某些地方买的话，你就是被骗了
 // ==/UserScript==
 
 
