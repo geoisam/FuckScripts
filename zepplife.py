@@ -16,8 +16,8 @@ from random import randint
 
 
 dataInfo = [
-    {"user": "no@thank.you", "pwd": "nothanks886"},  # 账号密码001
-    {"user": "nothanks@qq.com", "pwd": "qq1314520"},  # 账号密码002
+    ["no@thank.you", "nothanks886"],  # 账号密码001
+    ["nothanks@qq.com", "qq1314520"],  # 账号密码002
 ]
 
 minSteps = 17760
@@ -123,4 +123,4 @@ if __name__ == "__main__":
         user, password = su[0], su[1]
         steps = str(randint(minSteps, maxSteps))
         main()
-        time.sleep(randint(10, 30))
+        time.sleep(randint(15, 30))
