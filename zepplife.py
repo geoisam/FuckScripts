@@ -43,7 +43,7 @@ def login(user, password):
 
     if res1.status_code == 200:
         res1 = res1.json()
-        if res1["ok"] == "true":
+        if res1["ok"] == True:
             code = res1["access"]
             # print(f"access_token：\ncode")
         else:
