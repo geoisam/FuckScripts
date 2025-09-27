@@ -118,7 +118,17 @@ pjs.getAccessToken = function () {
                 if (xhr.status == 200) {
                     if (pjs.isJSONParsable(res)) {
                         res = JSON.parse(res)
-                        resolve(res.access)
+                        if (res.ok) {
+                            resolve(res.access)
+                        } else {
+                            if (res.error == 401) {
+                                pjs.pushMsg("Token获取失败🟡", "用户名或密码错误，请变更后再试！")
+                                resolve(false)
+                            } else {
+                                GM_log(`Code：${res.error}🔴\n\n${res}`)
+                                resolve(false)
+                            }
+                        }
                     } else {
                         GM_log(`Code：${xhr.status}🔴\n\n${res}`)
                         resolve(false)
@@ -199,6 +209,7 @@ pjs.submitSteps = function (id, token) {
 return new Promise((resolve, reject) => {
     pjs.isPhone(GM_getValue("Config.user", 0))
     pjs.todaySteps = pjs.getScopeRandomNum(GM_getValue("Config.min", 17760), GM_getValue("Config.max", 82240))
+    
     pjs.tasksStart = async function () {
         try {
             const result = await pjs.getAccessToken()
