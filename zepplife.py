@@ -107,7 +107,7 @@ def getToken(lt):
     res1 = requests.get(url1, headers=headers)
 
     res1 = res1.json()
-    if "token_info" in res1 and res1["result"] == "ok":
+    if "token_info" in res1:
         logToken(res1["token_info"]["login_token"])
 
     url2 = f"https://account-cn.huami.com/v1/client/app_tokens?login_token={lt}"
@@ -115,14 +115,15 @@ def getToken(lt):
 
     res2Code = res2.status_code
     res2 = res2.json()
-    if "token_info" in res2 and res2["result"] == "ok":
+    print(res2)
+    if "token_info" in res2:
         token_info = {
             "user_id": res2["token_info"]["user_id"],
             "app_token": res2["token_info"]["app_token"],
         }
         return token_info
     else:
-        print(f"------ Token Code：{res2Code}，Token 获取失败 ------")
+        print(f"------ Token 获取失败， ------")
         return False
 
 
@@ -134,6 +135,8 @@ def main(uu, pwd):
         token = login(uu, pwd)
     else:
         token = getToken(relog)
+        if token == False:
+            token = login(uu, pwd)
 
     if token == False:
         print("------ 运动步数提交失败，请自行检测 ------")
