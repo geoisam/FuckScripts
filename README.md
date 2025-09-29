@@ -63,6 +63,37 @@
 - 手环的唯一标识，实际上随便乱填都行，只要数量对得上
   - `"deviceId":"88CC5224060006C4"`
 
+- 可以使用云函数/青龙面板或者建个私人仓库用GitHub Actions运行
+
+```yml
+name: 华米运动步数修改
+ 
+on:
+  workflow_dispatch:
+  push:
+    branches: [ $default-branch ]
+  pull_request:
+    branches: [ $default-branch ]
+  schedule:
+    - cron: 0 0 * * *
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: setup python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.9
+    - name: install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
+    - name: running
+      run: python zepplife.py
+```
+
 ---
 
 ### \#\# 广告过滤（uBlock Origin / AdGuard / Adblock Plus）
