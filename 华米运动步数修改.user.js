@@ -57,7 +57,7 @@ const pjs = {
     dateNOW: new Date().toISOString().split("T")[0],
     secondNOW: Math.floor(Date.now() / 1000),
     deviceID: "88CC5224060006C4",
-    loginURL: "https://user.huami.com/universalLogin/index.html#/login?project_redirect_uri=https://www.huami.com/",
+    loginURL: "https://user.huami.com/universalLogin/#/login?project_redirect_uri=https://www.huami.com/",
     xhrHEADERS: {
         "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
         "user-agent": "MiFit/6.12.0 (MCE16; Android 16; Density/1.5)",
