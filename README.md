@@ -9,6 +9,8 @@
   + 👉[**脚本开发视频教程**](https://www.bilibili.com/video/BV1gT4y1N7zy)👈
   + 👉[**脚本猫官方开发文档**](https://docs.scriptcat.org/docs/dev)👈
 
+---
+
 > **👇👇普通脚本（通用）👇👇**
 
 | Name | GitHub | Gitee |
@@ -22,12 +24,9 @@
 | **自动删除QQ空间说说** | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/自动删除QQ空间说说.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/自动删除QQ空间说说.user.js) |
 | **自用校园网自动登录** | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/自用校园网自动登录.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/自用校园网自动登录.user.js) |
 
-> **👇👇定时脚本（[脚本猫](https://docs.scriptcat.org)）👇👇**
+---
 
-| Name | Lang | Type | GitHub | Gitee |
-|:---:|:---:|:---:|:---:|:---:|
-| **华米运动步数修改** | `UserScript` | **OAuth** | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/华米运动步数修改.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/华米运动步数修改.user.js) |
-| **华米运动步数修改** | `Python` | **OAuth** | [查看](https://raw.githubusercontent.com/geoisam/FuckScripts/main/zepplife.py) | [查看](https://gitee.com/geoisam/FuckScripts/raw/main/zepplife.py) |
+> **👇👇定时脚本（[脚本猫](https://docs.scriptcat.org)）👇👇**
 
 | Name | Type | GitHub | Gitee |
 |:---:|:---:|:---:|:---:|
@@ -37,6 +36,34 @@
 | ~~**粤知缘动漫社签到**~~ (已失效) | ~~**Discuz**(DC每日签到)~~ | ~~[安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/粤知缘动漫社签到.user.js)~~ | ~~[安装](https://gitee.com/geoisam/FuckScripts/raw/main/粤知缘动漫社签到.user.js)~~ |
 | ~~**MIUI历史版本签到**~~ (已失效) | ~~**WordPress**~~ | ~~[安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/MIUI历史版本签到.user.js)~~ | ~~[安装](https://gitee.com/geoisam/FuckScripts/raw/main/MIUI历史版本签到.user.js)~~ |
 | ~~**微软积分商城签到**~~ (已失效) | ~~**OAuth**~~ | ~~[安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/微软积分商城签到.user.js)~~ | ~~[安装](https://gitee.com/geoisam/FuckScripts/raw/main/微软积分商城签到.user.js)~~ |
+
+---
+
+| Name | Lang | Type | GitHub | Gitee |
+|:---:|:---:|:---:|:---:|:---:|
+| **华米运动步数修改** | `UserScript` | **OAuth** | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/华米运动步数修改.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/华米运动步数修改.user.js) |
+| **华米运动步数修改** | `Python` | **OAuth** | [查看](https://raw.githubusercontent.com/geoisam/FuckScripts/main/zepplife.py) | [查看](https://gitee.com/geoisam/FuckScripts/raw/main/zepplife.py) |
+
+- 有时虽然HTTP状态码是200但实际上却是出错了请参考以下信息
+
+| Error	| Description |
+|:---:|:---:|
+| 0100 |	无效的请求数据(必填数据为空，数据格式不正确等) |
+| 0101 |	无效的app_name |
+| 0102 |	无效的app_token |
+| 0103 |	无效的验证码 |
+| 0105 |	无效的login_token |
+| 0106 |	三方校验失败 |
+| 0107 |	注册失败 |
+| 0108 |	互斥登录 |
+
+- 设备ID，实际上随便乱填都行，App里面抓包是 `UUID v4`
+
+`"device_id":"02:00:00:00:00:00"`
+
+- 手环的唯一标识，实际上随便乱填都行，只要对上数量
+
+`"deviceId":"88CC5224060006C4"`
 
 ---
 
