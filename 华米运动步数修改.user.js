@@ -296,6 +296,7 @@ pjs.getAccessToken = function (account) {
                     if (pjs.isJSONParsable(res)) {
                         const resJSON = JSON.parse(res)
                         if (resJSON.access) {
+                            pjs.pushMsg("🟢", `「${account[0]}」Access Token获取成功！`)
                             resolve(resJSON.access)
                         } else {
                             pjs.pushMsg("🟡", `「${account[0]}」用户名或密码错误！`, true)
@@ -351,6 +352,7 @@ pjs.getUserInfo = function (code, account) {
                                 app: resJSON.token_info.app_token,
                                 login: resJSON.token_info.login_token
                             }
+                            pjs.pushMsg("🟢", `「${account[0]}」App Token获取成功！`)
                             resolve(token)
                         } else {
                             pjs.pushMsg("🟡", `「${account[0]}」TokenInfo Code：${xhr.status} 🔛${res}`)
@@ -384,6 +386,7 @@ pjs.reLoginToken = function (account) {
                     if (pjs.isJSONParsable(res)) {
                         const resJSON = JSON.parse(res)
                         if (resJSON.token_info) {
+                            pjs.pushMsg("🟢", `「${account[0]}」Login Token获取成功！`)
                             resolve(resJSON.token_info.login_token)
                         } else {
                             pjs.pushMsg("🟡", `「${account[0]}」LoginToken Code：${xhr.status} 🔛${res}`)
@@ -421,6 +424,7 @@ pjs.getAppToken = function (code, account) {
                                 id: resJSON.token_info.user_id,
                                 app: resJSON.token_info.app_token
                             }
+                            pjs.pushMsg("🟢", `「${account[0]}」App Token获取成功！`)
                             resolve(token)
                         } else {
                             pjs.pushMsg("🟡", `「${account[0]}」AppToken Code：${xhr.status} 🔛${res}`)
@@ -464,6 +468,7 @@ pjs.submitSteps = function (info, account) {
                     if (pjs.isJSONParsable(res)) {
                         const resJSON = JSON.parse(res)
                         if (resJSON.code && resJSON.code == 1) {
+                            pjs.pushMsg("🟢", `「${account[0]}」步数数据提交成功！`)
                             resolve(1)
                         } else {
                             pjs.pushMsg("🟡", `「${account[0]}」DataSubmit Code：${xhr.status} 🔛${res}`)
