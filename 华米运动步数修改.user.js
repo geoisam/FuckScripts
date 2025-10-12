@@ -33,7 +33,7 @@ Config:
     data:
         title: 账号#密码（一行一组）
         type: textarea
-        description: xxxxx@xxx.xxx#xxxxxxxx
+        description: xxxxx@xxxx.xxx#xxxxxxxx
     min:
         title: 步数最小值（MIN）
         type: number
@@ -49,7 +49,7 @@ Config:
         max: 100000
         description: 82240
     span:
-        title: 运行间隔（默认10秒）
+        title: 运行间隔（至少5秒）
         type: number
         default: 10
         min: 5
