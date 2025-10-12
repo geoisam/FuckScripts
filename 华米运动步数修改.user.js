@@ -298,7 +298,7 @@ return new Promise((resolve, reject) => {
                     "data": [{
                         "start": 0,
                         "stop": 1439,
-                        "value": "A".repeat(1440 * 4),
+                        "value": "AU".repeat(1440 * 2),
                         "tz": 32,
                         "did": FuckD.hm.deviceID,
                         "src": 24,
