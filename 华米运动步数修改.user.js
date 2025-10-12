@@ -294,7 +294,7 @@ return new Promise((resolve, reject) => {
                 }
                 const dataJSON = [{
                     "date": dateCHINA,
-                    "data_hr": "\\/v7+".repeat(480),
+                    "data_hr": "/v7+".repeat(480),
                     "data": [{
                         "start": 0,
                         "stop": 1439,
