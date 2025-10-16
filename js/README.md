@@ -1,7 +1,5 @@
 # 🌈FuckScripts
 
-<br>
-
 ### \# 脚本猫 / 油猴脚本
 
 - **🔥🔥脚本猫 / 油猴脚本开发指南🔥🔥**
@@ -16,10 +14,10 @@
 <table>
 <tr>
 <td><a>
-<img src="./images/wechat.jpg">
+<img src="../images/wechat.jpg">
 </a></td>
 <td><a>
-<img src="./images/alipay.jpg">
+<img src="../images/alipay.jpg">
 </a></td>
 </tr>
 </table>
