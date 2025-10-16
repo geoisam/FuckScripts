@@ -1,8 +1,8 @@
 # 🌈FuckScripts
 
-> **👇👇Python脚本👇👇**
+### \#  **👇👇Python脚本👇👇**
 
-- 支持 GitHub Actions、云函数、青龙面板等
+- 支持 GitHub Actions、云函数、青龙面板 等
 
 | Name | Type | GitHub | Gitee |
 |:---|:---:|:---:|:---:|
@@ -93,7 +93,7 @@ jobs:
 
 <br>
 
-### \#\# 赞赏码（在线乞讨）
+### \# 赞赏码（在线乞讨）
 
 <table>
 <tr>
