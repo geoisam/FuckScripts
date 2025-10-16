@@ -1,15 +1,8 @@
 # 🌈FuckScripts
 
-### \# 脚本猫 / 油猴脚本
+###  \# **👇👇普通脚本👇👇**
 
-- **🔥🔥脚本猫 / 油猴脚本开发指南🔥🔥**
-  - 👉**脚本开发图文教程**：<https://learn.scriptcat.org>👈
-  - 👉**脚本开发视频教程**：<https://www.bilibili.com/video/BV1gT4y1N7zy>👈
-  - 👉**脚本猫官方开发文档**：<https://docs.scriptcat.org/docs/dev>👈
-
-<br>
-
-> **👇👇普通脚本（[脚本猫](https://docs.scriptcat.org)、篡改猴、暴力猴、[X浏览器](https://www.xbext.com)）👇👇**
+- 支持 [脚本猫](https://docs.scriptcat.org)、篡改猴、暴力猴、[X浏览器](https://www.xbext.com) 等
 
 | Name | GitHub | Gitee |
 |:---|:---:|:---:|
@@ -24,7 +17,7 @@
 
 <br>
 
-### \#\# 赞赏码（在线乞讨）
+### \# 赞赏码（在线乞讨）
 
 <table>
 <tr>
