@@ -44,7 +44,7 @@
 
 > **👇👇[Python脚本](./py) `./py` 👇👇**
 
-- 支持 GitHub Actions、云函数、青龙面板等
+- 支持 GitHub Actions、云函数、青龙面板 等
 
 | 名称 | 类型 |
 |:---|:---:|
@@ -53,7 +53,9 @@
 
 <br>
 
-### \# [广告过滤](./adsfuck.txt)（uBlock Origin / AdGuard / Adblock Plus / [X浏览器](https://www.xbext.com) / [Via浏览器](https://viayoo.com)）
+### \# [广告过滤](./adsfuck.txt)
+
+- 支持 uBlock Origin、AdGuard、Adblock Plus、[X浏览器](https://www.xbext.com)、[Via浏览器](https://viayoo.com) 等
 
 - **🔥🔥网页广告过滤规则🔥🔥**
   - ✅ [微软必应](https://bing.com)
@@ -66,12 +68,12 @@
   - ✅ [蓝奏云](https://pc.woozooo.com)
 
 - **👇👇过滤规则推荐👇👇**
-  - **基础广告过滤**: <https://easylist-downloads.adblockplus.org/easylist.txt>
-  - **隐私保护**: <https://easylist-downloads.adblockplus.org/easyprivacy.txt>
-  - **Cookie通知过滤**: <https://secure.fanboy.co.nz/fanboy-cookiemonster.txt>
-  - **反广告拦截警告**: <https://easylist-downloads.adblockplus.org/antiadblockfilters.txt>
-  - **恶意软件**: <https://malware-filter.gitlab.io/urlhaus-filter/urlhaus-filter-ag-online.txt>
-  - **域名黑名单**: <https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext>
+  - **基础广告过滤**：[EasyList](https://easylist-downloads.adblockplus.org/easylist.txt)
+  - **隐私保护**：[EasyPrivacy](https://easylist-downloads.adblockplus.org/easyprivacy.txt)
+  - **Cookie通知过滤**：[Easylist Cookie List](https://secure.fanboy.co.nz/fanboy-cookiemonster.txt)
+  - **反广告拦截警告**：[Adblock Warning Removal List](https://easylist-downloads.adblockplus.org/antiadblockfilters.txt)
+  - **恶意软件**：[Online Malicious URL Blocklist](https://malware-filter.gitlab.io/urlhaus-filter/urlhaus-filter-ag-online.txt)
+  - **域名黑名单**：[Peter Lowe's Blocklist](https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext)
 
 | Name | Expires | Github | Gitee |
 |:---:|:---:|:---:|:---:|
