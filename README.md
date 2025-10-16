@@ -9,7 +9,7 @@
 
 <br>
 
-> **👇👇[普通脚本](./gm) `./gm` 👇👇**
+> **👇👇[普通脚本](./gm/README.md) `./gm` 👇👇**
 
 - 支持 [脚本猫](https://docs.scriptcat.org)、篡改猴、暴力猴、[X浏览器](https://www.xbext.com) 等
 
@@ -26,7 +26,7 @@
 
 <br>
 
-> **👇👇[后台定时脚本](./sc) `./sc` 👇👇**
+> **👇👇[后台定时脚本](./sc/README.md) `./sc` 👇👇**
 
 - 仅支持 [脚本猫](https://docs.scriptcat.org)
 
@@ -42,7 +42,7 @@
 
 <br>
 
-> **👇👇[Python脚本](./py) `./py` 👇👇**
+> **👇👇[Python脚本](./py/README.md) `./py` 👇👇**
 
 - 支持 GitHub Actions、云函数、青龙面板 等
 
