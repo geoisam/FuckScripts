@@ -1,7 +1,5 @@
 # 🌈FuckScripts
 
-<br>
-
 ### \# 脚本猫 / 油猴脚本
 
 - **🔥🔥脚本猫 / 油猴脚本开发指南🔥🔥**
@@ -11,41 +9,47 @@
 
 <br>
 
-> **👇👇[普通脚本](./gm)（[脚本猫](https://docs.scriptcat.org)、篡改猴、暴力猴、[X浏览器](https://www.xbext.com)）👇👇**
+> **👇👇[普通脚本](./gm) `./gm` 👇👇**
 
-| Name | GitHub | Gitee |
-|:---|:---:|:---:|
-| **微软必应优化助手** | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/微软必应优化助手.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/gm/微软必应优化助手.user.js) |
-| **123云盘优化助手** | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/123云盘优化助手.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/gm/123云盘优化助手.user.js) |
-| **腾讯视频优化助手** | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/腾讯视频优化助手.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/gm/腾讯视频优化助手.user.js) |
-| ~~**可可影视播放器**~~ (已失效) | [~~安装~~](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/可可影视播放器.user.js) | [~~安装~~](https://gitee.com/geoisam/FuckScripts/raw/main/gm/可可影视播放器.user.js) |
-| **百度网盘视频播放器（Dplayer）** | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/BD网盘视频播放器（改）.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/gm/BD网盘视频播放器（改）.user.js) |
-| **百度网盘音频播放器（Aplayer）** | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/百度网盘音频播放器（改）.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/gm/百度网盘音频播放器（改）.user.js) |
-| **自动删除QQ空间说说** | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/自动删除QQ空间说说.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/gm/自动删除QQ空间说说.user.js) |
-| **自用校园网自动登录** | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/自用校园网自动登录.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/gm/自用校园网自动登录.user.js) |
+- 支持 [脚本猫](https://docs.scriptcat.org)、篡改猴、暴力猴、[X浏览器](https://www.xbext.com) 等
 
-<br>
-
-> **👇👇[后台定时脚本](./sc)（仅支持 [脚本猫](https://docs.scriptcat.org)）👇👇**
-
-| Name | Type | GitHub | Gitee |
-|:---|:---|:---:|:---:|
-| **华米运动步数修改** | **OAuth** | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/华米运动步数修改.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/sc/华米运动步数修改.user.js) |
-| **油猴中文网签到** | **Discuz**(DSU每日签到) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/油猴中文网签到.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/sc/油猴中文网签到.user.js) |
-| **智能电视网签到** | **Discuz**(亮剑打卡签到) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/智能电视网签到.user.js) | [安装](https://gitee.com/geoisam/sc/FuckScripts/raw/main/智能电视网签到.user.js) |
-| **飘雪动漫社签到** | **Discuz**(西瓜微社区签到) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/飘雪动漫社签到.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/sc/飘雪动漫社签到.user.js) |
-| ~~**粤知缘动漫社签到**~~ (已失效) | ~~**Discuz**(DC每日签到)~~ | ~~[安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/粤知缘动漫社签到.user.js)~~ | ~~[安装](https://gitee.com/geoisam/FuckScripts/raw/main/sc/粤知缘动漫社签到.user.js)~~ |
-| ~~**MIUI历史版本签到**~~ (已失效) | ~~**WordPress**~~ | ~~[安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/MIUI历史版本签到.user.js)~~ | ~~[安装](https://gitee.com/geoisam/FuckScripts/raw/main/sc/MIUI历史版本签到.user.js)~~ |
-| ~~**微软积分商城签到**~~ (已失效) | ~~**OAuth**~~ | ~~[安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/微软积分商城签到.user.js)~~ | ~~[安装](https://gitee.com/geoisam/FuckScripts/raw/main/sc/微软积分商城签到.user.js)~~ |
+| 名称 |
+|:---|
+| **微软必应优化助手** |
+| **123云盘优化助手** |
+| **腾讯视频优化助手** |
+| ~~**可可影视播放器**~~ (已失效) |
+| **百度网盘视频播放器（Dplayer）** |
+| **百度网盘音频播放器（Aplayer）** |
+| **自动删除QQ空间说说** |
+| **自用校园网自动登录** |
 
 <br>
 
-> **👇👇[Python脚本](./py)（支持 GitHub Actions、云函数、青龙面板等）👇👇**
+> **👇👇[后台定时脚本](./sc) `./sc` 👇👇**
 
-| Name | Type | GitHub | Gitee |
-|:---|:---:|:---:|:---:|
-| **华米运动步数修改** | **OAuth** | [查看](./blob/main/py/huami.py) | [查看](./tree/main/py/huami.py) |
-| **豆瓣电影 Top 250 <br>封面图片下崽器** | **-** | [查看](./blob/main/py/douban.py) | [查看](./tree/main/py/douban.py) |
+- 仅支持 [脚本猫](https://docs.scriptcat.org)
+
+| 名称 | 类型 |
+|:---|:---|
+| **华米运动步数修改** | **OAuth** |
+| **油猴中文网签到** | **Discuz**(DSU每日签到) |
+| **智能电视网签到** | **Discuz**(亮剑打卡签到) |
+| **飘雪动漫社签到** | **Discuz**(西瓜微社区签到) |
+| ~~**粤知缘动漫社签到**~~ (已失效) | ~~**Discuz**(DC每日签到)~~ |
+| ~~**MIUI历史版本签到**~~ (已失效) | ~~**WordPress**~~ |
+| ~~**微软积分商城签到**~~ (已失效) | ~~**OAuth**~~ |
+
+<br>
+
+> **👇👇[Python脚本](./py) `./py` 👇👇**
+
+- 支持 GitHub Actions、云函数、青龙面板等
+
+| 名称 | 类型 |
+|:---|:---:|
+| **华米运动步数修改** | **OAuth** |
+| **豆瓣电影 Top 250 <br>封面图片下崽器** | **Spider** |
 
 <br>
 
