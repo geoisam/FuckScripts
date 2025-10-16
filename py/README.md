@@ -1,20 +1,13 @@
 # 🌈FuckScripts
 
-### \#\# 脚本猫 / 油猴脚本
+> **👇👇Python脚本👇👇**
 
-- **🔥🔥脚本猫 / 油猴脚本开发指南🔥🔥**
-  - 👉**脚本开发图文教程**：<https://learn.scriptcat.org>👈
-  - 👉**脚本开发视频教程**：<https://www.bilibili.com/video/BV1gT4y1N7zy>👈
-  - 👉**脚本猫官方开发文档**：<https://docs.scriptcat.org/docs/dev>👈
-
-<br>
-
-> **👇👇Python脚本（支持 GitHub Actions、云函数、青龙面板等）👇👇**
+- 支持 GitHub Actions、云函数、青龙面板等
 
 | Name | Type | GitHub | Gitee |
 |:---|:---:|:---:|:---:|
-| **华米运动步数修改** | **OAuth** | [查看](./blob/main/py/huami.py) | [查看](./tree/main/py/huami.py) |
-| **豆瓣电影 Top 250 <br>封面图片下崽器** | **-** | [查看](./blob/main/py/douban.py) | [查看](./tree/main/py/douban.py) |
+| **华米运动步数修改** | **OAuth** | [查看](https://raw.githubusercontent.com/geoisam/FuckScripts/main/py/huami.py) | [查看](https://gitee.com/geoisam/FuckScripts/raw/main/py/huami.py) |
+| **豆瓣电影 Top 250 <br>封面图片下崽器** | **-** | [查看](https://raw.githubusercontent.com/geoisam/FuckScripts/main/py/douban.py) | [查看](https://gitee.com/geoisam/FuckScripts/raw/main/py/douban.py) |
 
 <br>
 
