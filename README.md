@@ -1,121 +1,81 @@
 # 🌈FuckScripts
 
----
+<br>
 
-### \#\# 脚本猫 / 油猴脚本
+### \# 脚本猫 / 油猴脚本
 
-+ **🔥🔥脚本猫 / 油猴脚本开发指南🔥🔥**
-  + 👉[**脚本开发图文教程**](https://learn.scriptcat.org)👈
-  + 👉[**脚本开发视频教程**](https://www.bilibili.com/video/BV1gT4y1N7zy)👈
-  + 👉[**脚本猫官方开发文档**](https://docs.scriptcat.org/docs/dev)👈
+- **🔥🔥脚本猫 / 油猴脚本开发指南🔥🔥**
+  - 👉**脚本开发图文教程**：<https://learn.scriptcat.org>👈
+  - 👉**脚本开发视频教程**：<https://www.bilibili.com/video/BV1gT4y1N7zy>👈
+  - 👉**脚本猫官方开发文档**：<https://docs.scriptcat.org/docs/dev>👈
 
----
+<br>
 
-> **👇👇普通脚本（通用）👇👇**
+> **👇👇[普通脚本](./gm)（[脚本猫](https://docs.scriptcat.org)、篡改猴、暴力猴、[X浏览器](https://www.xbext.com)）👇👇**
 
 | Name | GitHub | Gitee |
-|:---:|:---:|:---:|
-| **微软必应优化助手** | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/微软必应优化助手.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/微软必应优化助手.user.js) |
-| **123云盘优化助手** | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/123云盘优化助手.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/123云盘优化助手.user.js) |
-| **腾讯视频优化助手** | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/腾讯视频优化助手.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/腾讯视频优化助手.user.js) |
-| ~~**可可影视播放器**~~ (已失效) | [~~安装~~](https://raw.githubusercontent.com/geoisam/FuckScripts/main/可可影视播放器.user.js) | [~~安装~~](https://gitee.com/geoisam/FuckScripts/raw/main/可可影视播放器.user.js) |
-| **百度网盘视频播放器（Dplayer）** | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/BD网盘视频播放器（改）.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/BD网盘视频播放器（改）.user.js) |
-| **百度网盘音频播放器（Aplayer）** | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/百度网盘音频播放器（改）.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/百度网盘音频播放器（改）.user.js) |
-| **自动删除QQ空间说说** | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/自动删除QQ空间说说.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/自动删除QQ空间说说.user.js) |
-| **自用校园网自动登录** | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/自用校园网自动登录.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/自用校园网自动登录.user.js) |
+|:---|:---:|:---:|
+| **微软必应优化助手** | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/微软必应优化助手.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/gm/微软必应优化助手.user.js) |
+| **123云盘优化助手** | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/123云盘优化助手.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/gm/123云盘优化助手.user.js) |
+| **腾讯视频优化助手** | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/腾讯视频优化助手.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/gm/腾讯视频优化助手.user.js) |
+| ~~**可可影视播放器**~~ (已失效) | [~~安装~~](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/可可影视播放器.user.js) | [~~安装~~](https://gitee.com/geoisam/FuckScripts/raw/main/gm/可可影视播放器.user.js) |
+| **百度网盘视频播放器（Dplayer）** | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/BD网盘视频播放器（改）.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/gm/BD网盘视频播放器（改）.user.js) |
+| **百度网盘音频播放器（Aplayer）** | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/百度网盘音频播放器（改）.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/gm/百度网盘音频播放器（改）.user.js) |
+| **自动删除QQ空间说说** | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/自动删除QQ空间说说.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/gm/自动删除QQ空间说说.user.js) |
+| **自用校园网自动登录** | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/自用校园网自动登录.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/gm/自用校园网自动登录.user.js) |
 
----
+<br>
 
-> **👇👇定时脚本（[脚本猫](https://docs.scriptcat.org)）👇👇**
+> **👇👇[后台定时脚本](./sc)（仅支持 [脚本猫](https://docs.scriptcat.org)）👇👇**
 
 | Name | Type | GitHub | Gitee |
-|:---:|:---:|:---:|:---:|
-| **油猴中文网签到** | **Discuz**(DSU每日签到) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/油猴中文网签到.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/油猴中文网签到.user.js) |
-| **智能电视网签到** | **Discuz**(亮剑打卡签到) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/智能电视网签到.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/智能电视网签到.user.js) |
-| **飘雪动漫社签到** | **Discuz**(西瓜微社区签到) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/飘雪动漫社签到.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/飘雪动漫社签到.user.js) |
-| ~~**粤知缘动漫社签到**~~ (已失效) | ~~**Discuz**(DC每日签到)~~ | ~~[安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/粤知缘动漫社签到.user.js)~~ | ~~[安装](https://gitee.com/geoisam/FuckScripts/raw/main/粤知缘动漫社签到.user.js)~~ |
-| ~~**MIUI历史版本签到**~~ (已失效) | ~~**WordPress**~~ | ~~[安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/MIUI历史版本签到.user.js)~~ | ~~[安装](https://gitee.com/geoisam/FuckScripts/raw/main/MIUI历史版本签到.user.js)~~ |
-| ~~**微软积分商城签到**~~ (已失效) | ~~**OAuth**~~ | ~~[安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/微软积分商城签到.user.js)~~ | ~~[安装](https://gitee.com/geoisam/FuckScripts/raw/main/微软积分商城签到.user.js)~~ |
+|:---|:---|:---:|:---:|
+| **华米运动步数修改** | **OAuth** | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/华米运动步数修改.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/sc/华米运动步数修改.user.js) |
+| **油猴中文网签到** | **Discuz**(DSU每日签到) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/油猴中文网签到.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/sc/油猴中文网签到.user.js) |
+| **智能电视网签到** | **Discuz**(亮剑打卡签到) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/智能电视网签到.user.js) | [安装](https://gitee.com/geoisam/sc/FuckScripts/raw/main/智能电视网签到.user.js) |
+| **飘雪动漫社签到** | **Discuz**(西瓜微社区签到) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/飘雪动漫社签到.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/sc/飘雪动漫社签到.user.js) |
+| ~~**粤知缘动漫社签到**~~ (已失效) | ~~**Discuz**(DC每日签到)~~ | ~~[安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/粤知缘动漫社签到.user.js)~~ | ~~[安装](https://gitee.com/geoisam/FuckScripts/raw/main/sc/粤知缘动漫社签到.user.js)~~ |
+| ~~**MIUI历史版本签到**~~ (已失效) | ~~**WordPress**~~ | ~~[安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/MIUI历史版本签到.user.js)~~ | ~~[安装](https://gitee.com/geoisam/FuckScripts/raw/main/sc/MIUI历史版本签到.user.js)~~ |
+| ~~**微软积分商城签到**~~ (已失效) | ~~**OAuth**~~ | ~~[安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/微软积分商城签到.user.js)~~ | ~~[安装](https://gitee.com/geoisam/FuckScripts/raw/main/sc/微软积分商城签到.user.js)~~ |
 
----
+<br>
 
-| Name | Lang | Type | GitHub | Gitee |
-|:---:|:---:|:---:|:---:|:---:|
-| **华米运动步数修改** | `UserScript` | **OAuth** | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/华米运动步数修改.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/华米运动步数修改.user.js) |
-| **华米运动步数修改** | `Python` | **OAuth** | [查看](https://raw.githubusercontent.com/geoisam/FuckScripts/main/zepplife.py) | [查看](https://gitee.com/geoisam/FuckScripts/raw/main/zepplife.py) |
+> **👇👇[Python脚本](./py)（支持 GitHub Actions、云函数、青龙面板等）👇👇**
 
-- 有时虽然HTTP状态码是200但实际上却是出错了请参考以下信息
+| Name | Type | GitHub | Gitee |
+|:---|:---:|:---:|:---:|
+| **华米运动步数修改** | **OAuth** | [查看](./blob/main/py/huami.py) | [查看](./tree/main/py/huami.py) |
+| **豆瓣电影 Top 250 <br>封面图片下崽器** | **-** | [查看](./blob/main/py/douban.py) | [查看](./tree/main/py/douban.py) |
 
-| Error	| Description |
-|:---:|:---:|
-| 0100 |	无效的请求数据(必填数据为空，数据格式不正确等) |
-| 0101 |	无效的app_name |
-| 0102 |	无效的app_token |
-| 0103 |	无效的验证码 |
-| 0105 |	无效的login_token |
-| 0106 |	三方校验失败 |
-| 0107 |	注册失败 |
-| 0108 |	互斥登录 |
+<br>
 
-- 设备ID，实际上随便乱填都行，App里面抓包是 `UUID v4`
-  - `"device_id":"02:00:00:00:00:00"`
+### \# [广告过滤](./adsfuck.txt)（uBlock Origin / AdGuard / Adblock Plus / [X浏览器](https://www.xbext.com) / [Via浏览器](https://viayoo.com)）
 
-- 手环的唯一标识，实际上随便乱填都行，只要数量对得上
-  - `"deviceId":"88CC5224060006C4"`
+- **🔥🔥网页广告过滤规则🔥🔥**
+  - ✅ [微软必应](https://bing.com)
+  - ✅ [腾讯视频](https://v.qq.com)
+  - ✅ [优酷](https://youku.com)
+  - ✅ [爱奇艺](https://iqiyi.com)
+  - ✅ [芒果TV](https://mgtv.com)
+  - ✅ [123云盘](https://123pan.com)
+  - ✅ [APKMirror](https://apkmirror.com)
+  - ✅ [蓝奏云](https://pc.woozooo.com)
 
-- 可以使用云函数/青龙面板或者建个私人仓库用GitHub Actions实现自动刷步
-
-```yml
-name: 华米运动步数修改
- 
-on:
-  workflow_dispatch:
-  push:
-    branches: [ $default-branch ]
-  pull_request:
-    branches: [ $default-branch ]
-  schedule:
-    - cron: 0 0 * * *
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    - name: setup python
-      uses: actions/setup-python@v4
-      with:
-        python-version: 3.9
-    - name: install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install requests
-    - name: running
-      run: python zepplife.py
-```
-
----
-
-### \#\# 广告过滤（uBlock Origin / AdGuard / Adblock Plus）
-
-> **🔥🔥网页广告过滤规则🔥🔥**
-
-- ✅ [微软必应](https://bing.com)
-- ✅ [腾讯视频](https://v.qq.com)
-- ✅ [优酷](https://youku.com)
-- ✅ [爱奇艺](https://iqiyi.com)
-- ✅ [芒果TV](https://mgtv.com)
-- ✅ [123云盘](https://123pan.com)
-- ✅ [APKMirror](https://apkmirror.com)
-- ✅ [蓝奏云](https://pc.woozooo.com)
+- **👇👇过滤规则推荐👇👇**
+  - **基础广告过滤**: <https://easylist-downloads.adblockplus.org/easylist.txt>
+  - **隐私保护**: <https://easylist-downloads.adblockplus.org/easyprivacy.txt>
+  - **Cookie通知过滤**: <https://secure.fanboy.co.nz/fanboy-cookiemonster.txt>
+  - **反广告拦截警告**: <https://easylist-downloads.adblockplus.org/antiadblockfilters.txt>
+  - **恶意软件**: <https://malware-filter.gitlab.io/urlhaus-filter/urlhaus-filter-ag-online.txt>
+  - **域名黑名单**: <https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext>
 
 | Name | Expires | Github | Gitee |
 |:---:|:---:|:---:|:---:|
 | AdsFuck | 2 days | [查看](https://raw.githubusercontent.com/geoisam/FuckScripts/main/adsfuck.txt) | [查看](https://gitee.com/geoisam/FuckScripts/raw/main/adsfuck.txt) |
 
----
+<br>
 
-### \#\# 赞赏码（在线乞讨）
+### \# 赞赏码（在线乞讨）
 
 <table>
 <tr>

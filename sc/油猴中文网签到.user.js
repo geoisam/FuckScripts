@@ -1,19 +1,21 @@
 // ==UserScript==
-// @name            油猴中文网签到
-// @namespace       https://github.com/geoisam
-// @version         0.1.1
-// @description     油猴中文网每日自动签到
-// @author          geoisam@qq.com
-// @icon            https://bbs.tampermonkey.net.cn/favicon.ico
-// @supportURL      https://github.com/geoisam/FuckScripts/issues
-// @crontab         * * once * *
-// @grant           GM_xmlhttpRequest
-// @grant           GM_notification
-// @grant           GM_openInTab
-// @grant           GM_log
-// @connect         bbs.tampermonkey.net.cn
-// @license         GPL-3.0
+// @name         油猴中文网签到
+// @namespace    https://geoisam.github.io
+// @version      0.1.1
+// @description  油猴中文网每日自动签到
+// @author       geoisam@qq.com
+// @icon         https://bbs.tampermonkey.net.cn/favicon.ico
+// @homepage     https://github.com/geoisam/FuckScripts
+// @supportURL   https://github.com/geoisam/FuckScripts/issues
+// @crontab      * * once * *
+// @connect      bbs.tampermonkey.net.cn
+// @grant        GM_xmlhttpRequest
+// @grant        GM_notification
+// @grant        GM_openInTab
+// @grant        GM_log
+// @license      GPL-3.0
 // ==/UserScript==
+
 
 function getRandNum(num) {
     return Math.floor(Math.random() * num)

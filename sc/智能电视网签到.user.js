@@ -1,20 +1,22 @@
 // ==UserScript==
-// @name            智能电视网签到
-// @namespace       https://github.com/geoisam
-// @version         0.4.1
-// @description     智能电视网每日自动签到，支持自动登录
-// @author          geoisam@qq.com
-// @icon            https://www.znds.com/favicon.ico
-// @supportURL      https://github.com/geoisam/FuckScripts/issues
-// @crontab         * * once * *
-// @grant           GM_xmlhttpRequest
-// @grant           GM_notification
-// @grant           GM_openInTab
-// @grant           GM_getValue
-// @grant           GM_log  
-// @connect         www.znds.com
-// @license         GPL-3.0
+// @name         智能电视网签到
+// @namespace    https://geoisam.github.io
+// @version      0.4.1
+// @description  智能电视网每日自动签到，支持自动登录
+// @author       geoisam@qq.com
+// @icon         https://www.znds.com/favicon.ico
+// @homepage     https://github.com/geoisam/FuckScripts
+// @supportURL   https://github.com/geoisam/FuckScripts/issues
+// @crontab      * * once * *
+// @connect      www.znds.com
+// @grant        GM_xmlhttpRequest
+// @grant        GM_notification
+// @grant        GM_openInTab
+// @grant        GM_getValue
+// @grant        GM_log  
+// @tips         此脚本一直为 开源免费 使用，如果你是从某些地方买的话，你就是被骗了
 // ==/UserScript==
+
 
 /* ==UserConfig==
 Login:
@@ -28,6 +30,7 @@ Login:
     title: 密码
     password: true
  ==/UserConfig== */
+
 
 let reLogTimes = 0
 let loginWay = GM_getValue("Login.way")

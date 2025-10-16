@@ -1,19 +1,21 @@
 // ==UserScript==
-// @name            飘雪动漫社签到
-// @namespace       https://github.com/geoisam
-// @version         0.3.0
-// @description     飘雪动漫社每日自动签到，领取红包
-// @author          geoisam@qq.com
-// @icon            https://www.dranime.net/favicon.ico
-// @supportURL      https://github.com/geoisam/FuckScripts/issues
-// @crontab         * * once * *
-// @grant           GM_xmlhttpRequest
-// @grant           GM_notification
-// @grant           GM_openInTab
-// @grant           GM_log
-// @connect         www.dranime.net
-// @license         GPL-3.0
+// @name         飘雪动漫社签到
+// @namespace    https://geoisam.github.io
+// @version      0.3.0
+// @description  飘雪动漫社每日自动签到，领取红包
+// @author       geoisam@qq.com
+// @icon         https://www.dranime.net/favicon.ico
+// @homepage     https://scriptcat.org/script-show-page/4285
+// @supportURL   https://github.com/geoisam/FuckScripts/issues
+// @crontab      * * once * *
+// @grant        GM_xmlhttpRequest
+// @grant        GM_notification
+// @grant        GM_openInTab
+// @grant        GM_log
+// @connect      www.dranime.net
+// @tips         此脚本一直为 开源免费 使用，如果你是从某些地方买的话，你就是被骗了
 // ==/UserScript==
+
 
 function getRandNum(num) {
     return Math.floor(Math.random() * num)

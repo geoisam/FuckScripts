@@ -1,24 +1,24 @@
 // ==UserScript==
-// @name         BD网盘视频播放器（改）
+// @name         百度网盘视频播放器（改）
 // @namespace    https://github.com/geoisam
 // @version      0.8.5.20241212
-// @description  https://scriptcat.org/script-show-page/340
+// @description  原作者脚本：https://scriptcat.org/script-show-page/340
 // @author       geoisam@qq.com
-// @icon         https://staticwx.cdn.bcebos.com/mini-program/images/ic_video.png
+// @icon         data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAABSCAMAAADw8nOpAAAApVBMVEUAAACBg/GBg/GvsP+Bg/GvsP+vsP+vsP+Bg/GBg/GBg/GBg/GvsP+vsP+Bg/GBg/GvsP+vsP+Bg/GvsP+Bg/GBg/GBg/GBg/GBg/GvsP+Bg/H///+vsP+ztff39/7p6f3ExfjT1PqQkvOEhvL09P6LjfLR0vrJyvmrrPaPkfP8/P/v7/2qq/3g4PyanPnBwvixsvafoPSWl/Pl5vynqPzb3Pu8vfiaZ4qSAAAAGnRSTlMAWjzy7uvlMfXcrlc9OTktKicnIh8D4MOkQtKtlbEAAAEZSURBVFjD7dlJb8IwEIZhSinQ0lJK6cJMwuas7Pv//2n4AAJkEsnxdwBp3pNPj+SLR/KUHqvPtwrZ9fudL5brZF011/x5Jfu86lcO2aQiZK7ZKERqs5VJPhUkvZcWmtRmDU5qE05qE056zzU0qc0PFDk1TGdy7p3NdwyptobpSpKaX9y9a5DO1dtwkspCCimkkFAyHAY9s8nCgYz4dklxsp9BDk7vecQ+lkw3zBGUXAX6OESSyzFjSRUzg8kdo8mU4eRIyHsmVQ9O0noCJymcwUlSMZrU+WMoeXreYktylkHu6dhoEVqSyW0xSB2G7nrpmyXhfc1xIYUUUkghhbyqgSebALJjfNW79ue4UDCrtN3WHib43yk9VgfOog3uzEKKTgAAAABJRU5ErkJggg==
 // @supportURL   https://github.com/geoisam/FuckScripts/issues
+// @require      https://scriptcat.org/lib/950/1.0.1/Joysound.js
+// @require      https://unpkg.com/jquery@3.7.1/dist/jquery.min.js
+// @require      https://unpkg.com/hls.js@1.6.13/dist/hls.min.js
+// @require      https://unpkg.com/dplayer@1.27.1/dist/DPlayer.min.js
 // @match        http*://pan.baidu.com/s/*
 // @match        http*://yun.baidu.com/s/*
 // @match        http*://*.baidu.com/play/video*
 // @match        http*://*.baidu.com/pfile/video*
 // @match        http*://*.baidu.com/pfile/mboxvideo*
 // @match        http*://*.baidu.com/mbox/streampage*
-// @require      https://scriptcat.org/lib/950/1.0.1/Joysound.js
-// @require      https://unpkg.com/jquery@3.7.1/dist/jquery.min.js
-// @require      https://unpkg.com/hls.js@1.5.17/dist/hls.min.js
-// @require      https://unpkg.com/dplayer@1.27.1/dist/DPlayer.min.js
 // @run-at       document-end
 // @grant        unsafeWindow
-// @license      GPL-3.0
+// @tips         此脚本一直为 开源免费 使用，如果你是从某些地方买的话，你就是被骗了
 // ==/UserScript==
 
 

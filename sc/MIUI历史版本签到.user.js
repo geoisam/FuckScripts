@@ -1,20 +1,22 @@
 // ==UserScript==
-// @name            MIUI历史版本签到
-// @namespace       https://github.com/geoisam
-// @version         0.3.8
-// @description     MIUI历史版本每日自动签到，支持自动登录
-// @author          geoisam@qq.com
-// @icon            https://miuiver.com/favicon.ico
-// @supportURL      https://github.com/geoisam/FuckScripts/issues
-// @crontab         * * once * *
-// @grant           GM_xmlhttpRequest
-// @grant           GM_notification
-// @grant           GM_openInTab
-// @grant           GM_getValue
-// @grant           GM_log
-// @connect         miuiver.com
-// @license         GPL-3.0
+// @name         MIUI历史版本签到
+// @namespace    https://geoisam.github.io
+// @version      0.3.8
+// @description  MIUI历史版本每日自动签到，支持自动登录
+// @author       geoisam@qq.com
+// @icon         https://miuiver.com/favicon.ico
+// @homepage     https://github.com/geoisam/FuckScripts
+// @supportURL   https://github.com/geoisam/FuckScripts/issues
+// @crontab      * * once * *
+// @connect      miuiver.com
+// @grant        GM_xmlhttpRequest
+// @grant        GM_notification
+// @grant        GM_openInTab
+// @grant        GM_getValue
+// @grant        GM_log
+// @tips         此脚本一直为 开源免费 使用，如果你是从某些地方买的话，你就是被骗了
 // ==/UserScript==
+
 
 /* ==UserConfig==
 Login:
@@ -24,6 +26,7 @@ Login:
     title: 密码
     password: true
  ==/UserConfig== */
+
 
 let reLogTimes = 0
 let userLog = encodeURIComponent(GM_getValue("Login.log"))
