@@ -53,7 +53,7 @@
 
 <br>
 
-### \# [广告过滤](./adsfuck.txt)
+### \# 广告过滤
 
 - 支持 uBlock Origin、AdGuard、Adblock Plus、[X浏览器](https://www.xbext.com)、[Via浏览器](https://viayoo.com) 等
 
