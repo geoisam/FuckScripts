@@ -930,7 +930,6 @@ return new Promise((resolve, reject) => {
                 FuckF.tasksEnd()
             } else {
                 FuckF.log("🟣", `初始化完成！\n${FuckF.getTimestamp()}`)
-                resolve()
                 const result = await FuckF.getRewardsInfo()
                 if (!result) {
                     FuckF.log("🔴", "账号状态失效，请检查Microsoft登录状态或重新登录！")
