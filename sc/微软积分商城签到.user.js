@@ -279,6 +279,7 @@ FuckF.getCode = async (url) => {
         const code = result.match(/M\.[\w+\.]+(\-\w+){4}/)
         if (code) return code[0]
         FuckF.log("🔴", `${message}失败！🔛${result}`)
+        GM_openInTab("https://login.live.com/", { active: true, insert: true, setParent: true })
         return false
     } catch (e) {
         return null
@@ -365,6 +366,7 @@ FuckF.getRewardsInfo = async () => {
             }
         }
         FuckF.log("🔴", `${message}失败！🔛${result}`)
+        GM_openInTab("https://rewards.bing.com/", { active: true, insert: true, setParent: true })
         return false
     } catch (e) {
         return null
