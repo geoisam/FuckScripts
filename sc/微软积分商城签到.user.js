@@ -792,6 +792,11 @@ FuckF.mainlandCheck = async () => {
     if (result) {
         const res = result.replace(/\s/g, "")
         const data = res.match(/Region:"(.*?)"(.*?)RevIpCC:"(.*?)"/)
+        const bingnone = res.match(/<spanid="id_s"(.*?)aria-hidden="(.*?)"/)
+        if (["display:none", "false"].some(str => bingnone.includes(str))) {
+            FuckF.log("🔴", "请检查 www.bing.com 登录状态，已打开网站尝试授权登录！", true)
+            GM_openInTab("https://www.bing.com/fd/auth/signin?action=interactive&provider=windows_live_id&return_url=https://www.bing.com/profile/history", { active: true, insert: true, setParent: true })
+        }
         if (data) {
             const ipcc = data[3].toUpperCase()
             FuckD.bing.region = ipcc
@@ -925,7 +930,7 @@ return new Promise((resolve, reject) => {
                 FuckF.log("🟣", "初始化运行完成！")
                 const result = await FuckF.getRewardsInfo()
                 if (!result) {
-                    FuckF.log("🔴", "账号状态失效，请检查 rewards.bing.com 登录状态或重新登录！", true)
+                    FuckF.log("🔴", "请检查 rewards.bing.com 登录状态，已打开网站尝试授权登录！", true)
                     GM_openInTab("https://rewards.bing.com/status/", { active: true, insert: true, setParent: true })
                     resolve()
                 } else {
@@ -935,7 +940,7 @@ return new Promise((resolve, reject) => {
                         FuckF.signStart()
                         FuckF.readStart()
                     } else {
-                        FuckF.log("🔴", "请检查 login.live.com 登录状态或手动填写 Code 授权！", true)
+                        FuckF.log("🔴", "请检查 login.live.com 登录状态，或者手动填写 Auth Code 授权！\n🚀复制粘贴跳转后的链接保存配置即可", true)
                         GM_openInTab("https://login.live.com/oauth20_authorize.srf?client_id=0000000040170455&scope=service::prod.rewardsplatform.microsoft.com::MBI_SSL&response_type=code&redirect_uri=https://login.live.com/oauth20_desktop.srf", { active: true, insert: true, setParent: true })
                     }
                     if (GM_getValue("Config.search", true)) FuckF.searchStart()
