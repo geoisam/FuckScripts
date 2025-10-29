@@ -172,13 +172,13 @@ const FuckF = {
         return only ? sid : uuid
     },
 
-    getRandomChinese(min = 1, max = 10) {
-        const c = FuckD.chinese
-        const l = this.getScopeRandomNum(min, max)
-        return Array.from(
-            { length: l },
-            () => c[this.getRandomNum(c.length)],
-        ).join("")
+    getRandomSubstring(str, num = 20) {
+        const length = str.length
+        if (length <= num) {
+            return str
+        }
+        const randomLength = Math.floor(Math.random() * (length - num + 1)) + num
+        return str.substring(0, randomLength)
     },
 
     getTimestamp(start = 0, end = 13) {
@@ -216,7 +216,6 @@ const FuckF = {
             const p = Array.isArray(j) || (typeof j === "object" && j !== null)
             return p ? true : false
         } catch (e) {
-            this.log("🔴", `非数组或对象 🔛${e}`)
             return false
         }
     },
@@ -227,8 +226,7 @@ const FuckF = {
                 ...options,
                 timeout: 5000,
                 ontimeout() {
-                    this.log("🔴", `请求超时！`)
-                    reject()
+                    reject(new Error("请求超时！"))
                 },
                 onload(xhr) {
                     if (xhr.status == 200) {
@@ -238,17 +236,24 @@ const FuckF = {
                             resolve(xhr.responseText)
                         }
                     } else {
-                        this.log("🔴", `请求失败，状态码：${xhr.status} 🔛${xhr.responseText}`)
-                        reject()
+                        reject(new Error(`请求失败，状态码：${xhr.status}`))
                     }
                 },
                 onerror(err) {
-                    this.log("🔴", `请求发生异常！ 🔛${err}`)
-                    reject()
+                    reject(new Error(`请求发生异常！ 🔛${err}`))
                 },
             })
         })
     },
+}
+
+FuckF.getRandomChinese = (min = 1, max = 10) => {
+    const c = FuckD.chinese
+    const l = FuckF.getScopeRandomNum(min, max)
+    return Array.from(
+        { length: l },
+        () => c[FuckF.getRandomNum(c.length)],
+    ).join("")
 }
 
 FuckF.getRandomApiHot = () => {
@@ -271,8 +276,10 @@ FuckF.getCode = async (url) => {
         }, true)
         const code = result.match(/M\.[\w+\.]+(\-\w+){4}/)
         if (code) return code[0]
-    } catch (e) { }
-    FuckF.log("🔴", `${message}失败！🔛${result}`)
+        FuckF.log("🟡", `${message}失败！🔛${result}`)
+    } catch (e) {
+        FuckF.log("🔴", `${message}出错！🔛${e.message}`)
+    }
     return false
 }
 
@@ -296,8 +303,10 @@ FuckF.getToken = async (url) => {
                 return true
             }
         }
-    } catch (e) { }
-    FuckF.log("🔴", `${message}失败！🔛${result}`)
+        FuckF.log("🟡", `${message}失败！🔛${result}`)
+    } catch (e) {
+        FuckF.log("🔴", `${message}出错！🔛${e.message}`)
+    }
     return false
 }
 
@@ -355,8 +364,10 @@ FuckF.getRewardsInfo = async () => {
             const data = res.dashboard
             if (data) return data
         }
-    } catch (e) { }
-    FuckF.log("🔴", `${message}失败！🔛${result}`)
+        FuckF.log("🟡", `${message}失败！🔛${result}`)
+    } catch (e) {
+        FuckF.log("🔴", `${message}出错！🔛${e.message}`)
+    }
     return false
 }
 
@@ -418,7 +429,9 @@ FuckF.taskSign = async () => {
         } else {
             FuckD.sign.times++
         }
-    } catch (e) { }
+    } catch (e) {
+        FuckF.log("🔴", `签入任务出错！🔛${e.message}`)
+    }
     return false
 }
 
@@ -443,7 +456,9 @@ FuckF.getReadPro = async () => {
                 }
             }
         }
-    } catch (e) { }
+    } catch (e) {
+        FuckF.log("🔴", `阅读详情信息获取出错！🔛${e.message}`)
+    }
     return readArr
 }
 
@@ -505,7 +520,9 @@ FuckF.taskRead = async () => {
                 "channel": "SAAndroid",
             }),
         })
-    } catch (e) { }
+    } catch (e) {
+        FuckF.log("🔴", `阅读任务出错！🔛${e.message}`)
+    }
     return false
 }
 
@@ -522,8 +539,10 @@ FuckF.getRewardsToken = async () => {
         const res = result.replace(/\s/g, "")
         const token = res.match(/RequestVerificationToken"type="hidden"value="(.*?)"/)
         if (token) return token[1]
-    } catch (e) { }
-    FuckF.log("🔴", `${message}失败！🔛${result}`)
+        FuckF.log("🟡", `${message}失败！🔛${result}`)
+    } catch (e) {
+        FuckF.log("🔴", `${message}出错！🔛${e.message}`)
+    }
     return false
 }
 
@@ -602,7 +621,9 @@ FuckF.taskPromos = async () => {
             })
             await new Promise(resolve => setTimeout(resolve, FuckD.bing.time))
         }
-    } catch (e) { }
+    } catch (e) {
+        FuckF.log("🔴", `活动任务出错！🔛${e.message}`)
+    }
     FuckD.promos.times++
     return false
 }
@@ -623,20 +644,21 @@ FuckF.getQueryWord = async () => {
                         }
                         FuckD.search.word.list = FuckF.getRandomArr(FuckD.search.word.list)
                         sentence = FuckD.search.word.list[FuckD.search.word.index]
-                        return sentence
                     }
                 }
-            } catch (e) { }
+            } catch (e) {
+                FuckF.log("🔴", `搜索词数据获取出错！🔛${e.message}`)
+            }
         } else {
             FuckD.search.word.index++
             if (FuckD.search.word.index > FuckD.search.word.list.length - 1) {
                 FuckD.search.word.index = 0
             }
             sentence = FuckD.search.word.list[FuckD.search.word.index]
-            return sentence
         }
         FuckF.log("🟡", "当前搜索词接口异常！已临时使用随机汉字组合！")
     }
+    sentence = FuckF.getRandomSubstring(sentence)
     return sentence
 }
 
@@ -739,7 +761,9 @@ FuckF.taskSearch = async () => {
                 await FuckF.xhr({ url: click, headers: headers, })
             }
         }
-    } catch (e) { }
+    } catch (e) {
+        FuckF.log("🔴", `搜索任务出错！🔛${e.message}`)
+    }
     FuckD.search.index++
     return false
 }
@@ -821,6 +845,7 @@ return new Promise((resolve, reject) => {
             resolve()
         }
         if (FuckD.sign.end > 0 && FuckD.read.end > 0 && FuckD.promos.end > 0 && FuckD.search.end > 0) {
+            FuckF.log("🟣", "本次运行结束！")
             resolve()
         }
     }
@@ -834,6 +859,7 @@ return new Promise((resolve, reject) => {
                 FuckF.tasksEnd()
             }
         } catch (e) {
+            FuckF.log("🔴", e.message)
             FuckD.sign.end++
             FuckF.tasksEnd()
         }
@@ -848,6 +874,7 @@ return new Promise((resolve, reject) => {
                 FuckF.tasksEnd()
             }
         } catch (e) {
+            FuckF.log("🔴", e.message)
             FuckD.read.end++
             FuckF.tasksEnd()
         }
@@ -862,6 +889,7 @@ return new Promise((resolve, reject) => {
                 FuckF.tasksEnd()
             }
         } catch (e) {
+            FuckF.log("🔴", e.message)
             FuckD.promos.end++
             FuckF.tasksEnd()
         }
@@ -880,6 +908,7 @@ return new Promise((resolve, reject) => {
                 FuckF.tasksEnd()
             }
         } catch (e) {
+            FuckF.log("🔴", e.message)
             FuckD.search.end++
             FuckF.tasksEnd()
         }
@@ -893,6 +922,7 @@ return new Promise((resolve, reject) => {
                 FuckD.bing.code = -1
                 FuckF.tasksEnd()
             } else {
+                FuckF.log("🟣", "初始化运行完成！")
                 const result = await FuckF.getRewardsInfo()
                 if (!result) {
                     FuckF.log("🔴", "账号状态失效，请检查 rewards.bing.com 登录状态或重新登录！", true)
@@ -912,6 +942,7 @@ return new Promise((resolve, reject) => {
                 }
             }
         } catch (e) {
+            FuckF.log("🔴", e.message)
             reject(e)
         }
     }
