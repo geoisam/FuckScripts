@@ -235,7 +235,7 @@ const FuckF = {
             const seconds = Date.now()
             GM_xmlhttpRequest({
                 ...options,
-                timeout: 10000,
+                timeout: 15000,
                 ontimeout() {
                     reject(new Error(`请求超时！用时：${(Date.now() - seconds) / 1000}秒`))
                 },
