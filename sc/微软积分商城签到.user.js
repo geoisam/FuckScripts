@@ -113,6 +113,7 @@ const FuckD = {
             },
         },
         mainland: 1,
+        login: 1,
     },
     sign: {
         times: 0,
@@ -170,15 +171,6 @@ const FuckF = {
         const uuid = crypto.randomUUID()
         const sid = uuid.replace(/-/g, "").toUpperCase()
         return only ? sid : uuid
-    },
-
-    getRandomSubstring(str, num = 20) {
-        const length = str.length
-        if (length <= num) {
-            return str
-        }
-        const randomLength = Math.floor(Math.random() * (length - num + 1)) + num
-        return str.substring(0, randomLength)
     },
 
     getTimestamp(start = 0, end = 13) {
@@ -245,6 +237,15 @@ const FuckF = {
             })
         })
     },
+}
+
+FuckF.getRandomSubstring = (str, min = 20, max = 32) => {
+    const length = str.length
+    if (length <= min) {
+        return str
+    }
+    const randomLength = FuckF.getScopeRandomNum(min, max)
+    return str.substring(0, randomLength)
 }
 
 FuckF.getRandomChinese = (min = 1, max = 10) => {
@@ -644,6 +645,8 @@ FuckF.getQueryWord = async () => {
                         }
                         FuckD.search.word.list = FuckF.getRandomArr(FuckD.search.word.list)
                         sentence = FuckD.search.word.list[FuckD.search.word.index]
+                        sentence = FuckF.getRandomSubstring(sentence)
+                        return sentence
                     }
                 }
             } catch (e) {
@@ -655,10 +658,11 @@ FuckF.getQueryWord = async () => {
                 FuckD.search.word.index = 0
             }
             sentence = FuckD.search.word.list[FuckD.search.word.index]
+            sentence = FuckF.getRandomSubstring(sentence)
+            return sentence
         }
         FuckF.log("🟡", "当前搜索词接口异常！已临时使用随机汉字组合！")
     }
-    sentence = FuckF.getRandomSubstring(sentence)
     return sentence
 }
 
@@ -772,7 +776,10 @@ FuckF.mainlandCheck = async () => {
     const host = "www.bing.com"
     const info = {
         url: "https://" + host,
-        headers: { "cookie": "_EDGE_S=mkt=0" }
+        headers: {
+            "user-agent": FuckD.ua.pc,
+            "cookie": "_EDGE_S=mkt=0"
+        }
     }
     const hash = ["g", "e", "o", "i", "s", "a", "m"].join("")
     if (!GM_info.script.header.includes(hash)) {
@@ -794,8 +801,11 @@ FuckF.mainlandCheck = async () => {
         const data = res.match(/Region:"(.*?)"(.*?)RevIpCC:"(.*?)"/)
         const bingnone = res.match(/<spanid="id_s"(.*?)aria-hidden="(.*?)"/)
         if (["display:none", "false"].some(str => bingnone.includes(str))) {
-            FuckF.log("🔴", "请检查 www.bing.com 登录状态，已打开网站尝试授权登录！", true)
-            GM_openInTab("https://www.bing.com/fd/auth/signin?action=interactive&provider=windows_live_id&return_url=https://www.bing.com/profile/history", { active: true, insert: true, setParent: true })
+            FuckD.bing.login--
+            if (FuckD.bing.login == 0) {
+                FuckF.log("🔴", "请检查 www.bing.com 登录状态，已打开网站尝试授权登录！", true)
+                GM_openInTab("https://www.bing.com/fd/auth/signin?action=interactive&provider=windows_live_id&return_url=https://www.bing.com/profile/history", { active: true, insert: true, setParent: true })
+            }
         }
         if (data) {
             const ipcc = data[3].toUpperCase()
@@ -844,8 +854,8 @@ return new Promise((resolve, reject) => {
     }
 
     FuckF.tasksEnd = () => {
-        FuckD.bing.mainland--
         if (FuckD.bing.code < 0) {
+            FuckD.bing.mainland--
             FuckD.bing.mainland < 0 || FuckF.log("🟡", `当前 IP 非中国大陆地区，END！\n🔥${FuckD.bing.ip}-${FuckD.bing.region}${FuckD.bing.ipInfo}`, true)
             resolve()
         }
