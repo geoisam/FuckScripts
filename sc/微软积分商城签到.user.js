@@ -102,6 +102,12 @@ const FuckD = {
             }],
         ],
     },
+    tasks: {
+        sign: GM_getValue("Tasks.sign", true),
+        read: GM_getValue("Tasks.read", true),
+        promos: GM_getValue("Tasks.promos", true),
+        search: GM_getValue("Tasks.search", true),
+    },
     bing: {
         region: "CN",
         status: GM_getValue("Config.lock", true),
@@ -386,7 +392,7 @@ FuckF.getRewardsInfo = async () => {
 }
 
 FuckF.taskSign = async () => {
-    if (FuckD.sign.date == FuckD.bing.dateNowNum || FuckD.sign.end > 0 || FuckD.sign.times > 2) {
+    if (!FuckD.tasks.sign || FuckD.sign.date == FuckD.bing.dateNowNum || FuckD.sign.times > 2 || FuckD.sign.end > 0) {
         FuckD.sign.end++
         return true
     }
@@ -477,7 +483,7 @@ FuckF.getReadPro = async () => {
 }
 
 FuckF.taskRead = async () => {
-    if (FuckD.read.end > 0 || FuckD.read.times > 2) {
+    if (!FuckD.tasks.read || FuckD.read.times > 2 || FuckD.read.end > 0) {
         FuckD.read.end++
         return true
     }
@@ -561,7 +567,7 @@ FuckF.getRewardsToken = async () => {
 }
 
 FuckF.taskPromos = async () => {
-    if (FuckD.promos.end > 0 || FuckD.promos.times > 2) {
+    if (!FuckD.tasks.promos || FuckD.promos.times > 2 || FuckD.promos.end > 0) {
         FuckD.promos.end++
         return true
     }
@@ -680,7 +686,10 @@ FuckF.getQueryWord = async () => {
 }
 
 FuckF.taskSearch = async () => {
-    if (FuckD.search.end > 0) return true
+    if (!FuckD.tasks.search || FuckD.search.end > 0) {
+        FuckD.search.end++
+        return true
+    }
     const fucker = await FuckF.mainlandCheck()
     if (FuckD.bing.status && fucker) {
         FuckD.bing.code = -1
@@ -852,12 +861,6 @@ return new Promise((resolve, reject) => {
     FuckD.read.date = tasksArr ? tasksArr.read : 0
     FuckD.promos.date = tasksArr ? tasksArr.promos : 0
     FuckD.search.date = tasksArr ? tasksArr.search : 0
-    const tasks = {
-        sign: GM_getValue("Tasks.sign", true),
-        read: GM_getValue("Tasks.read", true),
-        promos: GM_getValue("Tasks.promos", true),
-        search: GM_getValue("Tasks.search", true),
-    }
 
     if (FuckD.api.mode != "offline") {
         const defaultApiName = "hot.baiwumm.com"
@@ -950,7 +953,6 @@ return new Promise((resolve, reject) => {
 
     FuckF.tasksStart = async () => {
         try {
-            if (!tasks.sign && !tasks.read && !tasks.promos && !tasks.search) resolve()
             if (GM_info.script.author != "geoisam@qq.com") resolve()
             const fucker = await FuckF.mainlandCheck()
             if (fucker) {
@@ -966,12 +968,12 @@ return new Promise((resolve, reject) => {
                     }
                     resolve()
                 } else {
-                    if (tasks.promos) FuckF.promosStart()
-                    if (tasks.search) FuckF.searchStart()
+                    FuckF.promosStart()
+                    FuckF.searchStart()
                     const result = await FuckF.renewToken()
                     if (result) {
-                        if (tasks.sign) FuckF.signStart()
-                        if (tasks.read) FuckF.readStart()
+                        FuckF.signStart()
+                        FuckF.readStart()
                     } else {
                         FuckF.log("🔴", "请检查 login.live.com 登录状态，或者手动填写授权码或链接！\n🚀复制粘贴跳转后的链接保存配置即可", true)
                         GM_openInTab("https://login.live.com/oauth20_authorize.srf?client_id=0000000040170455&scope=service::prod.rewardsplatform.microsoft.com::MBI_SSL&response_type=code&redirect_uri=https://login.live.com/oauth20_desktop.srf", { active: true, insert: true, setParent: true })
