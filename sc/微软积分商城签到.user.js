@@ -95,6 +95,7 @@ const FuckD = {
         repo: "https://github.com/geoisam/FuckScripts/",
         time: 3210,
         span: GM_getValue("Config.span", 20),
+        code: 0,
         token: false,
         error: 0,
         tasks: {
@@ -366,7 +367,7 @@ FuckF.taskSign = async () => {
     }
     const fucker = await FuckF.mainlandCheck()
     if (FuckD.bing.status && fucker) {
-        FuckD.promos.end = -1
+        FuckD.bing.code = -1
         return true
     }
     if (FuckD.sign.point >= 0) {
@@ -381,7 +382,7 @@ FuckF.taskSign = async () => {
     try {
         const fucker = await FuckF.mainlandCheck()
         if (FuckD.bing.status && fucker) {
-            FuckD.promos.end = -1
+            FuckD.bing.code = -1
             return true
         }
         const region = FuckD.bing.status ? "cn" : FuckD.bing.region.toLowerCase()
@@ -453,7 +454,7 @@ FuckF.taskRead = async () => {
     }
     const fucker = await FuckF.mainlandCheck()
     if (FuckD.bing.status && fucker) {
-        FuckD.promos.end = -1
+        FuckD.bing.code = -1
         return true
     }
     const readPro = await FuckF.getReadPro()
@@ -475,7 +476,7 @@ FuckF.taskRead = async () => {
     try {
         const fucker = await FuckF.mainlandCheck()
         if (FuckD.bing.status && fucker) {
-            FuckD.promos.end = -1
+            FuckD.bing.code = -1
             return true
         }
         FuckD.read.date = 0
@@ -533,7 +534,7 @@ FuckF.taskPromos = async () => {
     }
     const fucker = await FuckF.mainlandCheck()
     if (FuckD.bing.status && fucker) {
-        FuckD.promos.end = -1
+        FuckD.bing.code = -1
         return true
     }
     const dashboard = await FuckF.getRewardsInfo()
@@ -577,7 +578,7 @@ FuckF.taskPromos = async () => {
     try {
         const fucker = await FuckF.mainlandCheck()
         if (FuckD.bing.status && fucker) {
-            FuckD.promos.end = -1
+            FuckD.bing.code = -1
             return true
         }
         FuckD.promos.date = 0
@@ -643,7 +644,7 @@ FuckF.taskSearch = async () => {
     if (FuckD.search.end > 0) return true
     const fucker = await FuckF.mainlandCheck()
     if (FuckD.bing.status && fucker) {
-        FuckD.promos.end = -1
+        FuckD.bing.code = -1
         return true
     }
     const dashboard = await FuckF.getRewardsInfo()
@@ -719,7 +720,7 @@ FuckF.taskSearch = async () => {
     try {
         const fucker = await FuckF.mainlandCheck()
         if (FuckD.bing.status && fucker) {
-            FuckD.promos.end = -1
+            FuckD.bing.code = -1
             return true
         }
         const result = await FuckF.xhr({ url: query, headers: { ...headers, "referer": `https://${FuckD.bing.host}/?form=QBLH`, }, })
@@ -815,12 +816,11 @@ return new Promise((resolve, reject) => {
 
     FuckF.tasksEnd = () => {
         FuckD.bing.mainland--
-        if (FuckD.promos.end < 0) {
+        if (FuckD.bing.code < 0) {
             FuckD.bing.mainland < 0 || FuckF.log("🟡", `当前 IP 非中国大陆地区，END！\n🔥${FuckD.bing.ip}-${FuckD.bing.region}${FuckD.bing.ipInfo}`, true)
             resolve()
         }
         if (FuckD.sign.end > 0 && FuckD.read.end > 0 && FuckD.promos.end > 0 && FuckD.search.end > 0) {
-            FuckF.log("🟣", `运行完成！\n${FuckF.getTimestamp()}`)
             resolve()
         }
     }
@@ -890,10 +890,9 @@ return new Promise((resolve, reject) => {
             if (GM_info.script.author != "geoisam@qq.com") resolve()
             const fucker = await FuckF.mainlandCheck()
             if (fucker) {
-                FuckD.promos.end = -1
+                FuckD.bing.code = -1
                 FuckF.tasksEnd()
             } else {
-                FuckF.log("🟣", `初始化完成！\n${FuckF.getTimestamp()}`)
                 const result = await FuckF.getRewardsInfo()
                 if (!result) {
                     FuckF.log("🔴", "账号状态失效，请检查 rewards.bing.com 登录状态或重新登录！", true)
