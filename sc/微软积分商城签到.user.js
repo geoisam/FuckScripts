@@ -34,10 +34,6 @@ Config:
         title: 锁定国区（若当前 IP 非中国大陆地区则停止）
         type: checkbox
         default: true
-    search:
-        title: 搜索任务（有一定概率会被风控）
-        type: checkbox
-        default: true
     span:
         title: 搜索间隔（至少 20 秒即间隔 5-35 秒）
         type: number
@@ -940,11 +936,14 @@ return new Promise((resolve, reject) => {
                 FuckF.log("🟣", "初始化运行完成！")
                 const result = await FuckF.getRewardsInfo()
                 if (!result) {
-                    FuckF.log("🔴", "请检查 rewards.bing.com 登录状态，已打开网站尝试授权登录！", true)
-                    GM_openInTab("https://rewards.bing.com/status/", { active: true, insert: true, setParent: true })
+                    if (FuckD.bing.login > 0) {
+                        FuckF.log("🔴", "请检查 rewards.bing.com 登录状态，已打开网站尝试授权登录！", true)
+                        GM_openInTab("https://rewards.bing.com/status/", { active: true, insert: true, setParent: true })
+                    }
                     resolve()
                 } else {
                     FuckF.promosStart()
+                    FuckF.searchStart()
                     const result = await FuckF.renewToken()
                     if (result) {
                         FuckF.signStart()
@@ -953,7 +952,6 @@ return new Promise((resolve, reject) => {
                         FuckF.log("🔴", "请检查 login.live.com 登录状态，或者手动填写 Auth Code 授权！\n🚀复制粘贴跳转后的链接保存配置即可", true)
                         GM_openInTab("https://login.live.com/oauth20_authorize.srf?client_id=0000000040170455&scope=service::prod.rewardsplatform.microsoft.com::MBI_SSL&response_type=code&redirect_uri=https://login.live.com/oauth20_desktop.srf", { active: true, insert: true, setParent: true })
                     }
-                    if (GM_getValue("Config.search", true)) FuckF.searchStart()
                 }
             }
         } catch (e) {
