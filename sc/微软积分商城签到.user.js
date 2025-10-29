@@ -853,6 +853,7 @@ FuckF.mainlandCheck = async () => {
 }
 
 return new Promise((resolve, reject) => {
+    const seconds = Date.now()
     if (!FuckD.bing.repo.includes("geoisam")) resolve()
     FuckD.search.limit = FuckF.getScopeRandomNum(4, 7)
     FuckD.bing.dateNowNum = Number(FuckF.getDatetime(true))
@@ -882,7 +883,7 @@ return new Promise((resolve, reject) => {
             resolve()
         }
         if (FuckD.sign.end > 0 && FuckD.read.end > 0 && FuckD.promos.end > 0 && FuckD.search.end > 0) {
-            FuckF.log("🟣", "本次运行结束！")
+            FuckF.log("🟣", `本次运行结束！用时：${(Date.now() - seconds) / 1000}秒`)
             resolve()
         }
     }
@@ -959,7 +960,7 @@ return new Promise((resolve, reject) => {
                 FuckD.bing.code = -1
                 FuckF.tasksEnd()
             } else {
-                FuckF.log("🟣", "初始化运行完成！")
+                FuckF.log("🟣", `初始化运行完成！用时：${(Date.now() - seconds) / 1000}秒`)
                 const result = await FuckF.getRewardsInfo()
                 if (!result) {
                     FuckF.log("🔴", "请检查 rewards.bing.com 登录状态，已请求打开网站尝试授权登录！", true)
