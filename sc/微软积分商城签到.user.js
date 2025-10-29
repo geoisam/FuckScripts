@@ -844,7 +844,7 @@ FuckF.mainlandCheck = async () => {
 }
 
 return new Promise((resolve, reject) => {
-    if (!(FuckD.bing.repo || []).includes("geoisam")) resolve()
+    if (!FuckD.bing.repo.includes("geoisam")) resolve()
     FuckD.search.limit = FuckF.getScopeRandomNum(4, 7)
     FuckD.bing.dateNowNum = Number(FuckF.getDatetime(true))
     const tasksArr = GM_getValue("Config.tasks", false)
@@ -961,7 +961,7 @@ return new Promise((resolve, reject) => {
                     if (Math.random() < 0.5) {
                         FuckF.searchStart()
                     } else {
-                        const timespan = FuckF.getScopeRandomNum(56, 99)
+                        const timespan = FuckF.getScopeRandomNum(56000, 99000)
                         FuckF.log("🔵", `哇！第一口就喝到了猪猪耶！停留 ${timespan / 1000} 秒后开始搜索...`)
                         setTimeout(() => { FuckF.searchStart() }, timespan)
                     }
