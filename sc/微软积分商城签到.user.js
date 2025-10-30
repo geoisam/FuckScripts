@@ -293,7 +293,7 @@ FuckF.getCode = async (url) => {
             headers: {
                 "content-type": "application/x-www-form-urlencoded; charset=utf-8",
                 "user-agent": FuckD.ua.pc,
-                "referer": "https://rewards.bing.com/",
+                "referer": "https://rewards.bing.com/status/",
             }
         }, true)
         const code = result.match(/M\.[\w+\.]+(\-\w+){4}/)
@@ -558,7 +558,7 @@ FuckF.getRewardsToken = async () => {
     const message = "Request Verification Token 获取"
     try {
         const result = await FuckF.xhr({
-            url: "https://rewards.bing.com/status/",
+            url: "https://rewards.bing.com/",
             headers: {
                 "content-type": "application/x-www-form-urlencoded; charset=utf-8",
                 "user-agent": FuckD.ua.pc,
@@ -751,7 +751,7 @@ FuckF.taskSearch = async () => {
         return true
     }
     FuckD.search.date = 0
-    let pcorm, keyword, headers, regionMKT = "", cookieMKT = "_EDGE_S=mkt=0"
+    let query, pcorm, keyword, headers, regionMKT = "", cookieMKT = "_EDGE_S=mkt=0"
     if (FuckD.search.pc.progress < FuckD.search.pc.max || FuckD.search.m.progress < FuckD.search.m.max) {
         pcorm = Math.random() > 0.6 ? false : true
         if (FuckD.search.pc.progress >= FuckD.search.pc.max) pcorm = false
@@ -760,21 +760,23 @@ FuckF.taskSearch = async () => {
     keyword = await FuckF.getQueryWord()
     keyword = encodeURIComponent(keyword)
     if (FuckD.bing.status) {
-        regionMKT = "&mkt=zh-CN"
+        regionMKT = true
         cookieMKT = "_EDGE_S=mkt=zh-CN"
     }
-    const query = `https://${FuckD.bing.host}/search?q=${keyword}&form=QBLH&qs=ds${regionMKT}`
+    query = `https://${FuckD.bing.host}/search?q=${keyword}`
     if (pcorm) {
+        query = query + `&${regionMKT ? "mkt=zh-CN" : ""}&PC=U316&form=QBLH&qs=ds`
         headers = {
             "content-type": "application/x-www-form-urlencoded; charset=utf-8",
             "user-agent": FuckD.ua.pc,
-            "cookie": `${FuckD.cookie.pc}; ${cookieMKT}`,
+            "cookie": `${FuckD.cookie.pc}; SRCHUSR=DOB=${FuckD.bing.dateNowNum}&DS=1; ${cookieMKT}; SRCHD=AF=NOFORM`,
         }
     } else {
+        query = query + `&${regionMKT ? "setmkt=zh-CN" : ""}&PC=EMMX01&form=LBT003&scope=web`
         headers = {
             "content-type": "application/x-www-form-urlencoded; charset=utf-8",
             "user-agent": FuckD.ua.m,
-            "cookie": `${FuckD.cookie.m}; ${cookieMKT}`,
+            "cookie": `${FuckD.cookie.m}; SRCHUSR=DOB=${FuckD.bing.dateNowNum}&DS=1; ${cookieMKT}; SRCHD=AF=NOFORM`,
         }
     }
     try {
