@@ -558,7 +558,7 @@ FuckF.getRewardsToken = async () => {
     const message = "Request Verification Token 获取"
     try {
         const result = await FuckF.xhr({
-            url: "https://rewards.bing.com/",
+            url: "https://rewards.bing.com/status/",
             headers: {
                 "content-type": "application/x-www-form-urlencoded; charset=utf-8",
                 "user-agent": FuckD.ua.pc,
