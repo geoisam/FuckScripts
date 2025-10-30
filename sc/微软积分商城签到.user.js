@@ -132,6 +132,7 @@ const FuckD = {
             },
         },
         mainland: 1,
+        end: 1,
     },
     sign: {
         times: 0,
@@ -886,7 +887,8 @@ return new Promise((resolve, reject) => {
             resolve()
         }
         if (FuckD.sign.end > 0 && FuckD.read.end > 0 && FuckD.promos.end > 0 && FuckD.search.end > 0) {
-            FuckF.log("🟣", `本次运行结束！用时 ${(Date.now() - seconds) / 1000} 秒`)
+            FuckD.bing.end--
+            FuckD.bing.end < 0 || FuckF.log("🟣", `本次运行结束！用时 ${(Date.now() - seconds) / 1000} 秒`)
             resolve()
         }
     }
