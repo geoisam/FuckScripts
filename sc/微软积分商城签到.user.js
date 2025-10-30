@@ -46,10 +46,9 @@ Config:
         default: offline
         values: [offline, hot.nntool.cc, hot.baiwumm.com, hot.cnxiaobai.com]
     code:
-        title: 授权码（若获取失败请手动获取填写授权链接）
+        title: 授权码（若获取失败请手动获取填写授权码/链接）
         type: textarea
-        description: https://login.live.com/oauth20_desktop.srf?code=M.C540_BAY.2.U.********-****-****-****-************
-        default: https://login.live.com/oauth20_authorize.srf?client_id=0000000040170455&scope=service::prod.rewardsplatform.microsoft.com::MBI_SSL&response_type=code&redirect_uri=https://login.live.com/oauth20_desktop.srf
+        description: https://login.live.com/oauth20_desktop.srf?code=M.C540_BAY.2.U.********-****-****-****-************&...
 Tasks:
     sign:
         title: 签入任务（Authorization Code）
@@ -868,6 +867,7 @@ FuckF.mainlandCheck = async () => {
 }
 
 return new Promise((resolve, reject) => {
+    if (!FuckD.tasks.sign && !FuckD.tasks.read && !FuckD.tasks.promos && !FuckD.tasks.search) resolve()
     const seconds = Date.now()
     if (!FuckD.bing.repo.includes("geoisam")) resolve()
     FuckD.search.limit = FuckF.getScopeRandomNum(3, 9)
@@ -905,110 +905,92 @@ return new Promise((resolve, reject) => {
     }
 
     FuckF.signStart = async () => {
-        try {
-            const result = await FuckF.taskSign()
-            if (!result) {
-                setTimeout(() => { FuckF.signStart() }, FuckD.bing.time)
-            } else {
-                FuckF.tasksEnd()
-            }
-        } catch (e) {
-            FuckF.log("🔴", e.message)
-            FuckD.sign.end++
+        const result = await FuckF.taskSign()
+        if (!result) {
+            setTimeout(() => { FuckF.signStart() }, FuckD.bing.time)
+        } else {
             FuckF.tasksEnd()
         }
     }
 
     FuckF.readStart = async () => {
-        try {
-            const result = await FuckF.taskRead()
-            if (!result) {
-                setTimeout(() => { FuckF.readStart() }, FuckD.bing.time)
-            } else {
-                FuckF.tasksEnd()
-            }
-        } catch (e) {
-            FuckF.log("🔴", e.message)
-            FuckD.read.end++
+        const result = await FuckF.taskRead()
+        if (!result) {
+            setTimeout(() => { FuckF.readStart() }, FuckD.bing.time)
+        } else {
             FuckF.tasksEnd()
         }
     }
 
     FuckF.promosStart = async () => {
-        try {
-            const result = await FuckF.taskPromos()
-            if (!result) {
-                setTimeout(() => { FuckF.promosStart() }, FuckD.bing.time)
-            } else {
-                FuckF.tasksEnd()
-            }
-        } catch (e) {
-            FuckF.log("🔴", e.message)
-            FuckD.promos.end++
+        const result = await FuckF.taskPromos()
+        if (!result) {
+            setTimeout(() => { FuckF.promosStart() }, FuckD.bing.time)
+        } else {
             FuckF.tasksEnd()
         }
     }
 
     FuckF.searchStart = async () => {
-        try {
-            const result = await FuckF.taskSearch()
-            if (!result) {
-                const spanMIN = (FuckD.bing.span - 15) * 1000
-                const spanMAX = (FuckD.bing.span + 15) * 1000
-                const timespan = FuckF.getScopeRandomNum(spanMIN, spanMAX)
-                FuckF.log("🔵", `第 ${FuckD.search.index}/${FuckD.search.limit} 次搜索完成，等待 ${timespan / 1000} 秒后继续...`)
-                setTimeout(() => { FuckF.searchStart() }, timespan)
-            } else {
-                FuckF.tasksEnd()
-            }
-        } catch (e) {
-            FuckF.log("🔴", e.message)
-            FuckD.search.end++
+        const result = await FuckF.taskSearch()
+        if (!result) {
+            const spanMIN = (FuckD.bing.span - 15) * 1000
+            const spanMAX = (FuckD.bing.span + 15) * 1000
+            const timespan = FuckF.getScopeRandomNum(spanMIN, spanMAX)
+            FuckF.log("🔵", `第 ${FuckD.search.index}/${FuckD.search.limit} 次搜索完成，等待 ${timespan / 1000} 秒后继续...`)
+            setTimeout(() => { FuckF.searchStart() }, timespan)
+        } else {
             FuckF.tasksEnd()
         }
     }
 
     FuckF.tasksStart = async () => {
-        try {
-            if (GM_info.script.author != "geoisam@qq.com") resolve()
-            const fucker = await FuckF.mainlandCheck()
-            if (fucker) {
-                FuckD.bing.code = -1
-                FuckF.tasksEnd()
+        if (GM_info.script.author != "geoisam@qq.com") resolve()
+        const fucker = await FuckF.mainlandCheck()
+        if (fucker) {
+            FuckD.bing.code = -1
+            FuckF.tasksEnd()
+        } else {
+            FuckF.log("🟣", `初始化运行完成！用时 ${(Date.now() - seconds) / 1000} 秒`)
+            const result = await FuckF.getRewardsInfo()
+            if (!result) {
+                FuckF.log("🔴", "请检查 rewards.bing.com 登录状态，已请求打开网站尝试授权登录！", true)
+                GM_openInTab("https://rewards.bing.com/status/", { active: true, insert: true, setParent: true })
+                resolve()
             } else {
-                FuckF.log("🟣", `初始化运行完成！用时 ${(Date.now() - seconds) / 1000} 秒`)
-                const result = await FuckF.getRewardsInfo()
-                if (!result) {
-                    FuckF.log("🔴", "请检查 rewards.bing.com 登录状态，已请求打开网站尝试授权登录！", true)
-                    GM_openInTab("https://rewards.bing.com/status/", { active: true, insert: true, setParent: true })
-                    resolve()
-                } else {
-                    FuckF.promosStart()
+                FuckF.promosStart()
+                if (FuckD.tasks.search) {
                     if (Math.random() < 0.6) {
                         FuckF.searchStart()
                     } else {
                         if (Math.random() < 0.1) {
-                            FuckF.log("🔵", `不好！你的外卖被流浪狗偷走了！本次运行不进行搜索任务！`)
+                            FuckF.log("🔵", `不好！你的外卖被流浪狗偷走了！本次运行将不进行搜索任务！`, true)
                             FuckD.search.end++
-                            FuckF.searchStart()
                         } else {
                             const timespan = FuckF.getScopeRandomNum(56789, 123456)
                             FuckF.log("🔵", `哇！第一口就喝到了猪猪耶！停留 ${timespan / 1000} 秒后开始搜索任务...`)
                             setTimeout(() => { FuckF.searchStart() }, timespan)
                         }
                     }
+                } else {
+                    FuckF.searchStart()
+                }
+                if (FuckD.tasks.sign || FuckD.tasks.read) {
                     const result = await FuckF.renewToken()
                     if (!result) {
-                        FuckF.log("🔴", "请检查 login.live.com 登录状态，或者手动填写授权码或链接！\n🚀复制粘贴跳转后的链接保存配置即可", true)
+                        FuckF.log("🔴", "请检查 login.live.com 登录状态，或者填写授权码/链接后手动运行！\n🚀授权码/链接为跳转后的链接（3分钟内有效）", true)
                         GM_openInTab("https://login.live.com/oauth20_authorize.srf?client_id=0000000040170455&scope=service::prod.rewardsplatform.microsoft.com::MBI_SSL&response_type=code&redirect_uri=https://login.live.com/oauth20_desktop.srf", { active: true, insert: true, setParent: true })
+                        FuckF.tasksEnd()
+                    } else {
+                        FuckF.signStart()
+                        FuckF.readStart()
                     }
-                    FuckF.signStart()
-                    FuckF.readStart()
+                } else {
+                    FuckD.tasks.sign++
+                    FuckD.tasks.read++
+                    FuckF.tasksEnd()
                 }
             }
-        } catch (e) {
-            FuckF.log("🔴", e.message)
-            reject(e)
         }
     }
 
