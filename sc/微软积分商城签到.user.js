@@ -747,14 +747,14 @@ FuckF.taskSearch = async () => {
         headers = {
             "content-type": "application/x-www-form-urlencoded; charset=utf-8",
             "user-agent": FuckD.ua.pc,
-            "cookie": `${FuckD.cookie.pc}; ${cookieMKT}; _Rwho=u=d&ts=${FuckD.bing.dateNow}; _RwBf=wls=2`,
+            "cookie": `${FuckD.cookie.pc}; ${cookieMKT}; _Rwho=u=d&ts=${FuckD.bing.dateNow}`,
         }
     } else {
         FuckD.search.device = "\n(移动设备)"
         headers = {
             "content-type": "application/x-www-form-urlencoded; charset=utf-8",
             "user-agent": FuckD.ua.m,
-            "cookie": `${FuckD.cookie.m}; ${cookieMKT}; _Rwho=u=m&ts=${FuckD.bing.dateNow}; _RwBf=wls=2`,
+            "cookie": `${FuckD.cookie.m}; ${cookieMKT}; _Rwho=u=m&ts=${FuckD.bing.dateNow}`,
         }
     }
     try {
@@ -774,7 +774,7 @@ FuckF.taskSearch = async () => {
             headers = { ...headers, "referer": query, }
             await FuckF.xhr({ method: "POST", url: ncheader, headers: headers, data: "wb=1;i=1;v=1" })
             await FuckF.xhr({ method: "POST", url: report, headers: headers, data: `url=${encodeURIComponent(query)}&V=web` })
-            if (data && Math.random() < 0.6) {
+            if (data) {
                 const click = `https://${FuckD.bing.host}/fd/ls/GLinkPingPost.aspx?IG=${guid}&ID=${data[3]}&url=${data[2]}`
                 await FuckF.xhr({ url: click, headers: headers })
             }
