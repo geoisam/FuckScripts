@@ -364,7 +364,6 @@ FuckF.getRewardsInfo = async () => {
         const result = await FuckF.xhr({
             url: `https://rewards.bing.com/api/getuserinfo?type=1&X-Requested-With=XMLHttpRequest&_=${FuckF.getTimestamp()}`,
             headers: {
-                "user-agent": FuckD.ua.pc,
                 "referer": "https://rewards.bing.com/",
             },
         })
@@ -539,7 +538,6 @@ FuckF.getRewardsToken = async () => {
         const result = await FuckF.xhr({
             url: "https://rewards.bing.com/status/",
             headers: {
-                "user-agent": FuckD.ua.pc,
                 "referer": "https://rewards.bing.com/",
             },
         })
@@ -749,14 +747,14 @@ FuckF.taskSearch = async () => {
         headers = {
             "content-type": "application/x-www-form-urlencoded; charset=utf-8",
             "user-agent": FuckD.ua.pc,
-            "cookie": `${FuckD.cookie.pc}; ${cookieMKT}; _Rwho=u=d&ts=${FuckF.getDatetime(false, false)}`,
+            "cookie": `${FuckD.cookie.pc}; ${cookieMKT}; _Rwho=u=d&ts=${FuckD.bing.dateNow}; _RwBf=wls=2`,
         }
     } else {
         FuckD.search.device = "\n(移动设备)"
         headers = {
             "content-type": "application/x-www-form-urlencoded; charset=utf-8",
             "user-agent": FuckD.ua.m,
-            "cookie": `${FuckD.cookie.m}; ${cookieMKT}; _Rwho=u=m&ts=${FuckF.getDatetime(false, false)}`,
+            "cookie": `${FuckD.cookie.m}; ${cookieMKT}; _Rwho=u=m&ts=${FuckD.bing.dateNow}; _RwBf=wls=2`,
         }
     }
     try {
@@ -843,6 +841,7 @@ return new Promise((resolve, reject) => {
     if (!FuckD.bing.repo.includes("geoisam")) resolve()
     FuckD.search.limit = FuckF.getScopeRandomNum(3, 9)
     FuckD.bing.dateNowNum = Number(FuckF.getDatetime(true))
+    FuckD.bing.dateNow = Number(FuckF.getDatetime(false, false))
     const tasksArr = GM_getValue("Config.tasks", false)
     FuckD.sign.date = tasksArr ? tasksArr.sign : 0
     FuckD.read.date = tasksArr ? tasksArr.read : 0
