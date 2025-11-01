@@ -22,6 +22,7 @@
 // @grant        GM_openInTab
 // @grant        GM_getValue
 // @grant        GM_setValue
+// @grant        GM_cookie
 // @grant        GM_info
 // @grant        GM_log
 // @tips         此脚本一直为 开源免费 使用，如果你是从某些地方买的话，你就是被骗了
@@ -46,24 +47,24 @@ Config:
         default: offline
         values: [offline, hot.nntool.cc, hot.baiwumm.com, hot.cnxiaobai.com]
     code:
-        title: 授权码（若获取失败请手动获取填写授权码/链接）
+        title: Authorization Code（授权码/链接）
         type: textarea
         description: https://login.live.com/oauth20_desktop.srf?code=M.C540_BAY.2.U.********-****-****-****-************&...
 Tasks:
     sign:
-        title: 签入任务（Authorization Code）
+        title: 签入（Authorization Code）
         type: checkbox
         default: true
     read:
-        title: 阅读任务（Authorization Code）
+        title: 阅读（Authorization Code）
         type: checkbox
         default: true
     promos:
-        title: 活动任务（rewards.bing.com）
+        title: 活动（rewards.bing.com）
         type: checkbox
         default: true
     search:
-        title: 搜索任务（www.bing.com）
+        title: 搜索（www.bing.com）
         type: checkbox
         default: true
 Notice:
@@ -81,8 +82,7 @@ const FuckD = {
         m: "Mozilla/5.0 (Linux; Android 16; MCE16 Build/BP3A.250905.014; ) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/123.0.0.0 Mobile Safari/537.36 EdgA/123.0.2420.102",
     },
     cookie: {
-        pc: "SRCHHPGUSR=PREFCOL=0&CW=1600&CH=900&SCW=1600&SCH=900&BRW=XW&BRH=M&PRVCW=1600&PRVCH=900&DPR=1.0",
-        m: "SRCHHPGUSR=PREFCOL=0&CW=400&CH=900&SCW=400&SCH=900&BRW=MW&BRH=MT&PRVCW=400&PRVCH=900&DPR=3.0&PR=3.0&OR=0&B=0",
+        mkt: "mkt=; mkt1=; _EDGE_S=mkt=",
     },
     api: {
         mode: GM_getValue("Config.api", "offline"),
@@ -200,7 +200,7 @@ const FuckF = {
     getDatetime(num = false, slash = true) {
         const today = new Date()
         const year = today.getFullYear()
-        let month = today.getMonth()
+        let month = today.getMonth() + 1
         let day = today.getDate()
         month = month < 10 ? "0" + month : month
         day = day < 10 ? "0" + day : day
@@ -319,10 +319,10 @@ FuckF.getToken = async (url) => {
 }
 
 FuckF.renewToken = async () => {
-    if (FuckD.bing.error > 1) return false
+    if (FuckD.bing.error > 2) return false
     let url, authcode, token, refreshToken = GM_getValue("Config.token", false)
     FuckF.okCallback = (err = false) => {
-        if (FuckD.bing.error > 1) {
+        if (FuckD.bing.error > 2) {
             FuckD.sign.end++
             FuckD.read.end++
             FuckF.renewToken()
@@ -364,6 +364,7 @@ FuckF.getRewardsInfo = async () => {
         const result = await FuckF.xhr({
             url: `https://rewards.bing.com/api/getuserinfo?type=1&X-Requested-With=XMLHttpRequest&_=${FuckF.getTimestamp()}`,
             headers: {
+                "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
                 "referer": "https://rewards.bing.com/",
             },
         })
@@ -380,7 +381,7 @@ FuckF.getRewardsInfo = async () => {
 }
 
 FuckF.taskSign = async () => {
-    if (!FuckD.tasks.sign || FuckD.sign.date == FuckD.bing.dateNowNum || FuckD.sign.times > 1 || FuckD.sign.end > 0) {
+    if (!FuckD.tasks.sign || FuckD.sign.date == FuckD.bing.dateNowNum || FuckD.sign.times > 2 || FuckD.sign.end > 0) {
         FuckD.sign.end++
         return true
     }
@@ -409,7 +410,7 @@ FuckF.taskSign = async () => {
             method: "POST",
             url: "https://prod.rewardsplatform.microsoft.com/dapi/me/activities",
             headers: {
-                "content-type": "application/json; charset=utf-8",
+                "content-type": "application/json; charset=UTF-8",
                 "user-agent": FuckD.ua.m,
                 "authorization": `Bearer ${FuckD.bing.token}`,
                 "x-rewards-appid": "SAAndroid/31.4.2110003555",
@@ -449,6 +450,7 @@ FuckF.getReadPro = async () => {
         const result = await FuckF.xhr({
             url: "https://prod.rewardsplatform.microsoft.com/dapi/me?channel=SAAndroid&options=613",
             headers: {
+                "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
                 "user-agent": FuckD.ua.m,
                 "authorization": `Bearer ${FuckD.bing.token}`,
             },
@@ -471,7 +473,7 @@ FuckF.getReadPro = async () => {
 }
 
 FuckF.taskRead = async () => {
-    if (!FuckD.tasks.read || FuckD.read.times > 1 || FuckD.read.end > 0) {
+    if (!FuckD.tasks.read || FuckD.read.times > 2 || FuckD.read.end > 0) {
         FuckD.read.end++
         return true
     }
@@ -508,7 +510,7 @@ FuckF.taskRead = async () => {
             method: "POST",
             url: "https://prod.rewardsplatform.microsoft.com/dapi/me/activities",
             headers: {
-                "content-type": "application/json; charset=utf-8",
+                "content-type": "application/json; charset=UTF-8",
                 "user-agent": FuckD.ua.m,
                 "authorization": `Bearer ${FuckD.bing.token}`,
                 "x-rewards-appid": "SAAndroid/31.4.2110003555",
@@ -538,6 +540,7 @@ FuckF.getRewardsToken = async () => {
         const result = await FuckF.xhr({
             url: "https://rewards.bing.com/status/",
             headers: {
+                "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
                 "referer": "https://rewards.bing.com/",
             },
         })
@@ -552,7 +555,7 @@ FuckF.getRewardsToken = async () => {
 }
 
 FuckF.taskPromos = async () => {
-    if (!FuckD.tasks.promos || FuckD.promos.times > 1 || FuckD.promos.end > 0) {
+    if (!FuckD.tasks.promos || FuckD.promos.times > 2 || FuckD.promos.end > 0) {
         FuckD.promos.end++
         return true
     }
@@ -570,7 +573,6 @@ FuckF.taskPromos = async () => {
     let promosArr = []
     let morePromos = dashboard.morePromotions
     let dailySetPromos = dashboard.dailySetPromotions[FuckF.getDatetime()]
-    const streakProtection = dashboard.streakProtectionPromo.streakProtectionStatus
     morePromos = Array.isArray(morePromos) ? morePromos : []
     dailySetPromos = Array.isArray(dailySetPromos) ? dailySetPromos : []
     for (const item of [...dailySetPromos, ...morePromos]) {
@@ -578,23 +580,12 @@ FuckF.taskPromos = async () => {
             promosArr.push({ id: item.offerId, hash: item.hash })
         }
     }
-    if (streakProtection && streakProtection == "False") {
-        FuckF.xhr({
-            method: "POST",
-            url: "https://rewards.bing.com/api/togglestreakasync?X-Requested-With=XMLHttpRequest",
-            headers: {
-                "user-agent": FuckD.ua.pc,
-                "referer": "https://rewards.bing.com/",
-            },
-            data: `isOn=true&activityAmount=1&form=&__RequestVerificationToken=${requestToken}`,
-        })
-    }
     FuckD.promos.point = promosArr.length
     if (promosArr.length < 1) {
         FuckD.promos.end++
         if (FuckD.promos.date != FuckD.bing.dateNowNum) {
             FuckD.promos.date = FuckD.bing.dateNowNum
-            FuckF.log("🟣", `哇！哥哥好棒！活动任务完成了！\n✨本次运行完成活动 ${FuckD.promos.point} 次`, true)
+            FuckF.log("🟣", "哇！哥哥好棒！活动任务完成了！", true)
         }
         GM_setValue("Config.tasks", FuckD.bing.tasks)
         return true
@@ -611,6 +602,7 @@ FuckF.taskPromos = async () => {
                 method: "POST",
                 url: "https://rewards.bing.com/api/reportactivity?X-Requested-With=XMLHttpRequest",
                 headers: {
+                    "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
                     "referer": "https://rewards.bing.com/",
                 },
                 data: new URLSearchParams({
@@ -719,7 +711,7 @@ FuckF.taskSearch = async () => {
         GM_setValue("Config.tasks", FuckD.bing.tasks)
         return true
     }
-    if (FuckD.search.times > 1 || FuckD.search.index >= FuckD.search.limit) {
+    if (FuckD.search.times > 2 || FuckD.search.index >= FuckD.search.limit) {
         FuckD.search.end++
         if (FuckD.search.index < FuckD.search.limit) {
             FuckF.log("🔵", `积分收入限制，共搜索 ${FuckD.search.index} 次！${pcReport}${mReport}`)
@@ -729,32 +721,32 @@ FuckF.taskSearch = async () => {
         return true
     }
     FuckD.search.date = 0
-    let query, pcorm, keyword, headers, regionMKT = "", cookieMKT = "mkt=0; mkt1=0; _EDGE_S=mkt=0"
+    let query, params, pcorm, headers, regionMKT = "", cookieMKT = FuckD.cookie.mkt
     if (FuckD.search.pc.progress < FuckD.search.pc.max || FuckD.search.m.progress < FuckD.search.m.max) {
         pcorm = Math.random() > 0.6 ? false : true
         if (FuckD.search.pc.progress >= FuckD.search.pc.max) pcorm = false
         if (FuckD.search.m.progress >= FuckD.search.m.max) pcorm = true
     }
-    keyword = await FuckF.getQueryWord()
-    keyword = encodeURIComponent(keyword)
+    const keyword = await FuckF.getQueryWord()
     if (FuckD.bing.status) {
         regionMKT = "mkt=zh-CN"
-        cookieMKT = "mkt=zh-CN; mkt1=zh-CN; _EDGE_S=mkt=zh-CN"
+        cookieMKT = `mkt=zh-CN; mkt1=zh-CN; _EDGE_S=mkt=zh-CN`
     }
-    query = `https://${FuckD.bing.host}/search?q=${keyword}&form=QBLH&qs=ds&${regionMKT}`
+    params = `q=${encodeURIComponent(keyword)}&form=QBLH&${regionMKT}`
+    query = `https://${FuckD.bing.host}/search?${params}`
     if (pcorm) {
-        FuckD.search.device = "\n(电脑)"
+        FuckD.search.device = "Desktop"
         headers = {
-            "content-type": "application/x-www-form-urlencoded; charset=utf-8",
+            "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
             "user-agent": FuckD.ua.pc,
-            "cookie": `${FuckD.cookie.pc}; ${cookieMKT}; _Rwho=u=d&ts=${FuckD.bing.dateNow}`,
+            "cookie": cookieMKT,
         }
     } else {
-        FuckD.search.device = "\n(移动设备)"
+        FuckD.search.device = "Mobile"
         headers = {
-            "content-type": "application/x-www-form-urlencoded; charset=utf-8",
+            "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
             "user-agent": FuckD.ua.m,
-            "cookie": `${FuckD.cookie.m}; ${cookieMKT}; _Rwho=u=m&ts=${FuckD.bing.dateNow}`,
+            "cookie": cookieMKT,
         }
     }
     try {
@@ -763,16 +755,18 @@ FuckF.taskSearch = async () => {
             FuckD.bing.code = -1
             return true
         }
-        const result = await FuckF.xhr({ url: query, headers: { ...headers, "referer": `https://${FuckD.bing.host}/?FORM=QBLH`, } })
+        GM_cookie('delete', { url: "https://bing.com", name: "_Rwho", domain: ".bing.com" })
+        GM_cookie('delete', { url: "https://bing.com", name: "_RwBf", domain: ".bing.com" })
+        const result = await FuckF.xhr({ url: query, headers: { ...headers, "referer": `https://${FuckD.bing.host}/?form=QBLH`, } })
         if (result) {
             const res = result.replace(/\s/g, "")
             const data0 = res.match(/,IG:"(.*?)",/)
             const guid = data0 ? data0[1] : FuckF.getRandomUUID(true)
             const data = res.match(/class="b_algo(.*?)href="(.*?)"h="ID=(.*?)">(.*?)<\/h2/)
-            const ncheader = `https://${FuckD.bing.host}/rewardsapp/ncheader?ver=61784504&IID=SERP.5047&IG=${guid}&ajaxreq=1`
-            const report = `https://${FuckD.bing.host}/rewardsapp/reportActivity?IG=${guid}&IID=SERP.5047&q=${keyword}&form=QBLH&qs=ds${regionMKT}&ajaxreq=1`
+            const ncheader = `https://${FuckD.bing.host}/rewardsapp/ncheader?ver=88888888&IID=SERP.5047&IG=${guid}&ajaxreq=1`
+            const report = `https://${FuckD.bing.host}/rewardsapp/reportActivity?IG=${guid}&IID=SERP.5047&${params}&ajaxreq=1`
             headers = { ...headers, "referer": query, }
-            await FuckF.xhr({ method: "POST", url: ncheader, headers: headers, data: "wb=1;i=1;v=1" })
+            await FuckF.xhr({ method: "POST", url: ncheader, headers: headers, data: "wb=1%3bi%3d1%3bv%3d1" })
             await FuckF.xhr({ method: "POST", url: report, headers: headers, data: `url=${encodeURIComponent(query)}&V=web` })
             if (data) {
                 const click = `https://${FuckD.bing.host}/fd/ls/GLinkPingPost.aspx?IG=${guid}&ID=${data[3]}&url=${data[2]}`
@@ -787,28 +781,17 @@ FuckF.taskSearch = async () => {
 }
 
 FuckF.mainlandCheck = async () => {
-    const host = "www.bing.com"
-    const info = {
-        url: `https://${host}/`,
-        headers: {
-            "cookie": "_EDGE_S=mkt=0",
-        }
-    }
     const hash = ["g", "e", "o", "i", "s", "a", "m"].join("")
     if (!GM_info.script.header.includes(hash)) {
         FuckD.bing.mainland = -1
         return true
     }
-    if (!FuckD.bing.host) {
-        if (FuckD.bing.status) {
-            FuckD.bing.host = "cn.bing.com"
-        } else {
-            let url = await FuckF.xhr(info, true)
-            url = new URL(url)
-            FuckD.bing.host = url ? url.host : host
-        }
-    }
-    const result = await FuckF.xhr(info)
+    const result = await FuckF.xhr({
+        url: `https://${FuckD.bing.host}/`,
+        headers: {
+            "cookie": FuckD.cookie.mkt,
+        },
+    })
     if (result) {
         const res = result.replace(/\s/g, "")
         const data = res.match(/Region:"(.*?)"(.*?)RevIpCC:"(.*?)"/)
@@ -837,17 +820,15 @@ FuckF.mainlandCheck = async () => {
 
 return new Promise((resolve, reject) => {
     if (!FuckD.tasks.sign && !FuckD.tasks.read && !FuckD.tasks.promos && !FuckD.tasks.search) resolve()
-    const seconds = Date.now()
     if (!FuckD.bing.repo.includes("geoisam")) resolve()
-    FuckD.search.limit = FuckF.getScopeRandomNum(3, 9)
-    FuckD.bing.dateNowNum = Number(FuckF.getDatetime(true))
-    FuckD.bing.dateNow = Number(FuckF.getDatetime(false, false))
+    const seconds = Date.now()
+    FuckD.search.limit = FuckF.getScopeRandomNum(4, 7)
+    FuckD.bing.dateNowNum = FuckF.getDatetime(true)
     const tasksArr = GM_getValue("Config.tasks", false)
     FuckD.sign.date = tasksArr ? tasksArr.sign : 0
     FuckD.read.date = tasksArr ? tasksArr.read : 0
     FuckD.promos.date = tasksArr ? tasksArr.promos : 0
     FuckD.search.date = tasksArr ? tasksArr.search : 0
-
     if (FuckD.api.mode != "offline") {
         const defaultApiName = "hot.baiwumm.com"
         const currentApiName = GM_getValue("Config.api", defaultApiName)
@@ -904,10 +885,13 @@ return new Promise((resolve, reject) => {
     FuckF.searchStart = async () => {
         const result = await FuckF.taskSearch()
         if (!result) {
-            const spanMIN = (FuckD.bing.span - 15) * 1000
-            const spanMAX = (FuckD.bing.span + 15) * 1000
-            const timespan = FuckF.getScopeRandomNum(spanMIN, spanMAX)
-            FuckF.log("🔵", `第 ${FuckD.search.index}/${FuckD.search.limit} 次搜索完成${FuckD.search.device}，等待 ${timespan / 1000} 秒后继续...`)
+            let timespan = FuckD.bing.time
+            if (FuckD.search.index < FuckD.search.limit) {
+                const spanMIN = (FuckD.bing.span - 15) * 1000
+                const spanMAX = (FuckD.bing.span + 15) * 1000
+                timespan = FuckF.getScopeRandomNum(spanMIN, spanMAX)
+            }
+            FuckF.log("🔵", `第 ${FuckD.search.index}/${FuckD.search.limit} 次搜索完成\n(${FuckD.search.device})，等待 ${timespan / 1000} 秒后继续...`)
             setTimeout(() => { FuckF.searchStart() }, timespan)
         } else {
             FuckF.tasksEnd()
@@ -916,6 +900,21 @@ return new Promise((resolve, reject) => {
 
     FuckF.tasksStart = async () => {
         if (GM_info.script.author != "geoisam@qq.com") resolve()
+        const host = "www.bing.com"
+        if (!FuckD.bing.host) {
+            if (FuckD.bing.status) {
+                FuckD.bing.host = "cn.bing.com"
+            } else {
+                let url = await FuckF.xhr({
+                    url: `https://${host}/`,
+                    headers: {
+                        "cookie": FuckD.cookie.mkt,
+                    },
+                }, true)
+                url = new URL(url)
+                FuckD.bing.host = url ? url.host : host
+            }
+        }
         const fucker = await FuckF.mainlandCheck()
         if (fucker) {
             FuckD.bing.code = -1
@@ -924,29 +923,21 @@ return new Promise((resolve, reject) => {
             FuckF.log("🟣", `初始化运行完成！用时 ${(Date.now() - seconds) / 1000} 秒`)
             const result = await FuckF.getRewardsInfo()
             if (!result) {
-                FuckF.log("🔴", "请检查 rewards.bing.com 登录状态，已请求打开网站尝试授权登录！", true)
-                GM_openInTab("https://rewards.bing.com/status/", { active: true, insert: true, setParent: true })
+                FuckF.log("🔴", "请检查 rewards.bing.com 登录状态！", true)
                 resolve()
             } else {
                 FuckF.promosStart()
                 if (FuckD.tasks.search) {
-                    if (Math.random() < 0.1) {
-                        FuckF.log("🔵", `不好！你的任务被乌鸦抢走了！本次运行将不进行搜索任务！`, true)
-                        FuckD.search.end++
-                        FuckF.searchStart()
-                    } else {
-                        const timespan = FuckF.getScopeRandomNum(56789, 123456)
-                        FuckF.log("🔵", `哇！恭喜哥哥抢到了任务！停留 ${timespan / 1000} 秒后开始搜索...`)
-                        setTimeout(() => { FuckF.searchStart() }, timespan)
-                    }
+                    const timespan = FuckF.getScopeRandomNum(7890, 123456)
+                    FuckF.log("🔵", `噔噔噔！噔噔噔！噔！停留 ${timespan / 1000} 秒后开始搜索...`)
+                    setTimeout(() => { FuckF.searchStart() }, timespan)
                 } else {
                     FuckF.searchStart()
                 }
                 if (FuckD.tasks.sign || FuckD.tasks.read) {
                     const result = await FuckF.renewToken()
                     if (!result) {
-                        FuckF.log("🔴", "请检查 login.live.com 登录状态，或者填写授权码/链接后手动运行！\n🚀授权码/链接为跳转空白页后的链接（3分钟内有效）", true)
-                        GM_openInTab("https://login.live.com/oauth20_authorize.srf?client_id=0000000040170455&scope=service::prod.rewardsplatform.microsoft.com::MBI_SSL&response_type=code&redirect_uri=https://login.live.com/oauth20_desktop.srf", { active: true, insert: true, setParent: true })
+                        FuckF.log("🔴", "请检查 login.live.com 登录状态，或者填写授权码/链接后手动运行！\n🚀授权码/链接为跳转空白页的链接（3分钟内有效）", true)
                         FuckF.tasksEnd()
                     } else {
                         FuckF.signStart()
