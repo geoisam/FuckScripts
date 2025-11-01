@@ -23,6 +23,13 @@ const FuckF = {
         return Math.floor(Math.random() * num)
     },
 
+    getDatetime() {
+        const timeUTC = new Date()
+        const newDateChina = new Date(timeUTC.setUTCHours(timeUTC.getUTCHours() + 8))
+        const datetimeChina = newDateChina.toISOString().split("Z")[0].replace("T", " ")
+        return datetimeChina
+    },
+
     log(title, text, push = false) {
         GM_log(title + text + "🔚")
         if (!push) return
@@ -60,8 +67,8 @@ const FuckF = {
 }
 
 return new Promise((resolve, reject) => {
-    const emoji = ["kx", "ng", "ym", "wl", "nu", "ch", "fd", "yl", "shuai"]
-    const mood = emoji[FuckF.getRandomNum(emoji.length)]
+    const mood = ["kx", "ng", "ym", "wl", "nu", "ch", "fd", "yl", "shuai"]
+    const qdxq = mood[FuckF.getRandomNum(mood.length)]
 
     FuckF.signStart = async () => {
         try {
@@ -69,6 +76,7 @@ return new Promise((resolve, reject) => {
             if (initCheck) {
                 const formhash = initCheck.match(/formhash=(.*?)"/)
                 if (formhash) {
+                    const todaysay = FuckF.getDatetime()
                     const dsuSign = await FuckF.xhr({
                         method: "POST",
                         url: "https://bbs.tampermonkey.net.cn/plugin.php?id=dsu_paulsign:sign&operation=qiandao&infloat=1&inajax=1",
@@ -78,9 +86,9 @@ return new Promise((resolve, reject) => {
                         },
                         data: new URLSearchParams({
                             "formhash": formhash[1],
-                            "qdxq": mood,
-                            "qdmode": 1,
-                            "todaysay": Date.now(),
+                            "qdxq": qdxq, // random
+                            "qdmode": 1, // 1：todaysay、2：fastreply、3：empty
+                            "todaysay": todaysay,
                             "fastreply": 0,
                         }).toString(),
                     })
@@ -89,11 +97,11 @@ return new Promise((resolve, reject) => {
                         FuckF.log("🔵", result)
                         const res = result.match(/class="c">(.*?)<\/div><\/div>\]\]/)
                         if (res) {
-                            const signed = res[1].match(/已(.*?)明/)
+                            const signed = res[1].match(/成功/)
                             if (signed) {
-                                FuckF.log("🟣", res[1], true)
-                            } else {
                                 FuckF.log("🟢", res[1], true)
+                            } else {
+                                FuckF.log("🟣", res[1], true)
                             }
                         }
                     }
