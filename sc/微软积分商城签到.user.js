@@ -385,11 +385,6 @@ FuckF.taskSign = async () => {
         FuckD.sign.end++
         return true
     }
-    const fucker = await FuckF.mainlandCheck()
-    if (FuckD.bing.status && fucker) {
-        FuckD.bing.code = -1
-        return true
-    }
     if (FuckD.sign.point >= 0) {
         FuckD.sign.end++
         if (FuckD.sign.date != FuckD.bing.dateNowNum) {
@@ -453,6 +448,8 @@ FuckF.getReadPro = async () => {
                 "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
                 "user-agent": FuckD.ua.m,
                 "authorization": `Bearer ${FuckD.bing.token}`,
+                "x-rewards-appid": "SAAndroid/31.4.2110003555",
+                "x-rewards-ismobile": "true",
             },
         })
         if (result && FuckF.isJSON(result)) {
@@ -475,11 +472,6 @@ FuckF.getReadPro = async () => {
 FuckF.taskRead = async () => {
     if (!FuckD.tasks.read || FuckD.read.times > 2 || FuckD.read.end > 0) {
         FuckD.read.end++
-        return true
-    }
-    const fucker = await FuckF.mainlandCheck()
-    if (FuckD.bing.status && fucker) {
-        FuckD.bing.code = -1
         return true
     }
     const readPro = await FuckF.getReadPro()
@@ -559,11 +551,6 @@ FuckF.taskPromos = async () => {
         FuckD.promos.end++
         return true
     }
-    const fucker = await FuckF.mainlandCheck()
-    if (FuckD.bing.status && fucker) {
-        FuckD.bing.code = -1
-        return true
-    }
     const dashboard = await FuckF.getRewardsInfo()
     const requestToken = await FuckF.getRewardsToken()
     if (!dashboard || !requestToken) {
@@ -616,7 +603,7 @@ FuckF.taskPromos = async () => {
                     "__RequestVerificationToken": requestToken,
                 }).toString(),
             })
-            await new Promise(resolve => setTimeout(resolve, FuckD.bing.time))
+            await new Promise(resolve => setTimeout(resolve, Math.floor(FuckD.bing.time / 3)))
         }
     } catch (e) {
         FuckF.log("🔴", `活动任务出错！🔛${e.message}`)
@@ -665,11 +652,6 @@ FuckF.getQueryWord = async () => {
 FuckF.taskSearch = async () => {
     if (!FuckD.tasks.search || FuckD.search.end > 0) {
         FuckD.search.end++
-        return true
-    }
-    const fucker = await FuckF.mainlandCheck()
-    if (FuckD.bing.status && fucker) {
-        FuckD.bing.code = -1
         return true
     }
     const dashboard = await FuckF.getRewardsInfo()
@@ -728,27 +710,6 @@ FuckF.taskSearch = async () => {
         if (FuckD.search.m.progress >= FuckD.search.m.max) pcorm = true
     }
     const keyword = await FuckF.getQueryWord()
-    if (FuckD.bing.status) {
-        regionMKT = "mkt=zh-CN"
-        cookieMKT = `mkt=zh-CN; mkt1=zh-CN; _EDGE_S=mkt=zh-CN`
-    }
-    params = `q=${encodeURIComponent(keyword)}&form=QBLH&${regionMKT}`
-    query = `https://${FuckD.bing.host}/search?${params}`
-    if (pcorm) {
-        FuckD.search.device = "Desktop"
-        headers = {
-            "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
-            "user-agent": FuckD.ua.pc,
-            "cookie": cookieMKT,
-        }
-    } else {
-        FuckD.search.device = "Mobile"
-        headers = {
-            "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
-            "user-agent": FuckD.ua.m,
-            "cookie": cookieMKT,
-        }
-    }
     try {
         const fucker = await FuckF.mainlandCheck()
         if (FuckD.bing.status && fucker) {
@@ -757,6 +718,27 @@ FuckF.taskSearch = async () => {
         }
         GM_cookie('delete', { url: "https://bing.com", name: "_Rwho", domain: ".bing.com" })
         GM_cookie('delete', { url: "https://bing.com", name: "_RwBf", domain: ".bing.com" })
+        if (FuckD.bing.status) {
+            regionMKT = "mkt=zh-CN"
+            cookieMKT = `mkt=zh-CN; mkt1=zh-CN; _EDGE_S=mkt=zh-CN`
+        }
+        params = `q=${encodeURIComponent(keyword)}&form=QBLH&${regionMKT}`
+        query = `https://${FuckD.bing.host}/search?${params}`
+        if (pcorm) {
+            FuckD.search.device = "Desktop"
+            headers = {
+                "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+                "user-agent": FuckD.ua.pc,
+                "cookie": `${cookieMKT}; _Rwho=u=d&ts=${FuckD.bing.dateNowhyphen}`,
+            }
+        } else {
+            FuckD.search.device = "Mobile"
+            headers = {
+                "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+                "user-agent": FuckD.ua.m,
+                "cookie": `${cookieMKT}; _Rwho=u=m&ts=${FuckD.bing.dateNowhyphen}`,
+            }
+        }
         const result = await FuckF.xhr({ url: query, headers: { ...headers, "referer": `https://${FuckD.bing.host}/?form=QBLH`, } })
         if (result) {
             const res = result.replace(/\s/g, "")
@@ -824,6 +806,7 @@ return new Promise((resolve, reject) => {
     const seconds = Date.now()
     FuckD.search.limit = FuckF.getScopeRandomNum(4, 7)
     FuckD.bing.dateNowNum = FuckF.getDatetime(true)
+    FuckD.bing.dateNowhyphen = FuckF.getDatetime(false, false)
     const tasksArr = GM_getValue("Config.tasks", false)
     FuckD.sign.date = tasksArr ? tasksArr.sign : 0
     FuckD.read.date = tasksArr ? tasksArr.read : 0
@@ -926,7 +909,7 @@ return new Promise((resolve, reject) => {
                 FuckF.log("🔴", "请检查 rewards.bing.com 登录状态！", true)
                 resolve()
             } else {
-                FuckF.promosStart()
+                setTimeout(() => { FuckF.promosStart() }, FuckD.bing.time)
                 if (FuckD.tasks.search) {
                     const timespan = FuckF.getScopeRandomNum(7890, 123456)
                     FuckF.log("🔵", `噔噔噔！噔噔噔！噔！停留 ${timespan / 1000} 秒后开始搜索...`)
@@ -940,8 +923,8 @@ return new Promise((resolve, reject) => {
                         FuckF.log("🔴", "请检查 login.live.com 登录状态，或者填写授权码/链接后手动运行！\n🚀授权码/链接为跳转空白页的链接（3分钟内有效）", true)
                         FuckF.tasksEnd()
                     } else {
-                        FuckF.signStart()
-                        FuckF.readStart()
+                        setTimeout(() => { FuckF.signStart() }, FuckD.bing.time)
+                        setTimeout(() => { FuckF.readStart() }, FuckD.bing.time)
                     }
                 } else {
                     FuckF.signStart()
