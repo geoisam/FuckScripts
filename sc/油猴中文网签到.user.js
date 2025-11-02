@@ -25,9 +25,8 @@ const FuckF = {
 
     getDatetime() {
         const timeUTC = new Date()
-        const newDateChina = new Date(timeUTC.setUTCHours(timeUTC.getUTCHours() + 8))
-        const datetimeChina = newDateChina.toISOString().split("Z")[0].replace("T", " ")
-        return datetimeChina
+        const timeChina = new Date(timeUTC.setUTCHours(timeUTC.getUTCHours() + 8))
+        return timeChina.toISOString()
     },
 
     log(title, text, push = false) {
