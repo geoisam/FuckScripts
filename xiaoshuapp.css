@@ -1,0 +1,19 @@
+div {
+	font-weight: bold;
+}
+
+.search .col:has(#chainwon-search) {
+	margin: auto !important;
+}
+
+#banner>div {
+	padding-bottom: 32px !important;
+}
+
+#catalog+.toolbar {
+	margin-bottom: 0 !important;
+}
+
+#catalog {
+	display: none !important;
+}
