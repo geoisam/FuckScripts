@@ -2,8 +2,6 @@
 
 ### \#  **👇👇Python脚本👇👇**
 
-- 支持 GitHub Actions、云函数、青龙面板 等
-
 | Name | Type | GitHub | Gitee |
 |:---|:---:|:---:|:---:|
 | **华米运动步数修改** | **OAuth** | [查看](https://raw.githubusercontent.com/geoisam/FuckScripts/main/py/huami.py) | [查看](https://gitee.com/geoisam/FuckScripts/raw/main/py/huami.py) |
