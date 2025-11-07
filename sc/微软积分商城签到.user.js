@@ -47,7 +47,7 @@ Config:
         default: offline
         values: [offline, hot.nntool.cc, hot.baiwumm.com, hot.cnxiaobai.com]
     code:
-        title: Authorization Code（授权码/链接）
+        title: 授权码/链接（请勿分享以免个人数据泄露）
         type: textarea
         description: https://login.live.com/oauth20_desktop.srf?code=M.C540_BAY.2.U.********-****-****-****-************&...
 Tasks:
@@ -193,8 +193,8 @@ const FuckF = {
 
     getTimestamp(start = 0, end = 13) {
         const timestamp = Date.now()
-        const num = Number(timestamp.toString().substring(start, end))
-        return num
+        const num = timestamp.toString().substring(start, end)
+        return Number(num)
     },
 
     getDatetime(num = false, slash = true) {
@@ -232,12 +232,12 @@ const FuckF = {
 
     xhr(options, only = false) {
         return new Promise((resolve, reject) => {
-            const seconds = Date.now()
+            const seconds = FuckF.getTimestamp()
             GM_xmlhttpRequest({
                 ...options,
                 timeout: 15000,
                 ontimeout() {
-                    reject(new Error(`请求超时！用时 ${(Date.now() - seconds) / 1000} 秒`))
+                    reject(new Error(`请求超时！用时 ${(FuckF.getTimestamp() - seconds) / 1000} 秒`))
                 },
                 onload(xhr) {
                     if (xhr.status == 200) {
@@ -247,11 +247,18 @@ const FuckF = {
                             resolve(xhr.responseText)
                         }
                     } else {
-                        reject(new Error(`请求失败，用时 ${(Date.now() - seconds) / 1000} 秒，状态码：${xhr.status}`))
+                        const redirectStatuses = [301, 302, 307, 308]
+                        if (redirectStatuses.includes(xhr.status)) {
+                            const result = xhr.responseHeaders
+                            const res = result.match(/Location:\s*(.*?)\s*\r?\n/i)
+                            resolve(res ? res[1] : false)
+                        } else {
+                            reject(new Error(`请求失败，用时 ${(FuckF.getTimestamp() - seconds) / 1000} 秒，状态码：${xhr.status}`))
+                        }
                     }
                 },
                 onerror(err) {
-                    reject(new Error(`请求发生异常！用时 ${(Date.now() - seconds) / 1000} 秒 🔛${err}`))
+                    reject(new Error(`请求发生异常！用时 ${(FuckF.getTimestamp() - seconds) / 1000} 秒 🔛${err}`))
                 },
             })
         })
@@ -287,9 +294,17 @@ FuckF.getRandomApiHot = () => {
 FuckF.getCode = async (url) => {
     const message = "Authorize Code 获取"
     try {
-        const result = await FuckF.xhr({ url: url }, true)
-        const code = result.match(/M\.[\w+.]+(-\w+){4}/)
-        if (code) return code[0]
+        const result = await FuckF.xhr({
+            url: url,
+            redirect: "manual",
+            headers: {
+                cookie: FuckD.cookie.bing,
+            },
+        })
+        if (result) {
+            const code = result.match(/M\.[\w+.]+(-\w+){4}/)
+            if (code) return code[0]
+        }
         FuckF.log("🟡", `${message}失败！🔛${result}`)
     } catch (e) {
         FuckF.log("🔴", `${message}出错！🔛${e.message}`)
@@ -332,6 +347,7 @@ FuckF.renewToken = async () => {
         setTimeout(() => { FuckF.renewToken() }, FuckD.bing.time)
     }
     if (!refreshToken) {
+        let message = "Authorize Code 获取成功！🔛请勿分享此授权码/链接以免个人数据泄露"
         url = "https://login.live.com/oauth20_authorize.srf?client_id=0000000040170455&scope=service::prod.rewardsplatform.microsoft.com::MBI_SSL&response_type=code&redirect_uri=https://login.live.com/oauth20_desktop.srf"
         authcode = await FuckF.getCode(url)
         if (!authcode) {
@@ -341,9 +357,11 @@ FuckF.renewToken = async () => {
                 FuckF.okCallback()
             } else {
                 authcode = code[0]
+                FuckF.log("🟢", message)
             }
         }
         if (authcode) {
+            FuckF.log("🟢", message)
             url = `https://login.live.com/oauth20_token.srf?client_id=0000000040170455&code=${authcode}&redirect_uri=https://login.live.com/oauth20_desktop.srf&grant_type=authorization_code`
             token = await FuckF.getToken(url)
         }
@@ -411,7 +429,6 @@ FuckF.taskSign = async () => {
                 "x-rewards-appid": "SAAndroid/31.4.2110003555",
                 "x-rewards-ismobile": "true",
                 "x-rewards-country": region,
-                "x-rewards-language": "zh",
                 "x-rewards-partnerid": "startapp",
                 "x-rewards-flights": "rwgobig",
             },
@@ -508,7 +525,6 @@ FuckF.taskRead = async () => {
                 "x-rewards-appid": "SAAndroid/31.4.2110003555",
                 "x-rewards-ismobile": "true",
                 "x-rewards-country": region,
-                "x-rewards-language": "zh",
             },
             data: JSON.stringify({
                 "amount": 1,
@@ -526,34 +542,13 @@ FuckF.taskRead = async () => {
     return false
 }
 
-FuckF.getRewardsToken = async () => {
-    const message = "Request Verification Token 获取"
-    try {
-        const result = await FuckF.xhr({
-            url: "https://rewards.bing.com/status/",
-            headers: {
-                "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
-                "referer": "https://rewards.bing.com/",
-            },
-        })
-        const res = result.replace(/\s/g, "")
-        const token = res.match(/RequestVerificationToken(.*?)value="(.*?)"/)
-        if (token) return token[2]
-        FuckF.log("🟡", `${message}失败！🔛${result}`)
-    } catch (e) {
-        FuckF.log("🔴", `${message}出错！🔛${e.message}`)
-    }
-    return false
-}
-
 FuckF.taskPromos = async () => {
     if (!FuckD.tasks.promos || FuckD.promos.times > 2 || FuckD.promos.end > 0) {
         FuckD.promos.end++
         return true
     }
     const dashboard = await FuckF.getRewardsInfo()
-    const requestToken = await FuckF.getRewardsToken()
-    if (!dashboard || !requestToken) {
+    if (!dashboard) {
         FuckD.promos.times++
         return false
     }
@@ -563,8 +558,11 @@ FuckF.taskPromos = async () => {
     morePromos = Array.isArray(morePromos) ? morePromos : []
     dailySetPromos = Array.isArray(dailySetPromos) ? dailySetPromos : []
     for (const item of [...dailySetPromos, ...morePromos]) {
-        if (item.complete == false && !item.attributes.promotional) {
-            promosArr.push({ id: item.offerId, hash: item.hash })
+        if (item.complete == false && item.exclusiveLockedFeatureStatus != "locked") {
+            promosArr.push({
+                id: item.offerId,
+                url: item.destinationUrl
+            })
         }
     }
     FuckD.promos.point = promosArr.length
@@ -587,21 +585,19 @@ FuckF.taskPromos = async () => {
         for (const item of promosArr) {
             FuckF.xhr({
                 method: "POST",
-                url: "https://rewards.bing.com/api/reportactivity?X-Requested-With=XMLHttpRequest",
+                url: `https://${FuckD.bing.host}/msrewards/api/v1/ReportActivity?ajaxreq=1`,
                 headers: {
-                    "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
-                    "referer": "https://rewards.bing.com/",
+                    "content-type": "application/json; charset=UTF-8",
+                    "referer": item.url,
                 },
-                data: new URLSearchParams({
-                    "id": item.id,
-                    "hash": item.hash,
-                    "timeZone": 480,
-                    "activityAmount": 1,
-                    "dbs": 0,
-                    "form": "",
-                    "type": "",
-                    "__RequestVerificationToken": requestToken,
-                }).toString(),
+                data: JSON.stringify({
+                    "ActivitySubType": "quiz",
+                    "ActivityType": "notification",
+                    "OfferId": item.id,
+                    "Channel": "Bing.Com",
+                    "PartnerId": "BingTrivia",
+                    "Timezone": -480
+                }),
             })
             await new Promise(resolve => setTimeout(resolve, Math.floor(FuckD.bing.time / 3)))
         }
@@ -716,8 +712,8 @@ FuckF.taskSearch = async () => {
             FuckD.bing.code = -1
             return true
         }
-        GM_cookie('delete', { url: "https://bing.com", name: "_Rwho", domain: ".bing.com" })
-        GM_cookie('delete', { url: "https://bing.com", name: "_RwBf", domain: ".bing.com" })
+        GM_cookie("delete", { url: "https://bing.com", name: "_Rwho", domain: ".bing.com" })
+        GM_cookie("delete", { url: "https://bing.com", name: "_RwBf", domain: ".bing.com" })
         if (FuckD.bing.status) {
             regionMKT = "mkt=zh-CN"
             cookieMKT = `mkt=zh-CN; mkt1=zh-CN; _EDGE_S=mkt=zh-CN`
@@ -739,7 +735,13 @@ FuckF.taskSearch = async () => {
                 "cookie": `${cookieMKT}; _Rwho=u=m&ts=${FuckD.bing.dateNowhyphen}`,
             }
         }
-        const result = await FuckF.xhr({ url: query, headers: { ...headers, "referer": `https://${FuckD.bing.host}/?form=QBLH`, } })
+        const result = await FuckF.xhr({
+            url: query,
+            headers: {
+                ...headers,
+                "referer": `https://${FuckD.bing.host}/?form=QBLH`,
+            }
+        })
         if (result) {
             const res = result.replace(/\s/g, "")
             const data0 = res.match(/,IG:"(.*?)",/)
@@ -747,9 +749,22 @@ FuckF.taskSearch = async () => {
             const data = res.match(/class="b_algo(.*?)href="(.*?)"h="ID=(.*?)">(.*?)<\/h2/)
             const ncheader = `https://${FuckD.bing.host}/rewardsapp/ncheader?ver=88888888&IID=SERP.5047&IG=${guid}&ajaxreq=1`
             const report = `https://${FuckD.bing.host}/rewardsapp/reportActivity?IG=${guid}&IID=SERP.5047&${params}&ajaxreq=1`
-            headers = { ...headers, "referer": query, }
-            await FuckF.xhr({ method: "POST", url: ncheader, headers: headers, data: "wb=1%3bi%3d1%3bv%3d1" })
-            await FuckF.xhr({ method: "POST", url: report, headers: headers, data: `url=${encodeURIComponent(query)}&V=web` })
+            headers = {
+                ...headers,
+                "referer": query,
+            }
+            await FuckF.xhr({
+                method: "POST",
+                url: ncheader,
+                headers: headers,
+                data: "wb=1%3bi%3d1%3bv%3d1"
+            })
+            await FuckF.xhr({
+                method: "POST",
+                url: report,
+                headers: headers,
+                data: `url=${encodeURIComponent(query)}&V=web`
+            })
             if (data) {
                 const click = `https://${FuckD.bing.host}/fd/ls/GLinkPingPost.aspx?IG=${guid}&ID=${data[3]}&url=${data[2]}`
                 await FuckF.xhr({ url: click, headers: headers })
@@ -803,7 +818,14 @@ FuckF.mainlandCheck = async () => {
 return new Promise((resolve, reject) => {
     if (!FuckD.tasks.sign && !FuckD.tasks.read && !FuckD.tasks.promos && !FuckD.tasks.search) resolve()
     if (!FuckD.bing.repo.includes("geoisam")) resolve()
-    const seconds = Date.now()
+    const seconds = FuckF.getTimestamp()
+    GM_cookie("list", { url: "https://login.live.com" }, (result) => {
+        let cookies = ""
+        result.forEach((item, index) => {
+            cookies = cookies + `${item.name}=${item.value}${index == result.length - 1 ? "" : "; "}`
+        })
+        FuckD.cookie.bing = cookies
+    })
     FuckD.search.limit = FuckF.getScopeRandomNum(4, 7)
     FuckD.bing.dateNowNum = FuckF.getDatetime(true)
     FuckD.bing.dateNowhyphen = FuckF.getDatetime(false, false)
@@ -833,7 +855,7 @@ return new Promise((resolve, reject) => {
         }
         if (FuckD.sign.end > 0 && FuckD.read.end > 0 && FuckD.promos.end > 0 && FuckD.search.end > 0) {
             FuckD.bing.end--
-            FuckD.bing.end < 0 || FuckF.log("🟣", `本次运行结束！用时 ${(Date.now() - seconds) / 1000} 秒`)
+            FuckD.bing.end < 0 || FuckF.log("🟣", `本次运行结束！用时 ${(FuckF.getTimestamp() - seconds) / 1000} 秒`)
             resolve()
         }
     }
@@ -903,33 +925,38 @@ return new Promise((resolve, reject) => {
             FuckD.bing.code = -1
             FuckF.tasksEnd()
         } else {
-            FuckF.log("🟣", `初始化运行完成！用时 ${(Date.now() - seconds) / 1000} 秒`)
-            const result = await FuckF.getRewardsInfo()
-            if (!result) {
-                FuckF.log("🔴", "请检查 rewards.bing.com 登录状态！", true)
-                resolve()
-            } else {
-                setTimeout(() => { FuckF.promosStart() }, FuckD.bing.time)
-                if (FuckD.tasks.search) {
-                    const timespan = FuckF.getScopeRandomNum(7890, 123456)
-                    FuckF.log("🔵", `噔噔噔！噔噔噔！噔！停留 ${timespan / 1000} 秒后开始搜索...`)
-                    setTimeout(() => { FuckF.searchStart() }, timespan)
+            FuckF.log("🟣", `初始化运行完成！用时 ${(FuckF.getTimestamp() - seconds) / 1000} 秒`)
+            if (FuckD.tasks.promos || FuckD.tasks.search) {
+                const result = await FuckF.getRewardsInfo()
+                if (!result) {
+                    FuckF.log("🔴", "请检查 rewards.bing.com 登录状态！", true)
+                    resolve()
                 } else {
-                    FuckF.searchStart()
-                }
-                if (FuckD.tasks.sign || FuckD.tasks.read) {
-                    const result = await FuckF.renewToken()
-                    if (!result) {
-                        FuckF.log("🔴", "请检查 login.live.com 登录状态，或者填写授权码/链接后手动运行！\n🚀授权码/链接为跳转空白页的链接（3分钟内有效）", true)
-                        FuckF.tasksEnd()
+                    setTimeout(() => { FuckF.promosStart() }, FuckD.bing.time)
+                    if (FuckD.tasks.search) {
+                        const timespan = FuckF.getScopeRandomNum(7890, 123456)
+                        FuckF.log("🔵", `噔噔噔！噔噔噔！噔！停留 ${timespan / 1000} 秒后开始搜索...`)
+                        setTimeout(() => { FuckF.searchStart() }, timespan)
                     } else {
-                        setTimeout(() => { FuckF.signStart() }, FuckD.bing.time)
-                        setTimeout(() => { FuckF.readStart() }, FuckD.bing.time)
+                        FuckF.searchStart()
                     }
-                } else {
-                    FuckF.signStart()
-                    FuckF.readStart()
                 }
+            } else {
+                FuckF.promosStart()
+                FuckF.searchStart()
+            }
+            if (FuckD.tasks.sign || FuckD.tasks.read) {
+                const result = await FuckF.renewToken()
+                if (!result) {
+                    FuckF.log("🔴", "请检查 login.live.com 登录状态，或者填写授权码/链接后手动运行！\n🚀授权码/链接为跳转后包含code=M.的链接（3分钟内有效）", true)
+                    FuckF.tasksEnd()
+                } else {
+                    setTimeout(() => { FuckF.signStart() }, FuckD.bing.time)
+                    setTimeout(() => { FuckF.readStart() }, FuckD.bing.time)
+                }
+            } else {
+                FuckF.signStart()
+                FuckF.readStart()
             }
         }
     }
