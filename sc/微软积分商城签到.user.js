@@ -81,9 +81,6 @@ const FuckD = {
         pc: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.2420.81",
         m: "Mozilla/5.0 (Linux; Android 16; MCE16 Build/BP3A.250905.014; ) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/123.0.0.0 Mobile Safari/537.36 EdgA/123.0.2420.102",
     },
-    cookie: {
-        mkt: "mkt=; mkt1=; _EDGE_S=mkt=",
-    },
     api: {
         mode: GM_getValue("Config.api", "offline"),
         arr: [
@@ -542,13 +539,33 @@ FuckF.taskRead = async () => {
     return false
 }
 
+FuckF.getRewardsToken = async () => {
+    const message = "Request Verification Token 获取"
+    try {
+        const result = await FuckF.xhr({
+            url: "https://rewards.bing.com/status/",
+            headers: {
+                "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+                "referer": "https://rewards.bing.com/",
+            },
+        })
+        const res = result.replace(/\s/g, "")
+        const token = res.match(/RequestVerificationToken(.*?)value="(.*?)"/)
+        if (token) return token[2]
+        FuckF.log("🟡", `${message}失败！🔛${result}`)
+    } catch (e) {
+        FuckF.log("🔴", `${message}出错！🔛${e.message}`)
+    }
+}
+
 FuckF.taskPromos = async () => {
     if (!FuckD.tasks.promos || FuckD.promos.times > 2 || FuckD.promos.end > 0) {
         FuckD.promos.end++
         return true
     }
     const dashboard = await FuckF.getRewardsInfo()
-    if (!dashboard) {
+    const requestToken = await FuckF.getRewardsToken()
+    if (!dashboard || !requestToken) {
         FuckD.promos.times++
         return false
     }
@@ -561,7 +578,8 @@ FuckF.taskPromos = async () => {
         if (item.complete == false && item.exclusiveLockedFeatureStatus != "locked") {
             promosArr.push({
                 id: item.offerId,
-                url: item.destinationUrl
+                hash: item.hash,
+                url: item.destinationUrl,
             })
         }
     }
@@ -583,6 +601,24 @@ FuckF.taskPromos = async () => {
         }
         FuckD.promos.date = 0
         for (const item of promosArr) {
+            FuckF.xhr({
+                method: "POST",
+                url: "https://rewards.bing.com/api/reportactivity?X-Requested-With=XMLHttpRequest",
+                headers: {
+                    "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+                    "referer": item.url,
+                },
+                data: new URLSearchParams({
+                    "id": item.id,
+                    "hash": item.hash,
+                    "timeZone": 480,
+                    "activityAmount": 1,
+                    "dbs": 0,
+                    "form": "",
+                    "type": "",
+                    "__RequestVerificationToken": requestToken,
+                }).toString(),
+            })
             FuckF.xhr({
                 method: "POST",
                 url: `https://${FuckD.bing.host}/msrewards/api/v1/ReportActivity?ajaxreq=1`,
@@ -699,7 +735,7 @@ FuckF.taskSearch = async () => {
         return true
     }
     FuckD.search.date = 0
-    let query, params, pcorm, headers, regionMKT = "", cookieMKT = FuckD.cookie.mkt
+    let query, params, pcorm, headers, regionMKT = ""
     if (FuckD.search.pc.progress < FuckD.search.pc.max || FuckD.search.m.progress < FuckD.search.m.max) {
         pcorm = Math.random() > 0.6 ? false : true
         if (FuckD.search.pc.progress >= FuckD.search.pc.max) pcorm = false
@@ -712,27 +748,25 @@ FuckF.taskSearch = async () => {
             FuckD.bing.code = -1
             return true
         }
-        GM_cookie("delete", { url: "https://bing.com", name: "_Rwho", domain: ".bing.com" })
-        GM_cookie("delete", { url: "https://bing.com", name: "_RwBf", domain: ".bing.com" })
-        if (FuckD.bing.status) {
-            regionMKT = "mkt=zh-CN"
-            cookieMKT = `mkt=zh-CN; mkt1=zh-CN; _EDGE_S=mkt=zh-CN`
-        }
-        params = `q=${encodeURIComponent(keyword)}&form=QBLH&${regionMKT}`
+        GM_cookie("delete", { url: "https://bing.com", name: "_EDGE_S" })
+        GM_cookie("delete", { url: "https://bing.com", name: "_Rwho" })
+        GM_cookie("delete", { url: "https://bing.com", name: "_RwBf" })
+        if (FuckD.bing.status) regionMKT = "&mkt=zh-CN"
+        params = `q=${encodeURIComponent(keyword)}&form=QBLH${regionMKT}`
         query = `https://${FuckD.bing.host}/search?${params}`
         if (pcorm) {
             FuckD.search.device = "Desktop"
             headers = {
                 "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
                 "user-agent": FuckD.ua.pc,
-                "cookie": `${cookieMKT}; _Rwho=u=d&ts=${FuckD.bing.dateNowhyphen}`,
+                "cookie": `_Rwho=u=d&ts=${FuckD.bing.dateNowhyphen}`,
             }
         } else {
             FuckD.search.device = "Mobile"
             headers = {
                 "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
                 "user-agent": FuckD.ua.m,
-                "cookie": `${cookieMKT}; _Rwho=u=m&ts=${FuckD.bing.dateNowhyphen}`,
+                "cookie": `_Rwho=u=m&ts=${FuckD.bing.dateNowhyphen}`,
             }
         }
         const result = await FuckF.xhr({
