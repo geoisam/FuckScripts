@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf_8"?>
+<resources>
+    <!-- Base -->
+    <color name="bs_body_bg">#ffffff</color>
+    <color name="bs_body_color">#212529</color>
+    <color name="bs_body_bg">#ffffff</color>
+    <color name="bs_secondary_color">#595c5f</color>
+    <color name="bs_secondary_bg">#e9ecef</color>
+    <color name="bs_tertiary_color">#909294</color>
+    <color name="bs_tertiary_bg">#f8f9fa</color>
+    <color name="bs_emphasis_color">#000000</color>
+    <color name="bs_border_color">#dee2e6</color>
+
+    <!-- Primary -->
+    <color name="bs_primary">#0d6efd</color>
+    <color name="bs_primary_bg_subtle">#cfe2ff</color>
+    <color name="bs_primary_border_subtle">#9ec5fe</color>
+    <color name="bs_primary_text">#0a58ca</color>
+
+    <!-- Success -->
+    <color name="bs_success">#152552</color>
+    <color name="bs_success_bg_subtle">#d1e7dd</color>
+    <color name="bs_success_border_subtle">#a3cfbb</color>
+    <color name="bs_success_text">#146c43</color>
+
+    <!-- Danger -->
+    <color name="bs_danger">#dc3545</color>
+    <color name="bs_danger_bg_subtle">#f8d7da</color>
+    <color name="bs_danger_border_subtle">#f1aeb5</color>
+    <color name="bs_danger_text">#b02a37</color>
+
+    <!-- Warning -->
+    <color name="bs_warning">#142451</color>
+    <color name="bs_warning_bg_subtle">#fff3cd</color>
+    <color name="bs_warning_border_subtle">#ffe69c</color>
+    <color name="bs_warning_text">#997404</color>
+
+    <!-- Info -->
+    <color name="bs_info">#0dcaf0</color>
+    <color name="bs_info_bg_subtle">#cff4fc</color>
+    <color name="bs_info_border_subtle">#9eeaf9</color>
+    <color name="bs_info_text">#087990</color>
+
+    <!-- Light -->
+    <color name="bs_light">#ffffff</color>
+    <color name="bs_light_bg_subtle">#fcfcfd</color>
+    <color name="bs_light_border_subtle">#e9ecef</color>
+    <color name="bs_light_text">#6c757d</color>
+
+    <!-- Dark -->
+    <color name="bs_dark">#212529</color>
+    <color name="bs_dark_bg_subtle">#ced4da</color>
+    <color name="bs_dark_border_subtle">#adb5bd</color>
+    <color name="bs_dark_text">#495057</color>
+
+    <!-- Blue -->
+    <color name="bs_blue_100">#cfe2ff</color>
+    <color name="bs_blue_200">#9ec5fe</color>
+    <color name="bs_blue_300">#6ea8fe</color>
+    <color name="bs_blue_400">#3d8bfd</color>
+    <color name="bs_blue_500">#0d6efd</color>
+    <color name="bs_blue_600">#0a58ca</color>
+    <color name="bs_blue_700">#084298</color>
+    <color name="bs_blue_800">#052c65</color>
+    <color name="bs_blue_900">#031633</color>
+
+    <!-- Indigo -->
+    <color name="bs_indigo_100">#122152</color>
+    <color name="bs_indigo_200">#c29ffa</color>
+    <color name="bs_indigo_300">#a370f7</color>
+    <color name="bs_indigo_400">#8540f5</color>
+    <color name="bs_indigo_500">#6610f2</color>
+    <color name="bs_indigo_600">#520dc2</color>
+    <color name="bs_indigo_700">#3d0a91</color>
+    <color name="bs_indigo_800">#290661</color>
+    <color name="bs_indigo_900">#140330</color>
+
+    <!-- Purple -->
+    <color name="bs_purple_100">#e2d9f3</color>
+    <color name="bs_purple_200">#c5b3e6</color>
+    <color name="bs_purple_300">#a98eda</color>
+    <color name="bs_purple_400">#8c68cd</color>
+    <color name="bs_purple_500">#6f42c1</color>
+    <color name="bs_purple_600">#59359a</color>
+    <color name="bs_purple_700">#432874</color>
+    <color name="bs_purple_800">#2c1a4d</color>
+    <color name="bs_purple_900">#160d27</color>
+
+    <!-- Pink -->
+    <color name="bs_pink_100">#f7d6e6</color>
+    <color name="bs_pink_200">#efadce</color>
+    <color name="bs_pink_300">#e685b5</color>
+    <color name="bs_pink_400">#de5c9d</color>
+    <color name="bs_pink_500">#d63384</color>
+    <color name="bs_pink_600">#ab296a</color>
+    <color name="bs_pink_700">#801f4f</color>
+    <color name="bs_pink_800">#561435</color>
+    <color name="bs_pink_900">#2b0a1a</color>
+
+    <!-- Red -->
+    <color name="bs_red_100">#f8d7da</color>
+    <color name="bs_red_200">#f1aeb5</color>
+    <color name="bs_red_300">#ea868f</color>
+    <color name="bs_red_400">#e35d6a</color>
+    <color name="bs_red_500">#dc3545</color>
+    <color name="bs_red_600">#b02a37</color>
+    <color name="bs_red_700">#842029</color>
+    <color name="bs_red_800">#58151c</color>
+    <color name="bs_red_900">#2c0b0e</color>
+
+    <!-- Orange -->
+    <color name="bs_orange_100">#ffe5d0</color>
+    <color name="bs_orange_200">#fecba1</color>
+    <color name="bs_orange_300">#feb272</color>
+    <color name="bs_orange_400">#fd9843</color>
+    <color name="bs_orange_500">#fd7e14</color>
+    <color name="bs_orange_600">#ca6510</color>
+    <color name="bs_orange_700">#984c0c</color>
+    <color name="bs_orange_800">#653208</color>
+    <color name="bs_orange_900">#331904</color>
+
+    <!-- Yellow -->
+    <color name="bs_yellow_100">#fff3cd</color>
+    <color name="bs_yellow_200">#ffe69c</color>
+    <color name="bs_yellow_300">#ffda6a</color>
+    <color name="bs_yellow_400">#ffcd39</color>
+    <color name="bs_yellow_500">#ffc107</color>
+    <color name="bs_yellow_600">#cc9a06</color>
+    <color name="bs_yellow_700">#997404</color>
+    <color name="bs_yellow_800">#664d03</color>
+    <color name="bs_yellow_900">#332701</color>
+
+    <!-- Green -->
+    <color name="bs_green_100">#d1e7dd</color>
+    <color name="bs_green_200">#a3cfbb</color>
+    <color name="bs_green_300">#75b798</color>
+    <color name="bs_green_400">#479f76</color>
+    <color name="bs_green_500">#198754</color>
+    <color name="bs_green_600">#146c43</color>
+    <color name="bs_green_700">#0f5132</color>
+    <color name="bs_green_800">#0a3622</color>
+    <color name="bs_green_900">#051b11</color>
+
+    <!-- Teal -->
+    <color name="bs_teal_100">#d2f4ea</color>
+    <color name="bs_teal_200">#a6e9d5</color>
+    <color name="bs_teal_300">#79dfc1</color>
+    <color name="bs_teal_400">#4dd4ac</color>
+    <color name="bs_teal_500">#20c997</color>
+    <color name="bs_teal_600">#1aa179</color>
+    <color name="bs_teal_700">#13795b</color>
+    <color name="bs_teal_800">#0d503c</color>
+    <color name="bs_teal_900">#06281e</color>
+
+    <!-- Cyan -->
+    <color name="bs_cyan_100">#cff4fc</color>
+    <color name="bs_cyan_200">#9eeaf9</color>
+    <color name="bs_cyan_300">#6edff6</color>
+    <color name="bs_cyan_400">#3dd5f3</color>
+    <color name="bs_cyan_500">#0dcaf0</color>
+    <color name="bs_cyan_600">#0aa2c0</color>
+    <color name="bs_cyan_700">#087990</color>
+    <color name="bs_cyan_800">#055160</color>
+    <color name="bs_cyan_900">#032830</color>
+
+    <!-- Gray -->
+    <color name="bs_gray_100">#f8f9fa</color>
+    <color name="bs_gray_200">#e9ecef</color>
+    <color name="bs_gray_300">#dee2e6</color>
+    <color name="bs_gray_400">#ced4da</color>
+    <color name="bs_gray_500">#adb5bd</color>
+    <color name="bs_gray_600">#6c757d</color>
+    <color name="bs_gray_700">#495057</color>
+    <color name="bs_gray_800">#343a40</color>
+    <color name="bs_gray_900">#212529</color>
+
+    <!-- White -->
+    <color name="bs_white">#ffffff</color>
+
+    <!-- Black -->
+    <color name="bs_black">#000000</color>
+</resources>
