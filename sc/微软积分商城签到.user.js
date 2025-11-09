@@ -81,6 +81,9 @@ const FuckD = {
         pc: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.2420.81",
         m: "Mozilla/5.0 (Linux; Android 16; MCE16 Build/BP3A.250905.014; ) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/123.0.0.0 Mobile Safari/537.36 EdgA/123.0.2420.102",
     },
+    cookie: {
+        bing: "",
+    },
     api: {
         mode: GM_getValue("Config.api", "offline"),
         arr: [
@@ -142,7 +145,6 @@ const FuckD = {
     },
     promos: {
         times: 0,
-        point: 0,
         token: 0,
         end: 0,
     },
@@ -229,12 +231,12 @@ const FuckF = {
 
     xhr(options, only = false) {
         return new Promise((resolve, reject) => {
-            const seconds = FuckF.getTimestamp()
+            const seconds = this.getTimestamp()
             GM_xmlhttpRequest({
                 ...options,
                 timeout: 15000,
                 ontimeout() {
-                    reject(new Error(`请求超时！用时 ${(FuckF.getTimestamp() - seconds) / 1000} 秒`))
+                    reject(new Error(`请求超时！用时 ${(this.getTimestamp() - seconds) / 1000} 秒`))
                 },
                 onload(xhr) {
                     if (xhr.status == 200) {
@@ -250,12 +252,12 @@ const FuckF = {
                             const res = result.match(/Location:\s*(.*?)\s*\r?\n/i)
                             resolve(res ? res[1] : false)
                         } else {
-                            reject(new Error(`请求失败，用时 ${(FuckF.getTimestamp() - seconds) / 1000} 秒，状态码：${xhr.status}`))
+                            reject(new Error(`请求失败，用时 ${(this.getTimestamp() - seconds) / 1000} 秒，状态码：${xhr.status}`))
                         }
                     }
                 },
                 onerror(err) {
-                    reject(new Error(`请求发生异常！用时 ${(FuckF.getTimestamp() - seconds) / 1000} 秒 🔛${err}`))
+                    reject(new Error(`请求发生异常！用时 ${(this.getTimestamp() - seconds) / 1000} 秒 🔛${err}`))
                 },
             })
         })
@@ -583,12 +585,11 @@ FuckF.taskPromos = async () => {
             })
         }
     }
-    FuckD.promos.point = promosArr.length
     if (promosArr.length < 1) {
         FuckD.promos.end++
         if (FuckD.promos.date != FuckD.bing.dateNowNum) {
             FuckD.promos.date = FuckD.bing.dateNowNum
-            FuckF.log("🟣", `哇！哥哥好棒！活动任务完成了！\n✨本次运行完成活动 ${FuckD.promos.point} 次`, true)
+            FuckF.log("🟣", "哇！哥哥好棒！活动任务完成了！", true)
         }
         GM_setValue("Config.tasks", FuckD.bing.tasks)
         return true
@@ -783,21 +784,18 @@ FuckF.taskSearch = async () => {
             const data = res.match(/class="b_algo(.*?)href="(.*?)"h="ID=(.*?)">(.*?)<\/h2/)
             const ncheader = `https://${FuckD.bing.host}/rewardsapp/ncheader?ver=88888888&IID=SERP.5047&IG=${guid}&ajaxreq=1`
             const report = `https://${FuckD.bing.host}/rewardsapp/reportActivity?IG=${guid}&IID=SERP.5047&${params}&ajaxreq=1`
-            headers = {
-                ...headers,
-                "referer": query,
-            }
+            headers = { ...headers, "referer": query }
             await FuckF.xhr({
                 method: "POST",
                 url: ncheader,
                 headers: headers,
-                data: "wb=1%3bi%3d1%3bv%3d1"
+                data: "wb=1%3bi%3d1%3bv%3d1",
             })
             await FuckF.xhr({
                 method: "POST",
                 url: report,
                 headers: headers,
-                data: `url=${encodeURIComponent(query)}&V=web`
+                data: `url=${encodeURIComponent(query)}&V=web`,
             })
             if (data) {
                 const click = `https://${FuckD.bing.host}/fd/ls/GLinkPingPost.aspx?IG=${guid}&ID=${data[3]}&url=${data[2]}`
@@ -860,6 +858,7 @@ return new Promise((resolve, reject) => {
         })
         FuckD.cookie.bing = cookies
     })
+    GM_cookie("delete", { url: "https://bing.com", name: "_EDGE_S" })
     FuckD.search.limit = FuckF.getScopeRandomNum(4, 7)
     FuckD.bing.dateNowNum = FuckF.getDatetime(true)
     FuckD.bing.dateNowhyphen = FuckF.getDatetime(false, false)
