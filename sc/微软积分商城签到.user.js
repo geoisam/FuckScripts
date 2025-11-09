@@ -106,6 +106,7 @@ const FuckD = {
         read: GM_getValue("Tasks.read", true),
         promos: GM_getValue("Tasks.promos", true),
         search: GM_getValue("Tasks.search", true),
+        error: GM_getValue("Tasks.error", 0),
     },
     bing: {
         region: "CN",
@@ -371,6 +372,7 @@ FuckF.renewToken = async () => {
     if (!token) {
         FuckF.okCallback(true)
     } else {
+        GM_setValue("Tasks.error", 0)
         return true
     }
 }
@@ -879,6 +881,13 @@ return new Promise((resolve, reject) => {
             FuckF.log("🟡", "当前搜索词接口配置错误！已替换为单机模式！")
         }
     }
+    if (GM_setValue("Tasks.error", FuckD.tasks.error++) > 6) {
+        FuckD.sign.end++
+        FuckD.read.end++
+        GM_setValue("Tasks.sign", false)
+        GM_setValue("Tasks.read", false)
+        FuckF.log("⚫", "由于您的授权错误次数过多，已为您关闭签入任务与阅读任务，如需开启可在 Tasks 中重新配置！", true)
+    }
 
     FuckF.tasksEnd = () => {
         if (FuckD.bing.code < 0) {
@@ -981,6 +990,7 @@ return new Promise((resolve, reject) => {
             if (FuckD.tasks.sign || FuckD.tasks.read) {
                 const result = await FuckF.renewToken()
                 if (!result) {
+                    GM_setValue("Tasks.error", FuckD.tasks.error++)
                     FuckF.log("🔴", "请检查 login.live.com 登录状态，或者填写授权码/链接后手动运行！\n🚀授权码/链接为跳转后包含code=M.的链接（3分钟内有效）", true)
                     FuckF.tasksEnd()
                 } else {
