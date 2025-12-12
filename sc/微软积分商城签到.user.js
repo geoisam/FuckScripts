@@ -600,7 +600,7 @@ FuckF.getReadPro = async () => {
 }
 
 FuckF.taskRead = async () => {
-    if (!FuckD.tasks.read || FuckD.read.times > 2 || FuckD.read.end > 0) {
+    if (!FuckD.tasks.read || FuckD.read.times > 2 || FuckD.read.end > 0 || (!GM_getValue("Config.keep", true) && FuckD.read.date == FuckD.bing.dateNowNum)) {
         FuckD.read.end++
         return true
     }
@@ -661,7 +661,7 @@ FuckF.getRewardsToken = async () => {
     const message = "Request Verification Token 获取"
     try {
         const result = await FuckF.xhr({
-            url: "https://rewards.bing.com/status/",
+            url: "https://rewards.bing.com/",
             headers: {
                 "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
                 "referer": "https://rewards.bing.com/",
@@ -678,7 +678,7 @@ FuckF.getRewardsToken = async () => {
 }
 
 FuckF.taskPromos = async () => {
-    if (!FuckD.tasks.promos || FuckD.promos.times > 2 || FuckD.promos.end > 0) {
+    if (!FuckD.tasks.promos || FuckD.promos.times > 2 || FuckD.promos.end > 0 || (!GM_getValue("Config.keep", true) && FuckD.promos.date == FuckD.bing.dateNowNum)) {
         FuckD.promos.end++
         return true
     }
@@ -694,7 +694,7 @@ FuckF.taskPromos = async () => {
     morePromos = Array.isArray(morePromos) ? morePromos : []
     dailySetPromos = Array.isArray(dailySetPromos) ? dailySetPromos : []
     for (const item of [...dailySetPromos, ...morePromos]) {
-        if (item.complete == false && item.exclusiveLockedFeatureStatus != "locked") {
+        if (item.complete == false && item.priority >= -1 && item.exclusiveLockedFeatureStatus != "locked") {
             promosArr.push({
                 id: item.offerId,
                 hash: item.hash,
@@ -757,6 +757,8 @@ FuckF.taskPromos = async () => {
             })
             await new Promise(resolve => setTimeout(resolve, Math.floor(FuckD.bing.time / 3)))
         }
+        FuckD.promos.end++
+        return true
     } catch (e) {
         FuckF.log("🔴", `活动任务出错！🔛${e.message}`)
     }
@@ -802,7 +804,7 @@ FuckF.getQueryWord = async () => {
 }
 
 FuckF.taskSearch = async () => {
-    if (!FuckD.tasks.search || FuckD.search.end > 0) {
+    if (!FuckD.tasks.search || FuckD.search.end > 0 || (!GM_getValue("Config.keep", true) && FuckD.search.date == FuckD.bing.dateNowNum)) {
         FuckD.search.end++
         return true
     }
