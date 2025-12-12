@@ -705,7 +705,7 @@ FuckF.taskPromos = async () => {
         FuckD.promos.end++
         if (FuckD.promos.date != FuckD.bing.dateNowNum) {
             FuckD.promos.date = FuckD.bing.dateNowNum
-            FuckD.bing.sendMSG = "哇！哥哥好棒！活动任务完成了！"
+            FuckD.bing.sendMSG = "哇！哥哥好棒！活动任务完成了！\n🤡具体以官网数据为准"
             FuckF.log("🟣", FuckD.bing.sendMSG, true)
             FuckF.send(FuckD.wh)
         }
