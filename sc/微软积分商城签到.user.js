@@ -694,7 +694,7 @@ FuckF.taskPromos = async () => {
     morePromos = Array.isArray(morePromos) ? morePromos : []
     dailySetPromos = Array.isArray(dailySetPromos) ? dailySetPromos : []
     for (const item of [...dailySetPromos, ...morePromos]) {
-        if (item.complete == false && item.priority >= -1 && item.exclusiveLockedFeatureStatus != "locked") {
+        if (item.complete == false && item.priority > -2 && item.exclusiveLockedFeatureStatus != "locked") {
             promosArr.push({
                 id: item.offerId,
                 hash: item.hash,
@@ -1016,10 +1016,6 @@ return new Promise((resolve, reject) => {
             FuckF.log("🟡", "当前搜索词接口配置错误！已替换为单机模式！")
         }
     }
-    if (!GM_getValue("Config.keep", true)) {
-        const d = FuckD.bing.dateNowNum
-        if (FuckD.sign.date == d && FuckD.read.date == d && FuckD.promos.date == d && FuckD.search.date == d) resolve()
-    }
 
     FuckF.tasksEnd = () => {
         if (FuckD.bing.code < 0) {
@@ -1079,6 +1075,10 @@ return new Promise((resolve, reject) => {
 
     FuckF.tasksStart = async () => {
         if (GM_info.script.author != "geoisam@qq.com") resolve()
+        if (!GM_getValue("Config.keep", true)) {
+            const d = FuckD.bing.dateNowNum
+            if (FuckD.sign.date == d && FuckD.read.date == d && FuckD.promos.date == d && FuckD.search.date == d) resolve()
+        }
         const host = "www.bing.com"
         if (!FuckD.bing.host) {
             if (FuckD.bing.status) {
