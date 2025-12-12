@@ -36,7 +36,7 @@
 /* ==UserConfig==
 Config:
     keep:
-        title: 持续检测（关闭则完成任务后不再运行检测）
+        title: 持续检测（关闭则所有任务完成后不再检测）
         type: checkbox
         default: true
     lock:
@@ -674,6 +674,7 @@ FuckF.getRewardsToken = async () => {
     } catch (e) {
         FuckF.log("🔴", `${message}出错！🔛${e.message}`)
     }
+    return false
 }
 
 FuckF.taskPromos = async () => {
@@ -979,7 +980,6 @@ FuckF.send = async (webhook) => {
             FuckF.log("🔴", `消息推送出错！🔛${e.message}`)
         }
     }))
-    return
 }
 
 return new Promise((resolve, reject) => {
