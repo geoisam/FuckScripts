@@ -518,7 +518,7 @@ FuckF.taskSign = async () => {
             FuckD.sign.date = FuckD.bing.dateNowNum
             FuckD.bing.sendMSG = `哇！哥哥好棒！签入任务完成了！\n${FuckD.sign.point > 0 ? `✨今日签入奖励：${FuckD.sign.point}` : "🚨今日已签入，无法二次签入"}`
             FuckF.log("🟣", FuckD.bing.sendMSG, true)
-            await FuckF.send(FuckD.wh)
+            FuckF.send(FuckD.wh)
         }
         GM_setValue("Config.tasks", FuckD.bing.tasks)
         return true
@@ -615,7 +615,7 @@ FuckF.taskRead = async () => {
             FuckD.read.date = FuckD.bing.dateNowNum
             FuckD.bing.sendMSG = `哇！哥哥好棒！阅读任务完成了！\n✨今日阅读奖励：${readPro.progress}/${readPro.max}`
             FuckF.log("🟣", FuckD.bing.sendMSG, true)
-            await FuckF.send(FuckD.wh)
+            FuckF.send(FuckD.wh)
         }
         GM_setValue("Config.tasks", FuckD.bing.tasks)
         return true
@@ -705,7 +705,7 @@ FuckF.taskPromos = async () => {
             FuckD.promos.date = FuckD.bing.dateNowNum
             FuckD.bing.sendMSG = "哇！哥哥好棒！活动任务完成了！"
             FuckF.log("🟣", FuckD.bing.sendMSG, true)
-            await FuckF.send(FuckD.wh)
+            FuckF.send(FuckD.wh)
         }
         GM_setValue("Config.tasks", FuckD.bing.tasks)
         return true
@@ -839,7 +839,7 @@ FuckF.taskSearch = async () => {
             FuckD.search.date = FuckD.bing.dateNowNum
             FuckD.bing.sendMSG = `哇！哥哥好棒！搜索任务完成了！${pcReport}${mReport}`
             FuckF.log("🟣", FuckD.bing.sendMSG, true)
-            await FuckF.send(FuckD.wh)
+            FuckF.send(FuckD.wh)
         }
         GM_setValue("Config.tasks", FuckD.bing.tasks)
         return true
@@ -847,10 +847,13 @@ FuckF.taskSearch = async () => {
     if (FuckD.search.times > 2 || FuckD.search.index >= FuckD.search.limit) {
         FuckD.search.end++
         if (FuckD.search.index < FuckD.search.limit) {
-            FuckF.log("🔵", `积分收入限制，共搜索 ${FuckD.search.index} 次！${pcReport}${mReport}`)
+            FuckD.bing.sendMSG = `积分收入限制，共搜索 ${FuckD.search.index} 次！${pcReport}${mReport}`
+            FuckF.log("🔵", FuckD.bing.sendMSG)
         } else {
-            FuckF.log("🔵", `本次运行正常，共搜索 ${FuckD.search.index} 次！${pcReport}${mReport}`)
+            FuckD.bing.sendMSG = `本次运行正常，共搜索 ${FuckD.search.index} 次！${pcReport}${mReport}`
+            FuckF.log("🔵", FuckD.bing.sendMSG)
         }
+        FuckF.send(FuckD.wh)
         return true
     }
     FuckD.search.date = 0
@@ -997,8 +1000,8 @@ return new Promise((resolve, reject) => {
     FuckD.read.date = tasksArr ? tasksArr.read : 0
     FuckD.promos.date = tasksArr ? tasksArr.promos : 0
     FuckD.search.date = tasksArr ? tasksArr.search : 0
-    if(!GM_getValue("Config.stop", true)){
-        if(FuckD.sign.date == FuckD.read.date == FuckD.promos.date == FuckD.search.date == FuckD.bing.dateNowNum) resolve()
+    if (!GM_getValue("Config.stop", true)) {
+        if (FuckD.sign.date == FuckD.read.date == FuckD.promos.date == FuckD.search.date == FuckD.bing.dateNowNum) resolve()
     }
     if (FuckD.api.mode != "offline") {
         const defaultApiName = "hot.baiwumm.com"
