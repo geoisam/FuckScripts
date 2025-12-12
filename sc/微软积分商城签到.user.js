@@ -16,6 +16,10 @@
 // @connect      hot.baiwumm.com
 // @connect      cnxiaobai.com
 // @connect      disp-qryapi.3g.qq.com
+// @connect      qyapi.weixin.qq.com
+// @connect      oapi.dingtalk.com
+// @connect      open.feishu.cn
+// @connect      push.i-i.me
 // @grant        unsafeWindow
 // @grant        GM_xmlhttpRequest
 // @grant        GM_notification
@@ -31,7 +35,7 @@
 
 /* ==UserConfig==
 Config:
-    stop:
+    keep:
         title: 持续检测（关闭则完成任务后不再运行检测）
         type: checkbox
         default: true
@@ -202,7 +206,6 @@ const FuckD = {
         read: GM_getValue("Tasks.read", true),
         promos: GM_getValue("Tasks.promos", true),
         search: GM_getValue("Tasks.search", true),
-        error: GM_getValue("Tasks.error", 0),
     },
     bing: {
         region: "CN",
@@ -480,7 +483,6 @@ FuckF.renewToken = async () => {
     if (!token) {
         FuckF.okCallback(true)
     } else {
-        GM_setValue("Tasks.error", 0)
         return true
     }
 }
@@ -1000,9 +1002,6 @@ return new Promise((resolve, reject) => {
     FuckD.read.date = tasksArr ? tasksArr.read : 0
     FuckD.promos.date = tasksArr ? tasksArr.promos : 0
     FuckD.search.date = tasksArr ? tasksArr.search : 0
-    if (!GM_getValue("Config.stop", true)) {
-        if (FuckD.sign.date == FuckD.read.date == FuckD.promos.date == FuckD.search.date == FuckD.bing.dateNowNum) resolve()
-    }
     if (FuckD.api.mode != "offline") {
         const defaultApiName = "hot.baiwumm.com"
         const currentApiName = GM_getValue("Config.api", defaultApiName)
@@ -1015,12 +1014,9 @@ return new Promise((resolve, reject) => {
             FuckF.log("🟡", "当前搜索词接口配置错误！已替换为单机模式！")
         }
     }
-    if (GM_getValue("Tasks.error", FuckD.tasks.error++) > 6) {
-        FuckD.sign.end++
-        FuckD.read.end++
-        GM_setValue("Tasks.sign", false)
-        GM_setValue("Tasks.read", false)
-        FuckF.log("⚫", "由于您的授权错误次数过多，已为您关闭签入任务与阅读任务，如需开启可在设置面板 Tasks 中重新配置！", true)
+    if (!GM_getValue("Config.keep", true)) {
+        const d = FuckD.bing.dateNowNum
+        if (FuckD.sign.date == d && FuckD.read.date == d && FuckD.promos.date == d && FuckD.search.date == d) resolve()
     }
 
     FuckF.tasksEnd = () => {
@@ -1124,7 +1120,6 @@ return new Promise((resolve, reject) => {
             if (FuckD.tasks.sign || FuckD.tasks.read) {
                 const result = await FuckF.renewToken()
                 if (!result) {
-                    GM_setValue("Tasks.error", FuckD.tasks.error++)
                     const tips = "🚀授权码/链接为跳转后包含code=M.的链接（3分钟内有效），请勿分享授权码/链接以免个人数据泄露！"
                     if (FuckF.isEdge) {
                         FuckF.log("🔴", `Microsoft Edge 不支持自动授权！请填写授权码/链接后手动运行！\n${tips}`, true)
