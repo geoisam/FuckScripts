@@ -41,9 +41,6 @@
             name: "bing_Search",
             value: false
         }, {
-            name: "bing_Footer",
-            value: true
-        }, {
             name: "bing_Center",
             value: true
         }, {
@@ -88,7 +85,6 @@
     <label class="pjs-setting-label">隐藏中间相关图像<input type="checkbox" id="S-Image" ${pjs.getValue("bing_Image") ? "checked" : ""}><span class="pjs-setting-checkbox"></span></label>
     <label class="pjs-setting-label">隐藏中间相关视频<input type="checkbox" id="S-Video" ${pjs.getValue("bing_Video") ? "checked" : ""}><span class="pjs-setting-checkbox"></span></label>
     <label class="pjs-setting-label">隐藏底部相关搜索<input type="checkbox" id="S-Search" ${pjs.getValue("bing_Search") ? "checked" : ""}><span class="pjs-setting-checkbox"></span></label>
-    <label class="pjs-setting-label">移动端隐藏页脚信息<input type="checkbox" id="S-Footer" ${pjs.getValue("bing_Footer") ? "checked" : ""}><span class="pjs-setting-checkbox"></span></label>
     <label class="pjs-setting-label">电脑端页面平铺居中<input type="checkbox" id="S-Center" ${pjs.getValue("bing_Center") ? "checked" : ""}><span class="pjs-setting-checkbox"></span></label>
     <label class="pjs-setting-label">页面平铺最大宽度 (像素)<input type="number" min="1000" id="S-MaxWidth" value="${pjs.getValue("bing_MaxWidth")}" class="pjs-setting-input"></label>
     </div>`
@@ -129,10 +125,6 @@
                 })
                 document.querySelector("#S-Search").addEventListener("change", (e) => {
                     const targetItem = pjs.option.find(item => item.name == "bing_Search")
-                    targetItem.value = e.currentTarget.checked
-                })
-                document.querySelector("#S-Footer").addEventListener("change", (e) => {
-                    const targetItem = pjs.option.find(item => item.name == "bing_Footer")
                     targetItem.value = e.currentTarget.checked
                 })
                 document.querySelector("#S-Center").addEventListener("change", (e) => {
@@ -187,7 +179,7 @@ li:has(.b_adSlug),
 `)
 
             if (pjs.getValue("bing_FAQ")) {
-                GM_addStyle(`li.b_ans:has(.b_vPanel) { display: none !important; }`)
+                GM_addStyle(`li.b_ans:has(.b_vPanel),li.b_ans:has(#relatedQnAListDisplay) { display: none !important; }`)
             }
 
             if (pjs.getValue("bing_News")) {
@@ -206,18 +198,12 @@ li:has(.b_adSlug),
                 GM_addStyle(`li.b_ans:has(.b_rs),li.b_ans:has(.b_mrs),#b_recSQ,.b_inline_ajax_rs { display: none !important; }`)
             }
 
-            if (pjs.getValue("bing_Footer")) {
-                if (isMobile) {
-                    GM_addStyle(`#b_footer ul { display: none !important; }`)
-                }
-            }
-
             if (pjs.getValue("bing_Center")) {
                 if (!isMobile) {
                     GM_addStyle(`
     #b_header { display: flex !important;flex-direction: column;align-items: center; }
     #b_header .b_scopebar { margin: 10px auto !important; }
-    #b_header #id_h { position: absolute;top: 1.5rem; }
+    #b_header #id_h { position: absolute; }
     #b_header #est_switch { margin:auto !important; }
     #b_header #sb_form { margin-left:-180px; }
     #ftr_pane,.aca_filterBar { margin: auto !important; }
