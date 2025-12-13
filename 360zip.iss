@@ -1,5 +1,5 @@
 #define MyAppName "360压缩"
-#define MyAppVersion "4.0.0.1630"
+#define MyAppVersion "4.0.0.1660"
 #define MyAppPublisher "geoisam@qq.com"
 #define MyAppURL "https://geoisam.github.io"
 #define MyAppIcon "D:\360\360zip.ico"
@@ -24,8 +24,8 @@ VersionInfoVersion={#MyAppVersion}
 AppVerName={#MyAppName} {#MyAppVersion}
 //发布者
 AppPublisher={#MyAppPublisher}
-VersionInfoCompany=You
-VersionInfoCopyright=You
+VersionInfoCompany=YOU
+VersionInfoCopyright=YOU
 VersionInfoDescription={#MyAppPublisher}
 //帮助链接
 AppPublisherURL={#MyAppURL}
@@ -93,10 +93,6 @@ WizardResizable=yes
 WizardStyle=modern
 
 
-[Messages]
-BeveledLabel=by: geoisam@qq.com
-
-
 [Languages]
 Name: "chs"; MessagesFile: "compiler:Languages\Chinese.isl"
 Name: "eng"; MessagesFile: "compiler:Languages\English.isl"
@@ -126,24 +122,9 @@ Root: HKLM; Subkey: "SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Unins
 Root: HKLM; Subkey: "SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppName}"; ValueType: string; ValueName: "UninstallString"; ValueData: "{app}\{#MyAppUnExeName}"; Flags: uninsdeletekeyifempty
 Root: HKLM; Subkey: "SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppName}"; ValueType: string; ValueName: "DisplayVersion"; ValueData: "{#MyAppVersion}"; Flags: uninsdeletekeyifempty
 Root: HKLM; Subkey: "SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppName}"; ValueType: string; ValueName: "URLInfoAbout"; ValueData: "http://yasuo.360.cn"; Flags: uninsdeletekeyifempty
-Root: HKLM; Subkey: "SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppName}"; ValueType: string; ValueName: "Publisher"; ValueData: "You"; Flags: uninsdeletekeyifempty
+Root: HKLM; Subkey: "SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppName}"; ValueType: string; ValueName: "Publisher"; ValueData: "YOU"; Flags: uninsdeletekeyifempty
 Root: HKLM; Subkey: "SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppName}"; ValueType: string; ValueName: "InstallLocation"; ValueData: "{app}"; Flags: uninsdeletekeyifempty
 
 
 [Run]
 Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
-
-[Code]
-var
-    myLabel:TNewStaticText;
-
-procedure InitializeWizard();
-
-begin
-//WizardForm.BeveledLabel.Enabled:= true;
-//WizardForm.BeveledLabel.Font.Color := clMaroon;
-//字体设置，其中fsBold=粗体，fsltalic=斜体，fsUnderline=下划线，fsStrikeOut=居中在线上
-    WizardForm.BeveledLabel.Font.Style := WizardForm.BeveledLabel.Font.Style+[fsBold];
-    WizardForm.BeveledLabel.Left := 45;
-    WizardForm.BeveledLabel.Top := 355;
-end;
