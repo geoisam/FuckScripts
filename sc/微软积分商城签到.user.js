@@ -113,7 +113,7 @@ const FuckD = {
                 "msgtype": "markdown_v2",
                 "markdown_v2": {
                     get content() {
-                        return `> ${FuckD.bing.datetimeChina}\n\n ## ${GM_info.script.name}\n ${FuckD.bing.sendMSG}`
+                        return `> ${FuckD.bing.datetimeLocaleStr}\n\n ## ${GM_info.script.name}\n ${FuckD.bing.sendMSG}`
                     }
                 },
             },
@@ -128,7 +128,7 @@ const FuckD = {
                 "markdown": {
                     "title": GM_info.script.name,
                     get text() {
-                        return `> ${FuckD.bing.datetimeChina}\n ### ${GM_info.script.name}\n ${FuckD.bing.sendMSG}`
+                        return `> ${FuckD.bing.datetimeLocaleStr}\n ### ${GM_info.script.name}\n ${FuckD.bing.sendMSG}`
                     }
                 },
             },
@@ -154,7 +154,7 @@ const FuckD = {
                             "tag": "markdown",
                             "text_align": "center",
                             get content() {
-                                return `#### ${FuckD.bing.datetimeChina}\n ${FuckD.bing.sendMSG}`
+                                return `#### ${FuckD.bing.datetimeLocaleStr}\n ${FuckD.bing.sendMSG}`
                             }
                         }]
                     }
@@ -305,14 +305,6 @@ const FuckF = {
         day = day < 10 ? "0" + day : day
         const dateNow = num ? Number(`${year}${month}${day}`) : slash ? `${month}/${day}/${year}` : `${year}-${month}-${day}`
         return dateNow
-    },
-
-    getDatetimeChina(only = false) {
-        const timeUTC = new Date()
-        const newDateChina = new Date(timeUTC.setUTCHours(timeUTC.getUTCHours() + 8))
-        const dateChina = newDateChina.toISOString().split("T")[0]
-        const datetimeChina = newDateChina.toISOString().split(".")[0].replace("T", " ")
-        return only ? dateChina : datetimeChina
     },
 
     isJSON(s) {
@@ -964,7 +956,8 @@ FuckF.mainlandCheck = async () => {
 }
 
 FuckF.send = async (webhook) => {
-    FuckD.bing.datetimeChina = FuckF.getDatetimeChina()
+    const now = new Date()
+    FuckD.bing.datetimeLocaleStr = now.toLocaleString()
     await Promise.all(webhook.map(async (i) => {
         if (!i.key) return
         let message = `「${i.name}」消息推送`
@@ -985,8 +978,6 @@ FuckF.send = async (webhook) => {
 }
 
 return new Promise((resolve, reject) => {
-    if (!FuckD.tasks.sign && !FuckD.tasks.read && !FuckD.tasks.promos && !FuckD.tasks.search) resolve()
-    if (!FuckD.bing.repo.includes("geoisam")) resolve()
     const seconds = FuckF.getTimestamp()
     GM_cookie("list", { url: "https://login.live.com" }, (result) => {
         let cookies = ""
@@ -1075,10 +1066,6 @@ return new Promise((resolve, reject) => {
 
     FuckF.tasksStart = async () => {
         if (GM_info.script.author != "geoisam@qq.com") resolve()
-        if (!GM_getValue("Config.keep", true)) {
-            const d = FuckD.bing.dateNowNum
-            if (FuckD.sign.date == d && FuckD.read.date == d && FuckD.promos.date == d && FuckD.search.date == d) resolve()
-        }
         const host = "www.bing.com"
         if (!FuckD.bing.host) {
             if (FuckD.bing.status) {
@@ -1140,5 +1127,9 @@ return new Promise((resolve, reject) => {
         }
     }
 
-    FuckF.tasksStart()
+    if ((!GM_getValue("Config.keep", true) && FuckD.sign.date == FuckD.bing.dateNowNum && FuckD.read.date == FuckD.bing.dateNowNum && FuckD.promos.date == FuckD.bing.dateNowNum && FuckD.search.date == FuckD.bing.dateNowNum) || !FuckD.bing.repo.includes("geoisam") || (!FuckD.tasks.sign && !FuckD.tasks.read && !FuckD.tasks.promos && !FuckD.tasks.search)) {
+        resolve()
+    } else {
+        FuckF.tasksStart()
+    }
 })
