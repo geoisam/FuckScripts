@@ -116,6 +116,7 @@ Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: de
 [Registry]
 Root: HKCU; Subkey: "Software\360zip"; ValueType: none; Flags: uninsdeletekeyifempty
 Root: HKCU; Subkey: "Software\360zip\InstallPath"; ValueType: string; ValueName: ""; ValueData: "{app}"; Flags: uninsdeletekeyifempty
+
 Root: HKLM; Subkey: "SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppName}"; ValueType: none; Flags: uninsdeletekeyifempty
 Root: HKLM; Subkey: "SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppName}"; ValueType: string; ValueName: "DisplayName"; ValueData: "{#MyAppName}"; Flags: uninsdeletekeyifempty
 Root: HKLM; Subkey: "SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppName}"; ValueType: string; ValueName: "DisplayIcon"; ValueData: "{app}\{#MyAppExeName}"; Flags: uninsdeletekeyifempty
@@ -128,3 +129,20 @@ Root: HKLM; Subkey: "SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Unins
 
 [Run]
 Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
+
+
+[Code]
+procedure InitializeWizard();
+var
+  InstallPath: string;
+begin
+  if RegQueryStringValue(
+       HKEY_CURRENT_USER,
+       'Software\360zip\InstallPath',
+       '',
+       InstallPath
+     ) and DirExists(InstallPath) then
+  begin
+    WizardForm.DirEdit.Text := InstallPath;
+  end;
+end;
