@@ -77,10 +77,20 @@ Tasks:
         type: checkbox
         default: true
 Notice:
+    account:
+        title: 账号标识（用于消息区分）
+        type: text
+        default: 账号A
     bro:
         title: 浏览器通知（当前脚本）
         type: checkbox
         default: true
+    search_push:
+        title: 搜索完成推送（每次完成推送/全部完成推送）
+        type: select
+        default: all
+        values: [all, each]
+        description: all=所有搜索任务完成后推送，each=每次搜索完成都推送
     wework:
         title: 企业微信消息推送（群机器人）
         type: text
@@ -110,6 +120,7 @@ Notice:
 
 
 const FuckD = {
+    searchPushMode: GM_getValue("Notice.search_push", "all"),
     wh: [
         {
             name: "企业微信",
@@ -119,7 +130,8 @@ const FuckD = {
                 "msgtype": "markdown_v2",
                 "markdown_v2": {
                     get content() {
-                        return `> ${FuckD.bing.datetimeLocaleStr}\n\n ## ${GM_info.script.name}\n ${FuckD.bing.sendMSG}`
+                        const account = GM_getValue("Notice.account", "账号A");
+                        return `> ${FuckD.bing.datetimeLocaleStr}\n\n ## ${GM_info.script.name}\n 【${account}】: ${FuckD.bing.sendMSG}`
                     }
                 },
             },
@@ -134,7 +146,8 @@ const FuckD = {
                 "markdown": {
                     "title": GM_info.script.name,
                     get text() {
-                        return `> ${FuckD.bing.datetimeLocaleStr}\n ### ${GM_info.script.name}\n ${FuckD.bing.sendMSG}`
+                        const account = GM_getValue("Notice.account", "账号A");
+                        return `> ${FuckD.bing.datetimeLocaleStr}\n ### ${GM_info.script.name}\n 【${account}】: ${FuckD.bing.sendMSG}`
                     }
                 },
             },
@@ -160,7 +173,8 @@ const FuckD = {
                             "tag": "markdown",
                             "text_align": "center",
                             get content() {
-                                return `#### ${FuckD.bing.datetimeLocaleStr}\n ${FuckD.bing.sendMSG}`
+                                const account = GM_getValue("Notice.account", "账号A");
+                                return `#### ${FuckD.bing.datetimeLocaleStr}\n 【${account}】: ${FuckD.bing.sendMSG}`
                             }
                         }]
                     }
@@ -174,9 +188,10 @@ const FuckD = {
             key: GM_getValue("Notice.pushme", false),
             msg: {
                 "type": "markdown",
-                "title": `${GM_info.script.name}[#reawrds!https://rewards.bing.com/rewards.png]`,
+                "title": GM_info.script.name,
                 get content() {
-                    return `\n ${FuckD.bing.sendMSG}`
+                    const account = GM_getValue("Notice.account", "账号A");
+                    return `\n 【${account}】: ${FuckD.bing.sendMSG}`
                 }
             },
             docs: "https://push.i-i.me/docs/index"
@@ -718,9 +733,9 @@ FuckF.taskPromos = async () => {
         FuckD.promos.end++
         if (FuckD.promos.date != FuckD.bing.dateNowNum) {
             FuckD.promos.date = FuckD.bing.dateNowNum
-            FuckD.bing.sendMSG = "哇！哥哥好棒！活动任务完成了！\n🤡具体以官网数据为准"
+            //FuckD.bing.sendMSG = "哇！哥哥好棒！活动任务完成了！\n🤡具体以官网数据为准"
             FuckF.log("🟣", FuckD.bing.sendMSG, true)
-            FuckF.send(FuckD.wh)
+            //FuckF.send(FuckD.wh)
         }
         GM_setValue("Config.tasks", FuckD.bing.tasks)
         return true
@@ -828,6 +843,13 @@ FuckF.taskSearch = async () => {
     let pcReport, mReport
     const searchInfo = dashboard.userStatus.counters
     const dailyPoint = searchInfo.dailyPoint[0].pointProgress
+
+    // 获取最新总积分
+    let totalPoints = 0
+    if (dashboard && dashboard.userStatus) {
+        totalPoints = dashboard.userStatus.availablePoints || 0
+    }
+
     if (searchInfo.pcSearch) {
         FuckD.search.pc.progress = searchInfo.pcSearch[0].pointProgress
         FuckD.search.pc.max = searchInfo.pcSearch[0].pointProgressMax
@@ -854,9 +876,12 @@ FuckF.taskSearch = async () => {
         FuckD.search.end++
         if (FuckD.search.date != FuckD.bing.dateNowNum) {
             FuckD.search.date = FuckD.bing.dateNowNum
-            FuckD.bing.sendMSG = `哇！哥哥好棒！搜索任务完成了！${pcReport}${mReport}`
-            FuckF.log("🟣", FuckD.bing.sendMSG, true)
-            FuckF.send(FuckD.wh)
+            // 只在所有任务完成模式下推送
+            if (FuckD.searchPushMode === "all") {
+                FuckD.bing.sendMSG = `哇！哥哥好棒！搜索任务完成了！${pcReport}${mReport} \n💰 当前总积分：${totalPoints}`
+                FuckF.log("🟣", FuckD.bing.sendMSG, true)
+                FuckF.send(FuckD.wh)
+            }
         }
         GM_setValue("Config.tasks", FuckD.bing.tasks)
         return true
@@ -864,13 +889,16 @@ FuckF.taskSearch = async () => {
     if (FuckD.search.times > 2 || FuckD.search.index >= FuckD.search.limit) {
         FuckD.search.end++
         if (FuckD.search.index < FuckD.search.limit) {
-            FuckD.bing.sendMSG = `积分收入限制，共搜索 ${FuckD.search.index} 次！${pcReport}${mReport}`
+            FuckD.bing.sendMSG = `积分收入限制，共搜索 ${FuckD.search.index} 次！\n${pcReport}${mReport} \n💰 当前总积分：${totalPoints}`
             FuckF.log("🔵", FuckD.bing.sendMSG)
-        } else {
-            FuckD.bing.sendMSG = `本次运行正常，共搜索 ${FuckD.search.index} 次！${pcReport}${mReport}`
+        } else {  
+            FuckD.bing.sendMSG = `本次运行正常，共搜索 ${FuckD.search.index} 次！\n${pcReport}${mReport} \n💰 当前总积分：${totalPoints}`
             FuckF.log("🔵", FuckD.bing.sendMSG)
         }
-        FuckF.send(FuckD.wh)
+        // 根据配置决定是否推送
+        if (FuckD.searchPushMode === "each") {
+            FuckF.send(FuckD.wh)
+        }
         return true
     }
     FuckD.search.date = 0
