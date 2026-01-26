@@ -1,5 +1,5 @@
 #define MyAppName "360压缩"
-#define MyAppVersion "4.0.0.1660"
+#define MyAppVersion "4.0.0.1680"
 #define MyAppPublisher "geoisam@qq.com"
 #define MyAppURL "https://geoisam.github.io"
 #define MyAppIcon "D:\360\360zip.ico"
@@ -24,8 +24,8 @@ VersionInfoVersion={#MyAppVersion}
 AppVerName={#MyAppName} {#MyAppVersion}
 //发布者
 AppPublisher={#MyAppPublisher}
-VersionInfoCompany=YOU
-VersionInfoCopyright=YOU
+VersionInfoCompany=You
+VersionInfoCopyright=You
 VersionInfoDescription={#MyAppPublisher}
 //帮助链接
 AppPublisherURL={#MyAppURL}
@@ -117,14 +117,14 @@ Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: de
 Root: HKCU; Subkey: "Software\360zip"; ValueType: none; Flags: uninsdeletekeyifempty
 Root: HKCU; Subkey: "Software\360zip\InstallPath"; ValueType: string; ValueName: ""; ValueData: "{app}"; Flags: uninsdeletekeyifempty
 
-Root: HKLM; Subkey: "SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppName}"; ValueType: none; Flags: uninsdeletekeyifempty
-Root: HKLM; Subkey: "SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppName}"; ValueType: string; ValueName: "DisplayName"; ValueData: "{#MyAppName}"; Flags: uninsdeletekeyifempty
-Root: HKLM; Subkey: "SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppName}"; ValueType: string; ValueName: "DisplayIcon"; ValueData: "{app}\{#MyAppExeName}"; Flags: uninsdeletekeyifempty
-Root: HKLM; Subkey: "SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppName}"; ValueType: string; ValueName: "UninstallString"; ValueData: "{app}\{#MyAppUnExeName}"; Flags: uninsdeletekeyifempty
-Root: HKLM; Subkey: "SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppName}"; ValueType: string; ValueName: "DisplayVersion"; ValueData: "{#MyAppVersion}"; Flags: uninsdeletekeyifempty
-Root: HKLM; Subkey: "SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppName}"; ValueType: string; ValueName: "URLInfoAbout"; ValueData: "http://yasuo.360.cn"; Flags: uninsdeletekeyifempty
-Root: HKLM; Subkey: "SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppName}"; ValueType: string; ValueName: "Publisher"; ValueData: "YOU"; Flags: uninsdeletekeyifempty
-Root: HKLM; Subkey: "SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppName}"; ValueType: string; ValueName: "InstallLocation"; ValueData: "{app}"; Flags: uninsdeletekeyifempty
+Root: HKLM32; Subkey: "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppName}"; ValueType: none; Flags: uninsdeletekeyifempty
+Root: HKLM32; Subkey: "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppName}"; ValueType: string; ValueName: "DisplayName"; ValueData: "{#MyAppName}"; Flags: uninsdeletekeyifempty
+Root: HKLM32; Subkey: "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppName}"; ValueType: string; ValueName: "DisplayIcon"; ValueData: "{app}\{#MyAppExeName}"; Flags: uninsdeletekeyifempty
+Root: HKLM32; Subkey: "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppName}"; ValueType: string; ValueName: "UninstallString"; ValueData: "{app}\{#MyAppUnExeName}"; Flags: uninsdeletekeyifempty
+Root: HKLM32; Subkey: "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppName}"; ValueType: string; ValueName: "DisplayVersion"; ValueData: "{#MyAppVersion}"; Flags: uninsdeletekeyifempty
+Root: HKLM32; Subkey: "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppName}"; ValueType: string; ValueName: "URLInfoAbout"; ValueData: "http://yasuo.360.cn"; Flags: uninsdeletekeyifempty
+Root: HKLM32; Subkey: "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppName}"; ValueType: string; ValueName: "Publisher"; ValueData: "You"; Flags: uninsdeletekeyifempty
+Root: HKLM32; Subkey: "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{#MyAppName}"; ValueType: string; ValueName: "InstallLocation"; ValueData: "{app}"; Flags: uninsdeletekeyifempty
 
 
 [Run]
