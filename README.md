@@ -13,13 +13,13 @@
 
 - 支持 [脚本猫](https://docs.scriptcat.org)、篡改猴、暴力猴、[X浏览器](https://www.xbext.com) 等
 
-| 名称 | 状态 | 说明 | GitHub | Gitee |
-|:---|:---:|:---:|:---:|:---:|
-| **微软必应优化助手** | ✅ | [说明](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/微软必应优化助手.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/gm/微软必应优化助手.user.js) |
-| **123云盘优化助手** | ✅ | [说明](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/123云盘优化助手.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/gm/123云盘优化助手.user.js) |
-| **腾讯视频优化助手** | ✅ | [说明](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/腾讯视频优化助手.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/gm/腾讯视频优化助手.user.js) |
-| **百度网盘视频播放器（Dplayer）** | ✅ | [说明](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/百度网盘视频播放器（改）.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/gm/百度网盘视频播放器（改）.user.js) |
-| **百度网盘音频播放器（Aplayer）** | ✅ | [说明](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/百度网盘音频播放器（改）.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/gm/百度网盘音频播放器（改）.user.js) |
+| Name | Docs | GitHub | Gitee |
+|:---|:---:|:---:|:---:|
+| **微软必应优化助手** | [说明](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/微软必应优化助手.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/gm/微软必应优化助手.user.js) |
+| **123云盘优化助手** | [说明](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/123云盘优化助手.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/gm/123云盘优化助手.user.js) |
+| **腾讯视频优化助手** | [说明](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/腾讯视频优化助手.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/gm/腾讯视频优化助手.user.js) |
+| **百度网盘视频播放器（Dplayer）** | [说明](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/百度网盘视频播放器（改）.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/gm/百度网盘视频播放器（改）.user.js) |
+| **百度网盘音频播放器（Aplayer）** | [说明](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/百度网盘音频播放器（改）.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/gm/百度网盘音频播放器（改）.user.js) |
 
 <br>
 
@@ -27,12 +27,12 @@
 
 - 仅支持 [脚本猫](https://docs.scriptcat.org)
 
-| 名称 | 类型 | 状态 | 说明 | GitHub | Gitee |
-|:---|:---|:---:|:---:|:---:|:---:|
-| **华米运动步数修改** | **OAuth** | ✅ | [说明](./sc/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/华米运动步数修改.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/sc/华米运动步数修改.user.js) |
-| **油猴中文网签到** | **Discuz**(DSU每日签到) | ✅ | [说明](./sc/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/油猴中文网签到.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/sc/油猴中文网签到.user.js) |
-| **智能电视网签到** | **Discuz**(亮剑打卡签到) | ✅ | [说明](./sc/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/智能电视网签到.user.js) | [安装](https://gitee.com/geoisam/sc/FuckScripts/raw/main/智能电视网签到.user.js) |
-| **飘雪动漫社签到** | **Discuz**(西瓜微社区签到) | ✅ | [说明](./sc/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/飘雪动漫社签到.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/sc/飘雪动漫社签到.user.js) |
+| Name | Type | Docs | GitHub | Gitee |
+|:---|:---|:---:|:---:|:---:|
+| **华米运动步数修改** | **OAuth** | [说明](./sc/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/华米运动步数修改.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/sc/华米运动步数修改.user.js) |
+| **油猴中文网签到** | **Discuz**(DSU每日签到) | [说明](./sc/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/油猴中文网签到.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/sc/油猴中文网签到.user.js) |
+| **智能电视网签到** | **Discuz**(亮剑打卡签到) | [说明](./sc/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/智能电视网签到.user.js) | [安装](https://gitee.com/geoisam/sc/FuckScripts/raw/main/智能电视网签到.user.js) |
+| **飘雪动漫社签到** | **Discuz**(西瓜微社区签到) | [说明](./sc/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/飘雪动漫社签到.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/sc/飘雪动漫社签到.user.js) |
 
 <br>
 
@@ -40,10 +40,10 @@
 
 - 支持 [GitHub Actions](https://docs.github.com/actions)、云函数、青龙面板 等
 
-| 名称 | 类型 | 状态 | 说明 | GitHub | Gitee |
-|:---|:---:|:---:|:---:|:---:|:---:|
-| **华米运动步数修改** | **OAuth** | ✅ | [说明](./py/README.md) | [查看](https://raw.githubusercontent.com/geoisam/FuckScripts/main/py/huami.py) | [查看](https://gitee.com/geoisam/FuckScripts/raw/main/py/huami.py) |
-| **Xshell8/Xftp8 <br>免登录修改器** | **Local** | ✅ | [说明](./py/README.md) | [查看](https://raw.githubusercontent.com/geoisam/FuckScripts/main/py/xshell.py) | [查看](https://gitee.com/geoisam/FuckScripts/raw/main/py/xshell.py) |
+| Name | Type | Docs | GitHub | Gitee |
+|:---|:---:|:---:|:---:|:---:|
+| **华米运动步数修改** | **OAuth** | [说明](./py/README.md) | [查看](https://raw.githubusercontent.com/geoisam/FuckScripts/main/py/huami.py) | [查看](https://gitee.com/geoisam/FuckScripts/raw/main/py/huami.py) |
+| **Xshell8/Xftp8 <br>免登录修改器** | **Local** | [说明](./py/README.md) | [查看](https://raw.githubusercontent.com/geoisam/FuckScripts/main/py/xshell.py) | [查看](https://gitee.com/geoisam/FuckScripts/raw/main/py/xshell.py) |
 
 <br>
 
