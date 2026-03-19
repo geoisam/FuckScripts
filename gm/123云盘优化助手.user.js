@@ -138,6 +138,7 @@
 
             GM_addStyle(`
 .advBanner,
+.ant-modal-root:has(img[src*="tuia-fa.jpg"]),
 [class*="banner_guide"],
 [class*="adv-container"],
 [class*="banner-container"],
