@@ -79,6 +79,7 @@ m.mgtv.com##.ReactModalPortal,[class*="OpenApp"],.open-app-popup,.ht.mgui-btn.mg
 123pan.com,123pan.cn,123684.com,123865.com,123912.com#$#.appBottomBtn.banner-bottom { bottom: 0 !important; }
 123pan.com,123pan.cn,123684.com,123865.com,123912.com#$#.webbody.svip-body,.backgroundImage,.verifyBox { background-image: none !important; }
 ||app.123pan.com/manager/share_background/$image
+||statics.123957.com/share_page_img/pro/$image
 ||arms-retcode.aliyuncs.com/r.png
 ||umini.shujupie.com/web_logs
 
