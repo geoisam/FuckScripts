@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Title: AdsFuck
-! Version: 2026031911
+! Version: 2026032522
 ! Expires: 2 days
 ! 👇👇过滤规则推荐👇👇
 ! 基础广告过滤: https://easylist-downloads.adblockplus.org/easylist.txt
@@ -74,7 +74,7 @@ m.mgtv.com##.ReactModalPortal,[class*="OpenApp"],.open-app-popup,.ht.mgui-btn.mg
 ||video.da.mgtv.com/$media
 
 ! ------ 123云盘 ------
-123pan.com,123pan.cn,123684.com,123865.com,123912.com##.advBanner,[class*="banner_guide"],[class*="adv-container"],[class*="banner-container"],[class*="header-waning-tips"],.btn_reward,.ant-carousel,.activity-box,#top_container,.banner_all_wrap,#banner_container,.verifyBox img.default-img-title,.uppy-Dashboard-slowSpeed-banner,.video-new-user-tips:has(.open-vip),.ant-modal-content .download-msgInfo-phone,.bg_svip_block_ads,.ant-modal-root:has(img[src*="tuia-fa.jpg"])
+123pan.com,123pan.cn,123684.com,123865.com,123912.com##.advBanner,[class*="banner_guide"],[class*="adv-container"],[class*="banner-container"],[class*="header-waning-tips"],.btn_reward,.ant-carousel,.activity-box,#top_container,.banner_all_wrap,#banner_container,.verifyBox img.default-img-title,.uppy-Dashboard-slowSpeed-banner,.video-new-user-tips:has(.open-vip),.ant-modal-content .download-msgInfo-phone,.bg_svip_block_ads,.ant-modal-root:has(img[src*="tuia-fa."])
 123pan.com,123pan.cn,123684.com,123865.com,123912.com#$#.contentBorder .conter { margin-bottom: 0 !important; }
 123pan.com,123pan.cn,123684.com,123865.com,123912.com#$#.appBottomBtn.banner-bottom { bottom: 0 !important; }
 123pan.com,123pan.cn,123684.com,123865.com,123912.com#$#.webbody.svip-body,.app-body.svip-body,.backgroundImage,.verifyBox { background-image: none !important; }
