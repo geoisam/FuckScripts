@@ -13,7 +13,7 @@
       "key": "非凡",
       "name": "非凡",
       "type": 1,
-      "api": "https://api.ffzyapi.com/api.php/provide/vod/from/ffm3u8/?ac=list",
+      "api": "https://api.ffzyapi.com/api.php/provide/vod/from/ffm3u8/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -22,7 +22,7 @@
       "key": "如意",
       "name": "如意",
       "type": 1,
-      "api": " https://cj.rycjapi.com/api.php/provide/vod/from/rym3u8/?ac=list",
+      "api": " https://cj.rycjapi.com/api.php/provide/vod/from/rym3u8/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -31,7 +31,7 @@
       "key": "虎牙",
       "name": "虎牙",
       "type": 1,
-      "api": "https://www.huyaapi.com/api.php/provide/vod/from/hym3u8/?ac=list",
+      "api": "https://www.huyaapi.com/api.php/provide/vod/from/hym3u8/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -40,7 +40,7 @@
       "key": "闪电",
       "name": "闪电",
       "type": 1,
-      "api": "https://sdzyapi.com/api.php/provide/vod/from/sdm3u8/?ac=list",
+      "api": "https://sdzyapi.com/api.php/provide/vod/from/sdm3u8/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -49,7 +49,7 @@
       "key": "百度",
       "name": "百度",
       "type": 1,
-      "api": "https://api.apibdzy.com/api.php/provide/vod/from/dbm3u8/?ac=list",
+      "api": "https://api.apibdzy.com/api.php/provide/vod/from/dbm3u8/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -58,7 +58,7 @@
       "key": "无尽",
       "name": "无尽",
       "type": 1,
-      "api": "https://api.wujinapi.me/api.php/provide/vod/from/wjm3u8/?ac=list",
+      "api": "https://api.wujinapi.me/api.php/provide/vod/from/wjm3u8/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -67,7 +67,7 @@
       "key": "金鹰",
       "name": "金鹰",
       "type": 1,
-      "api": "https://jyzyapi.com/provide/vod/from/jinyingm3u8/?ac=list",
+      "api": "https://jyzyapi.com/provide/vod/from/jinyingm3u8/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -76,7 +76,7 @@
       "key": "快车",
       "name": "快车",
       "type": 1,
-      "api": "https://caiji.kuaichezy.org/api.php/provide/vod/from/kcm3u8/?ac=list",
+      "api": "https://caiji.kuaichezy.org/api.php/provide/vod/from/kcm3u8/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -85,7 +85,7 @@
       "key": "量子",
       "name": "量子",
       "type": 1,
-      "api": "https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/?ac=list",
+      "api": "https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -94,7 +94,7 @@
       "key": "新浪",
       "name": "新浪",
       "type": 1,
-      "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/from/xlm3u8/?ac=list",
+      "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/from/xlm3u8/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -103,7 +103,7 @@
       "key": "茅台",
       "name": "茅台",
       "type": 1,
-      "api": "https://caiji.maotaizy.cc/api.php/provide/vod/from/mtm3u8/?ac=list",
+      "api": "https://caiji.maotaizy.cc/api.php/provide/vod/from/mtm3u8/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -112,7 +112,7 @@
       "key": "光速",
       "name": "光速",
       "type": 1,
-      "api": "https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8/?ac=list",
+      "api": "https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -121,7 +121,7 @@
       "key": "红牛",
       "name": "红牛",
       "type": 1,
-      "api": "https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/?ac=list",
+      "api": "https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -130,7 +130,7 @@
       "key": "优酷",
       "name": "优酷",
       "type": 1,
-      "api": "https://api.ukuapi88.com/api.php/provide/vod/from/ukm3u8/?ac=list",
+      "api": "https://api.ukuapi88.com/api.php/provide/vod/from/ukm3u8/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -139,7 +139,7 @@
       "key": "艾旦",
       "name": "艾旦",
       "type": 1,
-      "api": "https://lovedan.net/api.php/provide/vod/from/ldm3u8/?ac=list",
+      "api": "https://lovedan.net/api.php/provide/vod/from/ldm3u8/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -148,7 +148,52 @@
       "key": "最大",
       "name": "最大",
       "type": 1,
-      "api": "https://api.zuidapi.com/api.php/provide/vod/from/zdm3u8/?ac=list",
+      "api": "https://api.zuidapi.com/api.php/provide/vod/from/zdm3u8/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "暴风",
+      "name": "暴风",
+      "type": 1,
+      "api": "https://bfzyapi.com/api.php/provide/vod/from/bfm3u8/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "魔都",
+      "name": "魔都",
+      "type": 1,
+      "api": "https://moduzy2.com/api.php/provide/vod/from/mdm3u8/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "索尼",
+      "name": "索尼",
+      "type": 1,
+      "api": "https://suoniapi.com/api.php/provide/vod/from/snm3u8/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "奇异",
+      "name": "奇异",
+      "type": 1,
+      "api": "https://iqiyizyapi.com/api.php/provide/vod/from/snm3u8/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "天堂",
+      "name": "天堂",
+      "type": 1,
+      "api": "https://caiji.dyttzyapi.com/api.php/provide/vod/from/dyttm3u8/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -157,7 +202,7 @@
       "key": "淘片",
       "name": "淘片",
       "type": 1,
-      "api": "https://taopianapi.com/cjapi/mc10/vod/json/m3u8.html?ac=list",
+      "api": "https://taopianapi.com/cjapi/mc10/vod/json/m3u8.html",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -166,16 +211,12 @@
       "key": "森林",
       "name": "森林",
       "type": 1,
-      "api": "https://slapibf.com/api.php/provide/vod/?ac=list&t=61",
+      "api": "https://slapibf.com/api.php/provide/vod/?t=61",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
     }
   ],
-  "ads": [
-    "www.googletagmanager.com", 
-    "www.google-analytics.com", 
-    "hm.baidu.com", 
-    "cnzz.com"
-  ]
+  "rules":[],
+  "ads": ["www.googletagmanager.com", "www.google-analytics.com", "hm.baidu.com", "cnzz.com"]
 }
