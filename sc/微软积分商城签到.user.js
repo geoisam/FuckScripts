@@ -8,6 +8,9 @@
 // @homepage     https://github.com/geoisam/FuckScripts
 // @supportURL   https://github.com/geoisam/FuckScripts/issues
 // @crontab      */20 * * * *
+// @match         https://rewards.bing.com/*
+// @match         https://account.microsoft.com/rewards/*
+// @match         https://www.bing.com/*
 // @connect      bing.com
 // @connect      login.live.com
 // @connect      rewards.bing.com
@@ -39,6 +42,10 @@
 Config:
     keep:
         title: 持续检测（关闭则所有任务完成后不再检测）
+        type: checkbox
+        default: true
+    force:
+        title: 强制检测（crontab 模式强制执行所有任务）
         type: checkbox
         default: true
     lock:
@@ -1262,9 +1269,10 @@ return new Promise((resolve) => {
     }
 
     const isKeep = GM_getValue("Config.keep", true)
+    const isForce = GM_getValue("Config.force", true)
     const checkDone = (taskEnabled, taskDate) => !taskEnabled || taskDate == FuckD.bing.dateNowNum
     const isAllDone = checkDone(FuckD.tasks.sign, FuckD.sign.date) && checkDone(FuckD.tasks.read, FuckD.read.date) && checkDone(FuckD.tasks.promos, FuckD.promos.date) && checkDone(FuckD.tasks.search, FuckD.search.date)
-    if ((!isKeep && isAllDone) || !FuckD.bing.repo.includes("geoisam") || (!FuckD.tasks.sign && !FuckD.tasks.read && !FuckD.tasks.promos && !FuckD.tasks.search)) {
+    if ((isForce ? false : (!isKeep && isAllDone)) || !FuckD.bing.repo.includes("geoisam") || (!FuckD.tasks.sign && !FuckD.tasks.read && !FuckD.tasks.promos && !FuckD.tasks.search)) {
         if (isAllDone) {
             const allDoneDate = GM_getValue("Config.allDoneDate", 0)
             if (allDoneDate != FuckD.bing.dateNowNum) {
