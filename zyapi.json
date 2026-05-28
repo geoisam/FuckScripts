@@ -1,4 +1,6 @@
 {
+  "homepage": "https://github.com/geoisam/FuckScripts",
+  "wallpaper": "https://bing.img.run/1366x768.php",
   "sites": [
     {
       "key": "优质",
@@ -37,10 +39,10 @@
       "filterable": 1
     },
     {
-      "key": "闪电",
-      "name": "闪电",
+      "key": "360",
+      "name": "360",
       "type": 1,
-      "api": "https://sdzyapi.com/api.php/provide/vod/from/sdm3u8/",
+      "api": "https://360zy.com/api.php/provide/vod/from/360m3u8/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -73,46 +75,10 @@
       "filterable": 1
     },
     {
-      "key": "快车",
-      "name": "快车",
-      "type": 1,
-      "api": "https://caiji.kuaichezy.org/api.php/provide/vod/from/kcm3u8/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
       "key": "量子",
       "name": "量子",
       "type": 1,
       "api": "https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
-      "key": "新浪",
-      "name": "新浪",
-      "type": 1,
-      "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/from/xlm3u8/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
-      "key": "茅台",
-      "name": "茅台",
-      "type": 1,
-      "api": "https://caiji.maotaizy.cc/api.php/provide/vod/from/mtm3u8/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
-      "key": "光速",
-      "name": "光速",
-      "type": 1,
-      "api": "https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -136,55 +102,10 @@
       "filterable": 1
     },
     {
-      "key": "艾旦",
-      "name": "艾旦",
-      "type": 1,
-      "api": "https://lovedan.net/api.php/provide/vod/from/ldm3u8/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
-      "key": "最大",
-      "name": "最大",
-      "type": 1,
-      "api": "https://api.zuidapi.com/api.php/provide/vod/from/zdm3u8/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
       "key": "暴风",
       "name": "暴风",
       "type": 1,
       "api": "https://bfzyapi.com/api.php/provide/vod/from/bfm3u8/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
-      "key": "魔都",
-      "name": "魔都",
-      "type": 1,
-      "api": "https://moduzy2.com/api.php/provide/vod/from/mdm3u8/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
-      "key": "索尼",
-      "name": "索尼",
-      "type": 1,
-      "api": "https://suoniapi.com/api.php/provide/vod/from/snm3u8/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
-      "key": "奇异",
-      "name": "奇异",
-      "type": 1,
-      "api": "https://iqiyizyapi.com/api.php/provide/vod/from/snm3u8/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -199,6 +120,15 @@
       "filterable": 1
     },
     {
+      "key": "光速",
+      "name": "光速",
+      "type": 1,
+      "api": "https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
       "key": "淘片",
       "name": "淘片",
       "type": 1,
@@ -208,8 +138,80 @@
       "filterable": 1
     },
     {
+      "key": "猫眼",
+      "name": "猫眼 (限速)",
+      "type": 1,
+      "api": "https://api.maoyanapi.top/api.php/provide/vod/from/mym3u8/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "茅台",
+      "name": "茅台 (限速)",
+      "type": 1,
+      "api": "https://caiji.maotaizy.cc/api.php/provide/vod/from/mtm3u8/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "奇异",
+      "name": "奇异 (禁搜)",
+      "type": 1,
+      "api": "https://iqiyizyapi.com/api.php/provide/vod/from/snm3u8/",
+      "searchable": 0,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "魔都",
+      "name": "魔都 (禁搜)",
+      "type": 1,
+      "api": "https://moduzy2.com/api.php/provide/vod/from/mdm3u8/",
+      "searchable": 0,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "最大",
+      "name": "最大 (禁搜)",
+      "type": 1,
+      "api": "https://api.zuidapi.com/api.php/provide/vod/from/zdm3u8/",
+      "searchable": 0,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "快车",
+      "name": "快车 (禁搜)",
+      "type": 1,
+      "api": "https://caiji.kuaichezy.org/api.php/provide/vod/from/kcm3u8/",
+      "searchable": 0,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "闪电",
+      "name": "闪电 (禁搜)",
+      "type": 1,
+      "api": "https://sdzyapi.com/api.php/provide/vod/from/sdm3u8/",
+      "searchable": 0,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "新浪",
+      "name": "新浪 (禁搜)",
+      "type": 1,
+      "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/from/xlm3u8/",
+      "searchable": 0,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
       "key": "森林",
-      "name": "森林",
+      "name": "森林 (18+)",
       "type": 1,
       "api": "https://slapibf.com/api.php/provide/vod/?t=61",
       "searchable": 1,
@@ -239,11 +241,6 @@
       "ips": ["101.101.101.101", "101.102.103.104", "2001:de4::101", "2001:de4::102"]
     },
     {
-      "name": "HiNet",
-      "url": "https://dns.hinet.net/dns-query",
-      "ips": ["168.95.1.1", "168.95.192.1", "2001:b000:168::1", "2001:b000:168::2"]
-    },
-    {
       "name": "Quad9",
       "url": "https://dns.quad9.net/dns-query",
       "ips": ["9.9.9.9", "149.112.112.112", "2620:fe::fe", "2620:fe::9"]
@@ -267,7 +264,7 @@
   "rules": [
     {
       "name": "通用",
-      "hosts": ["*"],
+      "hosts": ["play", "v.", "vip.", "cdn.", "vod.", "vodcnd", "movie", "video", "yzzy", "ryplay", "ryiplay", "ffzy", "feifei", "huyall", "maowushi", "bdzybf", "ppqrrs", "vwwwxy", "ijycnd", "cdnlz", "lzcdn", "lz-cdn", "gsuus", "maoyanplay", "myqqdd", "bfvvs", "ukzy", "ukubf", "baofeng", "rrcdnbf", "ddbbffcdn", "bvvvvvv", "bfllvip", "fengbao", "bfengbf", "phimgood", "dytt", "taopianplay", "kuaichezy", "qqqrst", "xluuss", "senlin"],
       "regex": ["#EXT-X-DISCONTINUITY\r*\n*(#EXTINF:[\\d.]+,\r*\n*.*?\\.ts\r*\n*){3,7}#EXT-X-DISCONTINUITY"]
     }
   ],
