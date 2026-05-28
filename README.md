@@ -49,9 +49,9 @@
 
 ### \# 影视资源采集 / TVBox / 影视仓
 
-| Name | Lastest | Github | Gitee |
-|:---:|:---:|:---:|:---:|
-| zyapi.json | 2026-05-28 | [查看](https://raw.githubusercontent.com/geoisam/FuckScripts/refs/heads/main/zyapi.json) | [查看](https://gitee.com/geoisam/FuckScripts/raw/main/zyapi.json) |
+| Name | Github | Gitee |
+|:---:|:---:|:---:|
+| zyapi | [查看](https://raw.githubusercontent.com/geoisam/FuckScripts/refs/heads/main/zyapi.json) | [查看](https://gitee.com/geoisam/FuckScripts/raw/main/zyapi.json) |
 
 <br>
 
@@ -74,8 +74,6 @@
   - **隐私保护**：[EasyPrivacy](https://easylist-downloads.adblockplus.org/easyprivacy.txt)
   - **Cookie通知过滤**：[Easylist Cookie List](https://secure.fanboy.co.nz/fanboy-cookiemonster.txt)
   - **反广告拦截警告**：[Adblock Warning Removal List](https://easylist-downloads.adblockplus.org/antiadblockfilters.txt)
-  - **恶意软件**：[Online Malicious URL Blocklist](https://malware-filter.gitlab.io/urlhaus-filter/urlhaus-filter-ag-online.txt)
-  - **域名黑名单**：[Peter Lowe's Blocklist](https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext)
 
 | Name | Expires | Github | Gitee |
 |:---:|:---:|:---:|:---:|
