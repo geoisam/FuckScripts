@@ -51,7 +51,7 @@
 
 | Name | Github | Gitee |
 |:---:|:---:|:---:|
-| zyapi | [查看](https://raw.githubusercontent.com/geoisam/FuckScripts/refs/heads/main/zyapi.json) | [查看](https://gitee.com/geoisam/FuckScripts/raw/main/zyapi.json) |
+| ZYapi | [查看](https://raw.githubusercontent.com/geoisam/FuckScripts/refs/heads/main/zyapi.json) | [查看](https://gitee.com/geoisam/FuckScripts/raw/main/zyapi.json) |
 
 <br>
 
