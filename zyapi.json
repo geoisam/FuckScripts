@@ -229,7 +229,7 @@
       "ips": ["223.5.5.5", "223.6.6.6", "2400:3200::1", "2400:3200:baba::1"]
     },
     {
-      "name": "360 (IPv4-only)",
+      "name": "360DNS (IPv4-only)",
       "url": "https://doh.360.cn/dns-query",
       "ips": ["101.226.4.6", "123.125.81.6", "218.30.118.6", "140.207.198.6"]
     },
@@ -267,7 +267,7 @@
   "rules": [
     {
       "name": "通用",
-      "hosts": "*",
+      "hosts": ["*"],
       "regex": ["#EXT-X-DISCONTINUITY\r*\n*(#EXTINF:[\\d.]+,\r*\n*.*?\\.ts\r*\n*){3,7}#EXT-X-DISCONTINUITY"]
     }
   ],
