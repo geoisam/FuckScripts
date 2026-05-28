@@ -47,6 +47,14 @@
 
 <br>
 
+### \# 影视资源采集 / TVBox / 影视仓
+
+| Name | Lastest | Github | Gitee |
+|:---:|:---:|:---:|:---:|
+| zyapi.json | 2026-05-28 | [查看](https://raw.githubusercontent.com/geoisam/FuckScripts/refs/heads/main/zyapi.json) | [查看](https://gitee.com/geoisam/FuckScripts/raw/main/zyapi.json) |
+
+<br>
+
 ### \# 广告过滤
 
 - 支持 [uBlock Origin](https://ublockorigin.com)、AdGuard、Adblock Plus、[X浏览器](https://www.xbext.com)、[Via浏览器](https://viayoo.com) 等
