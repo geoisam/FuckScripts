@@ -81,8 +81,6 @@
 
 | **花名** | **地址** | **备注** |
 | :---: | --- | :---: |
-| **花名** | **地址** | **备注** |
-| :---: | --- | :---: |
 | **360** | <https://360zy.com/api.php/provide/vod/from/360m3u8/> | |
 | **优质** | <https://api.yyzy-tv.vip/inc/api_mac10.php> | |
 | **非凡** | <https://api.ffzyapi.com/api.php/provide/vod/from/ffm3u8/> | |
