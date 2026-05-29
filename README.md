@@ -81,6 +81,8 @@
 
 | **花名** | **地址** | **备注** |
 | :---: | --- | :---: |
+| **花名** | **地址** | **备注** |
+| :---: | --- | :---: |
 | **360** | <https://360zy.com/api.php/provide/vod/from/360m3u8/> | |
 | **优质** | <https://api.yyzy-tv.vip/inc/api_mac10.php> | |
 | **非凡** | <https://api.ffzyapi.com/api.php/provide/vod/from/ffm3u8/> | |
@@ -95,6 +97,7 @@
 | **金鹰** | <https://jyzyapi.com/provide/vod/from/jinyingm3u8/> | 播放卡速度慢 |
 | **豆瓣** | <https://caiji.dbzy5.com/api.php/provide/vod/from/dbm3u8/> | 播放卡速度慢 |
 | **红牛** | <https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/> | 播放卡速度慢 |
+| **速播** | <https://subocj.com/api.php/provide/vod/from/subm3u8/> | 播放卡速度慢 |
 | **无尽** | <https://api.wujinapi.me/api.php/provide/vod/from/wjm3u8/> | 播放卡速度慢 |
 | **U酷** | <https://api.ukuapi88.com/api.php/provide/vod/from/ukm3u8/> | 播放卡速度慢 |
 | **iKun** | <https://ikunzyapi.com/api.php/provide/vod/from/ikm3u8/> | 科学上网 |
@@ -117,8 +120,15 @@
 | **森林** | <https://slapibf.com/api.php/provide/vod/?t=61> | 🔞🔞🔞 |
 | **豆豆** | <https://api.douapi.cc/api.php/provide/vod/?t=80> | 🔞🔞🔞 |
 | **滴滴** | <https://api.ddapi.cc/api.php/provide/vod/?t=47> | 🔞🔞🔞 |
-| **百花** | <https://bhziyuan.com/api.php/provide/vod/?t=58> | 🔞🔞🔞 |
 | **玉兔** | <https://apiyutu.com/api.php/provide/vod/?t=66> | 🔞🔞🔞 |
+| **奶香香** | <https://naixxzy.com/api.php/provide/vod/?t=47> | 🔞🔞🔞 |
+| **奥斯卡** | <https://aosikazy.com/api.php/provide/vod/?t=29> | 🔞🔞🔞 |
+| **百花** | <https://bhziyuan.com/api.php/provide/vod/?t=40> | 🔞🔞🔞 |
+| **杏吧** | <https://xingba222.com/api.php/provide/vod/?t=59> | 🔞🔞🔞 |
+| **乐播** | <https://lbapi9.com/api.php/provide/vod/?t=31> | 🔞🔞🔞 |
+| **桃花** | <https://thzy1.me/api.php/provide/vod/?t=10> | 🔞🔞🔞 |
+| **鸡坤** | <https://jkunzyapi.com/api.php/provide/vod/?t=30> | 🔞🔞🔞 |
+| **115** | <https://155api.com/api.php/provide/vod/?t=29> | 🔞🔞🔞 |
 
 <br>
 
