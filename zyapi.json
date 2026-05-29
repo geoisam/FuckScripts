@@ -108,6 +108,15 @@
       "filterable": 1
     },
     {
+      "key": "虎牙",
+      "name": "🅰️虎牙",
+      "type": 1,
+      "api": "https://www.huyaapi.com/api.php/provide/vod/from/hym3u8/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
       "key": "量子",
       "name": "🅰️量子",
       "type": 1,
@@ -117,10 +126,10 @@
       "filterable": 1
     },
     {
-      "key": "U酷",
-      "name": "🅱️U酷",
+      "key": "百度",
+      "name": "🅰️百度",
       "type": 1,
-      "api": "https://api.ukuapi88.com/api.php/provide/vod/from/ukm3u8/",
+      "api": "https://api.apibdzy.com/api.php/provide/vod/from/dbm3u8/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -135,28 +144,10 @@
       "filterable": 1
     },
     {
-      "key": "豆瓣",
-      "name": "🅱️豆瓣",
+      "key": "极速",
+      "name": "🅱️极速",
       "type": 1,
-      "api": "https://caiji.dbzy5.com/api.php/provide/vod/from/dbm3u8/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
-      "key": "虎牙",
-      "name": "🅱️虎牙",
-      "type": 1,
-      "api": "https://www.huyaapi.com/api.php/provide/vod/from/hym3u8/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
-      "key": "红牛",
-      "name": "🅱️红牛",
-      "type": 1,
-      "api": "https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/",
+      "api": "https://jszyapi.com/api.php/provide/vod/from/jsm3u8/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -171,10 +162,10 @@
       "filterable": 1
     },
     {
-      "key": "极速",
-      "name": "🅱️极速",
+      "key": "豆瓣",
+      "name": "🅱️豆瓣",
       "type": 1,
-      "api": "https://jszyapi.com/api.php/provide/vod/from/jsm3u8/",
+      "api": "https://caiji.dbzy5.com/api.php/provide/vod/from/dbm3u8/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -189,10 +180,19 @@
       "filterable": 1
     },
     {
-      "key": "百度",
-      "name": "🅱️百度",
+      "key": "红牛",
+      "name": "🅱️红牛",
       "type": 1,
-      "api": "https://api.apibdzy.com/api.php/provide/vod/from/dbm3u8/",
+      "api": "https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "U酷",
+      "name": "🅱️U酷",
+      "type": 1,
+      "api": "https://api.ukuapi88.com/api.php/provide/vod/from/ukm3u8/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
