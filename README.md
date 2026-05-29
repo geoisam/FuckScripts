@@ -90,8 +90,11 @@
 | **量子** | <https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/> | |
 | **U酷** | <https://api.ukuapi88.com/api.php/provide/vod/from/ukm3u8/> | |
 | **金鹰** | <https://jyzyapi.com/provide/vod/from/jinyingm3u8/> | 播放慢 |
+| **豆瓣** | <https://caiji.dbzy5.com/api.php/provide/vod/from/dbm3u8/> | 贴片广告 |
 | **虎牙** | <https://www.huyaapi.com/api.php/provide/vod/from/hym3u8/> | 贴片广告 |
 | **红牛** | <https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/> | 贴片广告 |
+| **豪华** | <https://hhzyapi.com/api.php/provide/vod/from/hhm3u8/> | 贴片广告 |
+| **极速** | <https://jszyapi.com/api.php/provide/vod/from/jsm3u8/> | 贴片广告 |
 | **无尽** | <https://api.wujinapi.me/api.php/provide/vod/from/wjm3u8/> | 贴片广告 |
 | **百度** | <https://api.apibdzy.com/api.php/provide/vod/from/dbm3u8/> | 贴片广告 |
 | **iKun** | <https://ikunzyapi.com/api.php/provide/vod/from/ikm3u8/> | 贴片广告 |
@@ -107,6 +110,7 @@
 | **闪电** | <https://sdzyapi.com/api.php/provide/vod/from/sdm3u8/> | 禁止直接搜索 |
 | **新浪** | <https://api.xinlangapi.com/xinlangapi.php/provide/vod/from/xlm3u8/> | 禁止直接搜索 |
 | **樱花** | <https://m3u8.apiyhzy.com/api.php/provide/vod/from/yhm3u8/> | 禁止直接搜索 |
+| **索尼** | <https://suoniapi.com/api.php/provide/vod/from/snm3u8/> | 禁止直接搜索 |
 | **无水印** | <https://api.wsyzy.net/api.php/provide/vod/from/wsym3u8/> | 禁止直接搜索 |
 | **奇异果** | <https://iqiyizyapi.com/api.php/provide/vod/from/snm3u8/> | 禁止直接搜索 |
 | **LSB** | <https://apilsbzy1.com/api.php/provide/vod/?t=66> | 🔞🔞🔞 |
