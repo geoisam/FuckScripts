@@ -77,7 +77,7 @@
 
 | Name | Github | Gitee |
 |:---:|:---:|:---:|
-| 学习资源 | [查看](https://raw.githubusercontent.com/geoisam/FuckScripts/refs/heads/main/zyapi.json) | [查看](https://gitee.com/geoisam/FuckScripts/raw/main/zyapi.json) |
+| 学习资源API | [查看](https://raw.githubusercontent.com/geoisam/FuckScripts/refs/heads/main/zyapi.json) | [查看](https://gitee.com/geoisam/FuckScripts/raw/main/zyapi.json) |
 
 | **花名** | **地址** | **备注** |
 | :---: | --- | :---: |
