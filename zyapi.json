@@ -102,7 +102,7 @@
       "key": "暴风",
       "name": "🅰️暴风",
       "type": 1,
-      "api": "https://bfzyapi.com/api.php/provide/vod/from/bfm3u8/",
+      "api": "https://bfzyapi.com/api.php/provide/vod/from/bfzym3u8/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -325,7 +325,7 @@
     {
       "name": "通用",
       "hosts": [".com", ".net", ".org", ".top", ".app", ".cc", ".io", ".xyz", ".fun", ".site", "vip", "play", "zy", "bf", "v.", "cdn", "vod", "cnd", "movie", "video", "feifei", "huyall", "maowushi", "ppqrrs", "vwwwxy", "gsuus", "myqqdd", "ukzy", "baofeng", "bvvvvvv", "fengbao", "phimgood", "dytt", "qqqrst", "xluuss", "senlin"],
-      "regex": ["#EXT-X-DISCONTINUITY\r*\n*(#EXT-X-KEY:.*\r*\n*)?(#EXTINF:[\\d.]+,\r*\n*.*?\\.ts\r*\n*){3,7}#EXT-X-DISCONTINUITY\r*\n*(#EXT-X-KEY:.*\r*\n*)?", "#EXTINF.*?\\s+.*?adjump.*?\\.ts\\s+"]
+      "regex": ["#EXT-X-DISCONTINUITY\r*\n*(#EXT-X-KEY:.*\r*\n*)?(#EXTINF:[\\d.]+,\r*\n*.*?\\.ts\r*\n*){3,7}#EXT-X-DISCONTINUITY\r*\n*(#EXT-X-KEY:.*\r*\n*)?", "(#EXT-X-DISCONTINUITY\r*\n*)?#EXTINF.*\r*\n*.*adjump.*\\.ts\r*\n*(#EXT-X-DISCONTINUITY\r*\n*)?"]
     }
   ],
   "ads": ["googletagmanager.com", "google-analytics.com", "hm.baidu.com", "static-mozai.4gtv.tv", "cnzz.com"]
