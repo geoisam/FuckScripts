@@ -239,7 +239,7 @@
       "type": 1,
       "api": "https://apilsbzy1.com/api.php/provide/vod/?t=66",
       "searchable": 1,
-      "quickSearch": 1,
+      "quickSearch": 0,
       "filterable": 1
     },
     {
@@ -248,7 +248,7 @@
       "type": 1,
       "api": "https://slapibf.com/api.php/provide/vod/?t=61",
       "searchable": 1,
-      "quickSearch": 1,
+      "quickSearch": 0,
       "filterable": 1
     },
     {
@@ -257,7 +257,7 @@
       "type": 1,
       "api": "https://api.douapi.cc/api.php/provide/vod/?t=80",
       "searchable": 1,
-      "quickSearch": 1,
+      "quickSearch": 0,
       "filterable": 1
     },
     {
@@ -266,7 +266,16 @@
       "type": 1,
       "api": "https://api.ddapi.cc/api.php/provide/vod/?t=47",
       "searchable": 1,
-      "quickSearch": 1,
+      "quickSearch": 0,
+      "filterable": 1
+    },
+    {
+      "key": "百花",
+      "name": "🔞百花",
+      "type": 1,
+      "api": "https://bhziyuan.com/api.php/provide/vod/?t=58",
+      "searchable": 1,
+      "quickSearch": 0,
       "filterable": 1
     },
     {
@@ -275,7 +284,7 @@
       "type": 1,
       "api": "https://apiyutu.com/api.php/provide/vod/?t=66",
       "searchable": 1,
-      "quickSearch": 1,
+      "quickSearch": 0,
       "filterable": 1
     }
   ],
@@ -324,8 +333,8 @@
   "rules": [
     {
       "name": "通用",
-      "hosts": [".com", ".net", ".org", ".top", ".app", ".cc", ".io", ".xyz", ".fun", ".site", "vip", "play", "zy", "bf", "v.", "cdn", "vod", "cnd", "movie", "video", "feifei", "huyall", "maowushi", "ppqrrs", "vwwwxy", "gsuus", "myqqdd", "ukzy", "baofeng", "bvvvvvv", "fengbao", "phimgood", "dytt", "qqqrst", "xluuss", "senlin"],
-      "regex": ["#EXT-X-DISCONTINUITY\r*\n*(#EXT-X-KEY:.*\r*\n*)?(#EXTINF:[\\d.]+,\r*\n*.*?\\.ts\r*\n*){3,7}#EXT-X-DISCONTINUITY\r*\n*(#EXT-X-KEY:.*\r*\n*)?", "(#EXT-X-DISCONTINUITY\r*\n*)?#EXTINF.*\r*\n*.*adjump.*\\.ts\r*\n*(#EXT-X-DISCONTINUITY\r*\n*)?"]
+      "hosts": [".com", ".net", ".org", ".top", ".app", ".cc", ".io", ".me", ".xyz", ".fun", ".site", "vip", "play", "zy", "bf", "v.", "cdn", "vod", "cnd", "movie", "video", "feifei", "huyall", "maowushi", "ppqrrs", "vwwwxy", "gsuus", "myqqdd", "ukzy", "baofeng", "bvvvvvv", "fengbao", "phimgood", "dytt", "qqqrst", "xluuss", "senlin"],
+      "regex": ["#EXT-X-DISCONTINUITY\r*\n*(#EXT-X-KEY:.*\r*\n*)?(#EXTINF:[\\d.]+,\r*\n*.*?\\.ts\r*\n*){3,11}#EXT-X-DISCONTINUITY\r*\n*(#EXT-X-KEY:.*\r*\n*)?", "(#EXT-X-DISCONTINUITY\r*\n*)?#EXTINF.*\r*\n*.*adjump.*\\.ts\r*\n*(#EXT-X-DISCONTINUITY\r*\n*)?", "#EXT-X-KEY:METHOD=NONE\r*\n*(#EXTINF:\\d+,\r*\n*.*?\\.ts\r*\n*){3,11}#EXT-X-DISCONTINUITY"]
     }
   ],
   "ads": ["googletagmanager.com", "google-analytics.com", "hm.baidu.com", "static-mozai.4gtv.tv", "cnzz.com"]
