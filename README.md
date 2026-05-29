@@ -117,6 +117,7 @@
 | **森林** | <https://slapibf.com/api.php/provide/vod/?t=61> | 🔞🔞🔞 |
 | **豆豆** | <https://api.douapi.cc/api.php/provide/vod/?t=80> | 🔞🔞🔞 |
 | **滴滴** | <https://api.ddapi.cc/api.php/provide/vod/?t=47> | 🔞🔞🔞 |
+| **百花** | <https://bhziyuan.com/api.php/provide/vod/?t=58> | 🔞🔞🔞 |
 | **玉兔** | <https://apiyutu.com/api.php/provide/vod/?t=66> | 🔞🔞🔞 |
 
 <br>
