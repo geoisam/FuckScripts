@@ -23,8 +23,8 @@
   ],
   "sites": [
     {
-      "key": "豆瓣",
-      "name": "🏆豆瓣",
+      "key": "Douban",
+      "name": "🅾️首页",
       "type": 3,
       "api": "csp_Douban",
       "searchable": 0,
@@ -32,18 +32,25 @@
     },
     {
       "key": "Local",
-      "name": "🪙本地",
+      "name": "🅾️本地文件",
       "type": 3,
       "api": "csp_LocalFile",
       "searchable": 0
     },
     {
-      "key": "金牌",
-      "name": "🥇金牌",
+      "key": "接口免费",
+      "name": "🚨接口永远免费使用",
       "type": 3,
-      "api": "csp_Jpys",
-      "ext": "https://m.hkybqufgh.com,https://m.sizhengxt.com,https://m.9zhoukj.com,https://m.sizhengxt.com,https://m.jiabaide.cn",
-      "searchable": 1,
+      "api": "csp_Douban",
+      "searchable": 0,
+      "filterable": 1
+    },
+    {
+      "key": "广告勿信",
+      "name": "🚨请勿相信视频广告",
+      "type": 3,
+      "api": "csp_Douban",
+      "searchable": 0,
       "filterable": 1
     },
     {
@@ -128,6 +135,15 @@
       "filterable": 1
     },
     {
+      "key": "豆瓣",
+      "name": "🅱️豆瓣",
+      "type": 1,
+      "api": "https://caiji.dbzy5.com/api.php/provide/vod/from/dbm3u8/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
       "key": "虎牙",
       "name": "🅱️虎牙",
       "type": 1,
@@ -141,6 +157,24 @@
       "name": "🅱️红牛",
       "type": 1,
       "api": "https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "豪华",
+      "name": "🅱️豪华",
+      "type": 1,
+      "api": "https://hhzyapi.com/api.php/provide/vod/from/hhm3u8/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "极速",
+      "name": "🅱️极速",
+      "type": 1,
+      "api": "https://jszyapi.com/api.php/provide/vod/from/jsm3u8/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -174,7 +208,7 @@
     },
     {
       "key": "光速",
-      "name": "🅾️光速",
+      "name": "🆎光速",
       "type": 1,
       "api": "https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8/",
       "searchable": 1,
@@ -183,7 +217,7 @@
     },
     {
       "key": "猫眼",
-      "name": "🅾️猫眼",
+      "name": "🆎猫眼",
       "type": 1,
       "api": "https://api.maoyanapi.top/api.php/provide/vod/from/mym3u8/",
       "searchable": 1,
@@ -192,7 +226,7 @@
     },
     {
       "key": "茅台",
-      "name": "🅾️茅台",
+      "name": "🆎茅台",
       "type": 1,
       "api": "https://caiji.maotaizy.cc/api.php/provide/vod/from/mtm3u8/",
       "searchable": 1,
