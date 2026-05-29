@@ -86,7 +86,7 @@
 | **非凡** | <https://api.ffzyapi.com/api.php/provide/vod/from/ffm3u8/> | |
 | **如意** | <https://cj.rycjapi.com/api.php/provide/vod/from/rym3u8/> | |
 | **天堂** | <https://caiji.dyttzyapi.com/api.php/provide/vod/from/dyttm3u8/> | |
-| **暴风** | <https://bfzyapi.com/api.php/provide/vod/from/bfm3u8/> | |
+| **暴风** | <https://bfzyapi.com/api.php/provide/vod/from/bfzym3u8/> | |
 | **虎牙** | <https://www.huyaapi.com/api.php/provide/vod/from/hym3u8/> | |
 | **量子** | <https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/> | |
 | **百度** | <https://api.apibdzy.com/api.php/provide/vod/from/dbm3u8/> | |
