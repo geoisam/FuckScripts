@@ -171,19 +171,28 @@
       "filterable": 1
     },
     {
-      "key": "无尽",
-      "name": "🅱️无尽",
+      "key": "红牛",
+      "name": "🅱️红牛",
       "type": 1,
-      "api": "https://api.wujinapi.me/api.php/provide/vod/from/wjm3u8/",
+      "api": "https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
     },
     {
-      "key": "红牛",
-      "name": "🅱️红牛",
+      "key": "速播",
+      "name": "🅱️速播",
       "type": 1,
-      "api": "https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/",
+      "api": "https://subocj.com/api.php/provide/vod/from/subm3u8/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "无尽",
+      "name": "🅱️无尽",
+      "type": 1,
+      "api": "https://api.wujinapi.me/api.php/provide/vod/from/wjm3u8/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
@@ -270,15 +279,6 @@
       "filterable": 1
     },
     {
-      "key": "百花",
-      "name": "🔞百花",
-      "type": 1,
-      "api": "https://bhziyuan.com/api.php/provide/vod/?t=58",
-      "searchable": 1,
-      "quickSearch": 0,
-      "filterable": 1
-    },
-    {
       "key": "玉兔",
       "name": "🔞玉兔",
       "type": 1,
@@ -334,7 +334,7 @@
     {
       "name": "通用",
       "hosts": [".com", ".net", ".org", ".top", ".app", ".cc", ".io", ".me", ".xyz", ".fun", ".site", "vip", "play", "zy", "bf", "v.", "cdn", "vod", "cnd", "movie", "video", "feifei", "huyall", "maowushi", "ppqrrs", "vwwwxy", "gsuus", "myqqdd", "ukzy", "baofeng", "bvvvvvv", "fengbao", "phimgood", "dytt", "qqqrst", "xluuss", "senlin"],
-      "regex": ["#EXT-X-DISCONTINUITY\r*\n*(#EXT-X-KEY:.*\r*\n*)?(#EXTINF:[\\d.]+,\r*\n*.*?\\.ts\r*\n*){3,11}#EXT-X-DISCONTINUITY\r*\n*(#EXT-X-KEY:.*\r*\n*)?", "(#EXT-X-DISCONTINUITY\r*\n*)?#EXTINF.*\r*\n*.*adjump.*\\.ts\r*\n*(#EXT-X-DISCONTINUITY\r*\n*)?", "#EXT-X-KEY:METHOD=NONE\r*\n*(#EXTINF:\\d+,\r*\n*.*?\\.ts\r*\n*){3,11}#EXT-X-DISCONTINUITY"]
+      "regex": ["#EXT-X-DISCONTINUITY\r*\n*(#EXT-X-KEY:.*\r*\n*)?(#EXTINF:[\\d.]+,\r*\n*.*?\\.ts\r*\n*){3,7}#EXT-X-DISCONTINUITY\r*\n*(#EXT-X-KEY:.*\r*\n*)?", "(#EXT-X-DISCONTINUITY\r*\n*)?#EXTINF.*\r*\n*.*adjump.*\\.ts\r*\n*(#EXT-X-DISCONTINUITY\r*\n*)?", "#EXT-X-KEY:METHOD=NONE\r*\n*(#EXTINF:[\\d.]+,\r*\n*.*?\\.ts\r*\n*){3,9}#EXT-X-DISCONTINUITY\r*\n*"]
     }
   ],
   "ads": ["googletagmanager.com", "google-analytics.com", "hm.baidu.com", "static-mozai.4gtv.tv", "cnzz.com"]
