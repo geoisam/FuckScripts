@@ -97,7 +97,7 @@
 | **红牛** | <https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/> | 播放卡速度慢 |
 | **无尽** | <https://api.wujinapi.me/api.php/provide/vod/from/wjm3u8/> | 播放卡速度慢 |
 | **U酷** | <https://api.ukuapi88.com/api.php/provide/vod/from/ukm3u8/> | 播放卡速度慢 |
-| **iKun** | <https://ikunzyapi.com/api.php/provide/vod/from/ikm3u8/> | 科学加速上网 |
+| **iKun** | <https://ikunzyapi.com/api.php/provide/vod/from/ikm3u8/> | 科学上网 |
 | **光速** | <https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8/> | 采集限速一般 |
 | **猫眼** | <https://api.maoyanapi.top/api.php/provide/vod/from/mym3u8/> | 采集限速一般 |
 | **茅台** | <https://caiji.maotaizy.cc/api.php/provide/vod/from/mtm3u8/> | 采集限速严重 |
