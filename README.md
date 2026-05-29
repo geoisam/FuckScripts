@@ -81,23 +81,23 @@
 
 | **花名** | **地址** | **备注** |
 | :---: | --- | :---: |
-| **优质** | <https://api.yyzy-tv.vip/inc/api_mac10.php> |  |
-| **非凡** | <https://api.ffzyapi.com/api.php/provide/vod/from/ffm3u8/> |  |
-| **如意** | <https://cj.rycjapi.com/api.php/provide/vod/from/rym3u8/> |  |
-| **虎牙** | <https://www.huyaapi.com/api.php/provide/vod/from/hym3u8/> |  |
-| **360** | <https://360zy.com/api.php/provide/vod/from/360m3u8/> |  |
-| **百度** | <https://api.apibdzy.com/api.php/provide/vod/from/dbm3u8/> |  |
-| **无尽** | <https://api.wujinapi.me/api.php/provide/vod/from/wjm3u8/> |  |
-| **金鹰** | <https://jyzyapi.com/provide/vod/from/jinyingm3u8/> |  |
-| **量子** | <https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/> |  |
-| **红牛** | <https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/> |  |
-| **U酷** | <https://api.ukuapi88.com/api.php/provide/vod/from/ukm3u8/> |  |
-| **暴风** | <https://bfzyapi.com/api.php/provide/vod/from/bfm3u8/> |  |
-| **天堂** | <https://caiji.dyttzyapi.com/api.php/provide/vod/from/dyttm3u8/> |  |
-| **光速** | <https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8/> | 采集限速严重 |
-| **猫眼** | <https://api.maoyanapi.top/api.php/provide/vod/from/mym3u8/> | 采集限速严重 |
-| **茅台** | <https://caiji.maotaizy.cc/api.php/provide/vod/from/mtm3u8/> | 采集限速严重 |
-| **iKun** | <https://ikunzyapi.com/api.php/provide/vod/from/ikm3u8/> | ⛔科学上网 |
+| **虎牙** | <https://www.huyaapi.com/api.php/provide/vod/from/hym3u8/> | 1920x1080 |
+| **红牛** | <https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/> | 1920x1080 |
+| **360** | <https://360zy.com/api.php/provide/vod/from/360m3u8/> | 1280x720 |
+| **优质** | <https://api.yyzy-tv.vip/inc/api_mac10.php> | 1080x608 |
+| **非凡** | <https://api.ffzyapi.com/api.php/provide/vod/from/ffm3u8/> | 1080x608 |
+| **如意** | <https://cj.rycjapi.com/api.php/provide/vod/from/rym3u8/> | 1080x608 |
+| **量子** | <https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/> | 1080x608 |
+| **天堂** | <https://caiji.dyttzyapi.com/api.php/provide/vod/from/dyttm3u8/> | 1080x608 |
+| **暴风** | <https://bfzyapi.com/api.php/provide/vod/from/bfm3u8/> | 1080x608 |
+| **金鹰** | <https://jyzyapi.com/provide/vod/from/jinyingm3u8/> | 1920x1080 |
+| **无尽** | <https://api.wujinapi.me/api.php/provide/vod/from/wjm3u8/> | 1280x720 |
+| **iKun** | <https://ikunzyapi.com/api.php/provide/vod/from/ikm3u8/> | 1280x720 |
+| **百度** | <https://api.apibdzy.com/api.php/provide/vod/from/dbm3u8/> | 1080x608 |
+| **U酷** | <https://api.ukuapi88.com/api.php/provide/vod/from/ukm3u8/> | 864x486 |
+| **光速** | <https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8/> | 1920x1080;采集限速一般 |
+| **猫眼** | <https://api.maoyanapi.top/api.php/provide/vod/from/mym3u8/> | 1920x1080;采集限速一般 |
+| **茅台** | <https://caiji.maotaizy.cc/api.php/provide/vod/from/mtm3u8/> | 1920x1080;采集限速严重 |
 | **淘片** | <https://taopianapi.com/cjapi/mc10/vod/json/m3u8.html> | 禁止直接搜索 |
 | **牛牛** | <https://api.niuniuzy.me/api.php/provide/vod/from/nnm3u8/> | 禁止直接搜索 |
 | **鸭鸭** | <https://cj.yayazy.net/api.php/provide/vod/from/yym3u8/> | 禁止直接搜索 |
