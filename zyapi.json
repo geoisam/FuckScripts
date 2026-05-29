@@ -2,7 +2,7 @@
   "homepage": "https://github.com/geoisam/FuckScripts",
   "wallpaper": "https://bing.img.run/1366x768.php",
   "warningText": "接口永远免费使用，请勿相信视频广告",
-  "spider": "https://android.lushunming.qzz.io/jar/custom_spider.jar",
+  "spider": "http://zb.6exe.com/spider.jar",
   "lives": [
     {
       "name": "TVBox直播",
@@ -34,14 +34,14 @@
       "key": "Local",
       "name": "🪙本地",
       "type": 3,
-      "api": "csp_Local",
+      "api": "csp_LocalFile",
       "searchable": 0
     },
     {
       "key": "金牌",
       "name": "🥇金牌",
       "type": 3,
-      "api": "csp_Glod",
+      "api": "csp_Jpys",
       "ext": "https://m.hkybqufgh.com,https://m.sizhengxt.com,https://m.9zhoukj.com,https://m.sizhengxt.com,https://m.jiabaide.cn",
       "searchable": 1,
       "filterable": 1
@@ -291,7 +291,7 @@
     {
       "name": "通用",
       "hosts": [".com", ".net", ".org", ".top", ".app", ".cc", ".io", ".xyz", ".fun", ".site", "vip", "play", "zy", "bf", "v.", "cdn", "vod", "cnd", "movie", "video", "feifei", "huyall", "maowushi", "ppqrrs", "vwwwxy", "gsuus", "myqqdd", "ukzy", "baofeng", "bvvvvvv", "fengbao", "phimgood", "dytt", "qqqrst", "xluuss", "senlin"],
-      "regex": ["#EXT-X-DISCONTINUITY\r*\n*(#EXTINF:[\\d.]+,\r*\n*.*?\\.ts\r*\n*){3,7}#EXT-X-DISCONTINUITY", "#EXTINF.*?\\s+.*?adjump.*?\\.ts\\s+"]
+      "regex": ["#EXT-X-DISCONTINUITY\r*\n*(#EXT-X-KEY:.*\r*\n*)?(#EXTINF:[\\d.]+,\r*\n*.*?\\.ts\r*\n*){3,7}#EXT-X-DISCONTINUITY\r*\n*(#EXT-X-KEY:.*\r*\n*)?", "#EXTINF.*?\\s+.*?adjump.*?\\.ts\\s+"]
     }
   ],
   "ads": ["googletagmanager.com", "google-analytics.com", "hm.baidu.com", "static-mozai.4gtv.tv", "cnzz.com"]
