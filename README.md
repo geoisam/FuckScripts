@@ -81,21 +81,21 @@
 
 | **花名** | **地址** | **备注** |
 | :---: | --- | :---: |
-| **如意** | <https://cj.rycjapi.com/api.php/provide/vod/from/rym3u8/> | `阴险狡诈` |
-| **量子** | <https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/> | `阴险狡诈` |
-| **非凡** | <https://api.ffzyapi.com/api.php/provide/vod/from/ffm3u8/> | `插播广告` |
-| **天堂** | <https://caiji.dyttzyapi.com/api.php/provide/vod/from/dyttm3u8/> | `插播广告` |
-| **暴风** | <https://bfzyapi.com/api.php/provide/vod/from/bfzym3u8/> | `插播广告` |
 | **优质** | <https://api.yyzy-tv.vip/inc/api_mac10.php> | `插播广告` |
+| **非凡** | <https://api.ffzyapi.com/api.php/provide/vod/from/ffm3u8/> | `插播广告` |
+| **暴风** | <https://bfzyapi.com/api.php/provide/vod/from/bfzym3u8/> | `插播广告` |
+| **天堂** | <https://caiji.dyttzyapi.com/api.php/provide/vod/from/dyttm3u8/> | `插播广告` |
+| **如意** | <https://cj.rycjapi.com/api.php/provide/vod/from/rym3u8/> | `阴险狡诈` `插播广告` |
+| **量子** | <https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/> | `阴险狡诈` `插播广告` |
 | **360** | <https://360zy.com/api.php/provide/vod/from/360m3u8/> | `贴片广告` `插播广告` |
 | **虎牙** | <https://www.huyaapi.com/api.php/provide/vod/from/hym3u8/> | `贴片广告` |
 | **百度** | <https://api.apibdzy.com/api.php/provide/vod/from/dbm3u8/> | `贴片广告` |
 | **光速** | <https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8/> | `采集限速` `贴片广告` |
-| **iKun** | <https://ikunzyapi.com/api.php/provide/vod/from/ikm3u8/> | `科学上网` `贴片广告` `插播广告` |
-| **无尽** | <https://api.wujinapi.me/api.php/provide/vod/from/wjm3u8/> | `清晰度低` `贴片广告` |
-| **U酷** | <https://api.ukuapi88.com/api.php/provide/vod/from/ukm3u8/> | `清晰度低` `贴片广告` |
 | **金鹰** | <https://jyzyapi.com/provide/vod/from/jinyingm3u8/> | `播放卡` `贴片广告` |
 | **极速** | <https://jszyapi.com/api.php/provide/vod/from/jsm3u8/> | `播放卡` `贴片广告` |
+| **无尽** | <https://api.wujinapi.me/api.php/provide/vod/from/wjm3u8/> | `清晰度低` `贴片广告` |
+| **U酷** | <https://api.ukuapi88.com/api.php/provide/vod/from/ukm3u8/> | `播放卡` `清晰度低` `贴片广告` |
+| **iKun** | <https://ikunzyapi.com/api.php/provide/vod/from/ikm3u8/> | `科学上网` `贴片广告` `插播广告` |
 | **豪华** | <https://hhzyapi.com/api.php/provide/vod/from/hhm3u8/> | `贴片广告` `跑马灯广告` |
 | **红牛** | <https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/> | `贴片广告` `跑马灯广告` |
 | **速播** | <https://subocj.com/api.php/provide/vod/from/subm3u8/> | `贴片广告` `跑马灯广告` |
@@ -114,11 +114,11 @@
 | **索尼** | <https://suoniapi.com/api.php/provide/vod/from/snm3u8/> | 禁止直接搜索 |
 | **无水印** | <https://api.wsyzy.net/api.php/provide/vod/from/wsym3u8/> | 禁止直接搜索 |
 | **奇异果** | <https://iqiyizyapi.com/api.php/provide/vod/from/snm3u8/> | 禁止直接搜索 |
-| **LSB** | <https://apilsbzy1.com/api.php/provide/vod/?t=66> | 🔞🔞🔞 |
 | **森林** | <https://slapibf.com/api.php/provide/vod/?t=61> | 🔞🔞🔞 |
 | **豆豆** | <https://api.douapi.cc/api.php/provide/vod/?t=80> | 🔞🔞🔞 |
 | **滴滴** | <https://api.ddapi.cc/api.php/provide/vod/?t=47> | 🔞🔞🔞 |
 | **玉兔** | <https://apiyutu.com/api.php/provide/vod/?t=66> | 🔞🔞🔞 |
+| **老色B** | <https://apilsbzy1.com/api.php/provide/vod/?t=66> | 🔞🔞🔞 |
 | **奶香香** | <https://naixxzy.com/api.php/provide/vod/?t=47> | 🔞🔞🔞 |
 | **奥斯卡** | <https://aosikazy.com/api.php/provide/vod/?t=29> | 🔞🔞🔞 |
 | **百花** | <https://bhziyuan.com/api.php/provide/vod/?t=40> | 🔞🔞🔞 |
