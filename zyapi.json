@@ -333,8 +333,8 @@
   "rules": [
     {
       "name": "如意",
-      "hosts": ["ryplay", "ryiplay", "vip.ry"],
-      "regex": ["#EXT-X-DISCONTINUITY\r?\n(#EXTINF:4\\.0*,\r?\n.*\r?\n){5}#EXTINF:[\\d.]+,\r?\n.*\r?\n#EXT-X-DISCONTINUITY\r?\n", "#EXT-X-DISCONTINUITY\r?\n#EXTINF:.*\r?\ne3cf10eef8d0dcbc9be1fb2dffa56f33\\.ts\r?\n(#EXTINF:.*\r?\n.*\r?\n){4}#EXT-X-DISCONTINUITY\r?\n"]
+      "hosts": ["ryplay", "ryiplay", "vip.ry", "cdn.ry"],
+      "regex": ["#EXT-X-DISCONTINUITY\r?\n(#EXTINF:4\\.0*,\r?\n.*\r?\n){5}#EXTINF:0.560*,\r?\n.*\r?\n#EXT-X-DISCONTINUITY\r?\n", "#EXT-X-DISCONTINUITY\r?\n(#EXTINF:4\\.0*,\r?\n.*\r?\n)(#EXTINF:5\\.480*,\r?\n.*\r?\n)(#EXTINF:4\\.0*,\r?\n.*\r?\n)(.*\r?\n){4,6}#EXT-X-DISCONTINUITY\r?\n"]
     },
     {
       "name": "量子",
