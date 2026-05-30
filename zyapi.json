@@ -334,17 +334,22 @@
     {
       "name": "如意",
       "hosts": ["ryplay", "ryiplay", "vip.ry"],
-      "regex": ["(#EXT-X-DISCONTINUITY\r?\n)?(?:#EXTINF:4\\.000000,\r?\n.*\\.ts\r?\n){5}#EXTINF:2\\.000000,\r?\n.*\\.ts\r?\n(#EXT-X-DISCONTINUITY\r?\n)?"]
+      "regex": ["#EXT-X-DISCONTINUITY\r?\n(#EXTINF:4\\.?0*,\r?\n.*\\.ts\r?\n){5}#EXTINF:[\\d.]+,\r?\n.*\\.ts\r?\n#EXT-X-DISCONTINUITY\r?\n"]
     },
     {
       "name": "量子",
       "hosts": ["lzcdn", "cdnlz", "lz-cdn", "vip.lz"],
-      "regex": ["(#EXT-X-DISCONTINUITY\r?\n)?(#EXTINF:[\\d.]+,\r?\n[a-z0-9]{18}\\.ts\r?\n)+(#EXT-X-DISCONTINUITY\r?\n)?"]
+      "regex": ["#EXT-X-DISCONTINUITY\r?\n(#EXTINF:4\\.?0*,\r?\n.*?\\.ts\r?\n){6}#EXTINF:[\\d.]+,\r?\n.*?\\.ts\r?\n#EXT-X-DISCONTINUITY\r?\n"]
     },
     {
-      "name": "非凡&天堂&暴风&优质&360&iKun&猫眼&森林&豆豆&滴滴&玉兔&老色B",
-      "hosts": ["ffzy", "feifei", "dytt", "phimgood", "bfzy", "baofeng", "bvvvvvv", "rrcdnbf", "bbffcdn", "bfllvip", "bfengbf", "fengbao", "yzzy", "playback", "maowushi", "huicheng", "ikun", "kkzy", "maoyan", "senlin", "sl", "didi", "lsb"],
-      "regex": ["#EXT-X-DISCONTINUITY\r?\n(#EXT-X-KEY:.*\r?\n)?(#EXTINF:[\\d.]+,\r?\n.*\\.ts\r?\n){3,7}#EXT-X-DISCONTINUITY\r?\n(#EXT-X-KEY:.*\r?\n)?", "(#EXT-X-DISCONTINUITY\r?\n)?#EXTINF.*\r?\n.*adjump.*\\.ts\r?\n(#EXT-X-DISCONTINUITY\r?\n)?", "#EXT-X-KEY:METHOD=NONE\r?\n(#EXTINF:[\\d.]+,\r?\n.*\\.ts\r?\n){3,9}#EXT-X-DISCONTINUITY\r?\n", "#EXT-X-DISCONTINUITY\r?\n(#EXT-X-KEY:METHOD=NONE\r?\n)?(#EXTINF:[\\d.]+,\r?\n.*\\.ts\r?\n){3,9}(?=#EXT-X-ENDLIST)"]
+      "name": "暴风",
+      "hosts": ["bfzy", "baofeng", "bvvvvvv", "rrcdnbf", "bbffcdn", "bfllvip", "bfengbf", "fengbao"],
+      "regex": ["#EXT-X-DISCONTINUITY\r?\n#EXTINF.*\r?\n.*adjump.*\\.ts\r?\n#EXT-X-DISCONTINUITY\r?\n"]
+    },
+    {
+      "name": "非凡&天堂&优质&360&iKun&猫眼&森林&豆豆&滴滴&玉兔&老色B&暴风",
+      "hosts": ["ffzy", "feifei", "dytt", "phimgood", "yzzy", "playback", "maowushi", "huicheng", "ikun", "kkzy", "maoyan", "senlin", "sl", "didi", "lsb", "bfzy", "baofeng", "bvvvvvv", "rrcdnbf", "bbffcdn", "bfllvip", "bfengbf", "fengbao"],
+      "regex": ["#EXT-X-DISCONTINUITY\r?\n(#EXT-X-KEY:.*\r?\n)?(#EXTINF:[\\d.]+,\r?\n.*\\.ts\r?\n){3,7}#EXT-X-DISCONTINUITY\r?\n(#EXT-X-KEY:.*\r?\n)?", "#EXT-X-KEY:METHOD=NONE\r?\n(#EXTINF:[\\d.]+,\r?\n.*\\.ts\r?\n){3,9}#EXT-X-DISCONTINUITY\r?\n", "#EXT-X-DISCONTINUITY\r?\n(#EXT-X-KEY:METHOD=NONE\r?\n)?(#EXTINF:[\\d.]+,\r?\n.*\\.ts\r?\n){3,9}(?=#EXT-X-ENDLIST)"]
     }
   ],
   "ads": ["googletagmanager.com", "google-analytics.com", "hm.baidu.com", "static-mozai.4gtv.tv", "cnzz.com"]
