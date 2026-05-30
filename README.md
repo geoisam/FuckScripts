@@ -81,27 +81,27 @@
 
 | **花名** | **地址** | **备注** |
 | :---: | --- | :---: |
-| **360** | <https://360zy.com/api.php/provide/vod/from/360m3u8/> | |
-| **优质** | <https://api.yyzy-tv.vip/inc/api_mac10.php> | |
-| **非凡** | <https://api.ffzyapi.com/api.php/provide/vod/from/ffm3u8/> | |
-| **如意** | <https://cj.rycjapi.com/api.php/provide/vod/from/rym3u8/> | |
-| **天堂** | <https://caiji.dyttzyapi.com/api.php/provide/vod/from/dyttm3u8/> | |
-| **暴风** | <https://bfzyapi.com/api.php/provide/vod/from/bfzym3u8/> | |
-| **虎牙** | <https://www.huyaapi.com/api.php/provide/vod/from/hym3u8/> | |
-| **量子** | <https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/> | |
-| **百度** | <https://api.apibdzy.com/api.php/provide/vod/from/dbm3u8/> | |
-| **极速** | <https://jszyapi.com/api.php/provide/vod/from/jsm3u8/> | 贴片广告 |
-| **豪华** | <https://hhzyapi.com/api.php/provide/vod/from/hhm3u8/> | 贴片广告 |
-| **金鹰** | <https://jyzyapi.com/provide/vod/from/jinyingm3u8/> | 播放卡速度慢 |
-| **豆瓣** | <https://caiji.dbzy5.com/api.php/provide/vod/from/dbm3u8/> | 播放卡速度慢 |
-| **红牛** | <https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/> | 播放卡速度慢 |
-| **速播** | <https://subocj.com/api.php/provide/vod/from/subm3u8/> | 播放卡速度慢 |
-| **无尽** | <https://api.wujinapi.me/api.php/provide/vod/from/wjm3u8/> | 播放卡速度慢 |
-| **U酷** | <https://api.ukuapi88.com/api.php/provide/vod/from/ukm3u8/> | 播放卡速度慢 |
-| **iKun** | <https://ikunzyapi.com/api.php/provide/vod/from/ikm3u8/> | 科学上网 |
-| **光速** | <https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8/> | 采集限速一般 |
-| **猫眼** | <https://api.maoyanapi.top/api.php/provide/vod/from/mym3u8/> | 采集限速一般 |
-| **茅台** | <https://caiji.maotaizy.cc/api.php/provide/vod/from/mtm3u8/> | 采集限速严重 |
+| **如意** | <https://cj.rycjapi.com/api.php/provide/vod/from/rym3u8/> | `阴险狡诈` |
+| **量子** | <https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/> | `阴险狡诈` |
+| **非凡** | <https://api.ffzyapi.com/api.php/provide/vod/from/ffm3u8/> | `插播广告` |
+| **天堂** | <https://caiji.dyttzyapi.com/api.php/provide/vod/from/dyttm3u8/> | `插播广告` |
+| **暴风** | <https://bfzyapi.com/api.php/provide/vod/from/bfzym3u8/> | `插播广告` |
+| **优质** | <https://api.yyzy-tv.vip/inc/api_mac10.php> | `插播广告` |
+| **360** | <https://360zy.com/api.php/provide/vod/from/360m3u8/> | `贴片广告` `插播广告` |
+| **虎牙** | <https://www.huyaapi.com/api.php/provide/vod/from/hym3u8/> | `贴片广告` |
+| **百度** | <https://api.apibdzy.com/api.php/provide/vod/from/dbm3u8/> | `贴片广告` |
+| **光速** | <https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8/> | `采集限速` `贴片广告` |
+| **iKun** | <https://ikunzyapi.com/api.php/provide/vod/from/ikm3u8/> | `科学上网` `贴片广告` `插播广告` |
+| **豪华** | <https://hhzyapi.com/api.php/provide/vod/from/hhm3u8/> | `贴片广告` `跑马灯广告` |
+| **红牛** | <https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/> | `贴片广告` `跑马灯广告` |
+| **速播** | <https://subocj.com/api.php/provide/vod/from/subm3u8/> | `贴片广告` `跑马灯广告` |
+| **茅台** | <https://caiji.maotaizy.cc/api.php/provide/vod/from/mtm3u8/> | `采集限速` `贴片广告` `跑马灯广告` |
+| **金鹰** | <https://jyzyapi.com/provide/vod/from/jinyingm3u8/> | `播放卡` `贴片广告` |
+| **极速** | <https://jszyapi.com/api.php/provide/vod/from/jsm3u8/> | `播放卡` `贴片广告` |
+| **豆瓣** | <https://caiji.dbzy5.com/api.php/provide/vod/from/dbm3u8/> | `播放卡` `贴片广告` `跑马灯广告` |
+| **无尽** | <https://api.wujinapi.me/api.php/provide/vod/from/wjm3u8/> | `清晰度低` `贴片广告` |
+| **U酷** | <https://api.ukuapi88.com/api.php/provide/vod/from/ukm3u8/> | `清晰度低` `贴片广告` |
+| **猫眼** | <https://api.maoyanapi.top/api.php/provide/vod/from/mym3u8/> | `采集限速` `清晰度低` `贴片广告` `插播广告` |
 | **淘片** | <https://taopianapi.com/cjapi/mc10/vod/json/m3u8.html> | 禁止直接搜索 |
 | **牛牛** | <https://api.niuniuzy.me/api.php/provide/vod/from/nnm3u8/> | 禁止直接搜索 |
 | **鸭鸭** | <https://cj.yayazy.net/api.php/provide/vod/from/yym3u8/> | 禁止直接搜索 |
