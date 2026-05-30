@@ -24,7 +24,7 @@
   "sites": [
     {
       "key": "Douban",
-      "name": "🅾️首页",
+      "name": "🪙首页",
       "type": 3,
       "api": "csp_Douban",
       "searchable": 0,
@@ -32,7 +32,7 @@
     },
     {
       "key": "Local",
-      "name": "🅾️本地文件",
+      "name": "🪙本地文件",
       "type": 3,
       "api": "csp_LocalFile",
       "searchable": 0
@@ -54,35 +54,8 @@
       "filterable": 1
     },
     {
-      "key": "360",
-      "name": "🅰️360",
-      "type": 1,
-      "api": "https://360zy.com/api.php/provide/vod/from/360m3u8/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
-      "key": "优质",
-      "name": "🅰️优质",
-      "type": 1,
-      "api": "https://api.yyzy-tv.vip/inc/api_mac10.php",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
-      "key": "非凡",
-      "name": "🅰️非凡",
-      "type": 1,
-      "api": "https://api.ffzyapi.com/api.php/provide/vod/from/ffm3u8/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
       "key": "如意",
-      "name": "🅰️如意",
+      "name": "🥇如意",
       "type": 1,
       "api": "https://cj.rycjapi.com/api.php/provide/vod/from/rym3u8/",
       "searchable": 1,
@@ -90,8 +63,26 @@
       "filterable": 1
     },
     {
+      "key": "量子",
+      "name": "🥇量子",
+      "type": 1,
+      "api": "https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "非凡",
+      "name": "🥇非凡",
+      "type": 1,
+      "api": "https://api.ffzyapi.com/api.php/provide/vod/from/ffm3u8/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
       "key": "天堂",
-      "name": "🅰️天堂",
+      "name": "🥇天堂",
       "type": 1,
       "api": "https://caiji.dyttzyapi.com/api.php/provide/vod/from/dyttm3u8/",
       "searchable": 1,
@@ -100,7 +91,7 @@
     },
     {
       "key": "暴风",
-      "name": "🅰️暴风",
+      "name": "🥇暴风",
       "type": 1,
       "api": "https://bfzyapi.com/api.php/provide/vod/from/bfzym3u8/",
       "searchable": 1,
@@ -108,8 +99,26 @@
       "filterable": 1
     },
     {
+      "key": "优质",
+      "name": "🥇优质",
+      "type": 1,
+      "api": "https://api.yyzy-tv.vip/inc/api_mac10.php",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "360",
+      "name": "🥇360",
+      "type": 1,
+      "api": "https://360zy.com/api.php/provide/vod/from/360m3u8/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
       "key": "虎牙",
-      "name": "🅰️虎牙",
+      "name": "🥈虎牙",
       "type": 1,
       "api": "https://www.huyaapi.com/api.php/provide/vod/from/hym3u8/",
       "searchable": 1,
@@ -117,17 +126,8 @@
       "filterable": 1
     },
     {
-      "key": "量子",
-      "name": "🅰️量子",
-      "type": 1,
-      "api": "https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
       "key": "百度",
-      "name": "🅰️百度",
+      "name": "🥈百度",
       "type": 1,
       "api": "https://api.apibdzy.com/api.php/provide/vod/from/dbm3u8/",
       "searchable": 1,
@@ -135,62 +135,26 @@
       "filterable": 1
     },
     {
-      "key": "金鹰",
-      "name": "🅱️金鹰",
+      "key": "光速",
+      "name": "🥈光速",
       "type": 1,
-      "api": "https://jyzyapi.com/provide/vod/from/jinyingm3u8/",
+      "api": "https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
     },
     {
-      "key": "极速",
-      "name": "🅱️极速",
+      "key": "iKun",
+      "name": "🥈iKun",
       "type": 1,
-      "api": "https://jszyapi.com/api.php/provide/vod/from/jsm3u8/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
-      "key": "豪华",
-      "name": "🅱️豪华",
-      "type": 1,
-      "api": "https://hhzyapi.com/api.php/provide/vod/from/hhm3u8/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
-      "key": "豆瓣",
-      "name": "🅱️豆瓣",
-      "type": 1,
-      "api": "https://caiji.dbzy5.com/api.php/provide/vod/from/dbm3u8/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
-      "key": "红牛",
-      "name": "🅱️红牛",
-      "type": 1,
-      "api": "https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
-      "key": "速播",
-      "name": "🅱️速播",
-      "type": 1,
-      "api": "https://subocj.com/api.php/provide/vod/from/subm3u8/",
+      "api": "https://ikunzyapi.com/api.php/provide/vod/from/ikm3u8/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
     },
     {
       "key": "无尽",
-      "name": "🅱️无尽",
+      "name": "🥈无尽",
       "type": 1,
       "api": "https://api.wujinapi.me/api.php/provide/vod/from/wjm3u8/",
       "searchable": 1,
@@ -199,7 +163,7 @@
     },
     {
       "key": "U酷",
-      "name": "🅱️U酷",
+      "name": "🥈U酷",
       "type": 1,
       "api": "https://api.ukuapi88.com/api.php/provide/vod/from/ukm3u8/",
       "searchable": 1,
@@ -207,35 +171,53 @@
       "filterable": 1
     },
     {
-      "key": "iKun",
-      "name": "🅱️iKun",
+      "key": "金鹰",
+      "name": "🥈金鹰",
       "type": 1,
-      "api": "https://ikunzyapi.com/api.php/provide/vod/from/ikm3u8/",
+      "api": "https://jyzyapi.com/provide/vod/from/jinyingm3u8/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
     },
     {
-      "key": "光速",
-      "name": "🆎光速",
+      "key": "极速",
+      "name": "🥈极速",
       "type": 1,
-      "api": "https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8/",
+      "api": "https://jszyapi.com/api.php/provide/vod/from/jsm3u8/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
     },
     {
-      "key": "猫眼",
-      "name": "🆎猫眼",
+      "key": "豪华",
+      "name": "🥉豪华",
       "type": 1,
-      "api": "https://api.maoyanapi.top/api.php/provide/vod/from/mym3u8/",
+      "api": "https://hhzyapi.com/api.php/provide/vod/from/hhm3u8/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "红牛",
+      "name": "🥉红牛",
+      "type": 1,
+      "api": "https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "速播",
+      "name": "🥉速播",
+      "type": 1,
+      "api": "https://subocj.com/api.php/provide/vod/from/subm3u8/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
     },
     {
       "key": "茅台",
-      "name": "🆎茅台",
+      "name": "🥉茅台",
       "type": 1,
       "api": "https://caiji.maotaizy.cc/api.php/provide/vod/from/mtm3u8/",
       "searchable": 1,
@@ -243,12 +225,21 @@
       "filterable": 1
     },
     {
-      "key": "老色逼",
-      "name": "🔞老色逼",
+      "key": "豆瓣",
+      "name": "🥉豆瓣",
       "type": 1,
-      "api": "https://apilsbzy1.com/api.php/provide/vod/?t=66",
+      "api": "https://caiji.dbzy5.com/api.php/provide/vod/from/dbm3u8/",
       "searchable": 1,
-      "quickSearch": 0,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "猫眼",
+      "name": "🥉猫眼",
+      "type": 1,
+      "api": "https://api.maoyanapi.top/api.php/provide/vod/from/mym3u8/",
+      "searchable": 1,
+      "quickSearch": 1,
       "filterable": 1
     },
     {
@@ -283,6 +274,15 @@
       "name": "🔞玉兔",
       "type": 1,
       "api": "https://apiyutu.com/api.php/provide/vod/?t=66",
+      "searchable": 1,
+      "quickSearch": 0,
+      "filterable": 1
+    },
+    {
+      "key": "老色逼",
+      "name": "🔞老色逼",
+      "type": 1,
+      "api": "https://apilsbzy1.com/api.php/provide/vod/?t=66",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1
@@ -332,9 +332,9 @@
   ],
   "rules": [
     {
-      "name": "通用",
-      "hosts": [".com", ".net", ".org", ".top", ".app", ".cc", ".io", ".me", ".xyz", ".fun", ".site", "vip", "play", "zy", "bf", "v.", "cdn", "vod", "cnd", "movie", "video", "feifei", "huyall", "maowushi", "ppqrrs", "vwwwxy", "gsuus", "myqqdd", "ukzy", "baofeng", "bvvvvvv", "fengbao", "phimgood", "dytt", "qqqrst", "xluuss", "senlin"],
-      "regex": ["#EXT-X-DISCONTINUITY\r*\n*(#EXT-X-KEY:.*\r*\n*)?(#EXTINF:[\\d.]+,\r*\n*.*?\\.ts\r*\n*){3,7}#EXT-X-DISCONTINUITY\r*\n*(#EXT-X-KEY:.*\r*\n*)?", "(#EXT-X-DISCONTINUITY\r*\n*)?#EXTINF.*\r*\n*.*adjump.*\\.ts\r*\n*(#EXT-X-DISCONTINUITY\r*\n*)?", "#EXT-X-KEY:METHOD=NONE\r*\n*(#EXTINF:[\\d.]+,\r*\n*.*?\\.ts\r*\n*){3,9}#EXT-X-DISCONTINUITY\r*\n*"]
+      "name": "非凡&天堂&暴风&优质&360&iKun&猫眼&森林&豆豆&滴滴&玉兔&老色逼",
+      "hosts": ["ffzy", "feifei", "dytt", "phimgood", "bfzy", "baofeng", "bvvvvvv", "rrcdnbf", "bbffcdn", "bfllvip", "bfengbf", "fengbao", "yzzy", "playback", "maowushi", "huicheng", "ikuncdn", "maoyan", "senlin", "sl", "didi", "lsb"],
+      "regex": ["#EXT-X-DISCONTINUITY\r*\n*(#EXT-X-KEY:.*\r*\n*)?(?:#EXTINF:[\\d.]+,\r*\n*.*?\\.ts\r*\n*){3,7}#EXT-X-DISCONTINUITY\r*\n*(#EXT-X-KEY:.*\r*\n*)?", "(#EXT-X-DISCONTINUITY\r*\n*)?#EXTINF.*\r*\n*.*adjump.*\\.ts\r*\n*(#EXT-X-DISCONTINUITY\r*\n*)?", "#EXT-X-KEY:METHOD=NONE\r*\n*(?:#EXTINF:[\\d.]+,\r*\n*.*?\\.ts\r*\n*){3,9}#EXT-X-DISCONTINUITY\r*\n*", "#EXT-X-DISCONTINUITY\r*\n*(?:#EXTINF:[\\d.]+,\r*\n*.*?\\.ts\r*\n*){3,7}(?=#EXT-X-ENDLIST)"]
     }
   ],
   "ads": ["googletagmanager.com", "google-analytics.com", "hm.baidu.com", "static-mozai.4gtv.tv", "cnzz.com"]
