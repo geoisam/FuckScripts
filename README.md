@@ -104,7 +104,7 @@
 | **速播** | <https://subocj.com/api.php/provide/vod/from/subm3u8/> | `贴片广告` `跑马灯广告` |
 | **茅台** | <https://caiji.maotaizy.cc/api.php/provide/vod/from/mtm3u8/> | `采集限速` `贴片广告` `跑马灯广告` |
 | **豆瓣** | <https://caiji.dbzy5.com/api.php/provide/vod/from/dbm3u8/> | `播放卡` `贴片广告` `跑马灯广告` |
-| **猫眼** | <https://api.maoyanapi.top/api.php/provide/vod/from/mym3u8/> | `采集限速` `清晰度低` `贴片广告` `插播广告` |
+| **猫眼** | <https://api.maoyanapi.top/api.php/provide/vod/from/mym3u8/> | `阴险狡诈` `采集限速` `清晰度低` `贴片广告` `插播广告` |
 | **淘片** | <https://taopianapi.com/cjapi/mc10/vod/json/m3u8.html> | 禁止直接搜索 |
 | **天涯** | <https://tyyszyapi.com/api.php/provide/vod/from/tym3u8/> | 禁止直接搜索 |
 | **牛牛** | <https://api.niuniuzy.me/api.php/provide/vod/from/nnm3u8/> | 禁止直接搜索 |
