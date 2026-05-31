@@ -80,7 +80,7 @@
 
 | 名称 | 原生 | 加速 |
 |:---:|:---:|:---:|
-| 学习资源API | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/refs/heads/main/zyapi.json) | [下载](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/zyapi.json) |
+| 配置JSON | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/refs/heads/main/zyapi.json) | [下载](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/zyapi.json) |
 
 | **花名** | **地址** | **备注** |
 | :---: | --- | :---: |
