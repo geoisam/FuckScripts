@@ -43,7 +43,7 @@
 
 <br>
 
-- 可以使用 云函数 / 青龙面板 或者 GitHub 私人仓库用 GitHub Actions 实现自动刷步
+- 可以使用 云函数 / 青龙面板 或者 GitHub **私人仓库**用 GitHub Actions 实现自动刷步
 
 - **GitHub Actions** 配置如下 `.github/workflows/huami.yml`
   - 如需多（超过5个）账号运行脚本，请设置仓库读写权限，GitHub Actions 自动提交并推送存储 JSON 数据到根目录
