@@ -24,7 +24,7 @@
   "sites": [
     {
       "key": "Douban",
-      "name": "🪙首页",
+      "name": "🏅首页",
       "type": 3,
       "api": "csp_Douban",
       "searchable": 0,
@@ -32,7 +32,7 @@
     },
     {
       "key": "Local",
-      "name": "🪙本地文件",
+      "name": "📁本地文件",
       "type": 3,
       "api": "csp_LocalFile",
       "searchable": 0
@@ -47,7 +47,7 @@
     },
     {
       "key": "广告勿信",
-      "name": "🚨请勿相信视频广告",
+      "name": "👮请勿相信视频广告",
       "type": 3,
       "api": "csp_Douban",
       "searchable": 0,
@@ -177,22 +177,23 @@
       ]
     },
     {
-      "key": "天堂",
-      "name": "🥇天堂",
+      "key": "如意",
+      "name": "🥇如意",
       "type": 1,
-      "api": "https://caiji.dyttzyapi.com/api.php/provide/vod/from/dyttm3u8/",
+      "api": "https://cj.rycjapi.com/api.php/provide/vod/from/rym3u8/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 0,
       "categories": [
-        "动作片",
         "喜剧片",
+        "动作片",
         "爱情片",
         "科幻片",
         "恐怖片",
         "剧情片",
         "战争片",
-        "动画片",
+        "预告片",
+        "动画电影",
         "记录片",
         "国产剧",
         "欧美剧",
@@ -215,23 +216,22 @@
       ]
     },
     {
-      "key": "如意",
-      "name": "🥇如意",
+      "key": "天堂",
+      "name": "🥇天堂",
       "type": 1,
-      "api": "https://cj.rycjapi.com/api.php/provide/vod/from/rym3u8/",
+      "api": "https://caiji.dyttzyapi.com/api.php/provide/vod/from/dyttm3u8/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 0,
       "categories": [
-        "喜剧片",
         "动作片",
+        "喜剧片",
         "爱情片",
         "科幻片",
         "恐怖片",
         "剧情片",
         "战争片",
-        "预告片",
-        "动画电影",
+        "动画片",
         "记录片",
         "国产剧",
         "欧美剧",
@@ -582,7 +582,7 @@
     },
     {
       "key": "U酷",
-      "name": "🥈U酷",
+      "name": "🥈U酷 | 特别糊",
       "type": 1,
       "api": "https://api.ukuapi88.com/api.php/provide/vod/from/ukm3u8/",
       "searchable": 1,
@@ -897,15 +897,7 @@
         "大陆综艺",
         "港台综艺",
         "日韩综艺",
-        "欧美综艺",
-        "爽文短剧",
-        "短剧现代都市",
-        "短剧脑洞悬疑",
-        "短剧年代穿越",
-        "短剧古装仙侠",
-        "短剧反转爽剧",
-        "短剧女频恋爱",
-        "短剧成长逆袭"
+        "欧美综艺"
       ]
     },
     {
@@ -917,11 +909,11 @@
       "quickSearch": 0,
       "filterable": 0,
       "categories": [
-        "网曝门",
-        "成人动漫",
-        "男同性恋",
-        "女同性恋",
-        "伦理三级"
+        "\u7f51\u66dd\u95e8",
+        "\u6210\u4eba\u52a8\u6f2b",
+        "\u7537\u540c\u6027\u604b",
+        "\u5973\u540c\u6027\u604b",
+        "\u4f26\u7406\u4e09\u7ea7"
       ]
     },
     {
@@ -933,11 +925,11 @@
       "quickSearch": 0,
       "filterable": 0,
       "categories": [
-        "网曝黑料",
-        "成人动漫",
-        "男同性恋",
-        "女同性恋",
-        "三级伦理"
+        "\u7f51\u66dd\u9ed1\u6599",
+        "\u6210\u4eba\u52a8\u6f2b",
+        "\u7537\u540c\u6027\u604b",
+        "\u5973\u540c\u6027\u604b",
+        "\u4e09\u7ea7\u4f26\u7406"
       ]
     },
     {
@@ -949,11 +941,11 @@
       "quickSearch": 0,
       "filterable": 0,
       "categories": [
-        "黑料事件",
-        "卡通动漫",
-        "男同系列",
-        "女同系列",
-        "三级伦理"
+        "\u9ed1\u6599\u4e8b\u4ef6",
+        "\u5361\u901a\u52a8\u6f2b",
+        "\u7537\u540c\u7cfb\u5217",
+        "\u5973\u540c\u7cfb\u5217",
+        "\u4e09\u7ea7\u4f26\u7406"
       ]
     },
     {
@@ -965,27 +957,27 @@
       "quickSearch": 0,
       "filterable": 0,
       "categories": [
-        "网曝系列",
-        "卡通动漫",
-        "同性恋",
-        "明星换脸",
-        "三级伦理"
+        "\u7f51\u66dd\u7cfb\u5217",
+        "\u5361\u901a\u52a8\u6f2b",
+        "\u540c\u6027\u604b",
+        "\u660e\u661f\u6362\u8138",
+        "\u4e09\u7ea7\u4f26\u7406"
       ]
     },
     {
-      "key": "老色B",
-      "name": "🔞老色B",
+      "key": "老色13",
+      "name": "🔞老色13",
       "type": 1,
       "api": "https://apilsbzy1.com/api.php/provide/vod/",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 0,
       "categories": [
-        "网曝系列",
-        "卡通动漫",
-        "同性恋",
-        "明星换脸",
-        "三级伦理"
+        "\u7f51\u66dd\u7cfb\u5217",
+        "\u5361\u901a\u52a8\u6f2b",
+        "\u540c\u6027\u604b",
+        "\u660e\u661f\u6362\u8138",
+        "\u4e09\u7ea7\u4f26\u7406"
       ]
     }
   ],
@@ -1073,33 +1065,6 @@
   ],
   "rules": [
     {
-      "name": "如意",
-      "hosts": [
-        "ryplay",
-        "ryiplay",
-        "ruyiplay",
-        "cdn.ry",
-        "vip.ry"
-      ],
-      "regex": [
-        "#EXT-X-DISCONTINUITY\r?\n(#EXTINF:4\\.0*,\r?\n.*\r?\n){5}#EXTINF:(0\\.560*|2\\.0*),\r?\n.*\r?\n#EXT-X-DISCONTINUITY\r?\n",
-        "#EXT-X-DISCONTINUITY\r?\n(#EXTINF:4\\.0*,\r?\n.*\r?\n)(#EXTINF:5\\.480*,\r?\n.*\r?\n)(#EXTINF:4\\.0*,\r?\n.*\r?\n)(.*\r?\n){4,6}#EXT-X-DISCONTINUITY\r?\n"
-      ]
-    },
-    {
-      "name": "量子",
-      "hosts": [
-        "lzcdn",
-        "cdnlz",
-        "lz-cdn",
-        "lfthirtytwo",
-        "vip.lz"
-      ],
-      "regex": [
-        "#EXT-X-DISCONTINUITY\r?\n(#EXTINF:4\\.0*,\r?\n.*\r?\n){6}(.*\r?\n){2}#EXT-X-DISCONTINUITY\r?\n"
-      ]
-    },
-    {
       "name": "暴风",
       "hosts": [
         "bfzy",
@@ -1116,12 +1081,59 @@
       ]
     },
     {
-      "name": "非凡&天堂&优质&360&iKun&猫眼&森林&豆豆&滴滴&玉兔&老色B&暴风",
+      "name": "如意",
+      "hosts": [
+        "ryplay",
+        "ryiplay",
+        "ruyiplay",
+        "cdn.ry",
+        "vip.ry"
+      ],
+      "regex": [
+        "#EXT-X-DISCONTINUITY\r?\n(#EXTINF:4\\.0*,\r?\n.*\r?\n){5}#EXTINF:(0\\.560*|2\\.0*),\r?\n.*\r?\n#EXT-X-DISCONTINUITY\r?\n",
+        "#EXT-X-DISCONTINUITY\r?\n(#EXTINF:4\\.0*,\r?\n.*\r?\n)(#EXTINF:5\\.480*,\r?\n.*\r?\n)(#EXTINF:4\\.0*,\r?\n.*\r?\n)(.*\r?\n){4,6}#EXT-X-DISCONTINUITY\r?\n"
+      ]
+    },
+    {
+      "name": "天堂",
+      "hosts": [
+        "dytt",
+        "phimgood"
+      ],
+      "regex": [
+        "#EXT-X-DISCONTINUITY\r?\n",
+        "#EXTINF:5\\.567,\r?\n.*\r?\n#EXTINF:2\\.933,\r?\n.*\r?\n#EXTINF:5\\.700,\r?\n.*\r?\n#EXTINF:3\\.333,\r?\n.*\r?\n#EXTINF:1\\.533,\r?\n.*\r?\n",
+        "#EXTINF:6\\.667,\r?\n.*\r?\n#EXTINF:3\\.833,\r?\n.*\r?\n#EXTINF:1\\.833,\r?\n.*\r?\n#EXTINF:5\\.133,\r?\n.*\r?\n"
+      ]
+    },
+    {
+      "name": "量子",
+      "hosts": [
+        "lzcdn",
+        "cdnlz",
+        "lz-cdn",
+        "lfthirtytwo",
+        "vip.lz"
+      ],
+      "regex": [
+        "#EXT-X-DISCONTINUITY\r?\n(#EXTINF:4\\.0*,\r?\n.*\r?\n){6}(.*\r?\n){2}#EXT-X-DISCONTINUITY\r?\n"
+      ]
+    },
+    {
+      "name": "猫眼",
+      "hosts": [
+        "maoyan"
+      ],
+      "regex": [
+        "#EXTINF:3\\.32,\r?\n.*\r?\n(#EXTINF:1\\.68,\r?\n.*\r?\n){2}#EXTINF:1\\.64,\r?\n.*\r?\n#EXTINF:(1\\.68|1\\.12),\r?\n.*\r?\n",
+        "#EXTINF:2\\.8,\r?\n.*\r?\n#EXTINF:1\\.96,\r?\n.*\r?\n#EXTINF:1\\.16,\r?\n.*\r?\n#EXTINF:2\\.56,\r?\n.*\r?\n#EXTINF:1\\.68,\r?\n.*\r?\n#EXTINF:2\\.72,\r?\n.*\r?\n#EXTINF:0\\.92,\r?\n.*\r?\n#EXTINF:3\\.36,\r?\n.*\r?\n#EXTINF:1\\.64,\r?\n.*\r?\n#EXTINF:1\\.08,\r?\n.*\r?\n"
+      ]
+    },
+    {
+      "name": "非凡&优质&360&iKun&猫眼&森林&豆豆&滴滴&玉兔&老色13&暴风",
       "hosts": [
         "ffzy",
         "feifei",
-        "dytt",
-        "phimgood",
         "yzzy",
         "playback",
         "maowushi",
