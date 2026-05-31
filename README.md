@@ -79,7 +79,9 @@
 |:---:|:---:|:---:|
 | 学习资源API | [查看](https://raw.githubusercontent.com/geoisam/FuckScripts/refs/heads/main/zyapi.json) | [查看](https://raw.giteeusercontent.com/geoisam/FuckScripts/raw/main/zyapi.json) |
 
-<https://www.lanzoux.com/b00v02s58b>
+手机软件：<https://www.lanzoux.com/b00v02s58b>（密码：666）
+
+<br>
 
 | **花名** | **地址** | **备注** |
 | :---: | --- | :---: |
