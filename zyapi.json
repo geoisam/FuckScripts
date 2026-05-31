@@ -35,7 +35,8 @@
       "name": "📁本地文件",
       "type": 3,
       "api": "csp_Local",
-      "searchable": 0
+      "searchable": 0,
+      "filterable": 0
     },
     {
       "key": "接口免费",
@@ -54,12 +55,13 @@
       "filterable": 1
     },
     {
-      "key": "动漫巴士",
-      "name": "🏅动漫巴士",
+      "key": "六六",
+      "name": "🏅六六",
       "type": 3,
-      "api": "csp_Dm84",
-      "searchable": 0,
-      "quickSearch": 0
+      "api": "csp_Xb6v",
+      "searchable": 1,
+      "quickSearch": 0,
+      "filterable": 1
     },
     {
       "key": "优质",
@@ -68,6 +70,7 @@
       "api": "https://api.yyzy-tv.vip/inc/api_mac10.php",
       "searchable": 1,
       "quickSearch": 1,
+      "filterable": 0,
       "categories": [
         "动作片",
         "喜剧片",
@@ -106,6 +109,7 @@
       "api": "https://api.ffzyapi.com/api.php/provide/vod/from/ffm3u8/",
       "searchable": 1,
       "quickSearch": 1,
+      "filterable": 0,
       "categories": [
         "动作片",
         "喜剧片",
@@ -142,6 +146,7 @@
       "api": "https://bfzyapi.com/api.php/provide/vod/from/bfzym3u8/",
       "searchable": 1,
       "quickSearch": 1,
+      "filterable": 0,
       "categories": [
         "动作片",
         "喜剧片",
@@ -188,6 +193,7 @@
       "api": "https://cj.rycjapi.com/api.php/provide/vod/from/rym3u8/",
       "searchable": 1,
       "quickSearch": 1,
+      "filterable": 0,
       "categories": [
         "喜剧片",
         "动作片",
@@ -226,6 +232,7 @@
       "api": "https://caiji.dyttzyapi.com/api.php/provide/vod/from/dyttm3u8/",
       "searchable": 1,
       "quickSearch": 1,
+      "filterable": 0,
       "categories": [
         "动作片",
         "喜剧片",
@@ -263,6 +270,7 @@
       "api": "https://360zy.com/api.php/provide/vod/from/360m3u8/",
       "searchable": 1,
       "quickSearch": 1,
+      "filterable": 0,
       "categories": [
         "动作片",
         "喜剧片",
@@ -314,6 +322,7 @@
       "api": "https://www.huyaapi.com/api.php/provide/vod/from/hym3u8/",
       "searchable": 1,
       "quickSearch": 1,
+      "filterable": 0,
       "categories": [
         "动作片",
         "喜剧片",
@@ -346,6 +355,7 @@
       "api": "https://api.apibdzy.com/api.php/provide/vod/from/dbm3u8/",
       "searchable": 1,
       "quickSearch": 1,
+      "filterable": 0,
       "categories": [
         "动作片",
         "喜剧片",
@@ -391,6 +401,7 @@
       "api": "https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8/",
       "searchable": 1,
       "quickSearch": 1,
+      "filterable": 0,
       "categories": [
         "动作片",
         "喜剧片",
@@ -421,6 +432,7 @@
       "api": "https://jyzyapi.com/provide/vod/from/jinyingm3u8/",
       "searchable": 1,
       "quickSearch": 1,
+      "filterable": 0,
       "categories": [
         "动作片",
         "喜剧片",
@@ -453,6 +465,7 @@
       "api": "https://jszyapi.com/api.php/provide/vod/from/jsm3u8/",
       "searchable": 1,
       "quickSearch": 1,
+      "filterable": 0,
       "categories": [
         "动作片",
         "喜剧片",
@@ -492,6 +505,7 @@
       "api": "https://api.wujinapi.me/api.php/provide/vod/from/wjm3u8/",
       "searchable": 1,
       "quickSearch": 1,
+      "filterable": 0,
       "categories": [
         "动作片",
         "喜剧片",
@@ -543,6 +557,7 @@
       "api": "https://ikunzyapi.com/api.php/provide/vod/from/ikm3u8/",
       "searchable": 1,
       "quickSearch": 1,
+      "filterable": 0,
       "categories": [
         "动作片",
         "喜剧片",
@@ -587,6 +602,7 @@
       "api": "https://api.ukuapi88.com/api.php/provide/vod/from/ukm3u8/",
       "searchable": 1,
       "quickSearch": 1,
+      "filterable": 0,
       "categories": [
         "动作片",
         "喜剧片",
@@ -618,6 +634,7 @@
       "api": "https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/",
       "searchable": 1,
       "quickSearch": 1,
+      "filterable": 0,
       "categories": [
         "动作片",
         "喜剧片",
@@ -650,6 +667,7 @@
       "api": "https://hhzyapi.com/api.php/provide/vod/from/hhm3u8/",
       "searchable": 1,
       "quickSearch": 1,
+      "filterable": 0,
       "categories": [
         "动作片",
         "喜剧片",
@@ -689,6 +707,7 @@
       "api": "https://subocj.com/api.php/provide/vod/from/subm3u8/",
       "searchable": 1,
       "quickSearch": 1,
+      "filterable": 0,
       "categories": [
         "动作片",
         "喜剧片",
@@ -721,6 +740,7 @@
       "api": "https://caiji.dbzy5.com/api.php/provide/vod/from/dbm3u8/",
       "searchable": 1,
       "quickSearch": 1,
+      "filterable": 0,
       "categories": [
         "动作片",
         "喜剧片",
@@ -765,6 +785,7 @@
       "api": "https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/",
       "searchable": 1,
       "quickSearch": 1,
+      "filterable": 0,
       "categories": [
         "动作片",
         "喜剧片",
@@ -798,20 +819,13 @@
       ]
     },
     {
-      "key": "HLCGW",
-      "name": "🔞\u9ed1\u6599\u5403\u74dc",
-      "type": 3,
-      "api": "csp_HLCGW",
-      "searchable": 0,
-      "quickSearch": 0
-    },
-    {
       "key": "BLUEGAY",
       "name": "🔞\u5c0f\u84dd\u89c6\u9891",
       "type": 3,
       "api": "csp_BLUEGAY",
       "searchable": 0,
-      "quickSearch": 0
+      "quickSearch": 0,
+      "filterable": 0
     },
     {
       "key": "STGAY",
@@ -819,7 +833,8 @@
       "type": 3,
       "api": "csp_STGAY",
       "searchable": 0,
-      "quickSearch": 0
+      "quickSearch": 0,
+      "filterable": 0
     },
     {
       "key": "BAOLIAO",
@@ -827,7 +842,8 @@
       "type": 3,
       "api": "csp_BL51",
       "searchable": 0,
-      "quickSearch": 0
+      "quickSearch": 0,
+      "filterable": 0
     },
     {
       "key": "CHIGUA",
@@ -836,7 +852,16 @@
       "api": "csp_Cg51",
       "searchable": 0,
       "quickSearch": 0,
-      "filterable": 1
+      "filterable": 0
+    },
+    {
+      "key": "HLCGW",
+      "name": "🔞\u9ed1\u6599\u5403\u74dc",
+      "type": 3,
+      "api": "csp_HLCGW",
+      "searchable": 0,
+      "quickSearch": 0,
+      "filterable": 0
     },
     {
       "key": "森林",
@@ -845,6 +870,7 @@
       "api": "https://slapibf.com/api.php/provide/vod/",
       "searchable": 1,
       "quickSearch": 0,
+      "filterable": 0,
       "categories": [
         "\u7f51\u66dd\u95e8",
         "\u6210\u4eba\u52a8\u6f2b",
@@ -860,6 +886,7 @@
       "api": "https://api.ddapi.cc/api.php/provide/vod/",
       "searchable": 1,
       "quickSearch": 0,
+      "filterable": 0,
       "categories": [
         "\u9ed1\u6599\u4e8b\u4ef6",
         "\u5361\u901a\u52a8\u6f2b",
@@ -875,6 +902,7 @@
       "api": "https://apiyutu.com/api.php/provide/vod/",
       "searchable": 1,
       "quickSearch": 0,
+      "filterable": 0,
       "categories": [
         "\u7f51\u66dd\u7cfb\u5217",
         "\u5361\u901a\u52a8\u6f2b",
