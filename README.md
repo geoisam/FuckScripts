@@ -73,7 +73,7 @@
 
 <br>
 
-### \# 影视资源采集 / TVBox / EasyBox / MBox / 影视仓 / 影视
+### \# 影视资源采集 / TVBox / [EasyBox](https://easybox.pro/download.html) / [MBox](https://github.com/XiaoRanLiu3119/TVBoxOS-Mobile) / 影视仓 / [影视](https://github.com/FongMi/Release)
 
 - Mobile App
   - <https://www.lanzoux.com/b00v02s58b> `666`
