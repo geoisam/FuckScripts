@@ -38,7 +38,7 @@
 
 > **👇👇[Python脚本](./py) `./py` 👇👇**
 
-- 支持 [GitHub Actions](https://docs.github.com/actions)、云函数、青龙面板 等
+- 支持 [GitHub Actions](./py/README.md#--github-actions)、云函数、青龙面板 等
 
 | 名称 | 类型 | 说明 | 原生 | 加速 |
 |:---|:---:|:---:|:---:|:---:|
