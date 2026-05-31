@@ -581,38 +581,6 @@
       ]
     },
     {
-      "key": "U酷",
-      "name": "🥈U酷 | 特别糊",
-      "type": 1,
-      "api": "https://api.ukuapi88.com/api.php/provide/vod/from/ukm3u8/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 0,
-      "categories": [
-        "动作片",
-        "喜剧片",
-        "爱情片",
-        "科幻片",
-        "恐怖片",
-        "剧情片",
-        "战争片",
-        "奇幻片",
-        "犯罪片",
-        "动漫电影",
-        "记录片",
-        "国产剧",
-        "欧美剧",
-        "港澳剧",
-        "台湾剧",
-        "韩剧",
-        "日剧",
-        "泰剧",
-        "动漫",
-        "综艺",
-        "短剧"
-      ]
-    },
-    {
       "key": "iKun",
       "name": "🥉iKun",
       "type": 1,
@@ -655,6 +623,38 @@
         "日韩综艺",
         "欧美综艺",
         "爽文短剧"
+      ]
+    },
+    {
+      "key": "U酷",
+      "name": "🥉U酷",
+      "type": 1,
+      "api": "https://api.ukuapi88.com/api.php/provide/vod/from/ukm3u8/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "categories": [
+        "动作片",
+        "喜剧片",
+        "爱情片",
+        "科幻片",
+        "恐怖片",
+        "剧情片",
+        "战争片",
+        "奇幻片",
+        "犯罪片",
+        "动漫电影",
+        "记录片",
+        "国产剧",
+        "欧美剧",
+        "港澳剧",
+        "台湾剧",
+        "韩剧",
+        "日剧",
+        "泰剧",
+        "动漫",
+        "综艺",
+        "短剧"
       ]
     },
     {
@@ -764,52 +764,6 @@
       ]
     },
     {
-      "key": "茅台",
-      "name": "🥉茅台",
-      "type": 1,
-      "api": "https://caiji.maotaizy.cc/api.php/provide/vod/from/mtm3u8/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 0,
-      "categories": [
-        "动作片",
-        "喜剧片",
-        "爱情片",
-        "科幻片",
-        "恐怖片",
-        "剧情片",
-        "战争片",
-        "惊悚片",
-        "预告片",
-        "动漫电影",
-        "纪录片",
-        "国产剧",
-        "欧美剧",
-        "香港剧",
-        "台湾剧",
-        "韩剧",
-        "日本剧",
-        "泰国剧",
-        "海外剧",
-        "国产动漫",
-        "日本动漫",
-        "欧美动漫",
-        "海外动漫",
-        "大陆综艺",
-        "港台综艺",
-        "日韩综艺",
-        "欧美综艺",
-        "短剧大全",
-        "重生民国",
-        "穿越现代",
-        "反转爽剧",
-        "言情总裁",
-        "现代都市",
-        "古装仙侠",
-        "悬疑烧脑"
-      ]
-    },
-    {
       "key": "豆瓣",
       "name": "🥉豆瓣",
       "type": 1,
@@ -852,52 +806,6 @@
         "现代都市",
         "古装仙侠",
         "悬疑烧脑"
-      ]
-    },
-    {
-      "key": "猫眼",
-      "name": "🥉猫眼",
-      "type": 1,
-      "api": "https://api.maoyanapi.top/api.php/provide/vod/from/mym3u8/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 0,
-      "categories": [
-        "动作片",
-        "喜剧片",
-        "爱情片",
-        "科幻片",
-        "恐怖片",
-        "剧情片",
-        "战争片",
-        "惊悚片",
-        "家庭篇",
-        "古装片",
-        "历史片",
-        "悬疑片",
-        "犯罪片",
-        "灾难片",
-        "奇幻片",
-        "西部片",
-        "短片",
-        "动画片",
-        "纪录片",
-        "国产剧",
-        "欧美剧",
-        "香港剧",
-        "台湾剧",
-        "韩国剧",
-        "日本剧",
-        "海外剧",
-        "泰国剧",
-        "国产动漫",
-        "日韩动漫",
-        "欧美动漫",
-        "里番动漫",
-        "大陆综艺",
-        "港台综艺",
-        "日韩综艺",
-        "欧美综艺"
       ]
     },
     {
@@ -1118,18 +1026,6 @@
       ],
       "regex": [
         "#EXT-X-DISCONTINUITY\r?\n(#EXTINF:4\\.0*,\r?\n.*\r?\n){6}(.*\r?\n){2}#EXT-X-DISCONTINUITY\r?\n"
-      ]
-    },
-    {
-      "name": "猫眼",
-      "hosts": [
-        "maoyan"
-      ],
-      "regex": [
-        "#EXT-X-DISCONTINUITY\r?\n#EXT-X-KEY:METHOD=NONE\r?\n(#EXTINF:[\\d.]+,\r?\n.*\r?\n){3,9}#EXT-X-DISCONTINUITY\r?\n#EXT-X-KEY:.*\r?\n",
-        "#EXT-X-DISCONTINUITY\r?\n#EXT-X-KEY:METHOD=NONE\r?\n(#EXTINF:[\\d.]+,\r?\n.*\r?\n){3,11}(?=#EXT-X-ENDLIST)",
-        "#EXTINF:3\\.32,\r?\n.*\r?\n(#EXTINF:1\\.68,\r?\n.*\r?\n){2}#EXTINF:1\\.64,\r?\n.*\r?\n#EXTINF:(1\\.68|1\\.12),\r?\n.*\r?\n",
-        "#EXTINF:2\\.8,\r?\n.*\r?\n#EXTINF:1\\.96,\r?\n.*\r?\n#EXTINF:1\\.16,\r?\n.*\r?\n#EXTINF:2\\.56,\r?\n.*\r?\n#EXTINF:1\\.68,\r?\n.*\r?\n#EXTINF:2\\.72,\r?\n.*\r?\n#EXTINF:0\\.92,\r?\n.*\r?\n#EXTINF:3\\.36,\r?\n.*\r?\n#EXTINF:1\\.64,\r?\n.*\r?\n#EXTINF:1\\.08,\r?\n.*\r?\n"
       ]
     },
     {
