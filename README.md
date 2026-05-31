@@ -106,6 +106,7 @@
 | **豆瓣** | <https://caiji.dbzy5.com/api.php/provide/vod/from/dbm3u8/> | `播放卡` `贴片广告` `跑马灯广告` |
 | **猫眼** | <https://api.maoyanapi.top/api.php/provide/vod/from/mym3u8/> | `采集限速` `清晰度低` `贴片广告` `插播广告` |
 | **淘片** | <https://taopianapi.com/cjapi/mc10/vod/json/m3u8.html> | 禁止直接搜索 |
+| **天涯** | <https://tyyszyapi.com/api.php/provide/vod/from/tym3u8/> | 禁止直接搜索 |
 | **牛牛** | <https://api.niuniuzy.me/api.php/provide/vod/from/nnm3u8/> | 禁止直接搜索 |
 | **鸭鸭** | <https://cj.yayazy.net/api.php/provide/vod/from/yym3u8/> | 禁止直接搜索 |
 | **魔都** | <https://moduzy2.com/api.php/provide/vod/from/mdm3u8/> | 禁止直接搜索 |
@@ -117,6 +118,7 @@
 | **索尼** | <https://suoniapi.com/api.php/provide/vod/from/snm3u8/> | 禁止直接搜索 |
 | **无水印** | <https://api.wsyzy.net/api.php/provide/vod/from/wsym3u8/> | 禁止直接搜索 |
 | **奇异果** | <https://iqiyizyapi.com/api.php/provide/vod/from/snm3u8/> | 禁止直接搜索 |
+| **旺旺短剧** | <https://api.wwzy.tv/api.php/provide/vod/?ac=list> | `贴片广告` |
 | **森林** | <https://slapibf.com/api.php/provide/vod/?t=61> | 🔞🔞🔞 |
 | **豆豆** | <https://api.douapi.cc/api.php/provide/vod/?t=80> | 🔞🔞🔞 |
 | **滴滴** | <https://api.ddapi.cc/api.php/provide/vod/?t=47> | 🔞🔞🔞 |
