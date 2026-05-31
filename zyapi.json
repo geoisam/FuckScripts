@@ -60,7 +60,37 @@
       "api": "https://api.yyzy-tv.vip/inc/api_mac10.php",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 0,
+      "categories": [
+        "动作片",
+        "喜剧片",
+        "爱情片",
+        "科幻片",
+        "恐怖片",
+        "剧情片",
+        "战争片",
+        "动画片",
+        "记录片",
+        "国产剧",
+        "欧美剧",
+        "香港剧",
+        "台湾剧",
+        "韩国剧",
+        "日本剧",
+        "泰国剧",
+        "海外剧",
+        "国产动漫",
+        "日韩动漫",
+        "欧美动漫",
+        "港台动漫",
+        "海外动漫",
+        "大陆综艺",
+        "港台综艺",
+        "日韩综艺",
+        "欧美综艺",
+        "短剧大全",
+        "漫剧"
+      ]
     },
     {
       "key": "非凡",
@@ -69,7 +99,35 @@
       "api": "https://api.ffzyapi.com/api.php/provide/vod/from/ffm3u8/",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 0,
+      "categories": [
+        "动作片",
+        "喜剧片",
+        "爱情片",
+        "科幻片",
+        "恐怖片",
+        "剧情片",
+        "战争片",
+        "记录片",
+        "国产剧",
+        "欧美剧",
+        "香港剧",
+        "台湾剧",
+        "韩国剧",
+        "日本剧",
+        "泰国剧",
+        "海外剧",
+        "国产动漫",
+        "日韩动漫",
+        "欧美动漫",
+        "港台动漫",
+        "海外动漫",
+        "大陆综艺",
+        "港台综艺",
+        "日韩综艺",
+        "欧美综艺",
+        "短剧"
+      ]
     },
     {
       "key": "暴风",
@@ -78,7 +136,45 @@
       "api": "https://bfzyapi.com/api.php/provide/vod/from/bfzym3u8/",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 0,
+      "categories": [
+        "动作片",
+        "喜剧片",
+        "恐怖片",
+        "科幻片",
+        "爱情片",
+        "剧情片",
+        "战争片",
+        "预告片",
+        "动画片",
+        "纪录片",
+        "国产剧",
+        "欧美剧",
+        "香港剧",
+        "台湾剧",
+        "韩国剧",
+        "日本剧",
+        "泰国剧",
+        "海外剧",
+        "国产动漫",
+        "日韩动漫",
+        "欧美动漫",
+        "港台动漫",
+        "海外动漫",
+        "大陆综艺",
+        "港台综艺",
+        "日韩综艺",
+        "欧美综艺",
+        "短剧大全",
+        "重生民国",
+        "穿越年代",
+        "现代言情",
+        "反转爽文",
+        "女恋总裁",
+        "闪婚离婚",
+        "都市脑洞",
+        "古装仙侠"
+      ]
     },
     {
       "key": "天堂",
@@ -87,7 +183,36 @@
       "api": "https://caiji.dyttzyapi.com/api.php/provide/vod/from/dyttm3u8/",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 0,
+      "categories": [
+        "动作片",
+        "喜剧片",
+        "爱情片",
+        "科幻片",
+        "恐怖片",
+        "剧情片",
+        "战争片",
+        "动画片",
+        "记录片",
+        "国产剧",
+        "欧美剧",
+        "香港剧",
+        "台湾剧",
+        "韩国剧",
+        "日本剧",
+        "泰国剧",
+        "海外剧",
+        "国产动漫",
+        "日韩动漫",
+        "欧美动漫",
+        "港台动漫",
+        "海外动漫",
+        "大陆综艺",
+        "港台综艺",
+        "日韩综艺",
+        "欧美综艺",
+        "短剧"
+      ]
     },
     {
       "key": "如意",
@@ -96,7 +221,37 @@
       "api": "https://cj.rycjapi.com/api.php/provide/vod/from/rym3u8/",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 0,
+      "categories": [
+        "喜剧片",
+        "动作片",
+        "爱情片",
+        "科幻片",
+        "恐怖片",
+        "剧情片",
+        "战争片",
+        "预告片",
+        "动画电影",
+        "记录片",
+        "国产剧",
+        "欧美剧",
+        "香港剧",
+        "台湾剧",
+        "韩国剧",
+        "日本剧",
+        "泰国剧",
+        "海外剧",
+        "国产动漫",
+        "日韩动漫",
+        "欧美动漫",
+        "港台动漫",
+        "海外动漫",
+        "大陆综艺",
+        "港台综艺",
+        "日韩综艺",
+        "欧美综艺",
+        "短剧"
+      ]
     },
     {
       "key": "量子",
@@ -105,7 +260,38 @@
       "api": "https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 0,
+      "categories": [
+        "动作片",
+        "喜剧片",
+        "爱情片",
+        "科幻片",
+        "恐怖片",
+        "剧情片",
+        "战争片",
+        "预告片",
+        "动画片",
+        "记录片",
+        "国产剧",
+        "欧美剧",
+        "香港剧",
+        "台湾剧",
+        "韩国剧",
+        "日本剧",
+        "泰国剧",
+        "海外剧",
+        "国产动漫",
+        "日韩动漫",
+        "欧美动漫",
+        "港台动漫",
+        "海外动漫",
+        "大陆综艺",
+        "港台综艺",
+        "日韩综艺",
+        "欧美综艺",
+        "短剧",
+        "AI漫剧"
+      ]
     },
     {
       "key": "360",
@@ -114,7 +300,50 @@
       "api": "https://360zy.com/api.php/provide/vod/from/360m3u8/",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 0,
+      "categories": [
+        "动作片",
+        "喜剧片",
+        "爱情片",
+        "科幻片",
+        "恐怖片",
+        "剧情片",
+        "战争片",
+        "惊悚片",
+        "家庭篇",
+        "古装片",
+        "历史片",
+        "悬疑片",
+        "犯罪片",
+        "灾难片",
+        "西部片",
+        "短片",
+        "动画片",
+        "纪录片",
+        "国产剧",
+        "欧美剧",
+        "香港剧",
+        "台湾剧",
+        "韩国剧",
+        "日本剧",
+        "泰国剧",
+        "海外剧",
+        "国产动漫",
+        "日韩动漫",
+        "欧美动漫",
+        "大陆综艺",
+        "港台综艺",
+        "日韩综艺",
+        "欧美综艺",
+        "爽文短剧",
+        "现代都市",
+        "脑洞悬疑",
+        "年代穿越",
+        "古装仙侠",
+        "反转爽剧",
+        "女频恋爱",
+        "成长逆袭"
+      ]
     },
     {
       "key": "虎牙",
@@ -123,7 +352,31 @@
       "api": "https://www.huyaapi.com/api.php/provide/vod/from/hym3u8/",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 0,
+      "categories": [
+        "动作片",
+        "喜剧片",
+        "爱情片",
+        "科幻片",
+        "恐怖片",
+        "剧情片",
+        "战争片",
+        "预告片",
+        "动画片",
+        "记录片",
+        "内地剧",
+        "欧美剧",
+        "香港剧",
+        "台湾剧",
+        "韩剧",
+        "日剧",
+        "马泰剧",
+        "中国动漫",
+        "日本动漫",
+        "欧美动漫",
+        "综艺",
+        "短剧"
+      ]
     },
     {
       "key": "百度",
@@ -132,7 +385,44 @@
       "api": "https://api.apibdzy.com/api.php/provide/vod/from/dbm3u8/",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 0,
+      "categories": [
+        "动作片",
+        "喜剧片",
+        "爱情片",
+        "科幻片",
+        "恐怖片",
+        "剧情片",
+        "战争片",
+        "预告片",
+        "动画电影",
+        "纪录片",
+        "大陆剧",
+        "欧美剧",
+        "港澳剧",
+        "台湾剧",
+        "韩剧",
+        "日剧",
+        "泰剧",
+        "其他剧",
+        "国产动漫",
+        "日韩动漫",
+        "欧美动漫",
+        "港台动漫",
+        "海外动漫",
+        "有声动漫",
+        "大陆综艺",
+        "港台综艺",
+        "日韩综艺",
+        "欧美综艺",
+        "爽文短剧",
+        "女频恋爱",
+        "反转爽剧",
+        "古装仙侠",
+        "年代穿越",
+        "脑洞悬疑",
+        "现代都市"
+      ]
     },
     {
       "key": "光速",
@@ -141,7 +431,29 @@
       "api": "https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8/",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 0,
+      "categories": [
+        "动作片",
+        "喜剧片",
+        "爱情片",
+        "科幻片",
+        "恐怖片",
+        "剧情片",
+        "战争片",
+        "预告片",
+        "动漫电影",
+        "记录片",
+        "大陆剧",
+        "欧美剧",
+        "港澳剧",
+        "韩剧",
+        "日剧",
+        "台湾剧",
+        "泰剧",
+        "动漫",
+        "综艺",
+        "短剧"
+      ]
     },
     {
       "key": "金鹰",
@@ -150,7 +462,31 @@
       "api": "https://jyzyapi.com/provide/vod/from/jinyingm3u8/",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 0,
+      "categories": [
+        "动作片",
+        "喜剧片",
+        "爱情片",
+        "科幻片",
+        "恐怖片",
+        "剧情片",
+        "战争片",
+        "预告片",
+        "动画片",
+        "记录片",
+        "内地剧",
+        "欧美剧",
+        "香港剧",
+        "台湾剧",
+        "韩剧",
+        "日剧",
+        "马泰剧",
+        "中国动漫",
+        "日本动漫",
+        "欧美动漫",
+        "综艺",
+        "短剧"
+      ]
     },
     {
       "key": "极速",
@@ -159,7 +495,38 @@
       "api": "https://jszyapi.com/api.php/provide/vod/from/jsm3u8/",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 0,
+      "categories": [
+        "动作片",
+        "喜剧片",
+        "爱情片",
+        "科幻片",
+        "恐怖片",
+        "剧情片",
+        "战争片",
+        "灾难片",
+        "悬疑片",
+        "犯罪片",
+        "奇幻片",
+        "预告片",
+        "动画片",
+        "记录片",
+        "内地剧",
+        "欧美剧",
+        "香港剧",
+        "台湾剧",
+        "韩剧",
+        "日剧",
+        "马泰剧",
+        "中国动漫",
+        "日本动漫",
+        "欧美动漫",
+        "大陆综艺",
+        "港台综艺",
+        "日韩综艺",
+        "欧美综艺",
+        "短剧"
+      ]
     },
     {
       "key": "无尽",
@@ -168,7 +535,50 @@
       "api": "https://api.wujinapi.me/api.php/provide/vod/from/wjm3u8/",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 0,
+      "categories": [
+        "动作片",
+        "喜剧片",
+        "爱情片",
+        "科幻片",
+        "恐怖片",
+        "剧情片",
+        "战争片",
+        "悬疑片",
+        "犯罪片",
+        "奇幻片",
+        "预告片",
+        "动画片",
+        "纪录片",
+        "国产剧",
+        "美国剧",
+        "香港剧",
+        "台湾剧",
+        "韩国剧",
+        "日本剧",
+        "泰剧",
+        "海外剧",
+        "国产动漫",
+        "日韩动漫",
+        "欧美动漫",
+        "港台动漫",
+        "海外动漫",
+        "有声动漫",
+        "大陆综艺",
+        "港台综艺",
+        "日韩综艺",
+        "欧美综艺",
+        "女频恋爱",
+        "反转爽剧",
+        "脑洞悬疑",
+        "年代穿越",
+        "古装仙侠",
+        "现代都市",
+        "Netflix电影",
+        "Netflix自制剧",
+        "漫剧",
+        "儿童儿歌"
+      ]
     },
     {
       "key": "U酷",
@@ -177,7 +587,30 @@
       "api": "https://api.ukuapi88.com/api.php/provide/vod/from/ukm3u8/",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 0,
+      "categories": [
+        "动作片",
+        "喜剧片",
+        "爱情片",
+        "科幻片",
+        "恐怖片",
+        "剧情片",
+        "战争片",
+        "奇幻片",
+        "犯罪片",
+        "动漫电影",
+        "记录片",
+        "国产剧",
+        "欧美剧",
+        "港澳剧",
+        "台湾剧",
+        "韩剧",
+        "日剧",
+        "泰剧",
+        "动漫",
+        "综艺",
+        "短剧"
+      ]
     },
     {
       "key": "iKun",
@@ -186,7 +619,43 @@
       "api": "https://ikunzyapi.com/api.php/provide/vod/from/ikm3u8/",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 0,
+      "categories": [
+        "动作片",
+        "喜剧片",
+        "爱情片",
+        "科幻片",
+        "恐怖片",
+        "剧情片",
+        "战争片",
+        "惊悚片",
+        "家庭片",
+        "古装片",
+        "历史片",
+        "悬疑片",
+        "犯罪片",
+        "灾难片",
+        "短片",
+        "动画片",
+        "记录片",
+        "国产剧",
+        "欧美剧",
+        "香港剧",
+        "台湾剧",
+        "韩国剧",
+        "日本剧",
+        "泰国剧",
+        "海外剧",
+        "国产动漫",
+        "日本动漫",
+        "欧美动漫",
+        "里番动漫",
+        "大陆综艺",
+        "港台综艺",
+        "日韩综艺",
+        "欧美综艺",
+        "爽文短剧"
+      ]
     },
     {
       "key": "豪华",
@@ -195,7 +664,38 @@
       "api": "https://hhzyapi.com/api.php/provide/vod/from/hhm3u8/",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 0,
+      "categories": [
+        "动作片",
+        "喜剧片",
+        "爱情片",
+        "科幻片",
+        "恐怖片",
+        "剧情片",
+        "战争片",
+        "灾难片",
+        "悬疑片",
+        "犯罪片",
+        "奇幻片",
+        "预告片",
+        "动画片",
+        "记录片",
+        "内地剧",
+        "欧美剧",
+        "香港剧",
+        "韩剧",
+        "台湾剧",
+        "日剧",
+        "马泰剧",
+        "中国动漫",
+        "日本动漫",
+        "欧美动漫",
+        "大陆综艺",
+        "港台综艺",
+        "日韩综艺",
+        "欧美综艺",
+        "短剧"
+      ]
     },
     {
       "key": "红牛",
@@ -204,7 +704,31 @@
       "api": "https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 0,
+      "categories": [
+        "动作片",
+        "喜剧片",
+        "爱情片",
+        "科幻片",
+        "恐怖片",
+        "剧情片",
+        "战争片",
+        "预告片",
+        "动漫电影",
+        "纪录片",
+        "国产剧",
+        "欧美剧",
+        "港澳剧",
+        "台湾剧",
+        "韩剧",
+        "日剧",
+        "泰剧",
+        "中国动漫",
+        "日本动漫",
+        "欧美动漫",
+        "综艺",
+        "短剧"
+      ]
     },
     {
       "key": "速播",
@@ -213,7 +737,31 @@
       "api": "https://subocj.com/api.php/provide/vod/from/subm3u8/",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 0,
+      "categories": [
+        "动作片",
+        "喜剧片",
+        "爱情片",
+        "科幻片",
+        "恐怖片",
+        "剧情片",
+        "战争片",
+        "预告片",
+        "动漫电影",
+        "纪录片",
+        "大陆剧",
+        "美剧",
+        "港澳剧",
+        "台湾剧",
+        "韩剧",
+        "日剧",
+        "泰剧",
+        "中国动漫",
+        "日本动漫",
+        "欧美动漫",
+        "综艺",
+        "短剧"
+      ]
     },
     {
       "key": "茅台",
@@ -222,7 +770,44 @@
       "api": "https://caiji.maotaizy.cc/api.php/provide/vod/from/mtm3u8/",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 0,
+      "categories": [
+        "动作片",
+        "喜剧片",
+        "爱情片",
+        "科幻片",
+        "恐怖片",
+        "剧情片",
+        "战争片",
+        "惊悚片",
+        "预告片",
+        "动漫电影",
+        "纪录片",
+        "国产剧",
+        "欧美剧",
+        "香港剧",
+        "台湾剧",
+        "韩剧",
+        "日本剧",
+        "泰国剧",
+        "海外剧",
+        "国产动漫",
+        "日本动漫",
+        "欧美动漫",
+        "海外动漫",
+        "大陆综艺",
+        "港台综艺",
+        "日韩综艺",
+        "欧美综艺",
+        "短剧大全",
+        "重生民国",
+        "穿越现代",
+        "反转爽剧",
+        "言情总裁",
+        "现代都市",
+        "古装仙侠",
+        "悬疑烧脑"
+      ]
     },
     {
       "key": "豆瓣",
@@ -231,7 +816,43 @@
       "api": "https://caiji.dbzy5.com/api.php/provide/vod/from/dbm3u8/",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 0,
+      "categories": [
+        "动作片",
+        "喜剧片",
+        "爱情片",
+        "科幻片",
+        "恐怖片",
+        "剧情片",
+        "战争片",
+        "惊悚片",
+        "动漫电影",
+        "纪录片",
+        "国产剧",
+        "欧美剧",
+        "香港剧",
+        "台湾剧",
+        "韩剧",
+        "日本剧",
+        "泰国剧",
+        "海外剧",
+        "国产动漫",
+        "日本动漫",
+        "欧美动漫",
+        "海外动漫",
+        "大陆综艺",
+        "港台综艺",
+        "日韩综艺",
+        "欧美综艺",
+        "短剧大全",
+        "重生民国",
+        "穿越现代",
+        "反转爽剧",
+        "言情总裁",
+        "现代都市",
+        "古装仙侠",
+        "悬疑烧脑"
+      ]
     },
     {
       "key": "猫眼",
@@ -240,117 +861,300 @@
       "api": "https://api.maoyanapi.top/api.php/provide/vod/from/mym3u8/",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 0,
+      "categories": [
+        "动作片",
+        "喜剧片",
+        "爱情片",
+        "科幻片",
+        "恐怖片",
+        "剧情片",
+        "战争片",
+        "惊悚片",
+        "家庭篇",
+        "古装片",
+        "历史片",
+        "悬疑片",
+        "犯罪片",
+        "灾难片",
+        "奇幻片",
+        "西部片",
+        "短片",
+        "动画片",
+        "纪录片",
+        "国产剧",
+        "欧美剧",
+        "香港剧",
+        "台湾剧",
+        "韩国剧",
+        "日本剧",
+        "海外剧",
+        "泰国剧",
+        "国产动漫",
+        "日韩动漫",
+        "欧美动漫",
+        "里番动漫",
+        "大陆综艺",
+        "港台综艺",
+        "日韩综艺",
+        "欧美综艺",
+        "爽文短剧",
+        "短剧现代都市",
+        "短剧脑洞悬疑",
+        "短剧年代穿越",
+        "短剧古装仙侠",
+        "短剧反转爽剧",
+        "短剧女频恋爱",
+        "短剧成长逆袭"
+      ]
     },
     {
       "key": "森林",
       "name": "🔞森林",
       "type": 1,
-      "api": "https://slapibf.com/api.php/provide/vod/?t=61",
+      "api": "https://slapibf.com/api.php/provide/vod/",
       "searchable": 1,
       "quickSearch": 0,
-      "filterable": 1
+      "filterable": 0,
+      "categories": [
+        "网曝门",
+        "成人动漫",
+        "男同性恋",
+        "女同性恋",
+        "伦理三级"
+      ]
     },
     {
       "key": "豆豆",
       "name": "🔞豆豆",
       "type": 1,
-      "api": "https://api.douapi.cc/api.php/provide/vod/?t=80",
+      "api": "https://api.douapi.cc/api.php/provide/vod/",
       "searchable": 1,
       "quickSearch": 0,
-      "filterable": 1
+      "filterable": 0,
+      "categories": [
+        "网曝黑料",
+        "成人动漫",
+        "男同性恋",
+        "女同性恋",
+        "三级伦理"
+      ]
     },
     {
       "key": "滴滴",
       "name": "🔞滴滴",
       "type": 1,
-      "api": "https://api.ddapi.cc/api.php/provide/vod/?t=47",
+      "api": "https://api.ddapi.cc/api.php/provide/vod/",
       "searchable": 1,
       "quickSearch": 0,
-      "filterable": 1
+      "filterable": 0,
+      "categories": [
+        "黑料事件",
+        "卡通动漫",
+        "男同系列",
+        "女同系列",
+        "三级伦理"
+      ]
     },
     {
       "key": "玉兔",
       "name": "🔞玉兔",
       "type": 1,
-      "api": "https://apiyutu.com/api.php/provide/vod/?t=66",
+      "api": "https://apiyutu.com/api.php/provide/vod/",
       "searchable": 1,
       "quickSearch": 0,
-      "filterable": 1
+      "filterable": 0,
+      "categories": [
+        "网曝系列",
+        "卡通动漫",
+        "同性恋",
+        "明星换脸",
+        "三级伦理"
+      ]
     },
     {
       "key": "老色B",
       "name": "🔞老色B",
       "type": 1,
-      "api": "https://apilsbzy1.com/api.php/provide/vod/?t=66",
+      "api": "https://apilsbzy1.com/api.php/provide/vod/",
       "searchable": 1,
       "quickSearch": 0,
-      "filterable": 1
+      "filterable": 0,
+      "categories": [
+        "网曝系列",
+        "卡通动漫",
+        "同性恋",
+        "明星换脸",
+        "三级伦理"
+      ]
     }
   ],
   "doh": [
     {
       "name": "DNSPod",
       "url": "https://doh.pub/dns-query",
-      "ips": ["119.29.29.29", "119.28.28.28", "2402:4e00::", "2402:4e00:1::"]
+      "ips": [
+        "119.29.29.29",
+        "119.28.28.28",
+        "2402:4e00::",
+        "2402:4e00:1::"
+      ]
     },
     {
       "name": "Alidns",
       "url": "https://dns.alidns.com/dns-query",
-      "ips": ["223.5.5.5", "223.6.6.6", "2400:3200::1", "2400:3200:baba::1"]
+      "ips": [
+        "223.5.5.5",
+        "223.6.6.6",
+        "2400:3200::1",
+        "2400:3200:baba::1"
+      ]
     },
     {
       "name": "360DNS (IPv4-only)",
       "url": "https://doh.360.cn/dns-query",
-      "ips": ["101.226.4.6", "123.125.81.6", "218.30.118.6", "140.207.198.6"]
+      "ips": [
+        "101.226.4.6",
+        "123.125.81.6",
+        "218.30.118.6",
+        "140.207.198.6"
+      ]
     },
     {
       "name": "Quad 101",
       "url": "https://dns.twnic.tw/dns-query",
-      "ips": ["101.101.101.101", "101.102.103.104", "2001:de4::101", "2001:de4::102"]
+      "ips": [
+        "101.101.101.101",
+        "101.102.103.104",
+        "2001:de4::101",
+        "2001:de4::102"
+      ]
     },
     {
       "name": "Quad9",
       "url": "https://dns.quad9.net/dns-query",
-      "ips": ["9.9.9.9", "149.112.112.112", "2620:fe::fe", "2620:fe::9"]
+      "ips": [
+        "9.9.9.9",
+        "149.112.112.112",
+        "2620:fe::fe",
+        "2620:fe::9"
+      ]
     },
     {
       "name": "Yandex",
       "url": "https://common.dot.dns.yandex.net",
-      "ips": ["77.88.8.8", "77.88.8.1", "2a02:6b8::feed:0ff", "2a02:6b8:0:1::feed:0ff"]
+      "ips": [
+        "77.88.8.8",
+        "77.88.8.1",
+        "2a02:6b8::feed:0ff",
+        "2a02:6b8:0:1::feed:0ff"
+      ]
     },
     {
       "name": "Cloudflare",
       "url": "https://cloudflare-dns.com/dns-query",
-      "ips": ["1.1.1.1", "1.0.0.1", "2606:4700:4700::1111", "2606:4700:4700::1001"]
+      "ips": [
+        "1.1.1.1",
+        "1.0.0.1",
+        "2606:4700:4700::1111",
+        "2606:4700:4700::1001"
+      ]
     },
     {
       "name": "Google",
       "url": "https://dns.google/dns-query",
-      "ips": ["8.8.8.8", "8.8.4.4", "2001:4860:4860::8888", "2001:4860:4860::8844"]
+      "ips": [
+        "8.8.8.8",
+        "8.8.4.4",
+        "2001:4860:4860::8888",
+        "2001:4860:4860::8844"
+      ]
     }
   ],
   "rules": [
     {
       "name": "如意",
-      "hosts": ["ryplay", "ryiplay", "vip.ry", "cdn.ry"],
-      "regex": ["#EXT-X-DISCONTINUITY\r?\n(#EXTINF:4\\.0*,\r?\n.*\r?\n){5}#EXTINF:0.560*,\r?\n.*\r?\n#EXT-X-DISCONTINUITY\r?\n", "#EXT-X-DISCONTINUITY\r?\n(#EXTINF:4\\.0*,\r?\n.*\r?\n)(#EXTINF:5\\.480*,\r?\n.*\r?\n)(#EXTINF:4\\.0*,\r?\n.*\r?\n)(.*\r?\n){4,6}#EXT-X-DISCONTINUITY\r?\n"]
+      "hosts": [
+        "ryplay",
+        "ryiplay",
+        "ruyiplay",
+        "cdn.ry",
+        "vip.ry"
+      ],
+      "regex": [
+        "#EXT-X-DISCONTINUITY\r?\n(#EXTINF:4\\.0*,\r?\n.*\r?\n){5}#EXTINF:(0\\.560*|2\\.0*),\r?\n.*\r?\n#EXT-X-DISCONTINUITY\r?\n",
+        "#EXT-X-DISCONTINUITY\r?\n(#EXTINF:4\\.0*,\r?\n.*\r?\n)(#EXTINF:5\\.480*,\r?\n.*\r?\n)(#EXTINF:4\\.0*,\r?\n.*\r?\n)(.*\r?\n){4,6}#EXT-X-DISCONTINUITY\r?\n"
+      ]
     },
     {
       "name": "量子",
-      "hosts": ["lzcdn", "cdnlz", "lz-cdn", "vip.lz"],
-      "regex": ["#EXT-X-DISCONTINUITY\r?\n(#EXTINF:4\\.0*,\r?\n.*\r?\n){6}#EXTINF:[\\d.]+,\r?\n.*\r?\n#EXT-X-DISCONTINUITY\r?\n"]
+      "hosts": [
+        "lzcdn",
+        "cdnlz",
+        "lz-cdn",
+        "lfthirtytwo",
+        "vip.lz"
+      ],
+      "regex": [
+        "#EXT-X-DISCONTINUITY\r?\n(#EXTINF:4\\.0*,\r?\n.*\r?\n){6}(.*\r?\n){2}#EXT-X-DISCONTINUITY\r?\n"
+      ]
     },
     {
       "name": "暴风",
-      "hosts": ["bfzy", "baofeng", "bvvvvvv", "rrcdnbf", "bbffcdn", "bfllvip", "bfengbf", "fengbao"],
-      "regex": ["#EXT-X-DISCONTINUITY\r?\n(#EXTINF.*\r?\n.*adjump.*\r?\n)+#EXT-X-DISCONTINUITY\r?\n"]
+      "hosts": [
+        "bfzy",
+        "baofeng",
+        "bvvvvvv",
+        "rrcdnbf",
+        "bbffcdn",
+        "bfllvip",
+        "bfengbf",
+        "fengbao"
+      ],
+      "regex": [
+        "#EXT-X-DISCONTINUITY\r?\n(#EXTINF.*\r?\n.*adjump.*\r?\n)+#EXT-X-DISCONTINUITY\r?\n"
+      ]
     },
     {
       "name": "非凡&天堂&优质&360&iKun&猫眼&森林&豆豆&滴滴&玉兔&老色B&暴风",
-      "hosts": ["ffzy", "feifei", "dytt", "phimgood", "yzzy", "playback", "maowushi", "huicheng", "ikun", "kkzy", "maoyan", "senlin", "sl", "didi", "lsb", "bfzy", "baofeng", "bvvvvvv", "rrcdnbf", "bbffcdn", "bfllvip", "bfengbf", "fengbao"],
-      "regex": ["#EXT-X-DISCONTINUITY\r?\n(#EXT-X-KEY:.*\r?\n)?(#EXTINF:[\\d.]+,\r?\n.*\r?\n){3,7}#EXT-X-DISCONTINUITY\r?\n(#EXT-X-KEY:.*\r?\n)?", "#EXT-X-KEY:METHOD=NONE\r?\n(#EXTINF:[\\d.]+,\r?\n.*\r?\n){3,9}#EXT-X-DISCONTINUITY\r?\n", "#EXT-X-DISCONTINUITY\r?\n(#EXT-X-KEY:METHOD=NONE\r?\n)?(#EXTINF:[\\d.]+,\r?\n.*\r?\n){3,9}(?=#EXT-X-ENDLIST)"]
+      "hosts": [
+        "ffzy",
+        "feifei",
+        "dytt",
+        "phimgood",
+        "yzzy",
+        "playback",
+        "maowushi",
+        "huicheng",
+        "ikun",
+        "kkzy",
+        "maoyan",
+        "senlin",
+        "sl",
+        "didi",
+        "lsb",
+        "bfzy",
+        "baofeng",
+        "bvvvvvv",
+        "rrcdnbf",
+        "bbffcdn",
+        "bfllvip",
+        "bfengbf",
+        "fengbao"
+      ],
+      "regex": [
+        "#EXT-X-DISCONTINUITY\r?\n(#EXT-X-KEY:.*\r?\n)?(#EXTINF:[\\d.]+,\r?\n.*\r?\n){3,7}#EXT-X-DISCONTINUITY\r?\n(#EXT-X-KEY:.*\r?\n)?",
+        "#EXT-X-KEY:METHOD=NONE\r?\n(#EXTINF:[\\d.]+,\r?\n.*\r?\n){3,9}#EXT-X-DISCONTINUITY\r?\n",
+        "#EXT-X-DISCONTINUITY\r?\n(#EXT-X-KEY:METHOD=NONE\r?\n)?(#EXTINF:[\\d.]+,\r?\n.*\r?\n){3,9}(?=#EXT-X-ENDLIST)"
+      ]
     }
   ],
-  "ads": ["googletagmanager.com", "google-analytics.com", "hm.baidu.com", "static-mozai.4gtv.tv", "cnzz.com"]
+  "ads": [
+    "mimg.0c1q0l.cn",
+    "googletagmanager.com",
+    "google-analytics.com",
+    "hm.baidu.com",
+    "static-mozai.4gtv.tv",
+    "cnzz.com"
+  ]
 }
