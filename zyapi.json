@@ -1068,16 +1068,17 @@
       "name": "暴风",
       "hosts": [
         "bfzy",
-        "baofeng",
+        "fengbao",
         "bvvvvvv",
         "rrcdnbf",
         "bbffcdn",
         "bfllvip",
         "bfengbf",
-        "fengbao"
+        "baofeng"
       ],
       "regex": [
-        "#EXT-X-DISCONTINUITY\r?\n(#EXTINF.*\r?\n.*adjump.*\r?\n)+#EXT-X-DISCONTINUITY\r?\n"
+        "#EXT-X-DISCONTINUITY\r?\n",
+        "#EXTINF.*\r?\n.*adjump.*\r?\n"
       ]
     },
     {
@@ -1125,12 +1126,14 @@
         "maoyan"
       ],
       "regex": [
+        "#EXT-X-DISCONTINUITY\r?\n#EXT-X-KEY:METHOD=NONE\r?\n(#EXTINF:[\\d.]+,\r?\n.*\r?\n){3,9}#EXT-X-DISCONTINUITY\r?\n#EXT-X-KEY:.*\r?\n",
+        "#EXT-X-DISCONTINUITY\r?\n#EXT-X-KEY:METHOD=NONE\r?\n(#EXTINF:[\\d.]+,\r?\n.*\r?\n){3,11}(?=#EXT-X-ENDLIST)",
         "#EXTINF:3\\.32,\r?\n.*\r?\n(#EXTINF:1\\.68,\r?\n.*\r?\n){2}#EXTINF:1\\.64,\r?\n.*\r?\n#EXTINF:(1\\.68|1\\.12),\r?\n.*\r?\n",
         "#EXTINF:2\\.8,\r?\n.*\r?\n#EXTINF:1\\.96,\r?\n.*\r?\n#EXTINF:1\\.16,\r?\n.*\r?\n#EXTINF:2\\.56,\r?\n.*\r?\n#EXTINF:1\\.68,\r?\n.*\r?\n#EXTINF:2\\.72,\r?\n.*\r?\n#EXTINF:0\\.92,\r?\n.*\r?\n#EXTINF:3\\.36,\r?\n.*\r?\n#EXTINF:1\\.64,\r?\n.*\r?\n#EXTINF:1\\.08,\r?\n.*\r?\n"
       ]
     },
     {
-      "name": "非凡&优质&360&iKun&猫眼&森林&豆豆&滴滴&玉兔&老色13&暴风",
+      "name": "非凡&优质&360&iKun&森林&豆豆&滴滴&玉兔&老色13",
       "hosts": [
         "ffzy",
         "feifei",
@@ -1140,24 +1143,15 @@
         "huicheng",
         "ikun",
         "kkzy",
-        "maoyan",
         "senlin",
         "sl",
         "didi",
-        "lsb",
-        "bfzy",
-        "baofeng",
-        "bvvvvvv",
-        "rrcdnbf",
-        "bbffcdn",
-        "bfllvip",
-        "bfengbf",
-        "fengbao"
+        "lsb"
       ],
       "regex": [
-        "#EXT-X-DISCONTINUITY\r?\n(#EXT-X-KEY:.*\r?\n)?(#EXTINF:[\\d.]+,\r?\n.*\r?\n){3,7}#EXT-X-DISCONTINUITY\r?\n(#EXT-X-KEY:.*\r?\n)?",
         "#EXT-X-KEY:METHOD=NONE\r?\n(#EXTINF:[\\d.]+,\r?\n.*\r?\n){3,9}#EXT-X-DISCONTINUITY\r?\n",
-        "#EXT-X-DISCONTINUITY\r?\n(#EXT-X-KEY:METHOD=NONE\r?\n)?(#EXTINF:[\\d.]+,\r?\n.*\r?\n){3,9}(?=#EXT-X-ENDLIST)"
+        "#EXT-X-DISCONTINUITY\r?\n(#EXT-X-KEY:METHOD=NONE\r?\n)?(#EXTINF:[\\d.]+,\r?\n.*\r?\n){3,11}(?=#EXT-X-ENDLIST)",
+        "#EXT-X-DISCONTINUITY\r?\n(#EXT-X-KEY:METHOD=NONE\r?\n)?(#EXTINF:[\\d.]+,\r?\n.*\r?\n){3,9}#EXT-X-DISCONTINUITY\r?\n(#EXT-X-KEY:.*\r?\n)?"
       ]
     }
   ],
