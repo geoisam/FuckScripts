@@ -15,11 +15,11 @@
 
 | 名称 | 说明 | 原生 | 加速 |
 |:---|:---:|:---:|:---:|
-| **微软必应优化助手** | [说明](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/微软必应优化助手.user.js) | [安装](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/gm/微软必应优化助手.user.js) |
-| **123云盘优化助手** | [说明](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/123云盘优化助手.user.js) | [安装](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/gm/123云盘优化助手.user.js) |
-| **腾讯视频优化助手** | [说明](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/腾讯视频优化助手.user.js) | [安装](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/gm/腾讯视频优化助手.user.js) |
-| **百度网盘视频播放器（Dplayer）** | [说明](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/百度网盘视频播放器（改）.user.js) | [安装](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/gm/百度网盘视频播放器（改）.user.js) |
-| **百度网盘音频播放器（Aplayer）** | [说明](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/百度网盘音频播放器（改）.user.js) | [安装](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/gm/百度网盘音频播放器（改）.user.js) |
+| **微软必应优化助手** | [查看](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/微软必应优化助手.user.js) | [安装](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/gm/微软必应优化助手.user.js) |
+| **123云盘优化助手** | [查看](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/123云盘优化助手.user.js) | [安装](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/gm/123云盘优化助手.user.js) |
+| **腾讯视频优化助手** | [查看](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/腾讯视频优化助手.user.js) | [安装](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/gm/腾讯视频优化助手.user.js) |
+| **百度网盘视频播放器（Dplayer）** | [查看](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/百度网盘视频播放器（改）.user.js) | [安装](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/gm/百度网盘视频播放器（改）.user.js) |
+| **百度网盘音频播放器（Aplayer）** | [查看](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/百度网盘音频播放器（改）.user.js) | [安装](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/gm/百度网盘音频播放器（改）.user.js) |
 
 <br>
 
@@ -29,10 +29,10 @@
 
 | 名称 | 类型 | 说明 | 原生 | 加速 |
 |:---|:---|:---:|:---:|:---:|
-| **华米运动步数修改** | **OAuth** | [说明](./sc/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/华米运动步数修改.user.js) | [安装](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/sc/华米运动步数修改.user.js) |
-| **油猴中文网签到** | **Discuz**(DSU每日签到) | [说明](./sc/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/油猴中文网签到.user.js) | [安装](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/sc/油猴中文网签到.user.js) |
-| **智能电视网签到** | **Discuz**(亮剑打卡签到) | [说明](./sc/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/智能电视网签到.user.js) | [安装](https://ghfast.top/raw.githubusercontent.com/geoisam/sc/FuckScripts/main/智能电视网签到.user.js) |
-| **飘雪动漫社签到** | **Discuz**(西瓜微社区签到) | [说明](./sc/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/飘雪动漫社签到.user.js) | [安装](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/sc/飘雪动漫社签到.user.js) |
+| **华米运动步数修改** | **OAuth** | [查看](./sc/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/华米运动步数修改.user.js) | [安装](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/sc/华米运动步数修改.user.js) |
+| **油猴中文网签到** | **Discuz**(DSU每日签到) | [查看](./sc/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/油猴中文网签到.user.js) | [安装](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/sc/油猴中文网签到.user.js) |
+| **智能电视网签到** | **Discuz**(亮剑打卡签到) | [查看](./sc/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/智能电视网签到.user.js) | [安装](https://ghfast.top/raw.githubusercontent.com/geoisam/sc/FuckScripts/main/智能电视网签到.user.js) |
+| **飘雪动漫社签到** | **Discuz**(西瓜微社区签到) | [查看](./sc/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/飘雪动漫社签到.user.js) | [安装](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/sc/飘雪动漫社签到.user.js) |
 
 <br>
 
@@ -42,8 +42,8 @@
 
 | 名称 | 类型 | 说明 | 原生 | 加速 |
 |:---|:---:|:---:|:---:|:---:|
-| **华米运动步数修改** | **OAuth** | [说明](./py/README.md) | [查看](https://raw.githubusercontent.com/geoisam/FuckScripts/main/py/huami.py) | [查看](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/py/huami.py) |
-| **Xshell8/Xftp8 <br>免登录修改器** | **Local** | [说明](./py/README.md) | [查看](https://raw.githubusercontent.com/geoisam/FuckScripts/main/py/xshell.py) | [查看](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/py/xshell.py) |
+| **华米运动步数修改** | **OAuth** | [查看](./py/README.md) | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/main/py/huami.py) | [下载](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/py/huami.py) |
+| **Xshell8/Xftp8 <br>免登录修改器** | **Local** | [查看](./py/README.md) | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/main/py/xshell.py) | [下载](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/py/xshell.py) |
 
 <br>
 
@@ -69,17 +69,18 @@
 
 | 名称 | 过期 | 原生 | 加速 |
 |:---:|:---:|:---:|:---:|
-| AdsFuck | 2 days | [查看](https://raw.githubusercontent.com/geoisam/FuckScripts/main/adsfuck.txt) | [查看](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/adsfuck.txt) |
+| AdsFuck | 2 days | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/main/adsfuck.txt) | [下载](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/adsfuck.txt) |
 
 <br>
 
 ### \# 影视资源采集 / TVBox / EasyBox / MBox / 影视仓 / 影视
 
-**Mobile App**：<https://www.lanzoux.com/b00v02s58b> `666`
+- Mobile App
+  - <https://www.lanzoux.com/b00v02s58b> `666`
 
 | 名称 | 原生 | 加速 |
 |:---:|:---:|:---:|
-| 学习资源API | [查看](https://raw.githubusercontent.com/geoisam/FuckScripts/refs/heads/main/zyapi.json) | [查看](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/zyapi.json) |
+| 学习资源API | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/refs/heads/main/zyapi.json) | [下载](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/zyapi.json) |
 
 | **花名** | **地址** | **备注** |
 | :---: | --- | :---: |
