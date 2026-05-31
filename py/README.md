@@ -2,7 +2,7 @@
 
 ### \#  **👇👇Python脚本👇👇**
 
-| 名称 | 类型 | 说明 | 原生 | 加速 |
+| 名称 | 类型 | 状态 | 原生 | 加速 |
 |:---|:---:|:---:|:---:|:---:|
 | **华米运动步数修改** | **OAuth** | ✅ | [查看](https://raw.githubusercontent.com/geoisam/FuckScripts/main/py/huami.py) | [查看](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/py/huami.py) |
 | **Xshell8/Xftp8 <br>免登录修改器** | **Local** | ✅ | [查看](https://raw.githubusercontent.com/geoisam/FuckScripts/main/py/xshell.py) | [查看](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/py/xshell.py) |
