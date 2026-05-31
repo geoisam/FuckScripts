@@ -2,7 +2,7 @@
   "homepage": "https://github.com/geoisam/FuckScripts",
   "wallpaper": "https://bing.img.run/1366x768.php",
   "warningText": "接口永远免费使用，请勿相信视频广告",
-  "spider": "http://zb.6exe.com/spider.jar",
+  "spider": "./libs/custom_spider.jar",
   "lives": [
     {
       "name": "TVBox直播",
@@ -34,8 +34,9 @@
       "key": "Local",
       "name": "📁本地文件",
       "type": 3,
-      "api": "csp_LocalFile",
-      "searchable": 0
+      "api": "csp_Local",
+      "searchable": 0,
+      "filterable": 0
     },
     {
       "key": "接口免费",
@@ -51,6 +52,15 @@
       "type": 3,
       "api": "csp_Douban",
       "searchable": 0,
+      "filterable": 1
+    },
+    {
+      "key": "网飞猫",
+      "name": "🏅网飞猫",
+      "type": 3,
+      "api": "csp_NCat",
+      "searchable": 0,
+      "quickSearch": 0,
       "filterable": 1
     },
     {
@@ -769,52 +779,6 @@
       ]
     },
     {
-      "key": "茅台",
-      "name": "🥉茅台",
-      "type": 1,
-      "api": "https://caiji.maotaizy.cc/api.php/provide/vod/from/mtm3u8/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 0,
-      "categories": [
-        "动作片",
-        "喜剧片",
-        "爱情片",
-        "科幻片",
-        "恐怖片",
-        "剧情片",
-        "战争片",
-        "惊悚片",
-        "预告片",
-        "动漫电影",
-        "纪录片",
-        "国产剧",
-        "欧美剧",
-        "香港剧",
-        "台湾剧",
-        "韩剧",
-        "日本剧",
-        "泰国剧",
-        "海外剧",
-        "国产动漫",
-        "日本动漫",
-        "欧美动漫",
-        "海外动漫",
-        "大陆综艺",
-        "港台综艺",
-        "日韩综艺",
-        "欧美综艺",
-        "短剧大全",
-        "重生民国",
-        "穿越现代",
-        "反转爽剧",
-        "言情总裁",
-        "现代都市",
-        "古装仙侠",
-        "悬疑烧脑"
-      ]
-    },
-    {
       "key": "量子",
       "name": "🥉量子",
       "type": 1,
@@ -855,6 +819,51 @@
       ]
     },
     {
+      "key": "HLCGW",
+      "name": "🔞\u9ed1\u6599\u5403\u74dc",
+      "type": 3,
+      "api": "csp_HLCGW",
+      "searchable": 0,
+      "quickSearch": 0,
+      "filterable": 1
+    },
+    {
+      "key": "BLUEGAY",
+      "name": "🔞\u5c0f\u84dd\u89c6\u9891",
+      "type": 3,
+      "api": "csp_BLUEGAY",
+      "searchable": 0,
+      "quickSearch": 0,
+      "filterable": 1
+    },
+    {
+      "key": "STGAY",
+      "name": "🔞\u641c\u540c\u793e\u533a",
+      "type": 3,
+      "api": "csp_STGAY",
+      "searchable": 0,
+      "quickSearch": 0,
+      "filterable": 1
+    },
+    {
+      "key": "Douban",
+      "name": "🔞51\u7206\u6599",
+      "type": 3,
+      "api": "csp_BL51",
+      "searchable": 0,
+      "quickSearch": 0,
+      "filterable": 1
+    },
+    {
+      "key": "Douban",
+      "name": "🔞51\u5403\u74dc",
+      "type": 3,
+      "api": "csp_Cg51",
+      "searchable": 0,
+      "quickSearch": 0,
+      "filterable": 1
+    },
+    {
       "key": "森林",
       "name": "🔞森林",
       "type": 1,
@@ -868,38 +877,6 @@
         "\u7537\u540c\u6027\u604b",
         "\u5973\u540c\u6027\u604b",
         "\u4f26\u7406\u4e09\u7ea7"
-      ]
-    },
-    {
-      "key": "三木",
-      "name": "🔞三木",
-      "type": 1,
-      "api": "https://beiyong.slapibf.com/api.php/provide/vod/",
-      "searchable": 1,
-      "quickSearch": 0,
-      "filterable": 0,
-      "categories": [
-        "\u7f51\u66dd\u95e8",
-        "\u6210\u4eba\u52a8\u6f2b",
-        "\u7537\u540c\u6027\u604b",
-        "\u5973\u540c\u6027\u604b",
-        "\u4f26\u7406\u4e09\u7ea7"
-      ]
-    },
-    {
-      "key": "豆豆",
-      "name": "🔞豆豆",
-      "type": 1,
-      "api": "https://api.douapi.cc/api.php/provide/vod/",
-      "searchable": 1,
-      "quickSearch": 0,
-      "filterable": 0,
-      "categories": [
-        "\u7f51\u66dd\u9ed1\u6599",
-        "\u6210\u4eba\u52a8\u6f2b",
-        "\u7537\u540c\u6027\u604b",
-        "\u5973\u540c\u6027\u604b",
-        "\u4e09\u7ea7\u4f26\u7406"
       ]
     },
     {
@@ -923,22 +900,6 @@
       "name": "🔞玉兔",
       "type": 1,
       "api": "https://apiyutu.com/api.php/provide/vod/",
-      "searchable": 1,
-      "quickSearch": 0,
-      "filterable": 0,
-      "categories": [
-        "\u7f51\u66dd\u7cfb\u5217",
-        "\u5361\u901a\u52a8\u6f2b",
-        "\u540c\u6027\u604b",
-        "\u660e\u661f\u6362\u8138",
-        "\u4e09\u7ea7\u4f26\u7406"
-      ]
-    },
-    {
-      "key": "老色13",
-      "name": "🔞老色13",
-      "type": 1,
-      "api": "https://apilsbzy1.com/api.php/provide/vod/",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 0,
