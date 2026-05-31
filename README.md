@@ -123,7 +123,7 @@
 | **豆豆** | <https://api.douapi.cc/api.php/provide/vod/?t=80> | 🔞🔞🔞 |
 | **滴滴** | <https://api.ddapi.cc/api.php/provide/vod/?t=47> | 🔞🔞🔞 |
 | **玉兔** | <https://apiyutu.com/api.php/provide/vod/?t=66> | 🔞🔞🔞 |
-| **老色B** | <https://apilsbzy1.com/api.php/provide/vod/?t=66> | 🔞🔞🔞 |
+| **老色13** | <https://apilsbzy1.com/api.php/provide/vod/?t=66> | 🔞🔞🔞 |
 | **奶香香** | <https://naixxzy.com/api.php/provide/vod/?t=47> | 🔞🔞🔞 |
 | **奥斯卡** | <https://aosikazy.com/api.php/provide/vod/?t=29> | 🔞🔞🔞 |
 | **百花** | <https://bhziyuan.com/api.php/provide/vod/?t=40> | 🔞🔞🔞 |
