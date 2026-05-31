@@ -73,11 +73,13 @@
 
 <br>
 
-### \# 影视资源采集 / TVBox / 影视仓
+### \# 影视资源采集 / TVBox / EasyBox / MBox / 影视仓 / 影视
 
 | Name | Github | Gitee |
 |:---:|:---:|:---:|
 | 学习资源API | [查看](https://raw.githubusercontent.com/geoisam/FuckScripts/refs/heads/main/zyapi.json) | [查看](https://raw.giteeusercontent.com/geoisam/FuckScripts/raw/main/zyapi.json) |
+
+<https://www.lanzoux.com/b00v02s58b>
 
 | **花名** | **地址** | **备注** |
 | :---: | --- | :---: |
