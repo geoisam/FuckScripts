@@ -10,6 +10,8 @@
 
 <br>
 
+### \#  **GitHub Actions**
+
 > 👇👇**华米运动步数修改**👇👇
 
 - **浏览器后台定时运行脚本**（仅支持 [脚本猫](https://docs.scriptcat.org)）
