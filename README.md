@@ -87,8 +87,8 @@
 | **优质** | <https://api.yyzy-tv.vip/inc/api_mac10.php> | `插播广告` |
 | **非凡** | <https://api.ffzyapi.com/api.php/provide/vod/from/ffm3u8/> | `插播广告` |
 | **暴风** | <https://bfzyapi.com/api.php/provide/vod/from/bfzym3u8/> | `插播广告` |
-| **天堂** | <https://caiji.dyttzyapi.com/api.php/provide/vod/from/dyttm3u8/> | `插播广告` |
 | **如意** | <https://cj.rycjapi.com/api.php/provide/vod/from/rym3u8/> | `阴险狡诈` `插播广告` |
+| **天堂** | <https://caiji.dyttzyapi.com/api.php/provide/vod/from/dyttm3u8/> | `阴险狡诈` `插播广告` |
 | **量子** | <https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/> | `阴险狡诈` `插播广告` |
 | **360** | <https://360zy.com/api.php/provide/vod/from/360m3u8/> | `贴片广告` `插播广告` |
 | **虎牙** | <https://www.huyaapi.com/api.php/provide/vod/from/hym3u8/> | `贴片广告` |
