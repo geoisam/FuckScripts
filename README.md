@@ -120,7 +120,7 @@
 | **豆瓣** | <https://caiji.dbzy5.com/api.php/provide/vod/from/dbm3u8/> | `播放卡` `贴片广告` `跑马灯广告` |
 | **茅台** | <https://caiji.maotaizy.cc/api.php/provide/vod/from/mtm3u8/> | `采集限速` `贴片广告` `跑马灯广告` |
 | **量子** | <https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/> | `阴险狡诈` `采集限速` `插播广告` |
-| **猫眼** | <https://api.maoyanapi.top/api.php/provide/vod/from/mym3u8/> | `阴险狡诈` `螺蛳粉尿混合` `二手资源` `采集限速` `清晰度低` `贴片广告` `插播广告` `跑马灯广告` |
+| **猫眼** | <https://api.maoyanapi.top/api.php/provide/vod/from/mym3u8/> | `阴险狡诈` `屎尿混合` `二手资源` `采集限速` `清晰度低` `贴片广告` `插播广告` `跑马灯广告` |
 | **淘片** | <https://taopianapi.com/cjapi/mc10/vod/json/m3u8.html> | `站点搜索关闭` |
 | **天涯** | <https://tyyszyapi.com/api.php/provide/vod/from/tym3u8/> | `站点搜索关闭` |
 | **牛牛** | <https://api.niuniuzy.me/api.php/provide/vod/from/nnm3u8/> | `站点搜索关闭` |
