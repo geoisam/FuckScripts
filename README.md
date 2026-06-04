@@ -1,16 +1,6 @@
-<table>
-<tr>
-<td><a>
-<img src="./img/antifraud.png">
-</a></td>
-<td><a>
-<img src="./img/hicorenational.png">
-</a></td>
-<td><a>
-<img src="./img/truth.png">
-</a></td>
-</tr>
-</table>
+<p align="center">
+<img src="./img/ic_logo_fill.svg" alt="LOGO"/>
+</p>
 
 <br>
 
@@ -94,9 +84,10 @@
 - Mobile App
   - <https://www.lanzoux.com/b00v02s58b> `666`
 
-| 名称 | 原生 | 加速 |
+| 类型 | 原生 | 加速 |
 |:---:|:---:|:---:|
-| 配置JSON | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/refs/heads/main/zyapi.json) | [下载](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/zyapi.json) |
+| 纯影视采集 | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/refs/heads/main/json/zyapi.json) | [下载](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/json/zyapi.json) |
+| 影视+爬虫 | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/refs/heads/main/json/geoisam.json) | [下载](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/json/geoisam.json) |
 
 | **花名** | **地址** | **备注** |
 | :---: | --- | :---: |
