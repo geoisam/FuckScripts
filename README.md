@@ -86,8 +86,8 @@
 
 | 类型 | 原生 | 加速 |
 |:---:|:---:|:---:|
-| 纯影视采集 | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/refs/heads/main/json/zyapi.json) | [下载](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/json/zyapi.json) |
-| 影视+爬虫 | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/refs/heads/main/json/geoisam.json) | [下载](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/json/geoisam.json) |
+| 纯影视 | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/refs/heads/main/json/zyapi.json) | [下载](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/json/zyapi.json) |
+| 影视18+ | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/refs/heads/main/json/geoisam.json) | [下载](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/json/geoisam.json) |
 
 | **花名** | **地址** | **备注** |
 | :---: | --- | :---: |
