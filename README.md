@@ -81,7 +81,7 @@
 
 ### \# 影视资源采集 / TVBox / [EasyBox](https://easybox.pro/download.html) / [MBox](https://github.com/XiaoRanLiu3119/TVBoxOS-Mobile) / 影视仓 / [FongMi影视](https://github.com/FongMi/Release) / 影迷
 
-- Mobile App
+- **Mobile App**
   - <https://www.lanzoux.com/b00v02s58b> `666`
   - <https://share.feijipan.com/s/lyblrj8s>
 
