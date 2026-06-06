@@ -126,7 +126,7 @@
 | **最大** | <https://api.zuidapi.com/api.php/provide/vod/from/zdm3u8/> | `站点搜索关闭` `列表关闭` |
 | **魔都** | <https://moduzy2.com/api.php/provide/vod/from/mdm3u8/> | `站点搜索关闭` `列表关闭` |
 | **樱花** | <https://m3u8.apiyhzy.com/api.php/provide/vod/from/yhm3u8/> | `站点搜索关闭` `列表关闭` |
-| **淘片** | <https://taopianapi.com/cjapi/mc10/vod/xml/m3u8.html> | `站点搜索关闭` |
+| **淘片** | <https://taopianapi.com/cjapi/mc10/vod/xml/m3u8.html> | `清晰度低` `贴片广告` `跑马灯广告` |
 | **旺旺短剧** | <https://api.wwzy.tv/api.php/provide/vod/?ac=list> | `贴片广告` |
 
 <br>
