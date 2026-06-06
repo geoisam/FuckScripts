@@ -128,26 +128,6 @@
 | **无水印** | <https://api.wsyzy.net/api.php/provide/vod/from/wsym3u8/> | `站点搜索关闭` |
 | **奇异果** | <https://iqiyizyapi.com/api.php/provide/vod/from/snm3u8/> | `站点搜索关闭` |
 | **旺旺短剧** | <https://api.wwzy.tv/api.php/provide/vod/?ac=list> | `贴片广告` |
-| **森林** | <https://slapibf.com/api.php/provide/vod/?t=61> | 🔞🔞🔞 |
-| **豆豆** | <https://api.douapi.cc/api.php/provide/vod/?t=80> | 🔞🔞🔞 |
-| **滴滴** | <https://api.ddapi.cc/api.php/provide/vod/?t=47> | 🔞🔞🔞 |
-| **玉兔** | <https://apiyutu.com/api.php/provide/vod/?t=66> | 🔞🔞🔞 |
-| **老色13** | <https://apilsbzy1.com/api.php/provide/vod/?t=66> | 🔞🔞🔞 |
-| **奶香香** | <https://naixxzy.com/api.php/provide/vod/?t=47> | 🔞🔞🔞 |
-| **奥斯卡** | <https://aosikazy.com/api.php/provide/vod/?t=29> | 🔞🔞🔞 |
-| **百花** | <https://bhziyuan.com/api.php/provide/vod/?t=40> | 🔞🔞🔞 |
-| **杏吧** | <https://xingba222.com/api.php/provide/vod/?t=59> | 🔞🔞🔞 |
-| **乐播** | <https://lbapi9.com/api.php/provide/vod/?t=31> | 🔞🔞🔞 |
-| **桃花** | <https://thzy1.me/api.php/provide/vod/?t=10> | 🔞🔞🔞 |
-| **鸡坤** | <https://jkunzyapi.com/api.php/provide/vod/?t=30> | 🔞🔞🔞 |
-| **番号** | <http://fhapi9.com/api.php/provide/vod/?t=5> | 🔞🔞🔞 |
-| **黑料** | <https://www.heiliaozyapi.com/api.php/provide/vod/?t=30> | 🔞🔞🔞 |
-| **115** | <https://155api.com/api.php/provide/vod/?t=29> | 🔞🔞🔞 |
-| **CK** | <https://ckzy.me/api.php/provide/vod/?ac=list> | 🔞🔞🔞 |
-| **美少女** | <https://www.msnii.com/api/json.php?ac=list> | 🔞🔞🔞 |
-| **黄阿薇** | <https://www.pgxdy.com/api/json.php?ac=list> | 🔞🔞🔞 |
-| **白嫖** | <https://www.kxgav.com/api/json.php?ac=list> | 🔞🔞🔞 |
-| **麻豆** | <https://91md.me/api.php/provide/vod/?ac=list> | 🔞🔞🔞 |
 
 <br>
 
