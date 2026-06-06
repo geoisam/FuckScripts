@@ -88,7 +88,7 @@
 | 类型 | 原生 | 加速 |
 |:---:|:---:|:---:|
 | 影视+直播 | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/refs/heads/main/json/index.json) | [下载](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/json/index.json) |
-| 成人18+ | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/refs/heads/main/json/adult.json) | [下载](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/json/adult.json) |
+| 🔞🔞🔞 | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/refs/heads/main/json/adult.json) | [下载](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/json/adult.json) |
 | 优选+直播 | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/refs/heads/main/json/geoisam.json) | [下载](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/json/geoisam.json) |
 
 | **花名** | **地址** | **备注** |
