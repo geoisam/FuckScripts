@@ -1,5 +1,5 @@
 <p align="center">
-<img src="./img/ic_logo_round.svg" alt="LOGO" width="222px"/>
+<img src="./img/ic_logo_round.svg" alt="LOGO" width="119px"/>
 </p>
 
 <br>
@@ -79,7 +79,7 @@
 
 <br>
 
-### \# 影视资源采集 / TVBox / [EasyBox](https://easybox.pro/download.html) / [MBox](https://github.com/XiaoRanLiu3119/TVBoxOS-Mobile) / 影视仓 / [影视](https://github.com/FongMi/Release)
+### \# 影视资源采集 / TVBox / [EasyBox](https://easybox.pro/download.html) / [MBox](https://github.com/XiaoRanLiu3119/TVBoxOS-Mobile) / 影视仓 / [FongMi影视](https://github.com/FongMi/Release) / 影迷
 
 - Mobile App
   - <https://www.lanzoux.com/b00v02s58b> `666`
