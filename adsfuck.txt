@@ -93,8 +93,9 @@ lanzn.com,lanpv.com,lanpw.com,lanzov.com,lanzoub.com,lanzouc.com,lanzoue.com,lan
 ||statics.woozooo.com/assets/img/clipboard.min.js$script
 
 ! ------ 18+ ------
-/plugins/*/js/zzz.js$script
-/Mirages/js/*/web*.js$script
-/web/js/web*.js$script
-/js/*/domain-probe.js$script
-/report_enc.php^$third-party
+/Mirages/js*/web*tracker*.js$script
+/Mirages/js*/web*sdk*.js$script
+/web/js/web*tracker*.js$script
+/web/js/web*sdk*.js$script
+/js*/*domain*.js$script
+/*report*.php^$third-party
