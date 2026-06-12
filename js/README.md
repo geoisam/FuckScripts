@@ -9,10 +9,10 @@
 <table>
 <tr>
 <td><a>
-<img src="../images/wechat.jpg">
+<img src="../img/wechat.jpg">
 </a></td>
 <td><a>
-<img src="../images/alipay.jpg">
+<img src="../img/alipay.jpg">
 </a></td>
 </tr>
 </table>

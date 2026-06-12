@@ -1,3 +1,9 @@
+<p align="center">
+<img src="./img/ic_logo_round.svg" alt="LOGO" width="119px"/>
+</p>
+
+<br>
+
 # 🌈FuckScripts
 
 ### \# 脚本猫 / 油猴脚本
@@ -13,13 +19,13 @@
 
 - 支持 [脚本猫](https://docs.scriptcat.org)、篡改猴、暴力猴、[X浏览器](https://www.xbext.com) 等
 
-| Name | Docs | GitHub | Gitee |
+| 名称 | 说明 | 原生 | 加速 |
 |:---|:---:|:---:|:---:|
-| **微软必应优化助手** | [说明](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/微软必应优化助手.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/gm/微软必应优化助手.user.js) |
-| **123云盘优化助手** | [说明](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/123云盘优化助手.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/gm/123云盘优化助手.user.js) |
-| **腾讯视频优化助手** | [说明](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/腾讯视频优化助手.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/gm/腾讯视频优化助手.user.js) |
-| **百度网盘视频播放器（Dplayer）** | [说明](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/百度网盘视频播放器（改）.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/gm/百度网盘视频播放器（改）.user.js) |
-| **百度网盘音频播放器（Aplayer）** | [说明](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/百度网盘音频播放器（改）.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/gm/百度网盘音频播放器（改）.user.js) |
+| **微软必应优化助手** | [查看](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/微软必应优化助手.user.js) | [安装](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/gm/微软必应优化助手.user.js) |
+| **123云盘优化助手** | [查看](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/123云盘优化助手.user.js) | [安装](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/gm/123云盘优化助手.user.js) |
+| **腾讯视频优化助手** | [查看](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/腾讯视频优化助手.user.js) | [安装](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/gm/腾讯视频优化助手.user.js) |
+| **百度网盘视频播放器（Dplayer）** | [查看](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/百度网盘视频播放器（改）.user.js) | [安装](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/gm/百度网盘视频播放器（改）.user.js) |
+| **百度网盘音频播放器（Aplayer）** | [查看](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/百度网盘音频播放器（改）.user.js) | [安装](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/gm/百度网盘音频播放器（改）.user.js) |
 
 <br>
 
@@ -27,23 +33,23 @@
 
 - 仅支持 [脚本猫](https://docs.scriptcat.org)
 
-| Name | Type | Docs | GitHub | Gitee |
+| 名称 | 类型 | 说明 | 原生 | 加速 |
 |:---|:---|:---:|:---:|:---:|
-| **华米运动步数修改** | **OAuth** | [说明](./sc/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/华米运动步数修改.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/sc/华米运动步数修改.user.js) |
-| **油猴中文网签到** | **Discuz**(DSU每日签到) | [说明](./sc/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/油猴中文网签到.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/sc/油猴中文网签到.user.js) |
-| **智能电视网签到** | **Discuz**(亮剑打卡签到) | [说明](./sc/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/智能电视网签到.user.js) | [安装](https://gitee.com/geoisam/sc/FuckScripts/raw/main/智能电视网签到.user.js) |
-| **飘雪动漫社签到** | **Discuz**(西瓜微社区签到) | [说明](./sc/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/飘雪动漫社签到.user.js) | [安装](https://gitee.com/geoisam/FuckScripts/raw/main/sc/飘雪动漫社签到.user.js) |
+| **华米运动步数修改** | **OAuth** | [查看](./sc/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/华米运动步数修改.user.js) | [安装](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/sc/华米运动步数修改.user.js) |
+| **油猴中文网签到** | **Discuz**(DSU每日签到) | [查看](./sc/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/油猴中文网签到.user.js) | [安装](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/sc/油猴中文网签到.user.js) |
+| **智能电视网签到** | **Discuz**(亮剑打卡签到) | [查看](./sc/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/智能电视网签到.user.js) | [安装](https://ghfast.top/raw.githubusercontent.com/geoisam/sc/FuckScripts/main/智能电视网签到.user.js) |
+| **飘雪动漫社签到** | **Discuz**(西瓜微社区签到) | [查看](./sc/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/飘雪动漫社签到.user.js) | [安装](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/sc/飘雪动漫社签到.user.js) |
 
 <br>
 
 > **👇👇[Python脚本](./py) `./py` 👇👇**
 
-- 支持 [GitHub Actions](https://docs.github.com/actions)、云函数、青龙面板 等
+- 支持 [GitHub Actions](./py/README.md#--github-actions)、云函数、青龙面板 等
 
-| Name | Type | Docs | GitHub | Gitee |
+| 名称 | 类型 | 说明 | 原生 | 加速 |
 |:---|:---:|:---:|:---:|:---:|
-| **华米运动步数修改** | **OAuth** | [说明](./py/README.md) | [查看](https://raw.githubusercontent.com/geoisam/FuckScripts/main/py/huami.py) | [查看](https://gitee.com/geoisam/FuckScripts/raw/main/py/huami.py) |
-| **Xshell8/Xftp8 <br>免登录修改器** | **Local** | [说明](./py/README.md) | [查看](https://raw.githubusercontent.com/geoisam/FuckScripts/main/py/xshell.py) | [查看](https://gitee.com/geoisam/FuckScripts/raw/main/py/xshell.py) |
+| **华米运动步数修改** | **OAuth** | [查看](./py/README.md) | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/main/py/huami.py) | [下载](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/py/huami.py) |
+| **Xshell8/Xftp8 <br>免登录修改器** | **Local** | [查看](./py/README.md) | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/main/py/xshell.py) | [下载](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/py/xshell.py) |
 
 <br>
 
@@ -66,12 +72,62 @@
   - **隐私保护**：[EasyPrivacy](https://easylist-downloads.adblockplus.org/easyprivacy.txt)
   - **Cookie通知过滤**：[Easylist Cookie List](https://secure.fanboy.co.nz/fanboy-cookiemonster.txt)
   - **反广告拦截警告**：[Adblock Warning Removal List](https://easylist-downloads.adblockplus.org/antiadblockfilters.txt)
-  - **恶意软件**：[Online Malicious URL Blocklist](https://malware-filter.gitlab.io/urlhaus-filter/urlhaus-filter-ag-online.txt)
-  - **域名黑名单**：[Peter Lowe's Blocklist](https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext)
 
-| Name | Expires | Github | Gitee |
+| 名称 | 过期 | 原生 | 加速 |
 |:---:|:---:|:---:|:---:|
-| AdsFuck | 2 days | [查看](https://raw.githubusercontent.com/geoisam/FuckScripts/main/adsfuck.txt) | [查看](https://gitee.com/geoisam/FuckScripts/raw/main/adsfuck.txt) |
+| AdsFuck | 2 days | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/main/adsfuck.txt) | [下载](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/adsfuck.txt) |
+
+<br>
+
+### \# 影视资源采集 / TVBox / [EasyBox](https://easybox.pro/download.html) / [MBox](https://github.com/XiaoRanLiu3119/TVBoxOS-Mobile) / 影视仓 / [FongMi影视](https://github.com/FongMi/Release) / 影迷
+
+- **Mobile App**
+  - <https://www.lanzoux.com/b00v02s58b> `666`
+  - <https://share.feijipan.com/s/lyblrj8s>
+
+| 类型 | 原生 | 加速 |
+|:---:|:---:|:---:|
+| 影视+直播 | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/refs/heads/main/json/index.json) | [下载](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/json/index.json) |
+| 🔞🔞🔞 | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/refs/heads/main/json/adult.json) | [下载](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/json/adult.json) |
+| 优选+直播 | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/refs/heads/main/json/geoisam.json) | [下载](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/json/geoisam.json) |
+
+| **花名** | **地址** | **备注** |
+| :---: | --- | :---: |
+| **暴风** | <https://bfzyapi.com/api.php/provide/vod/from/bfzym3u8/> | `插播广告` |
+| **非凡** | <https://api.ffzyapi.com/api.php/provide/vod/from/ffm3u8/> | `插播广告` `贴片广告` |
+| **如意** | <https://cj.rycjapi.com/api.php/provide/vod/from/rym3u8/> | `阴险狡诈` `插播广告` |
+| **天堂** | <https://caiji.dyttzyapi.com/api.php/provide/vod/from/dyttm3u8/> | `阴险狡诈` `插播广告` |
+| **优质** | <https://api.yyzy-tv.vip/inc/api_mac10.php> | `插播广告` `跑马灯广告` |
+| **360** | <https://360zy.com/api.php/provide/vod/from/360m3u8/> | `插播广告` `贴片广告` |
+| **虎牙** | <https://www.huyaapi.com/api.php/provide/vod/from/hym3u8/> | `贴片广告` |
+| **百度** | <https://api.apibdzy.com/api.php/provide/vod/from/dbm3u8/> | `贴片广告` |
+| **光速** | <https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8/> | `采集限速` `贴片广告` |
+| **金鹰** | <https://jyzyapi.com/provide/vod/from/jinyingm3u8/> | `播放卡` `贴片广告` |
+| **极速** | <https://jszyapi.com/api.php/provide/vod/from/jsm3u8/> | `播放卡` `贴片广告` |
+| **无尽** | <https://api.wujinapi.net/api.php/provide/vod/from/wjm3u8/> | `清晰度低` `贴片广告` |
+| **iKun** | <https://ikunzyapi.com/api.php/provide/vod/from/ikm3u8/> | `科学上网` `插播广告` `贴片广告` |
+| **U酷** | <https://api.ukuapi88.com/api.php/provide/vod/from/ukm3u8/> | `播放卡` `清晰度低` `贴片广告` |
+| **红牛** | <https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/> | `科学上网` `贴片广告` `跑马灯广告` |
+| **豪华** | <https://hhzyapi.com/api.php/provide/vod/from/hhm3u8/> | `贴片广告` `跑马灯广告` |
+| **速播** | <https://subocj.com/api.php/provide/vod/from/subm3u8/> | `贴片广告` `跑马灯广告` |
+| **豆瓣** | <https://caiji.dbzy5.com/api.php/provide/vod/from/dbm3u8/> | `播放卡` `贴片广告` `跑马灯广告` |
+| **茅台** | <https://caiji.maotaizy.cc/api.php/provide/vod/from/mtm3u8/> | `采集限速` `贴片广告` `跑马灯广告` |
+| **量子** | <https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/> | `阴险狡诈` `采集限速` `插播广告` |
+| **猫眼** | <https://api.maoyanapi.top/api.php/provide/vod/from/mym3u8/> | `阴险狡诈` `屎尿混合` `二手资源` `采集限速` `清晰度低` `贴片广告` `插播广告` `跑马灯广告` |
+| **天涯** | <https://tyyszyapi.com/api.php/provide/vod/from/tym3u8/> | `站点搜索关闭` |
+| **牛牛** | <https://api.niuniuzy.me/api.php/provide/vod/from/nnm3u8/> | `站点搜索关闭` |
+| **鸭鸭** | <https://cj.yayazy.net/api.php/provide/vod/from/yym3u8/> | `站点搜索关闭` |
+| **快车** | <https://caiji.kuaichezy.org/api.php/provide/vod/from/kcm3u8/> | `站点搜索关闭` |
+| **闪电** | <https://sdzyapi.com/api.php/provide/vod/from/sdm3u8/> | `站点搜索关闭` |
+| **新浪** | <https://api.xinlangapi.com/xinlangapi.php/provide/vod/from/xlm3u8/> | `站点搜索关闭` |
+| **索尼** | <https://suoniapi.com/api.php/provide/vod/from/snm3u8/> | `站点搜索关闭` |
+| **无水印** | <https://api.wsyzy.net/api.php/provide/vod/from/wsym3u8/> | `站点搜索关闭` |
+| **奇异果** | <https://iqiyizyapi.com/api.php/provide/vod/from/snm3u8/> | `站点搜索关闭` `列表关闭` |
+| **最大** | <https://api.zuidapi.com/api.php/provide/vod/from/zdm3u8/> | `站点搜索关闭` `列表关闭` |
+| **魔都** | <https://moduzy2.com/api.php/provide/vod/from/mdm3u8/> | `站点搜索关闭` `列表关闭` |
+| **樱花** | <https://m3u8.apiyhzy.com/api.php/provide/vod/from/yhm3u8/> | `站点搜索关闭` `列表关闭` |
+| **淘片** | <https://taopianapi.com/cjapi/mc10/vod/xml/m3u8.html> | `清晰度低` `贴片广告` `跑马灯广告` |
+| **旺旺短剧** | <https://api.wwzy.tv/api.php/provide/vod/?ac=list> | `贴片广告` |
 
 <br>
 
@@ -80,10 +136,10 @@
 <table>
 <tr>
 <td><a>
-<img src="./images/wechat.jpg">
+<img src="./img/wechat.jpg">
 </a></td>
 <td><a>
-<img src="./images/alipay.jpg">
+<img src="./img/alipay.jpg">
 </a></td>
 </tr>
 </table>

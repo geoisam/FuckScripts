@@ -2,13 +2,15 @@
 
 ### \#  **👇👇Python脚本👇👇**
 
-| Name | Type | Status | GitHub | Gitee |
+| 名称 | 类型 | 状态 | 原生 | 加速 |
 |:---|:---:|:---:|:---:|:---:|
-| **华米运动步数修改** | **OAuth** | ✅ | [查看](https://raw.githubusercontent.com/geoisam/FuckScripts/main/py/huami.py) | [查看](https://gitee.com/geoisam/FuckScripts/raw/main/py/huami.py) |
-| **Xshell8/Xftp8 <br>免登录修改器** | **Local** | ✅ | [查看](https://raw.githubusercontent.com/geoisam/FuckScripts/main/py/xshell.py) | [查看](https://gitee.com/geoisam/FuckScripts/raw/main/py/xshell.py) |
-| **豆瓣电影 Top 250 <br>封面图片下崽器** | **Spider** | ✅ | [查看](https://raw.githubusercontent.com/geoisam/FuckScripts/main/py/douban.py) | [查看](https://gitee.com/geoisam/FuckScripts/raw/main/py/douban.py) |
+| **华米运动步数修改** | **OAuth** | ✅ | [查看](https://raw.githubusercontent.com/geoisam/FuckScripts/main/py/huami.py) | [查看](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/py/huami.py) |
+| **Xshell8/Xftp8 <br>免登录修改器** | **Local** | ✅ | [查看](https://raw.githubusercontent.com/geoisam/FuckScripts/main/py/xshell.py) | [查看](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/py/xshell.py) |
+| **豆瓣电影 Top 250 <br>封面图片下崽器** | **Spider** | ✅ | [查看](https://raw.githubusercontent.com/geoisam/FuckScripts/main/py/douban.py) | [查看](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/py/douban.py) |
 
 <br>
+
+### \#  **GitHub Actions**
 
 > 👇👇**华米运动步数修改**👇👇
 
@@ -41,7 +43,7 @@
 
 <br>
 
-- 可以使用 云函数 / 青龙面板 或者 GitHub 私人仓库用 GitHub Actions 实现自动刷步
+- 可以使用 云函数 / 青龙面板 或者 GitHub **私人仓库**用 GitHub Actions 实现自动刷步
 
 - **GitHub Actions** 配置如下 `.github/workflows/huami.yml`
   - 如需多（超过5个）账号运行脚本，请设置仓库读写权限，GitHub Actions 自动提交并推送存储 JSON 数据到根目录
@@ -97,10 +99,10 @@ jobs:
 <table>
 <tr>
 <td><a>
-<img src="../images/wechat.jpg">
+<img src="../img/wechat.jpg">
 </a></td>
 <td><a>
-<img src="../images/alipay.jpg">
+<img src="../img/alipay.jpg">
 </a></td>
 </tr>
 </table>
