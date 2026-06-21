@@ -94,7 +94,6 @@ lanzn.com,lanpv.com,lanpw.com,lanzov.com,lanzoub.com,lanzouc.com,lanzoue.com,lan
 ||statics.woozooo.com/assets/img/clipboard.min.js$script
 
 ! ------ 18+ ------
-/gtag.js
 ||googletagmanager.com^
 ||google-analytics.com^
 ||mc.yandex.ru^
@@ -104,8 +103,8 @@ lanzn.com,lanpv.com,lanpw.com,lanzov.com,lanzoub.com,lanzouc.com,lanzoue.com,lan
 ||mimg.0c1q0l.cn^
 ||cnzz.com^
 /ai/common/*.js$script
-/js*/web*tracker*.js$script
-/js*/web*sdk*.js$script
+/js*/web_tracker_v*.js$script
+/js*/web-sdk-v*.js$script
 /js*/*domain*.js$script
 /*report*.js^
 /*report*.php^
