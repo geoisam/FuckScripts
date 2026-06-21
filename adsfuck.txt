@@ -40,6 +40,7 @@ v.qq.com##+js(no-fetch-if, /(beacon|trace)\.qq\.com/)
 ||mall.video.qq.com/m/activity/h5/$subdocument
 ||mark.l.qq.com/fcgi-bin/get_video_mark_all?$script
 ||vfiles.gtimg.cn/tvideo/js/new_ping_video.js
+||video.qq.com/getlogo
 
 ! ------ 优酷 ------
 youku.com##.cardContentVip,#playerMouseWheel,.kui-watermark-0,.kui-vipentrance-member-control-container
@@ -102,6 +103,7 @@ lanzn.com,lanpv.com,lanpw.com,lanzov.com,lanzoub.com,lanzouc.com,lanzoue.com,lan
 ||static-mozai.4gtv.tv^
 ||mimg.0c1q0l.cn^
 ||cnzz.com^
+/ai/common/*.js$script
 /js*/web*tracker*.js$script
 /js*/web*sdk*.js$script
 /js*/*domain*.js$script
