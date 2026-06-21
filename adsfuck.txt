@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Title: AdsFuck
-! Version: 2026060522
+! Version: 2026062114
 ! Expires: 2 days
 ! 👇👇过滤规则推荐👇👇
 ! 基础广告过滤: https://easylist-downloads.adblockplus.org/easylist.txt
@@ -93,9 +93,19 @@ lanzn.com,lanpv.com,lanpw.com,lanzov.com,lanzoub.com,lanzouc.com,lanzoue.com,lan
 ||statics.woozooo.com/assets/img/clipboard.min.js$script
 
 ! ------ 18+ ------
-/Mirages/js*/web*tracker*.js$script
-/Mirages/js*/web*sdk*.js$script
-/web/js/web*tracker*.js$script
-/web/js/web*sdk*.js$script
+/gtag.js
+||googletagmanager.com^
+||google-analytics.com^
+||mc.yandex.ru^
+||cloudflareinsights.com^
+||hm.baidu.com^
+||static-mozai.4gtv.tv^
+||mimg.0c1q0l.cn^
+||cnzz.com^
+/js*/web*tracker*.js$script
+/js*/web*sdk*.js$script
 /js*/*domain*.js$script
-/*report*.php^$third-party
+/*report*.js^
+/*report*.php^
+/*report*.json^
+/eventtracking/*
