@@ -87,9 +87,9 @@
 
 | 类型 | 原生 | 加速 |
 |:---:|:---:|:---:|
-| 影视+直播 | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/main/json/index.json) | [下载](https://cdn.jsdelivr.net/gh/geoisam/FuckScripts/json/index.json) |
-| 🔞🔞🔞 | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/main/json/adult.json) | [下载](https://cdn.jsdelivr.net/gh/geoisam/FuckScripts/json/adult.json) |
-| 优选+直播 | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/main/json/geoisam.json) | [下载](https://cdn.jsdelivr.net/gh/geoisam/FuckScripts/json/geoisam.json) |
+| 影视+直播 | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/main/json/index.json) | [下载](https://gh-proxy.com/raw.githubusercontent.com/geoisam/FuckScripts/main/json/index.json) |
+| 🔞🔞🔞 | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/main/json/adult.json) | [下载](https://gh-proxy.com/raw.githubusercontent.com/geoisam/FuckScripts/main/json/adult.json) |
+| 优选+直播 | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/main/json/geoisam.json) | [下载](https://gh-proxy.com/raw.githubusercontent.com/geoisam/FuckScripts/main/json/geoisam.json) |
 
 - **CatVodSpider源码**
   - https://github.com/geoisam/CatVodSpider
