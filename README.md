@@ -91,7 +91,7 @@
 | 🔞🔞🔞 | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/main/json/adult.json) | [下载](https://cdn.jsdelivr.net/gh/geoisam/FuckScripts/json/adult.json) |
 | 优选+直播 | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/main/json/geoisam.json) | [下载](https://cdn.jsdelivr.net/gh/geoisam/FuckScripts/json/geoisam.json) |
 
-- **CatVod源码**
+- **CatVodSpider源码**
   - https://github.com/geoisam/CatVodSpider
 
 <br>
