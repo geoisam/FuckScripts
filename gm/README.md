@@ -6,7 +6,7 @@
 
 | 名称 | 状态 | 原生 | 加速 |
 |:---|:---:|:---:|:---:|
-| **微软必应优化助手** | ✅ | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/微软必应优化助手.user.js) | [安装](https://cdn.jsdelivr.net/gh/geoisam/FuckScripts/main/gm/微软必应优化助手.user.js) |
+| **微软必应优化助手** | ✅ | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/微软必应优化助手.user.js) | [安装](https://cdn.jsdelivr.net/gh/geoisam/FuckScripts/gm/微软必应优化助手.user.js) |
 | **123云盘优化助手** | ✅ | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/123云盘优化助手.user.js) | [安装](https://cdn.jsdelivr.net/gh/geoisam/FuckScripts/gm/123云盘优化助手.user.js) |
 | **腾讯视频优化助手** | ✅ | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/腾讯视频优化助手.user.js) | [安装](https://cdn.jsdelivr.net/gh/geoisam/FuckScripts/gm/腾讯视频优化助手.user.js) |
 | **百度网盘视频播放器（Dplayer）** | ✅ | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/百度网盘视频播放器（改）.user.js) | [安装](https://cdn.jsdelivr.net/gh/geoisam/FuckScripts/gm/百度网盘视频播放器（改）.user.js) |
