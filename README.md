@@ -1,5 +1,5 @@
 <p align="center">
-<img src="./img/ic_logo_round.svg" alt="LOGO" width="119px"/>
+<img src="./img/ic_logo_round.svg" alt="LOGO" width="186px"/>
 </p>
 
 <br>
@@ -21,11 +21,11 @@
 
 | 名称 | 说明 | 原生 | 加速 |
 |:---|:---:|:---:|:---:|
-| **微软必应优化助手** | [查看](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/微软必应优化助手.user.js) | [安装](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/gm/微软必应优化助手.user.js) |
-| **123云盘优化助手** | [查看](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/123云盘优化助手.user.js) | [安装](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/gm/123云盘优化助手.user.js) |
-| **腾讯视频优化助手** | [查看](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/腾讯视频优化助手.user.js) | [安装](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/gm/腾讯视频优化助手.user.js) |
-| **百度网盘视频播放器（Dplayer）** | [查看](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/百度网盘视频播放器（改）.user.js) | [安装](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/gm/百度网盘视频播放器（改）.user.js) |
-| **百度网盘音频播放器（Aplayer）** | [查看](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/百度网盘音频播放器（改）.user.js) | [安装](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/gm/百度网盘音频播放器（改）.user.js) |
+| **微软必应优化助手** | [查看](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/微软必应优化助手.user.js) | [安装](https://cdn.jsdelivr.net/gh/geoisam/FuckScripts/gm/微软必应优化助手.user.js) |
+| **123云盘优化助手** | [查看](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/123云盘优化助手.user.js) | [安装](https://cdn.jsdelivr.net/gh/geoisam/FuckScripts/gm/123云盘优化助手.user.js) |
+| **腾讯视频优化助手** | [查看](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/腾讯视频优化助手.user.js) | [安装](https://cdn.jsdelivr.net/gh/geoisam/FuckScripts/gm/腾讯视频优化助手.user.js) |
+| **百度网盘视频播放器（Dplayer）** | [查看](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/百度网盘视频播放器（改）.user.js) | [安装](https://cdn.jsdelivr.net/gh/geoisam/FuckScripts/gm/百度网盘视频播放器（改）.user.js) |
+| **百度网盘音频播放器（Aplayer）** | [查看](./gm/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/gm/百度网盘音频播放器（改）.user.js) | [安装](https://cdn.jsdelivr.net/gh/geoisam/FuckScripts/gm/百度网盘音频播放器（改）.user.js) |
 
 <br>
 
@@ -35,10 +35,10 @@
 
 | 名称 | 类型 | 说明 | 原生 | 加速 |
 |:---|:---|:---:|:---:|:---:|
-| **华米运动步数修改** | **OAuth** | [查看](./sc/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/华米运动步数修改.user.js) | [安装](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/sc/华米运动步数修改.user.js) |
-| **油猴中文网签到** | **Discuz**(DSU每日签到) | [查看](./sc/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/油猴中文网签到.user.js) | [安装](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/sc/油猴中文网签到.user.js) |
-| **智能电视网签到** | **Discuz**(亮剑打卡签到) | [查看](./sc/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/智能电视网签到.user.js) | [安装](https://ghfast.top/raw.githubusercontent.com/geoisam/sc/FuckScripts/main/智能电视网签到.user.js) |
-| **飘雪动漫社签到** | **Discuz**(西瓜微社区签到) | [查看](./sc/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/飘雪动漫社签到.user.js) | [安装](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/sc/飘雪动漫社签到.user.js) |
+| **华米运动步数修改** | **OAuth** | [查看](./sc/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/华米运动步数修改.user.js) | [安装](https://cdn.jsdelivr.net/gh/geoisam/FuckScripts/sc/华米运动步数修改.user.js) |
+| **油猴中文网签到** | **Discuz**(DSU每日签到) | [查看](./sc/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/油猴中文网签到.user.js) | [安装](https://cdn.jsdelivr.net/gh/geoisam/FuckScripts/sc/油猴中文网签到.user.js) |
+| **智能电视网签到** | **Discuz**(亮剑打卡签到) | [查看](./sc/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/智能电视网签到.user.js) | [安装](https://cdn.jsdelivr.net/gh/geoisam/FuckScripts/sc/智能电视网签到.user.js) |
+| **飘雪动漫社签到** | **Discuz**(西瓜微社区签到) | [查看](./sc/README.md) | [安装](https://raw.githubusercontent.com/geoisam/FuckScripts/main/sc/飘雪动漫社签到.user.js) | [安装](https://cdn.jsdelivr.net/gh/geoisam/FuckScripts/sc/飘雪动漫社签到.user.js) |
 
 <br>
 
@@ -48,8 +48,8 @@
 
 | 名称 | 类型 | 说明 | 原生 | 加速 |
 |:---|:---:|:---:|:---:|:---:|
-| **华米运动步数修改** | **OAuth** | [查看](./py/README.md) | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/main/py/huami.py) | [下载](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/py/huami.py) |
-| **Xshell8/Xftp8 <br>免登录修改器** | **Local** | [查看](./py/README.md) | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/main/py/xshell.py) | [下载](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/py/xshell.py) |
+| **华米运动步数修改** | **OAuth** | [查看](./py/README.md) | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/main/py/huami.py) | [下载](https://cdn.jsdelivr.net/gh/geoisam/FuckScripts/py/huami.py) |
+| **Xshell8/Xftp8 <br>免登录修改器** | **Local** | [查看](./py/README.md) | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/main/py/xshell.py) | [下载](https://cdn.jsdelivr.net/gh/geoisam/FuckScripts/py/xshell.py) |
 
 <br>
 
@@ -75,7 +75,7 @@
 
 | 名称 | 过期 | 原生 | 加速 |
 |:---:|:---:|:---:|:---:|
-| AdsFuck | 2 days | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/main/adsfuck.txt) | [下载](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/adsfuck.txt) |
+| AdsFuck | 2 days | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/main/adsfuck.txt) | [下载](https://cdn.jsdelivr.net/gh/geoisam/FuckScripts/adsfuck.txt) |
 
 <br>
 
@@ -87,9 +87,9 @@
 
 | 类型 | 原生 | 加速 |
 |:---:|:---:|:---:|
-| 影视+直播 | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/refs/heads/main/json/index.json) | [下载](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/json/index.json) |
-| 🔞🔞🔞 | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/refs/heads/main/json/adult.json) | [下载](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/json/adult.json) |
-| 优选+直播 | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/refs/heads/main/json/geoisam.json) | [下载](https://ghfast.top/raw.githubusercontent.com/geoisam/FuckScripts/main/json/geoisam.json) |
+| 影视+直播 | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/main/json/index.json) | [下载](https://cdn.jsdelivr.net/gh/geoisam/FuckScripts/json/index.json) |
+| 🔞🔞🔞 | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/main/json/adult.json) | [下载](https://cdn.jsdelivr.net/gh/geoisam/FuckScripts/json/adult.json) |
+| 优选+直播 | [下载](https://raw.githubusercontent.com/geoisam/FuckScripts/main/json/geoisam.json) | [下载](https://cdn.jsdelivr.net/gh/geoisam/FuckScripts/json/geoisam.json) |
 
 - **CatVod源码**
   - https://github.com/geoisam/CatVodSpider
